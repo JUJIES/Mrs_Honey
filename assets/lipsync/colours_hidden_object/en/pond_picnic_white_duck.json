@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/pond_picnic_white_duck.mp3",
+    "duration": 2.22
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.15,
+      "value": "C"
+    },
+    {
+      "start": 0.15,
+      "end": 0.36,
+      "value": "F"
+    },
+    {
+      "start": 0.36,
+      "end": 0.57,
+      "value": "B"
+    },
+    {
+      "start": 0.57,
+      "end": 0.78,
+      "value": "D"
+    },
+    {
+      "start": 0.78,
+      "end": 0.85,
+      "value": "C"
+    },
+    {
+      "start": 0.85,
+      "end": 0.92,
+      "value": "B"
+    },
+    {
+      "start": 0.92,
+      "end": 0.99,
+      "value": "C"
+    },
+    {
+      "start": 0.99,
+      "end": 1.13,
+      "value": "F"
+    },
+    {
+      "start": 1.13,
+      "end": 1.4,
+      "value": "B"
+    },
+    {
+      "start": 1.4,
+      "end": 1.6,
+      "value": "D"
+    },
+    {
+      "start": 1.6,
+      "end": 1.67,
+      "value": "C"
+    },
+    {
+      "start": 1.67,
+      "end": 1.81,
+      "value": "B"
+    },
+    {
+      "start": 1.81,
+      "end": 2.22,
+      "value": "X"
+    }
+  ]
+}

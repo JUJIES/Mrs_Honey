@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/fish.mp3",
+    "duration": 1.55
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.17,
+      "value": "B"
+    },
+    {
+      "start": 0.17,
+      "end": 0.38,
+      "value": "F"
+    },
+    {
+      "start": 0.38,
+      "end": 0.66,
+      "value": "B"
+    },
+    {
+      "start": 0.66,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 1.01,
+      "value": "B"
+    },
+    {
+      "start": 1.01,
+      "end": 1.09,
+      "value": "A"
+    },
+    {
+      "start": 1.09,
+      "end": 1.33,
+      "value": "B"
+    },
+    {
+      "start": 1.33,
+      "end": 1.55,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/park_road_green_car.mp3",
+    "duration": 2.22
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.13,
+      "value": "C"
+    },
+    {
+      "start": 0.13,
+      "end": 0.34,
+      "value": "F"
+    },
+    {
+      "start": 0.34,
+      "end": 0.62,
+      "value": "B"
+    },
+    {
+      "start": 0.62,
+      "end": 0.76,
+      "value": "E"
+    },
+    {
+      "start": 0.76,
+      "end": 0.97,
+      "value": "C"
+    },
+    {
+      "start": 0.97,
+      "end": 1.32,
+      "value": "B"
+    },
+    {
+      "start": 1.32,
+      "end": 1.65,
+      "value": "D"
+    },
+    {
+      "start": 1.65,
+      "end": 1.7,
+      "value": "C"
+    },
+    {
+      "start": 1.7,
+      "end": 1.88,
+      "value": "B"
+    },
+    {
+      "start": 1.88,
+      "end": 2.22,
+      "value": "X"
+    }
+  ]
+}

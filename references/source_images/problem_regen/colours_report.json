@@ -1,0 +1,224 @@
+{
+  "sets": [
+    {
+      "setId": "colours",
+      "setPath": "data/sets/colours.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/colours_scene",
+      "selectedItems": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "orange",
+        "purple",
+        "pink",
+        "brown"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "red",
+          "path": "assets/images/colours_scene/red.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.6,
+            "right": 0.6,
+            "top": 0.001,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.042,
+            0.159
+          ]
+        },
+        {
+          "id": "blue",
+          "path": "assets/images/colours_scene/blue.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.565,
+            "right": 0.536,
+            "top": 0.377,
+            "bottom": 0.976
+          },
+          "visualCenterOffset": [
+            0.036,
+            0.146
+          ]
+        },
+        {
+          "id": "green",
+          "path": "assets/images/colours_scene/green.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.594,
+            "right": 0.593,
+            "top": 0.0,
+            "bottom": 0.992
+          },
+          "visualCenterOffset": [
+            0.03,
+            0.18
+          ]
+        },
+        {
+          "id": "yellow",
+          "path": "assets/images/colours_scene/yellow.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.574,
+            "right": 0.574,
+            "top": 0.014,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.028,
+            0.16
+          ]
+        },
+        {
+          "id": "black",
+          "path": "assets/images/colours_scene/black.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.559,
+            "right": 0.561,
+            "top": 0.0,
+            "bottom": 0.95
+          },
+          "visualCenterOffset": [
+            0.031,
+            0.199
+          ]
+        },
+        {
+          "id": "white",
+          "path": "assets/images/colours_scene/white.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.556,
+            "right": 0.556,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.024,
+            0.206
+          ]
+        },
+        {
+          "id": "orange",
+          "path": "assets/images/colours_scene/orange.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.595,
+            "right": 0.595,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.028,
+            0.154
+          ]
+        },
+        {
+          "id": "purple",
+          "path": "assets/images/colours_scene/purple.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.607,
+            "right": 0.588,
+            "top": 0.051,
+            "bottom": 0.963
+          },
+          "visualCenterOffset": [
+            0.033,
+            0.154
+          ]
+        },
+        {
+          "id": "pink",
+          "path": "assets/images/colours_scene/pink.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.545,
+            "right": 0.542,
+            "top": 0.152,
+            "bottom": 0.96
+          },
+          "visualCenterOffset": [
+            0.042,
+            0.158
+          ]
+        },
+        {
+          "id": "brown",
+          "path": "assets/images/colours_scene/brown.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.606,
+            "right": 0.607,
+            "top": 0.037,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.036,
+            0.146
+          ]
+        }
+      ],
+      "warnings": [
+        "black: visual center looks off (0.03, 0.20)",
+        "white: visual center looks off (0.02, 0.21)"
+      ],
+      "failures": [],
+      "written": [
+        "data/sets/colours.bundle.js"
+      ],
+      "contactSheet": "references/source_images/problem_regen/colours_contact.png",
+      "qualityStatus": "warn"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "warn",
+    "warnings": 2,
+    "failures": 0,
+    "written": [
+      "data/sets/colours.bundle.js"
+    ]
+  }
+}

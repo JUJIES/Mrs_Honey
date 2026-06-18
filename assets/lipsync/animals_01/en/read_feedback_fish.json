@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/read_feedback_fish.mp3",
+    "duration": 1.68
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.12,
+      "value": "X"
+    },
+    {
+      "start": 0.12,
+      "end": 0.24,
+      "value": "E"
+    },
+    {
+      "start": 0.24,
+      "end": 0.38,
+      "value": "F"
+    },
+    {
+      "start": 0.38,
+      "end": 0.77,
+      "value": "B"
+    },
+    {
+      "start": 0.77,
+      "end": 0.83,
+      "value": "F"
+    },
+    {
+      "start": 0.83,
+      "end": 0.89,
+      "value": "B"
+    },
+    {
+      "start": 0.89,
+      "end": 0.96,
+      "value": "E"
+    },
+    {
+      "start": 0.96,
+      "end": 1.03,
+      "value": "F"
+    },
+    {
+      "start": 1.03,
+      "end": 1.1,
+      "value": "B"
+    },
+    {
+      "start": 1.1,
+      "end": 1.18,
+      "value": "A"
+    },
+    {
+      "start": 1.18,
+      "end": 1.51,
+      "value": "B"
+    },
+    {
+      "start": 1.51,
+      "end": 1.68,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "suffix": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "metrics": [
+      {
+        "src": "assets/images/transport_scene/train.png",
+        "img": {
+          "x": 129,
+          "y": 273,
+          "width": 494,
+          "height": 494
+        },
+        "card": {
+          "width": 512,
+          "height": 207
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/helicopter.png",
+        "img": {
+          "x": 657,
+          "y": 273,
+          "width": 494,
+          "height": 494
+        },
+        "card": {
+          "width": 512,
+          "height": 207
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/truck.png",
+        "img": {
+          "x": 129,
+          "y": 496,
+          "width": 494,
+          "height": 494
+        },
+        "card": {
+          "width": 512,
+          "height": 207
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/ferry.png",
+        "img": {
+          "x": 657,
+          "y": 496,
+          "width": 494,
+          "height": 494
+        },
+        "card": {
+          "width": 512,
+          "height": 207
+        },
+        "objectFit": "contain"
+      }
+    ]
+  },
+  {
+    "suffix": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "metrics": [
+      {
+        "src": "assets/images/transport_scene/train.png",
+        "img": {
+          "x": 23,
+          "y": 301,
+          "width": 157,
+          "height": 241
+        },
+        "card": {
+          "width": 175,
+          "height": 259
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/bicycle.png",
+        "img": {
+          "x": 210,
+          "y": 301,
+          "width": 157,
+          "height": 241
+        },
+        "card": {
+          "width": 175,
+          "height": 259
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/bus.png",
+        "img": {
+          "x": 23,
+          "y": 572,
+          "width": 157,
+          "height": 241
+        },
+        "card": {
+          "width": 175,
+          "height": 259
+        },
+        "objectFit": "contain"
+      },
+      {
+        "src": "assets/images/transport_scene/motorcycle.png",
+        "img": {
+          "x": 210,
+          "y": 572,
+          "width": 157,
+          "height": 241
+        },
+        "card": {
+          "width": 175,
+          "height": 259
+        },
+        "objectFit": "contain"
+      }
+    ]
+  }
+]

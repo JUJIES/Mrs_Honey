@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_bread.mp3",
+    "duration": 1.8
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.7,
+      "value": "B"
+    },
+    {
+      "start": 0.7,
+      "end": 0.84,
+      "value": "F"
+    },
+    {
+      "start": 0.84,
+      "end": 0.92,
+      "value": "A"
+    },
+    {
+      "start": 0.92,
+      "end": 0.97,
+      "value": "C"
+    },
+    {
+      "start": 0.97,
+      "end": 1.02,
+      "value": "E"
+    },
+    {
+      "start": 1.02,
+      "end": 1.09,
+      "value": "B"
+    },
+    {
+      "start": 1.09,
+      "end": 1.18,
+      "value": "A"
+    },
+    {
+      "start": 1.18,
+      "end": 1.24,
+      "value": "B"
+    },
+    {
+      "start": 1.24,
+      "end": 1.36,
+      "value": "C"
+    },
+    {
+      "start": 1.36,
+      "end": 1.5,
+      "value": "B"
+    },
+    {
+      "start": 1.5,
+      "end": 1.8,
+      "value": "X"
+    }
+  ]
+}

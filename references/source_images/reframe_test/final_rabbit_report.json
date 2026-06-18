@@ -1,0 +1,212 @@
+{
+  "sets": [
+    {
+      "setId": "animals_01",
+      "setPath": "data/sets/animals_01.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/animals_scene",
+      "selectedItems": [
+        "rabbit"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "cat",
+          "path": "assets/images/animals_scene/cat.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.992,
+            "right": 0.93,
+            "top": 0.338,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.007,
+            0.064
+          ]
+        },
+        {
+          "id": "dog",
+          "path": "assets/images/animals_scene/dog.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.787,
+            "right": 0.902,
+            "top": 0.708,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.071
+          ]
+        },
+        {
+          "id": "fish",
+          "path": "assets/images/animals_scene/fish.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 0.999,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            -0.011
+          ]
+        },
+        {
+          "id": "bird",
+          "path": "assets/images/animals_scene/bird.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.819,
+            "right": 0.742,
+            "top": 0.933,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.007,
+            0.09
+          ]
+        },
+        {
+          "id": "rabbit",
+          "path": "assets/images/animals_scene/rabbit.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.945,
+            "right": 0.94,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.0,
+            0.089
+          ]
+        },
+        {
+          "id": "mouse",
+          "path": "assets/images/animals_scene/mouse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.668,
+            "right": 0.972,
+            "top": 0.294,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.004,
+            0.063
+          ]
+        },
+        {
+          "id": "horse",
+          "path": "assets/images/animals_scene/horse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.806,
+            "right": 0.725,
+            "top": 0.926,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            0.085
+          ]
+        },
+        {
+          "id": "cow",
+          "path": "assets/images/animals_scene/cow.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.705,
+            "right": 0.808,
+            "top": 0.855,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.015,
+            0.113
+          ]
+        },
+        {
+          "id": "pig",
+          "path": "assets/images/animals_scene/pig.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.786,
+            "right": 0.797,
+            "top": 0.534,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.012,
+            0.131
+          ]
+        },
+        {
+          "id": "duck",
+          "path": "assets/images/animals_scene/duck.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.981,
+            "right": 1.0,
+            "top": 0.508,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.004,
+            0.021
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [
+        "data/sets/animals_01.bundle.js"
+      ],
+      "contactSheet": "references/source_images/reframe_test/final_rabbit_contact.png",
+      "qualityStatus": "pass"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "pass",
+    "warnings": 0,
+    "failures": 0,
+    "written": [
+      "data/sets/animals_01.bundle.js"
+    ]
+  }
+}

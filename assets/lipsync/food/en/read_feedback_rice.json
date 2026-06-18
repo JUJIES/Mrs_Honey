@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_rice.mp3",
+    "duration": 1.38
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.28,
+      "value": "C"
+    },
+    {
+      "start": 0.28,
+      "end": 0.78,
+      "value": "B"
+    },
+    {
+      "start": 0.78,
+      "end": 0.85,
+      "value": "C"
+    },
+    {
+      "start": 0.85,
+      "end": 1.13,
+      "value": "B"
+    },
+    {
+      "start": 1.13,
+      "end": 1.38,
+      "value": "X"
+    }
+  ]
+}

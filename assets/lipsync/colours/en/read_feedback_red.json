@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/read_feedback_red.mp3",
+    "duration": 2.03
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.44,
+      "value": "C"
+    },
+    {
+      "start": 0.44,
+      "end": 0.51,
+      "value": "B"
+    },
+    {
+      "start": 0.51,
+      "end": 0.72,
+      "value": "C"
+    },
+    {
+      "start": 0.72,
+      "end": 0.95,
+      "value": "X"
+    },
+    {
+      "start": 0.95,
+      "end": 1.34,
+      "value": "B"
+    },
+    {
+      "start": 1.34,
+      "end": 1.48,
+      "value": "C"
+    },
+    {
+      "start": 1.48,
+      "end": 1.69,
+      "value": "B"
+    },
+    {
+      "start": 1.69,
+      "end": 2.03,
+      "value": "X"
+    }
+  ]
+}

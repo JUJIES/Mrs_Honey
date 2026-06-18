@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_apple.mp3",
+    "duration": 1.55
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.4,
+      "value": "C"
+    },
+    {
+      "start": 0.4,
+      "end": 0.75,
+      "value": "B"
+    },
+    {
+      "start": 0.75,
+      "end": 0.89,
+      "value": "C"
+    },
+    {
+      "start": 0.89,
+      "end": 1.02,
+      "value": "A"
+    },
+    {
+      "start": 1.02,
+      "end": 1.42,
+      "value": "B"
+    },
+    {
+      "start": 1.42,
+      "end": 1.55,
+      "value": "X"
+    }
+  ]
+}

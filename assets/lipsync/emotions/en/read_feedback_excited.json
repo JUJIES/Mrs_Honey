@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/emotions/en/read_feedback_excited.mp3",
+    "duration": 2.5
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.22,
+      "value": "B"
+    },
+    {
+      "start": 0.22,
+      "end": 0.36,
+      "value": "C"
+    },
+    {
+      "start": 0.36,
+      "end": 0.77,
+      "value": "B"
+    },
+    {
+      "start": 0.77,
+      "end": 0.84,
+      "value": "C"
+    },
+    {
+      "start": 0.84,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.05,
+      "value": "C"
+    },
+    {
+      "start": 1.05,
+      "end": 1.75,
+      "value": "B"
+    },
+    {
+      "start": 1.75,
+      "end": 1.82,
+      "value": "C"
+    },
+    {
+      "start": 1.82,
+      "end": 2.31,
+      "value": "B"
+    },
+    {
+      "start": 2.31,
+      "end": 2.5,
+      "value": "X"
+    }
+  ]
+}

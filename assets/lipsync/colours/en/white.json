@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/white.mp3",
+    "duration": 1.53
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.35,
+      "value": "F"
+    },
+    {
+      "start": 0.35,
+      "end": 0.63,
+      "value": "B"
+    },
+    {
+      "start": 0.63,
+      "end": 0.77,
+      "value": "F"
+    },
+    {
+      "start": 0.77,
+      "end": 0.91,
+      "value": "D"
+    },
+    {
+      "start": 0.91,
+      "end": 1.19,
+      "value": "B"
+    },
+    {
+      "start": 1.19,
+      "end": 1.53,
+      "value": "X"
+    }
+  ]
+}

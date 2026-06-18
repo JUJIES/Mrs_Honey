@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/read_feedback_black.mp3",
+    "duration": 1.91
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.18,
+      "value": "F"
+    },
+    {
+      "start": 0.18,
+      "end": 0.32,
+      "value": "C"
+    },
+    {
+      "start": 0.32,
+      "end": 0.39,
+      "value": "B"
+    },
+    {
+      "start": 0.39,
+      "end": 0.64,
+      "value": "D"
+    },
+    {
+      "start": 0.64,
+      "end": 0.71,
+      "value": "C"
+    },
+    {
+      "start": 0.71,
+      "end": 0.95,
+      "value": "B"
+    },
+    {
+      "start": 0.95,
+      "end": 1.03,
+      "value": "A"
+    },
+    {
+      "start": 1.03,
+      "end": 1.47,
+      "value": "C"
+    },
+    {
+      "start": 1.47,
+      "end": 1.82,
+      "value": "B"
+    },
+    {
+      "start": 1.82,
+      "end": 1.91,
+      "value": "X"
+    }
+  ]
+}

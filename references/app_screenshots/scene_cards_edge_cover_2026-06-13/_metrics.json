@@ -1,0 +1,737 @@
+{
+  "failures": [],
+  "results": [
+    {
+      "set": "colours",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/colours_hear.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "red",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "purple",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "green",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "black",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/colours_read.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "pink",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "red",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "brown",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "orange",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/colours_speak.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "speak-image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "421.594px",
+            "label": "purple",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "food",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/food_hear.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "carrot",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "banana",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "soup",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "cheese",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "food",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/food_read.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "soup",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "milk",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "cake",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "banana",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "food",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/food_speak.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "speak-image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "421.594px",
+            "label": "milk",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "school",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/school_hear.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "book",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "ruler",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "chair",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "desk",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "school",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/school_read.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "backpack",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "eraser",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "ruler",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "pencil",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "school",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/school_speak.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "speak-image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "421.594px",
+            "label": "notebook",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/transport_hear.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "boat",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "car",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "airplane",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "motorcycle",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/transport_read.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "bicycle",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "motorcycle",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "truck",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          },
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "216px",
+            "label": "boat",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_edge_cover_2026-06-13/transport_speak.png",
+      "metrics": {
+        "cards": [
+          {
+            "afterBoxShadow": "rgba(105, 80, 48, 0.18) 0px 0px 0px 2px inset",
+            "afterContent": "\"\"",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "0px",
+            "cardRadius": "12px",
+            "className": "speak-image-card",
+            "imgInset": "-2px",
+            "imgRadius": "12px",
+            "imgWidth": "421.594px",
+            "label": "car",
+            "natural": [
+              768,
+              768
+            ],
+            "objectFit": "cover"
+          }
+        ],
+        "display": "scene-card"
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/banana.mp3",
+    "duration": 1.56
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.09,
+      "value": "X"
+    },
+    {
+      "start": 0.09,
+      "end": 0.21,
+      "value": "C"
+    },
+    {
+      "start": 0.21,
+      "end": 0.7,
+      "value": "B"
+    },
+    {
+      "start": 0.7,
+      "end": 0.84,
+      "value": "C"
+    },
+    {
+      "start": 0.84,
+      "end": 0.91,
+      "value": "B"
+    },
+    {
+      "start": 0.91,
+      "end": 0.99,
+      "value": "A"
+    },
+    {
+      "start": 0.99,
+      "end": 1.32,
+      "value": "B"
+    },
+    {
+      "start": 1.32,
+      "end": 1.56,
+      "value": "X"
+    }
+  ]
+}

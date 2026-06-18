@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/beach_sand_orange_fish.mp3",
+    "duration": 2.41
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.18,
+      "value": "C"
+    },
+    {
+      "start": 0.18,
+      "end": 0.32,
+      "value": "F"
+    },
+    {
+      "start": 0.32,
+      "end": 0.6,
+      "value": "B"
+    },
+    {
+      "start": 0.6,
+      "end": 0.74,
+      "value": "D"
+    },
+    {
+      "start": 0.74,
+      "end": 1.02,
+      "value": "B"
+    },
+    {
+      "start": 1.02,
+      "end": 1.16,
+      "value": "E"
+    },
+    {
+      "start": 1.16,
+      "end": 1.51,
+      "value": "B"
+    },
+    {
+      "start": 1.51,
+      "end": 1.59,
+      "value": "A"
+    },
+    {
+      "start": 1.59,
+      "end": 2.07,
+      "value": "B"
+    },
+    {
+      "start": 2.07,
+      "end": 2.41,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "candidates": [
+    {
+      "setId": "animals_01",
+      "id": "cat",
+      "path": "assets/images/animals_scene/cat.png",
+      "visualCenterOffset": [
+        0.023,
+        0.099
+      ],
+      "edgeSalience": {
+        "left": 0.767,
+        "right": 0.986,
+        "top": 0.433,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "cat: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "dog",
+      "path": "assets/images/animals_scene/dog.png",
+      "visualCenterOffset": [
+        0.004,
+        0.159
+      ],
+      "edgeSalience": {
+        "left": 0.735,
+        "right": 0.789,
+        "top": 0.094,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "dog: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "fish",
+      "path": "assets/images/animals_scene/fish.png",
+      "visualCenterOffset": [
+        -0.005,
+        -0.011
+      ],
+      "edgeSalience": {
+        "left": 1.0,
+        "right": 0.999,
+        "top": 1.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "fish: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "bird",
+      "path": "assets/images/animals_scene/bird.png",
+      "visualCenterOffset": [
+        -0.007,
+        0.09
+      ],
+      "edgeSalience": {
+        "left": 0.819,
+        "right": 0.742,
+        "top": 0.933,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "bird: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "rabbit",
+      "path": "assets/images/animals_scene/rabbit.png",
+      "visualCenterOffset": [
+        0.0,
+        0.089
+      ],
+      "edgeSalience": {
+        "left": 0.945,
+        "right": 0.94,
+        "top": 1.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "rabbit: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "mouse",
+      "path": "assets/images/animals_scene/mouse.png",
+      "visualCenterOffset": [
+        -0.004,
+        0.134
+      ],
+      "edgeSalience": {
+        "left": 0.852,
+        "right": 0.719,
+        "top": 0.999,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "mouse: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "horse",
+      "path": "assets/images/animals_scene/horse.png",
+      "visualCenterOffset": [
+        -0.006,
+        0.136
+      ],
+      "edgeSalience": {
+        "left": 0.813,
+        "right": 0.699,
+        "top": 0.69,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "horse: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "cow",
+      "path": "assets/images/animals_scene/cow.png",
+      "visualCenterOffset": [
+        -0.015,
+        0.113
+      ],
+      "edgeSalience": {
+        "left": 0.705,
+        "right": 0.808,
+        "top": 0.855,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "cow: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "pig",
+      "path": "assets/images/animals_scene/pig.png",
+      "visualCenterOffset": [
+        -0.012,
+        0.131
+      ],
+      "edgeSalience": {
+        "left": 0.786,
+        "right": 0.797,
+        "top": 0.534,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "pig: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "animals_01",
+      "id": "duck",
+      "path": "assets/images/animals_scene/duck.png",
+      "visualCenterOffset": [
+        0.014,
+        0.157
+      ],
+      "edgeSalience": {
+        "left": 0.601,
+        "right": 0.742,
+        "top": 0.001,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "duck: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "body_parts",
+      "id": "hand",
+      "path": "assets/images/body_parts_scene/hand.png",
+      "visualCenterOffset": [
+        -0.008,
+        0.012
+      ],
+      "edgeSalience": {
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0,
+        "bottom": 0.0
+      },
+      "reasons": [
+        "hand: possible edge stripe at top"
+      ]
+    },
+    {
+      "setId": "colours",
+      "id": "black",
+      "path": "assets/images/colours_scene/black.png",
+      "visualCenterOffset": [
+        0.031,
+        0.199
+      ],
+      "edgeSalience": {
+        "left": 0.559,
+        "right": 0.561,
+        "top": 0.0,
+        "bottom": 0.95
+      },
+      "reasons": [
+        "black: visual center looks off (0.03, 0.20)"
+      ]
+    },
+    {
+      "setId": "colours",
+      "id": "white",
+      "path": "assets/images/colours_scene/white.png",
+      "visualCenterOffset": [
+        0.024,
+        0.206
+      ],
+      "edgeSalience": {
+        "left": 0.556,
+        "right": 0.556,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "white: visual center looks off (0.02, 0.21)"
+      ]
+    },
+    {
+      "setId": "food",
+      "id": "apple",
+      "path": "assets/images/food_scene/apple.png",
+      "visualCenterOffset": [
+        0.019,
+        0.028
+      ],
+      "edgeSalience": {
+        "left": 0.417,
+        "right": 0.676,
+        "top": 0.762,
+        "bottom": 0.995
+      },
+      "reasons": [
+        "apple: possible edge stripe at left"
+      ]
+    },
+    {
+      "setId": "food",
+      "id": "egg",
+      "path": "assets/images/food_scene/egg.png",
+      "visualCenterOffset": [
+        0.005,
+        0.181
+      ],
+      "edgeSalience": {
+        "left": 0.379,
+        "right": 0.379,
+        "top": 0.013,
+        "bottom": 0.999
+      },
+      "reasons": [
+        "egg: visual center looks off (0.00, 0.18)"
+      ]
+    },
+    {
+      "setId": "food",
+      "id": "milk",
+      "path": "assets/images/food_scene/milk.png",
+      "visualCenterOffset": [
+        -0.006,
+        0.214
+      ],
+      "edgeSalience": {
+        "left": 0.429,
+        "right": 0.428,
+        "top": 0.0,
+        "bottom": 0.973
+      },
+      "reasons": [
+        "milk: visual center looks off (-0.01, 0.21)"
+      ]
+    },
+    {
+      "setId": "food",
+      "id": "soup",
+      "path": "assets/images/food_scene/soup.png",
+      "visualCenterOffset": [
+        0.009,
+        0.076
+      ],
+      "edgeSalience": {
+        "left": 0.417,
+        "right": 0.77,
+        "top": 0.947,
+        "bottom": 0.993
+      },
+      "reasons": [
+        "soup: possible edge stripe at left"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "pencil",
+      "path": "assets/images/school_scene/pencil.png",
+      "visualCenterOffset": [
+        0.005,
+        0.171
+      ],
+      "edgeSalience": {
+        "left": 0.557,
+        "right": 0.488,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "pencil: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "book",
+      "path": "assets/images/school_scene/book.png",
+      "visualCenterOffset": [
+        -0.008,
+        0.012
+      ],
+      "edgeSalience": {
+        "left": 0.821,
+        "right": 0.8,
+        "top": 0.996,
+        "bottom": 0.995
+      },
+      "reasons": [
+        "book: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "ruler",
+      "path": "assets/images/school_scene/ruler.png",
+      "visualCenterOffset": [
+        0.014,
+        0.126
+      ],
+      "edgeSalience": {
+        "left": 0.635,
+        "right": 0.613,
+        "top": 0.014,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "ruler: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "eraser",
+      "path": "assets/images/school_scene/eraser.png",
+      "visualCenterOffset": [
+        0.026,
+        0.182
+      ],
+      "edgeSalience": {
+        "left": 0.568,
+        "right": 0.568,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "eraser: visual center looks off (0.03, 0.18)",
+        "eraser: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "scissors",
+      "path": "assets/images/school_scene/scissors.png",
+      "visualCenterOffset": [
+        -0.006,
+        0.254
+      ],
+      "edgeSalience": {
+        "left": 0.362,
+        "right": 0.364,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "scissors: visual center looks off (-0.01, 0.25)",
+        "scissors: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "glue",
+      "path": "assets/images/school_scene/glue.png",
+      "visualCenterOffset": [
+        -0.009,
+        0.042
+      ],
+      "edgeSalience": {
+        "left": 0.928,
+        "right": 0.87,
+        "top": 0.816,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "glue: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "notebook",
+      "path": "assets/images/school_scene/notebook.png",
+      "visualCenterOffset": [
+        0.005,
+        0.121
+      ],
+      "edgeSalience": {
+        "left": 0.626,
+        "right": 0.733,
+        "top": 0.004,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "notebook: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "backpack",
+      "path": "assets/images/school_scene/backpack.png",
+      "visualCenterOffset": [
+        0.003,
+        0.067
+      ],
+      "edgeSalience": {
+        "left": 0.938,
+        "right": 0.999,
+        "top": 0.858,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "backpack: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "desk",
+      "path": "assets/images/school_scene/desk.png",
+      "visualCenterOffset": [
+        0.0,
+        0.007
+      ],
+      "edgeSalience": {
+        "left": 0.499,
+        "right": 1.0,
+        "top": 0.993,
+        "bottom": 0.993
+      },
+      "reasons": [
+        "desk: possible edge stripe at left",
+        "desk: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "school",
+      "id": "chair",
+      "path": "assets/images/school_scene/chair.png",
+      "visualCenterOffset": [
+        0.003,
+        0.076
+      ],
+      "edgeSalience": {
+        "left": 0.822,
+        "right": 0.853,
+        "top": 0.65,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "chair: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "hammer",
+      "path": "assets/images/tools_scene/hammer.png",
+      "visualCenterOffset": [
+        -0.013,
+        0.168
+      ],
+      "edgeSalience": {
+        "left": 0.211,
+        "right": 0.21,
+        "top": 0.0,
+        "bottom": 0.363
+      },
+      "reasons": [
+        "hammer: possible edge stripe at left, right, top, bottom",
+        "hammer: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "screwdriver",
+      "path": "assets/images/tools_scene/screwdriver.png",
+      "visualCenterOffset": [
+        -0.001,
+        0.081
+      ],
+      "edgeSalience": {
+        "left": 0.957,
+        "right": 0.957,
+        "top": 0.956,
+        "bottom": 0.958
+      },
+      "reasons": [
+        "screwdriver: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "wrench",
+      "path": "assets/images/tools_scene/wrench.png",
+      "visualCenterOffset": [
+        0.049,
+        0.093
+      ],
+      "edgeSalience": {
+        "left": 0.893,
+        "right": 1.0,
+        "top": 0.445,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "wrench: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "pliers",
+      "path": "assets/images/tools_scene/pliers.png",
+      "visualCenterOffset": [
+        0.004,
+        0.078
+      ],
+      "edgeSalience": {
+        "left": 0.889,
+        "right": 0.992,
+        "top": 0.827,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "pliers: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "saw",
+      "path": "assets/images/tools_scene/saw.png",
+      "visualCenterOffset": [
+        -0.009,
+        0.048
+      ],
+      "edgeSalience": {
+        "left": 1.0,
+        "right": 1.0,
+        "top": 1.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "saw: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "drill",
+      "path": "assets/images/tools_scene/drill.png",
+      "visualCenterOffset": [
+        0.029,
+        0.056
+      ],
+      "edgeSalience": {
+        "left": 0.608,
+        "right": 0.33,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "drill: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "tape_measure",
+      "path": "assets/images/tools_scene/tape_measure.png",
+      "visualCenterOffset": [
+        -0.058,
+        0.102
+      ],
+      "edgeSalience": {
+        "left": 0.863,
+        "right": 0.49,
+        "top": 0.193,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "tape_measure: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "level",
+      "path": "assets/images/tools_scene/level.png",
+      "visualCenterOffset": [
+        -0.001,
+        0.049
+      ],
+      "edgeSalience": {
+        "left": 1.0,
+        "right": 1.0,
+        "top": 1.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "level: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "paintbrush",
+      "path": "assets/images/tools_scene/paintbrush.png",
+      "visualCenterOffset": [
+        -0.005,
+        0.189
+      ],
+      "edgeSalience": {
+        "left": 0.36,
+        "right": 0.322,
+        "top": 0.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "paintbrush: visual center looks off (-0.01, 0.19)",
+        "paintbrush: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "chisel",
+      "path": "assets/images/tools_scene/chisel.png",
+      "visualCenterOffset": [
+        0.014,
+        0.094
+      ],
+      "edgeSalience": {
+        "left": 0.802,
+        "right": 0.672,
+        "top": 0.82,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "chisel: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "file",
+      "path": "assets/images/tools_scene/file.png",
+      "visualCenterOffset": [
+        0.011,
+        0.083
+      ],
+      "edgeSalience": {
+        "left": 0.753,
+        "right": 0.948,
+        "top": 0.938,
+        "bottom": 0.948
+      },
+      "reasons": [
+        "file: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "clamp",
+      "path": "assets/images/tools_scene/clamp.png",
+      "visualCenterOffset": [
+        -0.003,
+        0.029
+      ],
+      "edgeSalience": {
+        "left": 1.0,
+        "right": 1.0,
+        "top": 1.0,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "clamp: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "shovel",
+      "path": "assets/images/tools_scene/shovel.png",
+      "visualCenterOffset": [
+        0.016,
+        0.111
+      ],
+      "edgeSalience": {
+        "left": 0.828,
+        "right": 0.846,
+        "top": 0.001,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "shovel: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "rake",
+      "path": "assets/images/tools_scene/rake.png",
+      "visualCenterOffset": [
+        -0.009,
+        0.059
+      ],
+      "edgeSalience": {
+        "left": 0.998,
+        "right": 0.883,
+        "top": 0.481,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "rake: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    },
+    {
+      "setId": "tools",
+      "id": "trowel",
+      "path": "assets/images/tools_scene/trowel.png",
+      "visualCenterOffset": [
+        -0.017,
+        0.059
+      ],
+      "edgeSalience": {
+        "left": 1.0,
+        "right": 0.841,
+        "top": 0.498,
+        "bottom": 1.0
+      },
+      "reasons": [
+        "trowel: padding-sensitive subject; visually verify equal breathing room"
+      ]
+    }
+  ]
+}

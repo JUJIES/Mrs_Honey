@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/well_done.mp3",
+    "duration": 1.03
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.16,
+      "value": "F"
+    },
+    {
+      "start": 0.16,
+      "end": 0.34,
+      "value": "C"
+    },
+    {
+      "start": 0.34,
+      "end": 0.41,
+      "value": "B"
+    },
+    {
+      "start": 0.41,
+      "end": 0.83,
+      "value": "C"
+    },
+    {
+      "start": 0.83,
+      "end": 1.03,
+      "value": "X"
+    }
+  ]
+}

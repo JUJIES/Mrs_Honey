@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/tools/en/read_feedback_rake.mp3",
+    "duration": 1.95
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.28,
+      "value": "E"
+    },
+    {
+      "start": 0.28,
+      "end": 0.42,
+      "value": "C"
+    },
+    {
+      "start": 0.42,
+      "end": 0.63,
+      "value": "B"
+    },
+    {
+      "start": 0.63,
+      "end": 0.82,
+      "value": "X"
+    },
+    {
+      "start": 0.82,
+      "end": 1.06,
+      "value": "B"
+    },
+    {
+      "start": 1.06,
+      "end": 1.13,
+      "value": "C"
+    },
+    {
+      "start": 1.13,
+      "end": 1.2,
+      "value": "B"
+    },
+    {
+      "start": 1.2,
+      "end": 1.41,
+      "value": "C"
+    },
+    {
+      "start": 1.41,
+      "end": 1.55,
+      "value": "B"
+    },
+    {
+      "start": 1.55,
+      "end": 1.95,
+      "value": "X"
+    }
+  ]
+}

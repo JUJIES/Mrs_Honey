@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/home/en/read_feedback_bedroom.mp3",
+    "duration": 2.31
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.12,
+      "value": "X"
+    },
+    {
+      "start": 0.12,
+      "end": 0.45,
+      "value": "C"
+    },
+    {
+      "start": 0.45,
+      "end": 0.73,
+      "value": "B"
+    },
+    {
+      "start": 0.73,
+      "end": 0.97,
+      "value": "X"
+    },
+    {
+      "start": 0.97,
+      "end": 1.23,
+      "value": "B"
+    },
+    {
+      "start": 1.23,
+      "end": 1.31,
+      "value": "A"
+    },
+    {
+      "start": 1.31,
+      "end": 1.43,
+      "value": "C"
+    },
+    {
+      "start": 1.43,
+      "end": 1.5,
+      "value": "B"
+    },
+    {
+      "start": 1.5,
+      "end": 1.78,
+      "value": "F"
+    },
+    {
+      "start": 1.78,
+      "end": 1.91,
+      "value": "A"
+    },
+    {
+      "start": 1.91,
+      "end": 2.31,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "id": "feedback_en_01",
+  "title": {
+    "de": "Feedback Englisch 1",
+    "en": "English Feedback 1"
+  },
+  "category": "feedback",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "correct",
+      "text": {
+        "en": "Correct!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/correct.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/correct.mp3",
+          "assets/audio/feedback_en_01/en/correct_v2.mp3",
+          "assets/audio/feedback_en_01/en/correct_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "yes",
+      "text": {
+        "en": "Yes!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/yes.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/yes.mp3",
+          "assets/audio/feedback_en_01/en/yes_v2.mp3",
+          "assets/audio/feedback_en_01/en/yes_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "great",
+      "text": {
+        "en": "Great!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/great.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/great.mp3",
+          "assets/audio/feedback_en_01/en/great_v2.mp3",
+          "assets/audio/feedback_en_01/en/great_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "nice",
+      "text": {
+        "en": "Nice!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/nice.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/nice.mp3",
+          "assets/audio/feedback_en_01/en/nice_v2.mp3",
+          "assets/audio/feedback_en_01/en/nice_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "well_done",
+      "text": {
+        "en": "Well done!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/well_done.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/well_done.mp3",
+          "assets/audio/feedback_en_01/en/well_done_v2.mp3",
+          "assets/audio/feedback_en_01/en/well_done_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "good_job",
+      "text": {
+        "en": "Good job!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/good_job.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/good_job.mp3",
+          "assets/audio/feedback_en_01/en/good_job_v2.mp3",
+          "assets/audio/feedback_en_01/en/good_job_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "that_was_correct",
+      "text": {
+        "en": "That was correct!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/that_was_correct.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/that_was_correct.mp3",
+          "assets/audio/feedback_en_01/en/that_was_correct_v2.mp3",
+          "assets/audio/feedback_en_01/en/that_was_correct_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "wow",
+      "text": {
+        "en": "Wow!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/wow.mp3"
+      },
+      "kind": "positive",
+      "tags": [
+        "feedback",
+        "positive"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/wow.mp3",
+          "assets/audio/feedback_en_01/en/wow_v2.mp3",
+          "assets/audio/feedback_en_01/en/wow_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "oops",
+      "text": {
+        "en": "Oops!"
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/oops.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/oops.mp3",
+          "assets/audio/feedback_en_01/en/oops_v2.mp3",
+          "assets/audio/feedback_en_01/en/oops_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "not_quite",
+      "text": {
+        "en": "Not quite."
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/not_quite.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/not_quite.mp3",
+          "assets/audio/feedback_en_01/en/not_quite_v2.mp3",
+          "assets/audio/feedback_en_01/en/not_quite_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "that_was_not_correct",
+      "text": {
+        "en": "That was not correct."
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/that_was_not_correct.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/that_was_not_correct.mp3",
+          "assets/audio/feedback_en_01/en/that_was_not_correct_v2.mp3",
+          "assets/audio/feedback_en_01/en/that_was_not_correct_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "try_again",
+      "text": {
+        "en": "Try again."
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/try_again.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/try_again.mp3",
+          "assets/audio/feedback_en_01/en/try_again_v2.mp3",
+          "assets/audio/feedback_en_01/en/try_again_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "almost",
+      "text": {
+        "en": "Almost."
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/almost.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/almost.mp3",
+          "assets/audio/feedback_en_01/en/almost_v2.mp3",
+          "assets/audio/feedback_en_01/en/almost_v3.mp3"
+        ]
+      }
+    },
+    {
+      "id": "lets_try_again",
+      "text": {
+        "en": "Let's try again."
+      },
+      "audio": {
+        "en": "assets/audio/feedback_en_01/en/lets_try_again.mp3"
+      },
+      "kind": "negative",
+      "tags": [
+        "feedback",
+        "negative"
+      ],
+      "audioVariants": {
+        "en": [
+          "assets/audio/feedback_en_01/en/lets_try_again.mp3",
+          "assets/audio/feedback_en_01/en/lets_try_again_v2.mp3",
+          "assets/audio/feedback_en_01/en/lets_try_again_v3.mp3"
+        ]
+      }
+    }
+  ],
+  "feedbackVariants": {
+    "count": 3,
+    "naming": "primary file plus _v2, _v3, ... suffixes"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "set": "tools",
+  "display": "scene-card",
+  "contactSheet": "references/source_images/tools_scene_generation/tools_scene_contact_sheet.png",
+  "sheets": [
+    {
+      "fromSheet": "references/source_images/tools_scene_generation/tools_sheet_01_source.png",
+      "grid": "2x5",
+      "items": [
+        "hammer",
+        "screwdriver",
+        "wrench",
+        "pliers",
+        "saw",
+        "drill",
+        "tape_measure",
+        "level",
+        "paintbrush",
+        "chisel"
+      ]
+    },
+    {
+      "fromSheet": "references/source_images/tools_scene_generation/tools_sheet_02_source_v2.png",
+      "grid": "2x3",
+      "items": [
+        "file",
+        "clamp",
+        "shovel",
+        "rake",
+        "trowel"
+      ]
+    }
+  ]
+}

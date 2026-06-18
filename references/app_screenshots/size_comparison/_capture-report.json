@@ -1,0 +1,786 @@
+{
+  "animals": [
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-01-mouse.png",
+      "cards": [
+        {
+          "id": "bird",
+          "naturalHeight": 256,
+          "naturalWidth": 221,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/bird.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        },
+        {
+          "id": "horse",
+          "naturalHeight": 354,
+          "naturalWidth": 258,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/horse.png"
+        },
+        {
+          "id": "fish",
+          "naturalHeight": 208,
+          "naturalWidth": 280,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/fish.png"
+        }
+      ],
+      "progress": "1 / 10",
+      "target": "mouse"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-02-duck.png",
+      "cards": [
+        {
+          "id": "duck",
+          "naturalHeight": 287,
+          "naturalWidth": 175,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/duck.png"
+        },
+        {
+          "id": "horse",
+          "naturalHeight": 354,
+          "naturalWidth": 258,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/horse.png"
+        },
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        },
+        {
+          "id": "cat",
+          "naturalHeight": 309,
+          "naturalWidth": 226,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cat.png"
+        }
+      ],
+      "progress": "2 / 10",
+      "target": "duck"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-03-dog.png",
+      "cards": [
+        {
+          "id": "fish",
+          "naturalHeight": 208,
+          "naturalWidth": 280,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/fish.png"
+        },
+        {
+          "id": "pig",
+          "naturalHeight": 259,
+          "naturalWidth": 253,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/pig.png"
+        },
+        {
+          "id": "dog",
+          "naturalHeight": 310,
+          "naturalWidth": 241,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/dog.png"
+        },
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        }
+      ],
+      "progress": "3 / 10",
+      "target": "dog"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-04-cat.png",
+      "cards": [
+        {
+          "id": "duck",
+          "naturalHeight": 287,
+          "naturalWidth": 175,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/duck.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        },
+        {
+          "id": "cat",
+          "naturalHeight": 309,
+          "naturalWidth": 226,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cat.png"
+        },
+        {
+          "id": "rabbit",
+          "naturalHeight": 334,
+          "naturalWidth": 191,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/rabbit.png"
+        }
+      ],
+      "progress": "4 / 10",
+      "target": "cat"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-05-rabbit.png",
+      "cards": [
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        },
+        {
+          "id": "duck",
+          "naturalHeight": 287,
+          "naturalWidth": 175,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/duck.png"
+        },
+        {
+          "id": "rabbit",
+          "naturalHeight": 334,
+          "naturalWidth": 191,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/rabbit.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        }
+      ],
+      "progress": "5 / 10",
+      "target": "rabbit"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-06-horse.png",
+      "cards": [
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        },
+        {
+          "id": "duck",
+          "naturalHeight": 287,
+          "naturalWidth": 175,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/duck.png"
+        },
+        {
+          "id": "horse",
+          "naturalHeight": 354,
+          "naturalWidth": 258,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/horse.png"
+        },
+        {
+          "id": "dog",
+          "naturalHeight": 310,
+          "naturalWidth": 241,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/dog.png"
+        }
+      ],
+      "progress": "6 / 10",
+      "target": "horse"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-07-cow.png",
+      "cards": [
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        },
+        {
+          "id": "horse",
+          "naturalHeight": 354,
+          "naturalWidth": 258,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/horse.png"
+        },
+        {
+          "id": "rabbit",
+          "naturalHeight": 334,
+          "naturalWidth": 191,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/rabbit.png"
+        }
+      ],
+      "progress": "7 / 10",
+      "target": "cow"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-08-bird.png",
+      "cards": [
+        {
+          "id": "bird",
+          "naturalHeight": 256,
+          "naturalWidth": 221,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/bird.png"
+        },
+        {
+          "id": "cow",
+          "naturalHeight": 287,
+          "naturalWidth": 290,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cow.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        },
+        {
+          "id": "dog",
+          "naturalHeight": 310,
+          "naturalWidth": 241,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/dog.png"
+        }
+      ],
+      "progress": "8 / 10",
+      "target": "bird"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-09-pig.png",
+      "cards": [
+        {
+          "id": "pig",
+          "naturalHeight": 259,
+          "naturalWidth": 253,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/pig.png"
+        },
+        {
+          "id": "mouse",
+          "naturalHeight": 285,
+          "naturalWidth": 211,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/mouse.png"
+        },
+        {
+          "id": "fish",
+          "naturalHeight": 208,
+          "naturalWidth": 280,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/fish.png"
+        },
+        {
+          "id": "rabbit",
+          "naturalHeight": 334,
+          "naturalWidth": 191,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/rabbit.png"
+        }
+      ],
+      "progress": "9 / 10",
+      "target": "pig"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/animals-10-fish.png",
+      "cards": [
+        {
+          "id": "fish",
+          "naturalHeight": 208,
+          "naturalWidth": 280,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/fish.png"
+        },
+        {
+          "id": "horse",
+          "naturalHeight": 354,
+          "naturalWidth": 258,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/horse.png"
+        },
+        {
+          "id": "cat",
+          "naturalHeight": 309,
+          "naturalWidth": 226,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/cat.png"
+        },
+        {
+          "id": "pig",
+          "naturalHeight": 259,
+          "naturalWidth": 253,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/animals_01/pig.png"
+        }
+      ],
+      "progress": "10 / 10",
+      "target": "fish"
+    }
+  ],
+  "school": [
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-01-eraser.png",
+      "cards": [
+        {
+          "id": "eraser",
+          "naturalHeight": 428,
+          "naturalWidth": 422,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/eraser.png"
+        },
+        {
+          "id": "book",
+          "naturalHeight": 418,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/book.png"
+        },
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        },
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        }
+      ],
+      "progress": "1 / 10",
+      "target": "eraser"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-02-glue.png",
+      "cards": [
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        },
+        {
+          "id": "eraser",
+          "naturalHeight": 428,
+          "naturalWidth": 422,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/eraser.png"
+        },
+        {
+          "id": "chair",
+          "naturalHeight": 428,
+          "naturalWidth": 295,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/chair.png"
+        },
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        }
+      ],
+      "progress": "2 / 10",
+      "target": "glue"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-03-ruler.png",
+      "cards": [
+        {
+          "id": "ruler",
+          "naturalHeight": 428,
+          "naturalWidth": 296,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/ruler.png"
+        },
+        {
+          "id": "eraser",
+          "naturalHeight": 428,
+          "naturalWidth": 422,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/eraser.png"
+        },
+        {
+          "id": "backpack",
+          "naturalHeight": 428,
+          "naturalWidth": 379,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/backpack.png"
+        },
+        {
+          "id": "chair",
+          "naturalHeight": 428,
+          "naturalWidth": 295,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/chair.png"
+        }
+      ],
+      "progress": "3 / 10",
+      "target": "ruler"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-04-notebook.png",
+      "cards": [
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        },
+        {
+          "id": "eraser",
+          "naturalHeight": 428,
+          "naturalWidth": 422,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/eraser.png"
+        },
+        {
+          "id": "notebook",
+          "naturalHeight": 428,
+          "naturalWidth": 359,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/notebook.png"
+        },
+        {
+          "id": "desk",
+          "naturalHeight": 411,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/desk.png"
+        }
+      ],
+      "progress": "4 / 10",
+      "target": "notebook"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-05-pencil.png",
+      "cards": [
+        {
+          "id": "chair",
+          "naturalHeight": 428,
+          "naturalWidth": 295,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/chair.png"
+        },
+        {
+          "id": "backpack",
+          "naturalHeight": 428,
+          "naturalWidth": 379,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/backpack.png"
+        },
+        {
+          "id": "ruler",
+          "naturalHeight": 428,
+          "naturalWidth": 296,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/ruler.png"
+        },
+        {
+          "id": "pencil",
+          "naturalHeight": 428,
+          "naturalWidth": 302,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/pencil.png"
+        }
+      ],
+      "progress": "5 / 10",
+      "target": "pencil"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-06-desk.png",
+      "cards": [
+        {
+          "id": "desk",
+          "naturalHeight": 411,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/desk.png"
+        },
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        },
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        },
+        {
+          "id": "backpack",
+          "naturalHeight": 428,
+          "naturalWidth": 379,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/backpack.png"
+        }
+      ],
+      "progress": "6 / 10",
+      "target": "desk"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-07-chair.png",
+      "cards": [
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        },
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        },
+        {
+          "id": "chair",
+          "naturalHeight": 428,
+          "naturalWidth": 295,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/chair.png"
+        },
+        {
+          "id": "ruler",
+          "naturalHeight": 428,
+          "naturalWidth": 296,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/ruler.png"
+        }
+      ],
+      "progress": "7 / 10",
+      "target": "chair"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-08-scissors.png",
+      "cards": [
+        {
+          "id": "pencil",
+          "naturalHeight": 428,
+          "naturalWidth": 302,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/pencil.png"
+        },
+        {
+          "id": "glue",
+          "naturalHeight": 428,
+          "naturalWidth": 218,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/glue.png"
+        },
+        {
+          "id": "desk",
+          "naturalHeight": 411,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/desk.png"
+        },
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        }
+      ],
+      "progress": "8 / 10",
+      "target": "scissors"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-09-book.png",
+      "cards": [
+        {
+          "id": "scissors",
+          "naturalHeight": 428,
+          "naturalWidth": 338,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/scissors.png"
+        },
+        {
+          "id": "pencil",
+          "naturalHeight": 428,
+          "naturalWidth": 302,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/pencil.png"
+        },
+        {
+          "id": "book",
+          "naturalHeight": 418,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/book.png"
+        },
+        {
+          "id": "eraser",
+          "naturalHeight": 428,
+          "naturalWidth": 422,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/eraser.png"
+        }
+      ],
+      "progress": "9 / 10",
+      "target": "book"
+    },
+    {
+      "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/size_comparison/school-10-backpack.png",
+      "cards": [
+        {
+          "id": "ruler",
+          "naturalHeight": 428,
+          "naturalWidth": 296,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/ruler.png"
+        },
+        {
+          "id": "backpack",
+          "naturalHeight": 428,
+          "naturalWidth": 379,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/backpack.png"
+        },
+        {
+          "id": "book",
+          "naturalHeight": 418,
+          "naturalWidth": 428,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/book.png"
+        },
+        {
+          "id": "notebook",
+          "naturalHeight": 428,
+          "naturalWidth": 359,
+          "renderedHeight": 88,
+          "renderedWidth": 260,
+          "src": "assets/images/school/notebook.png"
+        }
+      ],
+      "progress": "10 / 10",
+      "target": "backpack"
+    }
+  ]
+}

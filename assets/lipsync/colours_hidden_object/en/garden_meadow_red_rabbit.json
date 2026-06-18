@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/garden_meadow_red_rabbit.mp3",
+    "duration": 2.27
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.17,
+      "value": "C"
+    },
+    {
+      "start": 0.17,
+      "end": 0.38,
+      "value": "F"
+    },
+    {
+      "start": 0.38,
+      "end": 0.59,
+      "value": "B"
+    },
+    {
+      "start": 0.59,
+      "end": 0.8,
+      "value": "D"
+    },
+    {
+      "start": 0.8,
+      "end": 0.87,
+      "value": "C"
+    },
+    {
+      "start": 0.87,
+      "end": 0.94,
+      "value": "B"
+    },
+    {
+      "start": 0.94,
+      "end": 1.01,
+      "value": "C"
+    },
+    {
+      "start": 1.01,
+      "end": 1.08,
+      "value": "B"
+    },
+    {
+      "start": 1.08,
+      "end": 1.15,
+      "value": "C"
+    },
+    {
+      "start": 1.15,
+      "end": 1.36,
+      "value": "B"
+    },
+    {
+      "start": 1.36,
+      "end": 1.43,
+      "value": "C"
+    },
+    {
+      "start": 1.43,
+      "end": 1.51,
+      "value": "A"
+    },
+    {
+      "start": 1.51,
+      "end": 1.9,
+      "value": "B"
+    },
+    {
+      "start": 1.9,
+      "end": 2.27,
+      "value": "X"
+    }
+  ]
+}

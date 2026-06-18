@@ -1,0 +1,217 @@
+{
+  "sets": [
+    {
+      "setId": "school",
+      "setPath": "data/sets/school.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/school_scene",
+      "selectedItems": [
+        "pencil",
+        "ruler"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "pencil",
+          "path": "assets/images/school_scene/pencil.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.557,
+            "right": 0.488,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.005,
+            0.171
+          ]
+        },
+        {
+          "id": "book",
+          "path": "assets/images/school_scene/book.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.821,
+            "right": 0.8,
+            "top": 0.996,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            -0.008,
+            0.012
+          ]
+        },
+        {
+          "id": "ruler",
+          "path": "assets/images/school_scene/ruler.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.635,
+            "right": 0.613,
+            "top": 0.014,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.126
+          ]
+        },
+        {
+          "id": "eraser",
+          "path": "assets/images/school_scene/eraser.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.568,
+            "right": 0.568,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.026,
+            0.182
+          ]
+        },
+        {
+          "id": "scissors",
+          "path": "assets/images/school_scene/scissors.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.362,
+            "right": 0.364,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.006,
+            0.254
+          ]
+        },
+        {
+          "id": "glue",
+          "path": "assets/images/school_scene/glue.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.928,
+            "right": 0.87,
+            "top": 0.816,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.042
+          ]
+        },
+        {
+          "id": "notebook",
+          "path": "assets/images/school_scene/notebook.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.32,
+            "right": 0.321,
+            "top": 0.074,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            -0.008,
+            0.03
+          ]
+        },
+        {
+          "id": "backpack",
+          "path": "assets/images/school_scene/backpack.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.435,
+            "right": 0.457,
+            "top": 0.306,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            0.015,
+            0.064
+          ]
+        },
+        {
+          "id": "desk",
+          "path": "assets/images/school_scene/desk.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.499,
+            "right": 1.0,
+            "top": 0.993,
+            "bottom": 0.993
+          },
+          "visualCenterOffset": [
+            0.0,
+            0.007
+          ]
+        },
+        {
+          "id": "chair",
+          "path": "assets/images/school_scene/chair.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.822,
+            "right": 0.853,
+            "top": 0.65,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.003,
+            0.076
+          ]
+        }
+      ],
+      "warnings": [
+        "eraser: visual center looks off (0.03, 0.18)",
+        "scissors: visual center looks off (-0.01, 0.25)",
+        "desk: possible edge stripe at left"
+      ],
+      "failures": [],
+      "written": [
+        "data/sets/school.bundle.js"
+      ],
+      "contactSheet": "references/source_images/problem_regen/final_school_contact.png",
+      "qualityStatus": "warn"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "warn",
+    "warnings": 3,
+    "failures": 0,
+    "written": [
+      "data/sets/school.bundle.js"
+    ]
+  }
+}

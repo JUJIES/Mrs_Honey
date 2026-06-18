@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/emotions/en/angry.mp3",
+    "duration": 2.22
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.23,
+      "value": "C"
+    },
+    {
+      "start": 0.23,
+      "end": 0.37,
+      "value": "F"
+    },
+    {
+      "start": 0.37,
+      "end": 0.72,
+      "value": "B"
+    },
+    {
+      "start": 0.72,
+      "end": 0.93,
+      "value": "C"
+    },
+    {
+      "start": 0.93,
+      "end": 1.42,
+      "value": "B"
+    },
+    {
+      "start": 1.42,
+      "end": 1.56,
+      "value": "C"
+    },
+    {
+      "start": 1.56,
+      "end": 1.84,
+      "value": "B"
+    },
+    {
+      "start": 1.84,
+      "end": 2.22,
+      "value": "X"
+    }
+  ]
+}

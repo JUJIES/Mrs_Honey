@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/correct_v3.mp3",
+    "duration": 0.84
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.31,
+      "value": "E"
+    },
+    {
+      "start": 0.31,
+      "end": 0.45,
+      "value": "C"
+    },
+    {
+      "start": 0.45,
+      "end": 0.66,
+      "value": "B"
+    },
+    {
+      "start": 0.66,
+      "end": 0.84,
+      "value": "X"
+    }
+  ]
+}

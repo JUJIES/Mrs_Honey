@@ -1,0 +1,235 @@
+{
+  "allowedInternalHoleItems": [
+    "backpack",
+    "scissors"
+  ],
+  "items": [
+    {
+      "id": "backpack",
+      "size": [
+        379,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [
+        {
+          "area": 1989,
+          "bbox": [
+            303,
+            151,
+            341,
+            330
+          ]
+        },
+        {
+          "area": 730,
+          "bbox": [
+            168,
+            23,
+            214,
+            52
+          ]
+        }
+      ],
+      "largeInternalHoles": [
+        {
+          "area": 1989,
+          "bbox": [
+            303,
+            151,
+            341,
+            330
+          ]
+        },
+        {
+          "area": 730,
+          "bbox": [
+            168,
+            23,
+            214,
+            52
+          ]
+        }
+      ],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "book",
+      "size": [
+        428,
+        418
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "chair",
+      "size": [
+        295,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "desk",
+      "size": [
+        428,
+        411
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "eraser",
+      "size": [
+        422,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "glue",
+      "size": [
+        218,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "notebook",
+      "size": [
+        359,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "pencil",
+      "size": [
+        302,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "ruler",
+      "size": [
+        296,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [],
+      "largeInternalHoles": [],
+      "smallInternalHoles": []
+    },
+    {
+      "id": "scissors",
+      "size": [
+        338,
+        428
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "internalTransparentComponents": [
+        {
+          "area": 3144,
+          "bbox": [
+            35,
+            271,
+            99,
+            347
+          ]
+        },
+        {
+          "area": 3076,
+          "bbox": [
+            172,
+            314,
+            224,
+            395
+          ]
+        }
+      ],
+      "largeInternalHoles": [
+        {
+          "area": 3144,
+          "bbox": [
+            35,
+            271,
+            99,
+            347
+          ]
+        },
+        {
+          "area": 3076,
+          "bbox": [
+            172,
+            314,
+            224,
+            395
+          ]
+        }
+      ],
+      "smallInternalHoles": []
+    }
+  ],
+  "warnings": []
+}

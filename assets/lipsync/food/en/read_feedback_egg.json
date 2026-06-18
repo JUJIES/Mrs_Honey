@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_egg.mp3",
+    "duration": 1.64
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.15,
+      "value": "F"
+    },
+    {
+      "start": 0.15,
+      "end": 0.33,
+      "value": "C"
+    },
+    {
+      "start": 0.33,
+      "end": 0.4,
+      "value": "B"
+    },
+    {
+      "start": 0.4,
+      "end": 0.68,
+      "value": "C"
+    },
+    {
+      "start": 0.68,
+      "end": 0.89,
+      "value": "B"
+    },
+    {
+      "start": 0.89,
+      "end": 1.24,
+      "value": "C"
+    },
+    {
+      "start": 1.24,
+      "end": 1.38,
+      "value": "B"
+    },
+    {
+      "start": 1.38,
+      "end": 1.64,
+      "value": "X"
+    }
+  ]
+}

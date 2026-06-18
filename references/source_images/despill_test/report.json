@@ -1,0 +1,89 @@
+{
+  "source": "lernwort_mvp_codex_package/references/source_images/despill_test/green_source.png",
+  "imageSize": [
+    420,
+    420
+  ],
+  "expectedItems": 1,
+  "detectedComponents": 1,
+  "canvas": 512,
+  "padding": 44,
+  "grid": "1x1",
+  "gridCheck": {
+    "enabled": true,
+    "warnings": [],
+    "failures": [],
+    "cells": [
+      {
+        "componentIndex": 0,
+        "row": 0,
+        "col": 0,
+        "bbox": [
+          120,
+          90,
+          301,
+          321
+        ],
+        "centroid": [
+          210.0,
+          205.0
+        ],
+        "margins": [
+          120.0,
+          90.0,
+          119.0,
+          99.0
+        ]
+      }
+    ]
+  },
+  "postProcessing": {
+    "trimOutput": true,
+    "edgeFeather": 0.35,
+    "edgeContract": 0,
+    "despill": true,
+    "keyColor": [
+      0,
+      255,
+      0
+    ]
+  },
+  "transparentHoleItems": [],
+  "items": [
+    {
+      "outputSize": [
+        338,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        336,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "test",
+      "path": "lernwort_mvp_codex_package/references/source_images/despill_test/out/test.png",
+      "sourceBbox": [
+        120,
+        90,
+        301,
+        321
+      ],
+      "sourceArea": 32871,
+      "sourceCentroid": [
+        210.0,
+        205.0
+      ]
+    }
+  ],
+  "warnings": [],
+  "failures": [],
+  "qualityStatus": "pass"
+}

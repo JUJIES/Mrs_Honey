@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/body_parts/en/knee.mp3",
+    "duration": 1.57
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.19,
+      "value": "B"
+    },
+    {
+      "start": 0.19,
+      "end": 0.4,
+      "value": "F"
+    },
+    {
+      "start": 0.4,
+      "end": 0.5,
+      "value": "A"
+    },
+    {
+      "start": 0.5,
+      "end": 0.55,
+      "value": "C"
+    },
+    {
+      "start": 0.55,
+      "end": 0.73,
+      "value": "B"
+    },
+    {
+      "start": 0.73,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 1.15,
+      "value": "B"
+    },
+    {
+      "start": 1.15,
+      "end": 1.57,
+      "value": "X"
+    }
+  ]
+}

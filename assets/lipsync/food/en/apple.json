@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/apple.mp3",
+    "duration": 1.67
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.19,
+      "value": "C"
+    },
+    {
+      "start": 0.19,
+      "end": 0.23,
+      "value": "E"
+    },
+    {
+      "start": 0.23,
+      "end": 0.42,
+      "value": "F"
+    },
+    {
+      "start": 0.42,
+      "end": 0.51,
+      "value": "A"
+    },
+    {
+      "start": 0.51,
+      "end": 0.56,
+      "value": "C"
+    },
+    {
+      "start": 0.56,
+      "end": 0.88,
+      "value": "B"
+    },
+    {
+      "start": 0.88,
+      "end": 0.95,
+      "value": "C"
+    },
+    {
+      "start": 0.95,
+      "end": 1.16,
+      "value": "A"
+    },
+    {
+      "start": 1.16,
+      "end": 1.36,
+      "value": "B"
+    },
+    {
+      "start": 1.36,
+      "end": 1.67,
+      "value": "X"
+    }
+  ]
+}

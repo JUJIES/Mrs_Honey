@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "id": "airplane",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/airplane.png",
+      "size": [
+        430,
+        263
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 1512,
+      "magentaResiduePixels": 12
+    },
+    {
+      "id": "ferry",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/ferry.png",
+      "size": [
+        430,
+        360
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 792,
+      "magentaResiduePixels": 14
+    },
+    {
+      "id": "boat",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/boat.png",
+      "size": [
+        430,
+        399
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 1516,
+      "magentaResiduePixels": 6
+    },
+    {
+      "id": "car",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/car.png",
+      "size": [
+        430,
+        311
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 627,
+      "magentaResiduePixels": 1
+    },
+    {
+      "id": "bus",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/bus.png",
+      "size": [
+        430,
+        279
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 802,
+      "magentaResiduePixels": 1
+    },
+    {
+      "id": "train",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/train.png",
+      "size": [
+        430,
+        242
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 802,
+      "magentaResiduePixels": 6
+    },
+    {
+      "id": "bicycle",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/bicycle.png",
+      "size": [
+        430,
+        357
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 127,
+      "magentaResiduePixels": 2330
+    },
+    {
+      "id": "motorcycle",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/motorcycle.png",
+      "size": [
+        430,
+        356
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 7,
+      "magentaResiduePixels": 1892
+    },
+    {
+      "id": "truck",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/truck.png",
+      "size": [
+        430,
+        348
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 853,
+      "magentaResiduePixels": 1
+    },
+    {
+      "id": "helicopter",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/helicopter.png",
+      "size": [
+        430,
+        356
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "trueTransparency": true,
+      "greenResiduePixels": 4,
+      "magentaResiduePixels": 1354
+    }
+  ],
+  "warnings": [
+    "airplane: green residue pixels 1512",
+    "boat: green residue pixels 1516"
+  ],
+  "failures": [],
+  "qualityStatus": "warn"
+}

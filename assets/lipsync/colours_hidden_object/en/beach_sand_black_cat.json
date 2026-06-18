@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/beach_sand_black_cat.mp3",
+    "duration": 2.22
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.16,
+      "value": "C"
+    },
+    {
+      "start": 0.16,
+      "end": 0.37,
+      "value": "F"
+    },
+    {
+      "start": 0.37,
+      "end": 0.58,
+      "value": "B"
+    },
+    {
+      "start": 0.58,
+      "end": 0.79,
+      "value": "D"
+    },
+    {
+      "start": 0.79,
+      "end": 0.93,
+      "value": "C"
+    },
+    {
+      "start": 0.93,
+      "end": 1.01,
+      "value": "A"
+    },
+    {
+      "start": 1.01,
+      "end": 1.61,
+      "value": "C"
+    },
+    {
+      "start": 1.61,
+      "end": 1.89,
+      "value": "B"
+    },
+    {
+      "start": 1.89,
+      "end": 2.22,
+      "value": "X"
+    }
+  ]
+}

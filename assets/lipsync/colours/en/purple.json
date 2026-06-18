@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/purple.mp3",
+    "duration": 1.52
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.16,
+      "value": "F"
+    },
+    {
+      "start": 0.16,
+      "end": 0.27,
+      "value": "C"
+    },
+    {
+      "start": 0.27,
+      "end": 0.48,
+      "value": "B"
+    },
+    {
+      "start": 0.48,
+      "end": 0.56,
+      "value": "A"
+    },
+    {
+      "start": 0.56,
+      "end": 0.74,
+      "value": "E"
+    },
+    {
+      "start": 0.74,
+      "end": 0.86,
+      "value": "A"
+    },
+    {
+      "start": 0.86,
+      "end": 1.09,
+      "value": "B"
+    },
+    {
+      "start": 1.09,
+      "end": 1.52,
+      "value": "X"
+    }
+  ]
+}

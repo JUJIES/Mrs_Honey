@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mrs. Honey Avatar-Lab</title>
+    <link rel="stylesheet" href="styles.css?v=head-body-rig-27" />
+  </head>
+  <body>
+    <main class="lab-shell">
+      <section class="stage-panel" aria-label="Mrs. Honey Avatar Testbereich">
+        <div class="avatar-card">
+          <button class="honey-listen-button" id="avatarButton" type="button" aria-label="Mrs. Honey sprechen lassen">
+            <span class="honey-stage">
+              <span class="honey-portrait-wrap">
+                <span class="honey-body-rig" id="bodyRig">
+                  <img
+                    class="honey-body-frame"
+                    id="bodyFrame"
+                    src="assets/mrs-honey-body-rig/body-head-socket-breathe-00.png"
+                    alt=""
+                    draggable="false"
+                  />
+                  <img
+                    class="honey-body-frame honey-body-frame-blend"
+                    id="bodyFrameBlend"
+                    src="assets/mrs-honey-body-rig/body-head-socket-breathe-01.png"
+                    alt=""
+                    draggable="false"
+                  />
+                </span>
+                <span class="honey-head-rig" id="headRig">
+                  <img
+                    class="honey-head-base"
+                    src="assets/mrs-honey-body-rig/head-round-no-neck-imagegen.png"
+                    alt=""
+                    draggable="false"
+                  />
+                  <img
+                    class="honey-eye-frame honey-eye-frame-left"
+                    id="eyeLeftFrame"
+                    src="assets/mrs-honey-eye-rig/generated/eye-left-open-v2.png"
+                    alt=""
+                    draggable="false"
+                  />
+                  <img
+                    class="honey-eye-frame honey-eye-frame-right"
+                    id="eyeRightFrame"
+                    src="assets/mrs-honey-eye-rig/generated/eye-right-open-v2.png"
+                    alt=""
+                    draggable="false"
+                  />
+                  <svg class="honey-mouth-shape" viewBox="0 0 100 60" aria-hidden="true" focusable="false">
+                    <defs>
+                      <linearGradient id="honeyMouthFill" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#5b2a34" />
+                        <stop offset="100%" stop-color="#321821" />
+                      </linearGradient>
+                    </defs>
+                    <path id="mouthPath" class="honey-mouth-fill" d="" />
+                  </svg>
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="playback-bar">
+          <button class="primary-action" id="playButton" type="button">Abspielen</button>
+          <button class="icon-action" id="stopButton" type="button" aria-label="Stoppen" title="Stoppen">
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="time-readout" aria-live="polite">
+            <span id="currentTime">0.00</span>s / <span id="duration">0.00</span>s
+          </div>
+        </div>
+      </section>
+
+      <aside class="control-panel" aria-label="Avatar Teststeuerung">
+        <label class="field">
+          <span>Audio</span>
+          <select id="sampleSelect"></select>
+        </label>
+
+        <div class="cue-strip" id="cueStrip" aria-label="Mundformen"></div>
+
+        <div class="shape-grid" aria-label="Mundform direkt testen">
+          <button type="button" data-shape="X">X</button>
+          <button type="button" data-shape="A">A</button>
+          <button type="button" data-shape="B">B</button>
+          <button type="button" data-shape="C">C</button>
+          <button type="button" data-shape="D">D</button>
+          <button type="button" data-shape="E">E</button>
+          <button type="button" data-shape="F">F</button>
+          <button type="button" data-shape="G">G</button>
+          <button type="button" data-shape="H">H</button>
+        </div>
+
+        <div class="blink-actions" aria-label="Blinzeln testen">
+          <label class="check-field">
+            <input id="autoBlink" type="checkbox" checked />
+            <span>Auto-Blinzeln</span>
+          </label>
+          <button class="secondary-action" id="blinkButton" type="button">Blink jetzt</button>
+        </div>
+
+        <div class="sliders" aria-label="Avatar Feintuning">
+          <label class="range-field">
+            <span>Ausschnitt</span>
+            <input id="rigScale" type="range" min="0.4" max="1.15" step="0.01" value="0.82" />
+            <output for="rigScale">0.82x</output>
+          </label>
+          <label class="range-field">
+            <span>Mund links/rechts</span>
+            <input id="mouthLeft" type="range" min="0" max="100" step="0.1" value="49.8" />
+            <output for="mouthLeft">49.8%</output>
+          </label>
+          <label class="range-field">
+            <span>Mund hoch/runter</span>
+            <input id="mouthTop" type="range" min="0" max="120" step="0.1" value="69.8" />
+            <output for="mouthTop">69.8%</output>
+          </label>
+          <label class="range-field">
+            <span>Mund Breite</span>
+            <input id="mouthWidth" type="range" min="1" max="140" step="0.5" value="140" />
+            <output for="mouthWidth">140.0px</output>
+          </label>
+          <label class="range-field">
+            <span>Mund Ruhe</span>
+            <input id="mouthRestHeight" type="range" min="1" max="12" step="0.2" value="3.6" />
+            <output for="mouthRestHeight">3.6px</output>
+          </label>
+          <label class="range-field">
+            <span>Mund Oeffnung</span>
+            <input id="mouthHeight" type="range" min="1" max="90" step="0.5" value="58" />
+            <output for="mouthHeight">58.0px</output>
+          </label>
+          <label class="range-field">
+            <span>Mund Rundung</span>
+            <input id="mouthRoundness" type="range" min="0" max="1" step="0.01" value="0.76" />
+            <output for="mouthRoundness">0.76x</output>
+          </label>
+          <label class="range-field">
+            <span>Laecheln</span>
+            <input id="mouthSmile" type="range" min="0" max="1" step="0.01" value="0.42" />
+            <output for="mouthSmile">0.42x</output>
+          </label>
+          <label class="range-field">
+            <span>Mund Stil</span>
+            <select id="mouthStyle">
+              <option value="soft" selected>weich</option>
+              <option value="narrow">schmal</option>
+              <option value="round">rund</option>
+            </select>
+            <output for="mouthStyle">weich</output>
+          </label>
+          <label class="range-field">
+            <span>Glaettung</span>
+            <input id="smoothing" type="range" min="50" max="220" step="5" value="220" />
+            <output for="smoothing">220ms</output>
+          </label>
+          <label class="range-field">
+            <span>Kopfbewegung</span>
+            <input id="headMotion" type="range" min="0" max="1.8" step="0.1" value="0.4" />
+            <output for="headMotion">0.4x</output>
+          </label>
+          <label class="range-field">
+            <span>Kopf Groesse</span>
+            <input id="headSize" type="range" min="45" max="155" step="1" value="98" />
+            <output for="headSize">98%</output>
+          </label>
+          <label class="range-field">
+            <span>Kopf hoch/runter</span>
+            <input id="headTop" type="range" min="-10" max="78" step="0.5" value="-7.5" />
+            <output for="headTop">-7.5%</output>
+          </label>
+          <label class="range-field">
+            <span>Koerper Groesse</span>
+            <input id="bodySize" type="range" min="55" max="180" step="1" value="109" />
+            <output for="bodySize">109%</output>
+          </label>
+          <label class="range-field">
+            <span>Koerper hoch/runter</span>
+            <input id="bodyTop" type="range" min="20" max="110" step="0.5" value="47.5" />
+            <output for="bodyTop">47.5%</output>
+          </label>
+          <label class="range-field">
+            <span>Atem Rhythmus</span>
+            <input id="breathRate" type="range" min="6" max="18" step="0.5" value="9" />
+            <output for="breathRate">9.0/min</output>
+          </label>
+          <label class="range-field">
+            <span>Atem Staerke</span>
+            <input id="breathAmplitude" type="range" min="0" max="1" step="0.05" value="0.65" />
+            <output for="breathAmplitude">0.65x</output>
+          </label>
+          <label class="range-field">
+            <span>Augen links/rechts</span>
+            <input id="eyeLeft" type="range" min="35" max="65" step="0.1" value="49.3" />
+            <output for="eyeLeft">49.3%</output>
+          </label>
+          <label class="range-field">
+            <span>Augen hoch/runter</span>
+            <input id="eyeTop" type="range" min="20" max="58" step="0.1" value="49.6" />
+            <output for="eyeTop">49.6%</output>
+          </label>
+          <label class="range-field">
+            <span>Augen Groesse</span>
+            <input id="eyeWidth" type="range" min="3" max="42" step="0.2" value="11.6" />
+            <output for="eyeWidth">11.6%</output>
+          </label>
+          <label class="range-field">
+            <span>Augen Abstand</span>
+            <input id="eyeGap" type="range" min="0" max="32" step="0.1" value="13.5" />
+            <output for="eyeGap">13.5%</output>
+          </label>
+          <label class="range-field">
+            <span>Blink Tempo</span>
+            <input id="blinkSpeed" type="range" min="0.65" max="1.8" step="0.05" value="1" />
+            <output for="blinkSpeed">1.00x</output>
+          </label>
+        </div>
+
+        <div class="notes-panel">
+          <textarea id="notes" rows="5" spellcheck="false" placeholder="Notizen fuer Avatar-Aenderungen"></textarea>
+          <button class="secondary-action" id="copyButton" type="button">Tuning kopieren</button>
+        </div>
+      </aside>
+    </main>
+
+    <script src="avatar-lab.js?v=head-body-rig-27"></script>
+  </body>
+</html>

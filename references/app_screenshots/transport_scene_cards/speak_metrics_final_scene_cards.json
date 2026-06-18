@@ -1,0 +1,42 @@
+[
+  {
+    "suffix": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "metrics": {
+      "src": "assets/images/transport_scene/car.png",
+      "img": {
+        "width": 328,
+        "height": 328
+      },
+      "card": {
+        "width": 600,
+        "height": 350
+      },
+      "fits": true,
+      "objectFit": "contain"
+    }
+  },
+  {
+    "suffix": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "metrics": {
+      "src": "assets/images/transport_scene/truck.png",
+      "img": {
+        "width": 338,
+        "height": 338
+      },
+      "card": {
+        "width": 362,
+        "height": 360
+      },
+      "fits": true,
+      "objectFit": "contain"
+    }
+  }
+]

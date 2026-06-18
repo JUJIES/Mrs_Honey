@@ -1,0 +1,593 @@
+{
+  "failures": [],
+  "results": [
+    {
+      "set": "colours",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/colours_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "red",
+            "src": "assets/images/colours_scene/red.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "green",
+            "src": "assets/images/colours_scene/green.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "pink",
+            "src": "assets/images/colours_scene/pink.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "brown",
+            "src": "assets/images/colours_scene/brown.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/colours_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "pink",
+            "src": "assets/images/colours_scene/pink.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "white",
+            "src": "assets/images/colours_scene/white.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "yellow",
+            "src": "assets/images/colours_scene/yellow.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "green",
+            "src": "assets/images/colours_scene/green.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/colours_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "green",
+            "src": "assets/images/colours_scene/green.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/food_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "cake",
+            "src": "assets/images/food_scene/cake.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "carrot",
+            "src": "assets/images/food_scene/carrot.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "bread",
+            "src": "assets/images/food_scene/bread.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "banana",
+            "src": "assets/images/food_scene/banana.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/food_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "cake",
+            "src": "assets/images/food_scene/cake.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "cheese",
+            "src": "assets/images/food_scene/cheese.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "banana",
+            "src": "assets/images/food_scene/banana.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "soup",
+            "src": "assets/images/food_scene/soup.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/food_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "apple",
+            "src": "assets/images/food_scene/apple.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/school_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "notebook",
+            "src": "assets/images/school_scene/notebook.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "scissors",
+            "src": "assets/images/school_scene/scissors.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "glue",
+            "src": "assets/images/school_scene/glue.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "eraser",
+            "src": "assets/images/school_scene/eraser.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/school_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "scissors",
+            "src": "assets/images/school_scene/scissors.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "desk",
+            "src": "assets/images/school_scene/desk.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "notebook",
+            "src": "assets/images/school_scene/notebook.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "glue",
+            "src": "assets/images/school_scene/glue.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/school_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "eraser",
+            "src": "assets/images/school_scene/eraser.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/transport_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "motorcycle",
+            "src": "assets/images/transport_scene/motorcycle.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "truck",
+            "src": "assets/images/transport_scene/truck.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "ferry",
+            "src": "assets/images/transport_scene/ferry.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "airplane",
+            "src": "assets/images/transport_scene/airplane.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/transport_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "truck",
+            "src": "assets/images/transport_scene/truck.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "helicopter",
+            "src": "assets/images/transport_scene/helicopter.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "boat",
+            "src": "assets/images/transport_scene/boat.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          },
+          {
+            "label": "bus",
+            "src": "assets/images/transport_scene/bus.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "transport",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/scene_cards_rounded_2026-06-13/final_after_image_crop/transport_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "airplane",
+            "src": "assets/images/transport_scene/airplane.png",
+            "natural": [
+              768,
+              768
+            ],
+            "cardRadius": "12px",
+            "imgRadius": "12px",
+            "borderWidth": "0px",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    }
+  ]
+}

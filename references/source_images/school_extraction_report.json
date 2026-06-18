@@ -1,0 +1,650 @@
+{
+  "source": "lernwort_mvp_codex_package/references/source_images/school_source_sheet.png",
+  "imageSize": [
+    1352,
+    801
+  ],
+  "expectedItems": 10,
+  "detectedComponents": 10,
+  "canvas": 512,
+  "padding": 44,
+  "grid": "2x5",
+  "gridCheck": {
+    "enabled": true,
+    "warnings": [
+      "Component 7 is close to grid cell 2,2 edge: 4.6px.",
+      "Component 8 is close to grid cell 2,3 edge: -4.8px.",
+      "Component 9 is close to grid cell 2,4 edge: -1.2px."
+    ],
+    "failures": [],
+    "cells": [
+      {
+        "componentIndex": 0,
+        "row": 0,
+        "col": 0,
+        "bbox": [
+          30,
+          85,
+          216,
+          350
+        ],
+        "centroid": [
+          120.7,
+          211.52
+        ],
+        "margins": [
+          30.0,
+          85.0,
+          54.4,
+          50.5
+        ]
+      },
+      {
+        "componentIndex": 1,
+        "row": 0,
+        "col": 1,
+        "bbox": [
+          287,
+          106,
+          530,
+          343
+        ],
+        "centroid": [
+          408.04,
+          223.45
+        ],
+        "margins": [
+          16.6,
+          106.0,
+          10.8,
+          57.5
+        ]
+      },
+      {
+        "componentIndex": 2,
+        "row": 0,
+        "col": 2,
+        "bbox": [
+          589,
+          94,
+          765,
+          350
+        ],
+        "centroid": [
+          677.06,
+          222.84
+        ],
+        "margins": [
+          48.2,
+          94.0,
+          46.2,
+          50.5
+        ]
+      },
+      {
+        "componentIndex": 3,
+        "row": 0,
+        "col": 3,
+        "bbox": [
+          843,
+          125,
+          1046,
+          331
+        ],
+        "centroid": [
+          944.83,
+          227.37
+        ],
+        "margins": [
+          31.8,
+          125.0,
+          35.6,
+          69.5
+        ]
+      },
+      {
+        "componentIndex": 4,
+        "row": 0,
+        "col": 4,
+        "bbox": [
+          1090,
+          82,
+          1309,
+          360
+        ],
+        "centroid": [
+          1199.6,
+          248.16
+        ],
+        "margins": [
+          8.4,
+          82.0,
+          43.0,
+          40.5
+        ]
+      },
+      {
+        "componentIndex": 5,
+        "row": 1,
+        "col": 0,
+        "bbox": [
+          31,
+          451,
+          168,
+          722
+        ],
+        "centroid": [
+          100.49,
+          611.55
+        ],
+        "margins": [
+          31.0,
+          50.5,
+          102.4,
+          79.0
+        ]
+      },
+      {
+        "componentIndex": 6,
+        "row": 1,
+        "col": 1,
+        "bbox": [
+          275,
+          472,
+          481,
+          718
+        ],
+        "centroid": [
+          379.95,
+          594.92
+        ],
+        "margins": [
+          4.6,
+          71.5,
+          59.8,
+          83.0
+        ]
+      },
+      {
+        "componentIndex": 7,
+        "row": 1,
+        "col": 2,
+        "bbox": [
+          536,
+          462,
+          772,
+          729
+        ],
+        "centroid": [
+          653.13,
+          607.14
+        ],
+        "margins": [
+          -4.8,
+          61.5,
+          39.2,
+          72.0
+        ]
+      },
+      {
+        "componentIndex": 8,
+        "row": 1,
+        "col": 3,
+        "bbox": [
+          810,
+          502,
+          1058,
+          740
+        ],
+        "centroid": [
+          935.54,
+          582.17
+        ],
+        "margins": [
+          -1.2,
+          101.5,
+          23.6,
+          61.0
+        ]
+      },
+      {
+        "componentIndex": 9,
+        "row": 1,
+        "col": 4,
+        "bbox": [
+          1100,
+          473,
+          1289,
+          748
+        ],
+        "centroid": [
+          1206.4,
+          587.76
+        ],
+        "margins": [
+          18.4,
+          72.5,
+          63.0,
+          53.0
+        ]
+      }
+    ]
+  },
+  "postProcessing": {
+    "trimOutput": true,
+    "edgeFeather": 0.35,
+    "edgeContract": 0,
+    "despill": true,
+    "keyColor": null
+  },
+  "transparentHoleItems": [
+    "backpack",
+    "ruler",
+    "scissors"
+  ],
+  "items": [
+    {
+      "outputSize": [
+        304,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        302,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "pencil",
+      "path": "lernwort_mvp_codex_package/assets/images/school/pencil.png",
+      "sourceBbox": [
+        30,
+        85,
+        216,
+        350
+      ],
+      "sourceArea": 20613,
+      "sourceCentroid": [
+        120.7,
+        211.52
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        420
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        418
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "book",
+      "path": "lernwort_mvp_codex_package/assets/images/school/book.png",
+      "sourceBbox": [
+        287,
+        106,
+        530,
+        343
+      ],
+      "sourceArea": 38508,
+      "sourceCentroid": [
+        408.04,
+        223.45
+      ]
+    },
+    {
+      "outputSize": [
+        298,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        296,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "ruler",
+      "path": "lernwort_mvp_codex_package/assets/images/school/ruler.png",
+      "sourceBbox": [
+        589,
+        94,
+        765,
+        350
+      ],
+      "sourceArea": 17232,
+      "sourceCentroid": [
+        677.06,
+        222.84
+      ]
+    },
+    {
+      "outputSize": [
+        424,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        422,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "eraser",
+      "path": "lernwort_mvp_codex_package/assets/images/school/eraser.png",
+      "sourceBbox": [
+        843,
+        125,
+        1046,
+        331
+      ],
+      "sourceArea": 24331,
+      "sourceCentroid": [
+        944.83,
+        227.37
+      ]
+    },
+    {
+      "outputSize": [
+        340,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        338,
+        428
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 3037,
+            "bbox": [
+              36,
+              273,
+              99,
+              347
+            ]
+          },
+          {
+            "area": 2980,
+            "bbox": [
+              173,
+              317,
+              225,
+              395
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 3037,
+            "bbox": [
+              36,
+              273,
+              99,
+              347
+            ]
+          },
+          {
+            "area": 2980,
+            "bbox": [
+              173,
+              317,
+              225,
+              395
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "scissors",
+      "path": "lernwort_mvp_codex_package/assets/images/school/scissors.png",
+      "sourceBbox": [
+        1090,
+        82,
+        1309,
+        360
+      ],
+      "sourceArea": 21363,
+      "sourceCentroid": [
+        1199.6,
+        248.16
+      ]
+    },
+    {
+      "outputSize": [
+        220,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        218,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "glue",
+      "path": "lernwort_mvp_codex_package/assets/images/school/glue.png",
+      "sourceBbox": [
+        31,
+        451,
+        168,
+        722
+      ],
+      "sourceArea": 25835,
+      "sourceCentroid": [
+        100.49,
+        611.55
+      ]
+    },
+    {
+      "outputSize": [
+        361,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        359,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "notebook",
+      "path": "lernwort_mvp_codex_package/assets/images/school/notebook.png",
+      "sourceBbox": [
+        275,
+        472,
+        481,
+        718
+      ],
+      "sourceArea": 38631,
+      "sourceCentroid": [
+        379.95,
+        594.92
+      ]
+    },
+    {
+      "outputSize": [
+        381,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        379,
+        428
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1884,
+            "bbox": [
+              305,
+              157,
+              341,
+              326
+            ]
+          },
+          {
+            "area": 645,
+            "bbox": [
+              172,
+              25,
+              212,
+              52
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1884,
+            "bbox": [
+              305,
+              157,
+              341,
+              326
+            ]
+          },
+          {
+            "area": 645,
+            "bbox": [
+              172,
+              25,
+              212,
+              52
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "backpack",
+      "path": "lernwort_mvp_codex_package/assets/images/school/backpack.png",
+      "sourceBbox": [
+        536,
+        462,
+        772,
+        729
+      ],
+      "sourceArea": 47131,
+      "sourceCentroid": [
+        653.13,
+        607.14
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        413
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        411
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "desk",
+      "path": "lernwort_mvp_codex_package/assets/images/school/desk.png",
+      "sourceBbox": [
+        810,
+        502,
+        1058,
+        740
+      ],
+      "sourceArea": 29390,
+      "sourceCentroid": [
+        935.54,
+        582.17
+      ]
+    },
+    {
+      "outputSize": [
+        297,
+        430
+      ],
+      "contentBbox": [
+        2,
+        2,
+        295,
+        428
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "chair",
+      "path": "lernwort_mvp_codex_package/assets/images/school/chair.png",
+      "sourceBbox": [
+        1100,
+        473,
+        1289,
+        748
+      ],
+      "sourceArea": 25860,
+      "sourceCentroid": [
+        1206.4,
+        587.76
+      ]
+    }
+  ],
+  "warnings": [
+    "Component 7 is close to grid cell 2,2 edge: 4.6px.",
+    "Component 8 is close to grid cell 2,3 edge: -4.8px.",
+    "Component 9 is close to grid cell 2,4 edge: -1.2px."
+  ],
+  "failures": [],
+  "qualityStatus": "warn"
+}

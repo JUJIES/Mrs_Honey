@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_cake.mp3",
+    "duration": 1.57
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.15,
+      "value": "F"
+    },
+    {
+      "start": 0.15,
+      "end": 0.26,
+      "value": "C"
+    },
+    {
+      "start": 0.26,
+      "end": 0.33,
+      "value": "B"
+    },
+    {
+      "start": 0.33,
+      "end": 0.61,
+      "value": "C"
+    },
+    {
+      "start": 0.61,
+      "end": 0.82,
+      "value": "B"
+    },
+    {
+      "start": 0.82,
+      "end": 1.17,
+      "value": "C"
+    },
+    {
+      "start": 1.17,
+      "end": 1.31,
+      "value": "B"
+    },
+    {
+      "start": 1.31,
+      "end": 1.57,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "checkedAt": "2026-06-13T20:29:31.604Z",
+  "source": "/Users/Julius/coding_projects/tools/11labs wizard/dist/tools-read-feedback-bundle.zip",
+  "output": "/Users/Julius/coding_projects/tools/11labs wizard/dist/tools-read-feedback-bundle.qa.zip",
+  "thresholds": {
+    "minHeadMs": 70,
+    "minTailMs": 110,
+    "activeDb": -48,
+    "maxPeakDb": -0.3,
+    "maxRmsSpreadDb": 4,
+    "maxRmsDeltaDb": 3,
+    "padExtraMs": 35,
+    "paddingToleranceMs": 5,
+    "fadeMs": 8
+  },
+  "summary": {
+    "files": 15,
+    "filesWithIssues": 0,
+    "issueCount": 0,
+    "rmsSpreadDb": 3.8,
+    "paddingFixed": true,
+    "normalized": true,
+    "faded": true
+  },
+  "files": [
+    {
+      "path": "read_feedback_chisel.mp3",
+      "durationMs": 2032.2,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 232.7,
+      "peakDb": -2.8,
+      "rmsDb": -20.7,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_clamp.mp3",
+      "durationMs": 1904,
+      "leadingSilenceMs": 92.9,
+      "trailingSilenceMs": 418,
+      "peakDb": -2.4,
+      "rmsDb": -18.7,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_drill.mp3",
+      "durationMs": 2125.1,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 302.4,
+      "peakDb": -2.8,
+      "rmsDb": -18.3,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_file.mp3",
+      "durationMs": 2264.4,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 418.5,
+      "peakDb": -5.5,
+      "rmsDb": -18.1,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_hammer.mp3",
+      "durationMs": 2171.6,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 395.2,
+      "peakDb": -2.9,
+      "rmsDb": -18.2,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_level.mp3",
+      "durationMs": 2310.9,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 325.6,
+      "peakDb": -3.1,
+      "rmsDb": -17.3,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_paintbrush.mp3",
+      "durationMs": 2084.4,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 145.5,
+      "peakDb": -5.3,
+      "rmsDb": -18.7,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_pliers.mp3",
+      "durationMs": 2182.7,
+      "leadingSilenceMs": 92.9,
+      "trailingSilenceMs": 406.3,
+      "peakDb": -2.4,
+      "rmsDb": -18.5,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_rake.mp3",
+      "durationMs": 1950.5,
+      "leadingSilenceMs": 92.9,
+      "trailingSilenceMs": 406.3,
+      "peakDb": -2.4,
+      "rmsDb": -19,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_saw.mp3",
+      "durationMs": 1863.8,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 145.5,
+      "peakDb": -2.9,
+      "rmsDb": -20.2,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_screwdriver.mp3",
+      "durationMs": 2136.2,
+      "leadingSilenceMs": 92.9,
+      "trailingSilenceMs": 383.1,
+      "peakDb": -2.4,
+      "rmsDb": -19.6,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_shovel.mp3",
+      "durationMs": 2357.3,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 314,
+      "peakDb": -3.5,
+      "rmsDb": -17.3,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_tape_measure.mp3",
+      "durationMs": 2136.2,
+      "leadingSilenceMs": 81.3,
+      "trailingSilenceMs": 394.7,
+      "peakDb": -2.4,
+      "rmsDb": -17.7,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_trowel.mp3",
+      "durationMs": 2067.1,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 232.7,
+      "peakDb": -2.9,
+      "rmsDb": -21,
+      "flags": []
+    },
+    {
+      "path": "read_feedback_wrench.mp3",
+      "durationMs": 2078.7,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 360.4,
+      "peakDb": -3.3,
+      "rmsDb": -17.2,
+      "flags": []
+    }
+  ]
+}

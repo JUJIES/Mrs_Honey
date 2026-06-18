@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "id": "body_parts",
+  "title": {
+    "en": "Body"
+  },
+  "category": "body",
+  "display": "scene-card",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "head",
+      "image": "assets/images/body_parts_scene/head.png",
+      "labels": {
+        "en": "head"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/head.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the head?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_head.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's the head."
+      }
+    },
+    {
+      "id": "hair",
+      "image": "assets/images/body_parts_scene/hair.png",
+      "labels": {
+        "en": "hair"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/hair.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the hair?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_hair.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! That's the hair."
+      }
+    },
+    {
+      "id": "eye",
+      "image": "assets/images/body_parts_scene/eye.png",
+      "labels": {
+        "en": "eye"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/eye.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the eye?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_eye.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! That's the eye."
+      }
+    },
+    {
+      "id": "ear",
+      "image": "assets/images/body_parts_scene/ear.png",
+      "labels": {
+        "en": "ear"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/ear.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the ear?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_ear.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's the ear."
+      }
+    },
+    {
+      "id": "nose",
+      "image": "assets/images/body_parts_scene/nose.png",
+      "labels": {
+        "en": "nose"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/nose.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the nose?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_nose.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's the nose."
+      }
+    },
+    {
+      "id": "mouth",
+      "image": "assets/images/body_parts_scene/mouth.png",
+      "labels": {
+        "en": "mouth"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/mouth.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the mouth?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_mouth.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's the mouth."
+      }
+    },
+    {
+      "id": "tooth",
+      "image": "assets/images/body_parts_scene/tooth.png",
+      "labels": {
+        "en": "tooth"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/tooth.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the tooth?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_tooth.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! That's the tooth."
+      }
+    },
+    {
+      "id": "hand",
+      "image": "assets/images/body_parts_scene/hand.png",
+      "labels": {
+        "en": "hand"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/hand.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the hand?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_hand.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! That's the hand."
+      }
+    },
+    {
+      "id": "finger",
+      "image": "assets/images/body_parts_scene/finger.png",
+      "labels": {
+        "en": "finger"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/finger.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the finger?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_finger.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's the finger."
+      }
+    },
+    {
+      "id": "arm",
+      "image": "assets/images/body_parts_scene/arm.png",
+      "labels": {
+        "en": "arm"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/arm.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the arm?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_arm.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! You found the arm."
+      }
+    },
+    {
+      "id": "leg",
+      "image": "assets/images/body_parts_scene/leg.png",
+      "labels": {
+        "en": "leg"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/leg.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the leg?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_leg.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's the leg."
+      }
+    },
+    {
+      "id": "foot",
+      "image": "assets/images/body_parts_scene/foot.png",
+      "labels": {
+        "en": "foot"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/foot.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the foot?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_foot.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! That's the foot."
+      }
+    },
+    {
+      "id": "toe",
+      "image": "assets/images/body_parts_scene/toe.png",
+      "labels": {
+        "en": "toe"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/toe.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the toe?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_toe.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! That's the toe."
+      }
+    },
+    {
+      "id": "knee",
+      "image": "assets/images/body_parts_scene/knee.png",
+      "labels": {
+        "en": "knee"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/knee.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the knee?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_knee.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's the knee."
+      }
+    },
+    {
+      "id": "shoulder",
+      "image": "assets/images/body_parts_scene/shoulder.png",
+      "labels": {
+        "en": "shoulder"
+      },
+      "audio": {
+        "en": "assets/audio/body_parts/en/shoulder.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "body"
+      ],
+      "speak": {
+        "en": "Can you find the shoulder?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/body_parts/en/read_feedback_shoulder.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's the shoulder."
+      }
+    }
+  ]
+}

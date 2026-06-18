@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/pink.mp3",
+    "duration": 1.48
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.16,
+      "value": "B"
+    },
+    {
+      "start": 0.16,
+      "end": 0.37,
+      "value": "F"
+    },
+    {
+      "start": 0.37,
+      "end": 0.51,
+      "value": "B"
+    },
+    {
+      "start": 0.51,
+      "end": 0.59,
+      "value": "A"
+    },
+    {
+      "start": 0.59,
+      "end": 1.11,
+      "value": "B"
+    },
+    {
+      "start": 1.11,
+      "end": 1.48,
+      "value": "X"
+    }
+  ]
+}

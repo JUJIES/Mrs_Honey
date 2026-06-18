@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_soup.mp3",
+    "duration": 1.7
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.63,
+      "value": "B"
+    },
+    {
+      "start": 0.63,
+      "end": 0.66,
+      "value": "X"
+    },
+    {
+      "start": 0.66,
+      "end": 0.79,
+      "value": "F"
+    },
+    {
+      "start": 0.79,
+      "end": 0.87,
+      "value": "A"
+    },
+    {
+      "start": 0.87,
+      "end": 0.93,
+      "value": "C"
+    },
+    {
+      "start": 0.93,
+      "end": 0.99,
+      "value": "E"
+    },
+    {
+      "start": 0.99,
+      "end": 1.27,
+      "value": "F"
+    },
+    {
+      "start": 1.27,
+      "end": 1.47,
+      "value": "A"
+    },
+    {
+      "start": 1.47,
+      "end": 1.7,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_cheese.mp3",
+    "duration": 1.56
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.23,
+      "value": "E"
+    },
+    {
+      "start": 0.23,
+      "end": 0.37,
+      "value": "C"
+    },
+    {
+      "start": 0.37,
+      "end": 1.28,
+      "value": "B"
+    },
+    {
+      "start": 1.28,
+      "end": 1.56,
+      "value": "X"
+    }
+  ]
+}

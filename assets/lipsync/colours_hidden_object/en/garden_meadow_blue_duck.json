@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/garden_meadow_blue_duck.mp3",
+    "duration": 2.18
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.17,
+      "value": "C"
+    },
+    {
+      "start": 0.17,
+      "end": 0.38,
+      "value": "F"
+    },
+    {
+      "start": 0.38,
+      "end": 0.59,
+      "value": "B"
+    },
+    {
+      "start": 0.59,
+      "end": 0.8,
+      "value": "D"
+    },
+    {
+      "start": 0.8,
+      "end": 0.87,
+      "value": "C"
+    },
+    {
+      "start": 0.87,
+      "end": 0.94,
+      "value": "B"
+    },
+    {
+      "start": 0.94,
+      "end": 1.02,
+      "value": "A"
+    },
+    {
+      "start": 1.02,
+      "end": 1.32,
+      "value": "F"
+    },
+    {
+      "start": 1.32,
+      "end": 1.81,
+      "value": "B"
+    },
+    {
+      "start": 1.81,
+      "end": 2.18,
+      "value": "X"
+    }
+  ]
+}

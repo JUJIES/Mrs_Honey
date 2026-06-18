@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/park_road_blue_duck.mp3",
+    "duration": 2.18
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.18,
+      "value": "C"
+    },
+    {
+      "start": 0.18,
+      "end": 0.32,
+      "value": "F"
+    },
+    {
+      "start": 0.32,
+      "end": 0.6,
+      "value": "B"
+    },
+    {
+      "start": 0.6,
+      "end": 0.81,
+      "value": "D"
+    },
+    {
+      "start": 0.81,
+      "end": 0.88,
+      "value": "C"
+    },
+    {
+      "start": 0.88,
+      "end": 0.95,
+      "value": "B"
+    },
+    {
+      "start": 0.95,
+      "end": 1.03,
+      "value": "A"
+    },
+    {
+      "start": 1.03,
+      "end": 1.31,
+      "value": "F"
+    },
+    {
+      "start": 1.31,
+      "end": 1.36,
+      "value": "E"
+    },
+    {
+      "start": 1.36,
+      "end": 1.54,
+      "value": "C"
+    },
+    {
+      "start": 1.54,
+      "end": 1.82,
+      "value": "B"
+    },
+    {
+      "start": 1.82,
+      "end": 2.18,
+      "value": "X"
+    }
+  ]
+}

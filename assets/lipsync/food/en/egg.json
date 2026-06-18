@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/egg.mp3",
+    "duration": 1.42
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.17,
+      "value": "F"
+    },
+    {
+      "start": 0.17,
+      "end": 0.3,
+      "value": "C"
+    },
+    {
+      "start": 0.3,
+      "end": 0.58,
+      "value": "B"
+    },
+    {
+      "start": 0.58,
+      "end": 0.93,
+      "value": "C"
+    },
+    {
+      "start": 0.93,
+      "end": 1.21,
+      "value": "B"
+    },
+    {
+      "start": 1.21,
+      "end": 1.42,
+      "value": "X"
+    }
+  ]
+}

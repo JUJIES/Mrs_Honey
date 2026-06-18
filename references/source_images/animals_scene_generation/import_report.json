@@ -1,0 +1,401 @@
+{
+  "sets": [
+    {
+      "setId": "animals_01",
+      "setPath": "data/sets/animals_01.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/animals_scene",
+      "selectedItems": [
+        "cat",
+        "dog",
+        "fish",
+        "bird",
+        "rabbit",
+        "mouse",
+        "horse",
+        "cow",
+        "pig",
+        "duck"
+      ],
+      "importedFromSheet": "references/source_images/animals_scene_generation/animals_scene_contact_source.png",
+      "items": [
+        {
+          "id": "cat",
+          "imported": true,
+          "path": "assets/images/animals_scene/cat.png",
+          "sourceCell": {
+            "row": 1,
+            "col": 1
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            32,
+            96,
+            324,
+            388
+          ]
+        },
+        {
+          "id": "dog",
+          "imported": true,
+          "path": "assets/images/animals_scene/dog.png",
+          "sourceCell": {
+            "row": 1,
+            "col": 2
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            386,
+            84,
+            702,
+            400
+          ]
+        },
+        {
+          "id": "fish",
+          "imported": true,
+          "path": "assets/images/animals_scene/fish.png",
+          "sourceCell": {
+            "row": 1,
+            "col": 3
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            724,
+            80,
+            1049,
+            404
+          ]
+        },
+        {
+          "id": "bird",
+          "imported": true,
+          "path": "assets/images/animals_scene/bird.png",
+          "sourceCell": {
+            "row": 1,
+            "col": 4
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            1070,
+            82,
+            1388,
+            400
+          ]
+        },
+        {
+          "id": "rabbit",
+          "imported": true,
+          "path": "assets/images/animals_scene/rabbit.png",
+          "sourceCell": {
+            "row": 1,
+            "col": 5
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            1450,
+            96,
+            1741,
+            388
+          ]
+        },
+        {
+          "id": "mouse",
+          "imported": true,
+          "path": "assets/images/animals_scene/mouse.png",
+          "sourceCell": {
+            "row": 2,
+            "col": 1
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            32,
+            500,
+            324,
+            792
+          ]
+        },
+        {
+          "id": "horse",
+          "imported": true,
+          "path": "assets/images/animals_scene/horse.png",
+          "sourceCell": {
+            "row": 2,
+            "col": 2
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            386,
+            488,
+            702,
+            804
+          ]
+        },
+        {
+          "id": "cow",
+          "imported": true,
+          "path": "assets/images/animals_scene/cow.png",
+          "sourceCell": {
+            "row": 2,
+            "col": 3
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            724,
+            483,
+            1049,
+            808
+          ]
+        },
+        {
+          "id": "pig",
+          "imported": true,
+          "path": "assets/images/animals_scene/pig.png",
+          "sourceCell": {
+            "row": 2,
+            "col": 4
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            1070,
+            486,
+            1388,
+            804
+          ]
+        },
+        {
+          "id": "duck",
+          "imported": true,
+          "path": "assets/images/animals_scene/duck.png",
+          "sourceCell": {
+            "row": 2,
+            "col": 5
+          },
+          "cropMode": "auto",
+          "sourceCrop": [
+            1450,
+            500,
+            1741,
+            791
+          ]
+        },
+        {
+          "id": "cat",
+          "path": "assets/images/animals_scene/cat.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.992,
+            "right": 0.93,
+            "top": 0.338,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.007,
+            0.064
+          ]
+        },
+        {
+          "id": "dog",
+          "path": "assets/images/animals_scene/dog.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.787,
+            "right": 0.902,
+            "top": 0.708,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.071
+          ]
+        },
+        {
+          "id": "fish",
+          "path": "assets/images/animals_scene/fish.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 0.999,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            -0.011
+          ]
+        },
+        {
+          "id": "bird",
+          "path": "assets/images/animals_scene/bird.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.819,
+            "right": 0.742,
+            "top": 0.933,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.007,
+            0.09
+          ]
+        },
+        {
+          "id": "rabbit",
+          "path": "assets/images/animals_scene/rabbit.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.639,
+            "right": 0.782,
+            "top": 0.685,
+            "bottom": 0.791
+          },
+          "visualCenterOffset": [
+            0.039,
+            0.098
+          ]
+        },
+        {
+          "id": "mouse",
+          "path": "assets/images/animals_scene/mouse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.668,
+            "right": 0.972,
+            "top": 0.294,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.004,
+            0.063
+          ]
+        },
+        {
+          "id": "horse",
+          "path": "assets/images/animals_scene/horse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.806,
+            "right": 0.725,
+            "top": 0.926,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            0.085
+          ]
+        },
+        {
+          "id": "cow",
+          "path": "assets/images/animals_scene/cow.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.705,
+            "right": 0.808,
+            "top": 0.855,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.015,
+            0.113
+          ]
+        },
+        {
+          "id": "pig",
+          "path": "assets/images/animals_scene/pig.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.786,
+            "right": 0.797,
+            "top": 0.534,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.012,
+            0.131
+          ]
+        },
+        {
+          "id": "duck",
+          "path": "assets/images/animals_scene/duck.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.981,
+            "right": 1.0,
+            "top": 0.508,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.004,
+            0.021
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [
+        "assets/images/animals_scene/cat.png",
+        "assets/images/animals_scene/dog.png",
+        "assets/images/animals_scene/fish.png",
+        "assets/images/animals_scene/bird.png",
+        "assets/images/animals_scene/rabbit.png",
+        "assets/images/animals_scene/mouse.png",
+        "assets/images/animals_scene/horse.png",
+        "assets/images/animals_scene/cow.png",
+        "assets/images/animals_scene/pig.png",
+        "assets/images/animals_scene/duck.png",
+        "data/sets/animals_01.bundle.js"
+      ],
+      "contactSheet": "references/source_images/animals_scene_generation/animals_scene_pipeline_contact_sheet.png",
+      "qualityStatus": "pass"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "pass",
+    "warnings": 0,
+    "failures": 0,
+    "written": [
+      "assets/images/animals_scene/cat.png",
+      "assets/images/animals_scene/dog.png",
+      "assets/images/animals_scene/fish.png",
+      "assets/images/animals_scene/bird.png",
+      "assets/images/animals_scene/rabbit.png",
+      "assets/images/animals_scene/mouse.png",
+      "assets/images/animals_scene/horse.png",
+      "assets/images/animals_scene/cow.png",
+      "assets/images/animals_scene/pig.png",
+      "assets/images/animals_scene/duck.png",
+      "data/sets/animals_01.bundle.js"
+    ]
+  }
+}

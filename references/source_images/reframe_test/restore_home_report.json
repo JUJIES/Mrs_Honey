@@ -1,0 +1,213 @@
+{
+  "sets": [
+    {
+      "setId": "home",
+      "setPath": "data/sets/home.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/home_scene",
+      "selectedItems": [
+        "table",
+        "house"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "house",
+          "path": "assets/images/home_scene/house.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.989,
+            "right": 0.926,
+            "top": 0.864,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.013,
+            0.043
+          ]
+        },
+        {
+          "id": "door",
+          "path": "assets/images/home_scene/door.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.94,
+            "right": 0.99,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.038
+          ]
+        },
+        {
+          "id": "window",
+          "path": "assets/images/home_scene/window.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.14,
+            "right": 0.091,
+            "top": 0.029,
+            "bottom": 0.879
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.005
+          ]
+        },
+        {
+          "id": "stairs",
+          "path": "assets/images/home_scene/stairs.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.939,
+            "right": 0.992,
+            "top": 0.993,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.028
+          ]
+        },
+        {
+          "id": "kitchen",
+          "path": "assets/images/home_scene/kitchen.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.754,
+            "right": 0.995,
+            "top": 0.46,
+            "bottom": 0.979
+          },
+          "visualCenterOffset": [
+            -0.03,
+            0.072
+          ]
+        },
+        {
+          "id": "bedroom",
+          "path": "assets/images/home_scene/bedroom.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.213,
+            "right": 0.671,
+            "top": 0.127,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.03,
+            0.098
+          ]
+        },
+        {
+          "id": "bathroom",
+          "path": "assets/images/home_scene/bathroom.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.539,
+            "right": 0.01,
+            "top": 0.467,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.075,
+            0.055
+          ]
+        },
+        {
+          "id": "toilet",
+          "path": "assets/images/home_scene/toilet.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.003,
+            "right": 0.004,
+            "top": 0.0,
+            "bottom": 0.479
+          },
+          "visualCenterOffset": [
+            0.012,
+            0.162
+          ]
+        },
+        {
+          "id": "sink",
+          "path": "assets/images/home_scene/sink.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.053,
+            "right": 0.054,
+            "top": 0.048,
+            "bottom": 0.732
+          },
+          "visualCenterOffset": [
+            0.056,
+            0.074
+          ]
+        },
+        {
+          "id": "table",
+          "path": "assets/images/home_scene/table.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.998,
+            "right": 0.919,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.01,
+            0.064
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [
+        "data/sets/home.bundle.js"
+      ],
+      "contactSheet": "references/source_images/reframe_test/restore_home_contact.png",
+      "qualityStatus": "pass"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "pass",
+    "warnings": 0,
+    "failures": 0,
+    "written": [
+      "data/sets/home.bundle.js"
+    ]
+  }
+}

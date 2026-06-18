@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-06-13T21:54:24.168Z",
+  "source": "/Users/Julius/coding_projects/tools/11labs wizard/dist/emotions-bundle.zip",
+  "output": "/Users/Julius/coding_projects/tools/11labs wizard/dist/emotions-bundle.qa.zip",
+  "thresholds": {
+    "minHeadMs": 70,
+    "minTailMs": 110,
+    "activeDb": -48,
+    "maxPeakDb": -0.3,
+    "maxRmsSpreadDb": 4,
+    "maxRmsDeltaDb": 3,
+    "padExtraMs": 35,
+    "paddingToleranceMs": 5,
+    "fadeMs": 8
+  },
+  "summary": {
+    "files": 10,
+    "filesWithIssues": 0,
+    "issueCount": 0,
+    "rmsSpreadDb": 2.6,
+    "paddingFixed": true,
+    "normalized": true,
+    "faded": true
+  },
+  "files": [
+    {
+      "path": "angry.mp3",
+      "durationMs": 2229.1,
+      "leadingSilenceMs": 81.3,
+      "trailingSilenceMs": 406.3,
+      "peakDb": -2.9,
+      "rmsDb": -18.2,
+      "flags": []
+    },
+    {
+      "path": "bored.mp3",
+      "durationMs": 2089.8,
+      "leadingSilenceMs": 116.1,
+      "trailingSilenceMs": 359.9,
+      "peakDb": -2.3,
+      "rmsDb": -19.2,
+      "flags": []
+    },
+    {
+      "path": "excited.mp3",
+      "durationMs": 2414.9,
+      "leadingSilenceMs": 81.3,
+      "trailingSilenceMs": 418,
+      "peakDb": -3.4,
+      "rmsDb": -16.9,
+      "flags": []
+    },
+    {
+      "path": "happy.mp3",
+      "durationMs": 2229.1,
+      "leadingSilenceMs": 116.1,
+      "trailingSilenceMs": 406.3,
+      "peakDb": -3.8,
+      "rmsDb": -16.8,
+      "flags": []
+    },
+    {
+      "path": "proud.mp3",
+      "durationMs": 2136.2,
+      "leadingSilenceMs": 81.3,
+      "trailingSilenceMs": 394.7,
+      "peakDb": -2.3,
+      "rmsDb": -18.4,
+      "flags": []
+    },
+    {
+      "path": "sad.mp3",
+      "durationMs": 1996.9,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 336.7,
+      "peakDb": -2.6,
+      "rmsDb": -18.2,
+      "flags": []
+    },
+    {
+      "path": "scared.mp3",
+      "durationMs": 2322,
+      "leadingSilenceMs": 81.3,
+      "trailingSilenceMs": 359.9,
+      "peakDb": -3.5,
+      "rmsDb": -16.6,
+      "flags": []
+    },
+    {
+      "path": "surprised.mp3",
+      "durationMs": 2368.4,
+      "leadingSilenceMs": 116.1,
+      "trailingSilenceMs": 394.7,
+      "peakDb": -3.2,
+      "rmsDb": -18.2,
+      "flags": []
+    },
+    {
+      "path": "tired.mp3",
+      "durationMs": 2322,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 418,
+      "peakDb": -2.9,
+      "rmsDb": -17.8,
+      "flags": []
+    },
+    {
+      "path": "worried.mp3",
+      "durationMs": 2275.6,
+      "leadingSilenceMs": 104.5,
+      "trailingSilenceMs": 406.3,
+      "peakDb": -4.4,
+      "rmsDb": -17,
+      "flags": []
+    }
+  ]
+}

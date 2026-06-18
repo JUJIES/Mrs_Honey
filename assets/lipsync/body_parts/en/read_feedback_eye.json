@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/body_parts/en/read_feedback_eye.mp3",
+    "duration": 2.04
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.35,
+      "value": "C"
+    },
+    {
+      "start": 0.35,
+      "end": 0.77,
+      "value": "B"
+    },
+    {
+      "start": 0.77,
+      "end": 0.84,
+      "value": "C"
+    },
+    {
+      "start": 0.84,
+      "end": 1.26,
+      "value": "B"
+    },
+    {
+      "start": 1.26,
+      "end": 1.61,
+      "value": "D"
+    },
+    {
+      "start": 1.61,
+      "end": 1.68,
+      "value": "B"
+    },
+    {
+      "start": 1.68,
+      "end": 2.04,
+      "value": "X"
+    }
+  ]
+}

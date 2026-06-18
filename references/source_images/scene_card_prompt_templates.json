@@ -1,0 +1,8 @@
+{
+  "base": "Square watercolor vocabulary card for children. One {subject}, fully visible, centered, slightly airy composition with 24-30 percent padding on all sides. Warm hand-painted app-card style. No cropping, no text, no border, no frame, no white margins.",
+  "peopleOrAnimals": "Square watercolor vocabulary card for children. One {subject}, complete full body visible, centered, slightly smaller airy composition with 28-32 percent soft background padding on all sides. Friendly expression, simple soft background. Equal breathing room around ears, head, feet, tail, and body. No part near or touching the edge. No text, no border, no white margins.",
+  "longObjects": "Square watercolor vocabulary card for children. One {subject}, fully visible from end to end, centered diagonally, smaller airy composition with 26-32 percent padding on all sides. Simple background. No handle or tip near or touching the edge. No text, no border, no white margins.",
+  "tallObjects": "Square watercolor vocabulary card for children. One {subject}, fully visible from top to bottom, centered, smaller airy composition with 26-32 percent padding on all sides. Simple background. No top or base near or touching the edge. No text, no border, no white margins.",
+  "colourCards": "Square watercolor vocabulary card for children. Color: {colour}. One {colour} crayon fully visible next to a simple {colour} shape on paper, centered, with 24-30 percent padding on all sides. Wooden desk and pale background. No cropping, no text, no border, no white margins.",
+  "rerenderRule": "If the subject is visibly cropped, too close to the card edge, or has white corner/border artifacts, rerender the card instead of adding blurred borders or stretching the existing image."
+}

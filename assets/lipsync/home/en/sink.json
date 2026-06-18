@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/home/en/sink.mp3",
+    "duration": 1.67
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.16,
+      "value": "C"
+    },
+    {
+      "start": 0.16,
+      "end": 0.37,
+      "value": "F"
+    },
+    {
+      "start": 0.37,
+      "end": 0.65,
+      "value": "B"
+    },
+    {
+      "start": 0.65,
+      "end": 0.72,
+      "value": "C"
+    },
+    {
+      "start": 0.72,
+      "end": 1.28,
+      "value": "B"
+    },
+    {
+      "start": 1.28,
+      "end": 1.67,
+      "value": "X"
+    }
+  ]
+}

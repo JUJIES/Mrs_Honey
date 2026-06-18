@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/home/en/bedroom.mp3",
+    "duration": 1.71
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.15,
+      "value": "B"
+    },
+    {
+      "start": 0.15,
+      "end": 0.36,
+      "value": "F"
+    },
+    {
+      "start": 0.36,
+      "end": 0.64,
+      "value": "B"
+    },
+    {
+      "start": 0.64,
+      "end": 0.72,
+      "value": "A"
+    },
+    {
+      "start": 0.72,
+      "end": 0.83,
+      "value": "C"
+    },
+    {
+      "start": 0.83,
+      "end": 0.9,
+      "value": "B"
+    },
+    {
+      "start": 0.9,
+      "end": 1.18,
+      "value": "F"
+    },
+    {
+      "start": 1.18,
+      "end": 1.29,
+      "value": "A"
+    },
+    {
+      "start": 1.29,
+      "end": 1.71,
+      "value": "X"
+    }
+  ]
+}

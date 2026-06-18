@@ -1,0 +1,485 @@
+{
+  "source": "lernwort_mvp_codex_package/references/source_images/transport_repair_bike_motorcycle_helicopter_v2.png",
+  "imageSize": [
+    1774,
+    887
+  ],
+  "expectedItems": 3,
+  "detectedComponents": 3,
+  "canvas": 512,
+  "padding": 44,
+  "grid": "1x3",
+  "gridCheck": {
+    "enabled": true,
+    "warnings": [],
+    "failures": [],
+    "cells": [
+      {
+        "componentIndex": 0,
+        "row": 0,
+        "col": 0,
+        "bbox": [
+          42,
+          228,
+          560,
+          657
+        ],
+        "centroid": [
+          296.25,
+          489.0
+        ],
+        "margins": [
+          42.0,
+          228.0,
+          31.33,
+          230.0
+        ]
+      },
+      {
+        "componentIndex": 1,
+        "row": 0,
+        "col": 1,
+        "bbox": [
+          612,
+          227,
+          1133,
+          657
+        ],
+        "centroid": [
+          861.9,
+          476.75
+        ],
+        "margins": [
+          20.67,
+          227.0,
+          49.67,
+          230.0
+        ]
+      },
+      {
+        "componentIndex": 2,
+        "row": 0,
+        "col": 2,
+        "bbox": [
+          1220,
+          246,
+          1729,
+          666
+        ],
+        "centroid": [
+          1426.15,
+          464.21
+        ],
+        "margins": [
+          37.33,
+          246.0,
+          45.0,
+          221.0
+        ]
+      }
+    ]
+  },
+  "postProcessing": {
+    "trimOutput": true,
+    "edgeFeather": 0.35,
+    "edgeContract": 0,
+    "despill": true,
+    "keyColor": [
+      255,
+      0,
+      255
+    ]
+  },
+  "transparentHoleItems": [
+    "bicycle",
+    "helicopter",
+    "motorcycle"
+  ],
+  "items": [
+    {
+      "outputSize": [
+        430,
+        357
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        355
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1651,
+            "bbox": [
+              137,
+              100,
+              249,
+              229
+            ]
+          },
+          {
+            "area": 1330,
+            "bbox": [
+              40,
+              188,
+              84,
+              244
+            ]
+          },
+          {
+            "area": 1132,
+            "bbox": [
+              32,
+              229,
+              72,
+              281
+            ]
+          },
+          {
+            "area": 1123,
+            "bbox": [
+              36,
+              267,
+              80,
+              321
+            ]
+          },
+          {
+            "area": 1042,
+            "bbox": [
+              70,
+              272,
+              107,
+              324
+            ]
+          },
+          {
+            "area": 972,
+            "bbox": [
+              96,
+              266,
+              137,
+              317
+            ]
+          },
+          {
+            "area": 911,
+            "bbox": [
+              315,
+              269,
+              351,
+              316
+            ]
+          },
+          {
+            "area": 880,
+            "bbox": [
+              352,
+              263,
+              386,
+              313
+            ]
+          },
+          {
+            "area": 874,
+            "bbox": [
+              104,
+              234,
+              143,
+              276
+            ]
+          },
+          {
+            "area": 767,
+            "bbox": [
+              364,
+              236,
+              396,
+              280
+            ]
+          },
+          {
+            "area": 586,
+            "bbox": [
+              362,
+              200,
+              394,
+              241
+            ]
+          },
+          {
+            "area": 566,
+            "bbox": [
+              337,
+              184,
+              365,
+              227
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1651,
+            "bbox": [
+              137,
+              100,
+              249,
+              229
+            ]
+          },
+          {
+            "area": 1330,
+            "bbox": [
+              40,
+              188,
+              84,
+              244
+            ]
+          },
+          {
+            "area": 1132,
+            "bbox": [
+              32,
+              229,
+              72,
+              281
+            ]
+          },
+          {
+            "area": 1123,
+            "bbox": [
+              36,
+              267,
+              80,
+              321
+            ]
+          },
+          {
+            "area": 1042,
+            "bbox": [
+              70,
+              272,
+              107,
+              324
+            ]
+          },
+          {
+            "area": 972,
+            "bbox": [
+              96,
+              266,
+              137,
+              317
+            ]
+          },
+          {
+            "area": 911,
+            "bbox": [
+              315,
+              269,
+              351,
+              316
+            ]
+          },
+          {
+            "area": 880,
+            "bbox": [
+              352,
+              263,
+              386,
+              313
+            ]
+          },
+          {
+            "area": 874,
+            "bbox": [
+              104,
+              234,
+              143,
+              276
+            ]
+          },
+          {
+            "area": 767,
+            "bbox": [
+              364,
+              236,
+              396,
+              280
+            ]
+          },
+          {
+            "area": 586,
+            "bbox": [
+              362,
+              200,
+              394,
+              241
+            ]
+          },
+          {
+            "area": 566,
+            "bbox": [
+              337,
+              184,
+              365,
+              227
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "bicycle",
+      "path": "lernwort_mvp_codex_package/references/source_images/transport_repair_out_v2/bicycle.png",
+      "sourceBbox": [
+        42,
+        228,
+        560,
+        657
+      ],
+      "sourceArea": 114146,
+      "sourceCentroid": [
+        296.25,
+        489.0
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        356
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        354
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "motorcycle",
+      "path": "lernwort_mvp_codex_package/references/source_images/transport_repair_out_v2/motorcycle.png",
+      "sourceBbox": [
+        612,
+        227,
+        1133,
+        657
+      ],
+      "sourceArea": 127047,
+      "sourceCentroid": [
+        861.9,
+        476.75
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        356
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        354
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1497,
+            "bbox": [
+              160,
+              286,
+              217,
+              330
+            ]
+          },
+          {
+            "area": 595,
+            "bbox": [
+              59,
+              295,
+              112,
+              315
+            ]
+          },
+          {
+            "area": 518,
+            "bbox": [
+              109,
+              317,
+              154,
+              339
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1497,
+            "bbox": [
+              160,
+              286,
+              217,
+              330
+            ]
+          },
+          {
+            "area": 595,
+            "bbox": [
+              59,
+              295,
+              112,
+              315
+            ]
+          },
+          {
+            "area": 518,
+            "bbox": [
+              109,
+              317,
+              154,
+              339
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "helicopter",
+      "path": "lernwort_mvp_codex_package/references/source_images/transport_repair_out_v2/helicopter.png",
+      "sourceBbox": [
+        1220,
+        246,
+        1729,
+        666
+      ],
+      "sourceArea": 105242,
+      "sourceCentroid": [
+        1426.15,
+        464.21
+      ]
+    }
+  ],
+  "warnings": [],
+  "failures": [],
+  "qualityStatus": "pass"
+}

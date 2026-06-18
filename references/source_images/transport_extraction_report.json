@@ -1,0 +1,816 @@
+{
+  "source": "lernwort_mvp_codex_package/references/source_images/transport_source_sheet_v3.png",
+  "imageSize": [
+    1619,
+    972
+  ],
+  "expectedItems": 10,
+  "detectedComponents": 10,
+  "canvas": 512,
+  "padding": 44,
+  "grid": "2x5",
+  "gridCheck": {
+    "enabled": true,
+    "warnings": [
+      "Component 1 is close to grid cell 1,1 edge: -11.2px.",
+      "Component 2 is close to grid cell 1,2 edge: -12.4px.",
+      "Component 3 is close to grid cell 1,3 edge: -4.6px.",
+      "Component 6 is close to grid cell 2,1 edge: 4.8px."
+    ],
+    "failures": [],
+    "cells": [
+      {
+        "componentIndex": 0,
+        "row": 0,
+        "col": 0,
+        "bbox": [
+          51,
+          223,
+          335,
+          395
+        ],
+        "centroid": [
+          189.64,
+          321.52
+        ],
+        "margins": [
+          51.0,
+          223.0,
+          -11.2,
+          91.0
+        ]
+      },
+      {
+        "componentIndex": 1,
+        "row": 0,
+        "col": 1,
+        "bbox": [
+          423,
+          210,
+          660,
+          408
+        ],
+        "centroid": [
+          540.67,
+          326.66
+        ],
+        "margins": [
+          99.2,
+          210.0,
+          -12.4,
+          78.0
+        ]
+      },
+      {
+        "componentIndex": 2,
+        "row": 0,
+        "col": 2,
+        "bbox": [
+          759,
+          201,
+          976,
+          402
+        ],
+        "centroid": [
+          870.29,
+          332.38
+        ],
+        "margins": [
+          111.4,
+          201.0,
+          -4.6,
+          84.0
+        ]
+      },
+      {
+        "componentIndex": 3,
+        "row": 0,
+        "col": 3,
+        "bbox": [
+          1054,
+          254,
+          1254,
+          398
+        ],
+        "centroid": [
+          1156.33,
+          326.46
+        ],
+        "margins": [
+          82.6,
+          254.0,
+          41.2,
+          88.0
+        ]
+      },
+      {
+        "componentIndex": 4,
+        "row": 0,
+        "col": 4,
+        "bbox": [
+          1330,
+          242,
+          1568,
+          395
+        ],
+        "centroid": [
+          1448.97,
+          314.66
+        ],
+        "margins": [
+          34.8,
+          242.0,
+          51.0,
+          91.0
+        ]
+      },
+      {
+        "componentIndex": 5,
+        "row": 1,
+        "col": 0,
+        "bbox": [
+          48,
+          585,
+          319,
+          736
+        ],
+        "centroid": [
+          174.4,
+          662.05
+        ],
+        "margins": [
+          48.0,
+          99.0,
+          4.8,
+          236.0
+        ]
+      },
+      {
+        "componentIndex": 6,
+        "row": 1,
+        "col": 1,
+        "bbox": [
+          384,
+          583,
+          595,
+          755
+        ],
+        "centroid": [
+          487.46,
+          682.78
+        ],
+        "margins": [
+          60.2,
+          97.0,
+          52.6,
+          217.0
+        ]
+      },
+      {
+        "componentIndex": 7,
+        "row": 1,
+        "col": 2,
+        "bbox": [
+          691,
+          577,
+          930,
+          759
+        ],
+        "centroid": [
+          805.21,
+          681.65
+        ],
+        "margins": [
+          43.4,
+          91.0,
+          41.4,
+          213.0
+        ]
+      },
+      {
+        "componentIndex": 8,
+        "row": 1,
+        "col": 3,
+        "bbox": [
+          1013,
+          580,
+          1229,
+          754
+        ],
+        "centroid": [
+          1124.84,
+          663.24
+        ],
+        "margins": [
+          41.6,
+          94.0,
+          66.2,
+          218.0
+        ]
+      },
+      {
+        "componentIndex": 9,
+        "row": 1,
+        "col": 4,
+        "bbox": [
+          1315,
+          597,
+          1572,
+          757
+        ],
+        "centroid": [
+          1427.51,
+          673.45
+        ],
+        "margins": [
+          19.8,
+          111.0,
+          47.0,
+          215.0
+        ]
+      }
+    ]
+  },
+  "postProcessing": {
+    "trimOutput": true,
+    "edgeFeather": 0.35,
+    "edgeContract": 0,
+    "despill": true,
+    "keyColor": [
+      0,
+      255,
+      0
+    ]
+  },
+  "transparentHoleItems": [
+    "bicycle",
+    "boat",
+    "helicopter",
+    "motorcycle"
+  ],
+  "items": [
+    {
+      "outputSize": [
+        430,
+        263
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        261
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 1512,
+        "strong": 622
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "airplane",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/airplane.png",
+      "sourceBbox": [
+        51,
+        223,
+        335,
+        395
+      ],
+      "sourceArea": 24539,
+      "sourceCentroid": [
+        189.64,
+        321.52
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        360
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        358
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 792,
+        "strong": 364
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "ferry",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/ferry.png",
+      "sourceBbox": [
+        423,
+        210,
+        660,
+        408
+      ],
+      "sourceArea": 29327,
+      "sourceCentroid": [
+        540.67,
+        326.66
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        399
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        397
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 1516,
+        "strong": 688
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "boat",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/boat.png",
+      "sourceBbox": [
+        759,
+        201,
+        976,
+        402
+      ],
+      "sourceArea": 21844,
+      "sourceCentroid": [
+        870.29,
+        332.38
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        311
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        309
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 627,
+        "strong": 366
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "car",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/car.png",
+      "sourceBbox": [
+        1054,
+        254,
+        1254,
+        398
+      ],
+      "sourceArea": 20610,
+      "sourceCentroid": [
+        1156.33,
+        326.46
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        279
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        277
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 802,
+        "strong": 422
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "bus",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/bus.png",
+      "sourceBbox": [
+        1330,
+        242,
+        1568,
+        395
+      ],
+      "sourceArea": 30945,
+      "sourceCentroid": [
+        1448.97,
+        314.66
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        242
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        240
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 802,
+        "strong": 391
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "train",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/train.png",
+      "sourceBbox": [
+        48,
+        585,
+        319,
+        736
+      ],
+      "sourceArea": 31072,
+      "sourceCentroid": [
+        174.4,
+        662.05
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        352
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        350
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 12898,
+            "bbox": [
+              29,
+              165,
+              155,
+              324
+            ]
+          },
+          {
+            "area": 6250,
+            "bbox": [
+              290,
+              172,
+              399,
+              301
+            ]
+          },
+          {
+            "area": 1928,
+            "bbox": [
+              321,
+              153,
+              376,
+              216
+            ]
+          },
+          {
+            "area": 1924,
+            "bbox": [
+              144,
+              107,
+              251,
+              216
+            ]
+          },
+          {
+            "area": 1021,
+            "bbox": [
+              292,
+              169,
+              341,
+              214
+            ]
+          },
+          {
+            "area": 898,
+            "bbox": [
+              92,
+              170,
+              124,
+              247
+            ]
+          },
+          {
+            "area": 530,
+            "bbox": [
+              263,
+              137,
+              296,
+              213
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 12898,
+            "bbox": [
+              29,
+              165,
+              155,
+              324
+            ]
+          },
+          {
+            "area": 6250,
+            "bbox": [
+              290,
+              172,
+              399,
+              301
+            ]
+          },
+          {
+            "area": 1928,
+            "bbox": [
+              321,
+              153,
+              376,
+              216
+            ]
+          },
+          {
+            "area": 1924,
+            "bbox": [
+              144,
+              107,
+              251,
+              216
+            ]
+          },
+          {
+            "area": 1021,
+            "bbox": [
+              292,
+              169,
+              341,
+              214
+            ]
+          },
+          {
+            "area": 898,
+            "bbox": [
+              92,
+              170,
+              124,
+              247
+            ]
+          },
+          {
+            "area": 530,
+            "bbox": [
+              263,
+              137,
+              296,
+              213
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 2851,
+        "strong": 1568
+      },
+      "warnings": [
+        "visible key-color residue remains: 1568 strong pixels"
+      ],
+      "failures": [],
+      "id": "bicycle",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/bicycle.png",
+      "sourceBbox": [
+        384,
+        583,
+        595,
+        755
+      ],
+      "sourceArea": 18907,
+      "sourceCentroid": [
+        487.46,
+        682.78
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        329
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        327
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 2049,
+            "bbox": [
+              39,
+              213,
+              116,
+              295
+            ]
+          },
+          {
+            "area": 536,
+            "bbox": [
+              157,
+              73,
+              215,
+              98
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 2049,
+            "bbox": [
+              39,
+              213,
+              116,
+              295
+            ]
+          },
+          {
+            "area": 536,
+            "bbox": [
+              157,
+              73,
+              215,
+              98
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 3049,
+        "strong": 1891
+      },
+      "warnings": [
+        "visible key-color residue remains: 1891 strong pixels"
+      ],
+      "failures": [],
+      "id": "motorcycle",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/motorcycle.png",
+      "sourceBbox": [
+        691,
+        577,
+        930,
+        759
+      ],
+      "sourceArea": 24292,
+      "sourceCentroid": [
+        805.21,
+        681.65
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        348
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        346
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 853,
+        "strong": 429
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "truck",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/truck.png",
+      "sourceBbox": [
+        1013,
+        580,
+        1229,
+        754
+      ],
+      "sourceArea": 29468,
+      "sourceCentroid": [
+        1124.84,
+        663.24
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        270
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        268
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1584,
+            "bbox": [
+              161,
+              210,
+              222,
+              249
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1584,
+            "bbox": [
+              161,
+              210,
+              222,
+              249
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 2429,
+        "strong": 1291
+      },
+      "warnings": [
+        "visible key-color residue remains: 1291 strong pixels"
+      ],
+      "failures": [],
+      "id": "helicopter",
+      "path": "lernwort_mvp_codex_package/assets/images/transport/helicopter.png",
+      "sourceBbox": [
+        1315,
+        597,
+        1572,
+        757
+      ],
+      "sourceArea": 19303,
+      "sourceCentroid": [
+        1427.51,
+        673.45
+      ]
+    }
+  ],
+  "warnings": [
+    "Component 1 is close to grid cell 1,1 edge: -11.2px.",
+    "Component 2 is close to grid cell 1,2 edge: -12.4px.",
+    "Component 3 is close to grid cell 1,3 edge: -4.6px.",
+    "Component 6 is close to grid cell 2,1 edge: 4.8px.",
+    "bicycle: visible key-color residue remains: 1568 strong pixels",
+    "motorcycle: visible key-color residue remains: 1891 strong pixels",
+    "helicopter: visible key-color residue remains: 1291 strong pixels"
+  ],
+  "failures": [],
+  "qualityStatus": "warn"
+}

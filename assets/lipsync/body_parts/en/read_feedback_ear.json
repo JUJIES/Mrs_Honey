@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/body_parts/en/read_feedback_ear.mp3",
+    "duration": 2.29
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.17,
+      "value": "F"
+    },
+    {
+      "start": 0.17,
+      "end": 0.37,
+      "value": "C"
+    },
+    {
+      "start": 0.37,
+      "end": 0.44,
+      "value": "B"
+    },
+    {
+      "start": 0.44,
+      "end": 0.72,
+      "value": "D"
+    },
+    {
+      "start": 0.72,
+      "end": 0.79,
+      "value": "C"
+    },
+    {
+      "start": 0.79,
+      "end": 1.13,
+      "value": "X"
+    },
+    {
+      "start": 1.13,
+      "end": 1.18,
+      "value": "B"
+    },
+    {
+      "start": 1.18,
+      "end": 1.22,
+      "value": "C"
+    },
+    {
+      "start": 1.22,
+      "end": 1.99,
+      "value": "B"
+    },
+    {
+      "start": 1.99,
+      "end": 2.29,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/yes_v3.mp3",
+    "duration": 0.81
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.43,
+      "value": "C"
+    },
+    {
+      "start": 0.43,
+      "end": 0.64,
+      "value": "B"
+    },
+    {
+      "start": 0.64,
+      "end": 0.81,
+      "value": "X"
+    }
+  ]
+}

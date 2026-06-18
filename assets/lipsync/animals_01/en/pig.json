@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/pig.mp3",
+    "duration": 1.57
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.16,
+      "value": "B"
+    },
+    {
+      "start": 0.16,
+      "end": 0.44,
+      "value": "F"
+    },
+    {
+      "start": 0.44,
+      "end": 0.79,
+      "value": "B"
+    },
+    {
+      "start": 0.79,
+      "end": 0.87,
+      "value": "A"
+    },
+    {
+      "start": 0.87,
+      "end": 1.5,
+      "value": "B"
+    },
+    {
+      "start": 1.5,
+      "end": 1.57,
+      "value": "X"
+    }
+  ]
+}

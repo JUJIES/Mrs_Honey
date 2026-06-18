@@ -1,0 +1,96 @@
+{
+  "source": "references/source_images/scene_card_test/transport_scene_sheet_remaining.png",
+  "imageSize": [
+    1536,
+    1024
+  ],
+  "expected": 6,
+  "detected": 6,
+  "qualityStatus": "pass",
+  "cards": [
+    {
+      "id": "airplane",
+      "sourceBbox": [
+        30,
+        25,
+        500,
+        491
+      ],
+      "output": "assets/images/transport_scene/airplane.png",
+      "size": [
+        768,
+        768
+      ]
+    },
+    {
+      "id": "ferry",
+      "sourceBbox": [
+        528,
+        25,
+        1005,
+        492
+      ],
+      "output": "assets/images/transport_scene/ferry.png",
+      "size": [
+        768,
+        768
+      ]
+    },
+    {
+      "id": "boat",
+      "sourceBbox": [
+        1034,
+        25,
+        1504,
+        492
+      ],
+      "output": "assets/images/transport_scene/boat.png",
+      "size": [
+        768,
+        768
+      ]
+    },
+    {
+      "id": "car",
+      "sourceBbox": [
+        30,
+        522,
+        500,
+        992
+      ],
+      "output": "assets/images/transport_scene/car.png",
+      "size": [
+        768,
+        768
+      ]
+    },
+    {
+      "id": "bus",
+      "sourceBbox": [
+        528,
+        522,
+        1005,
+        992
+      ],
+      "output": "assets/images/transport_scene/bus.png",
+      "size": [
+        768,
+        768
+      ]
+    },
+    {
+      "id": "truck",
+      "sourceBbox": [
+        1034,
+        522,
+        1504,
+        992
+      ],
+      "output": "assets/images/transport_scene/truck.png",
+      "size": [
+        768,
+        768
+      ]
+    }
+  ]
+}

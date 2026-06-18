@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/that_was_correct.mp3",
+    "duration": 1.16
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.29,
+      "value": "B"
+    },
+    {
+      "start": 0.29,
+      "end": 0.36,
+      "value": "F"
+    },
+    {
+      "start": 0.36,
+      "end": 0.43,
+      "value": "B"
+    },
+    {
+      "start": 0.43,
+      "end": 0.71,
+      "value": "E"
+    },
+    {
+      "start": 0.71,
+      "end": 0.85,
+      "value": "C"
+    },
+    {
+      "start": 0.85,
+      "end": 0.99,
+      "value": "B"
+    },
+    {
+      "start": 0.99,
+      "end": 1.16,
+      "value": "X"
+    }
+  ]
+}

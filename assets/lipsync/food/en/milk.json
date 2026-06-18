@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/milk.mp3",
+    "duration": 1.55
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.18,
+      "value": "C"
+    },
+    {
+      "start": 0.18,
+      "end": 0.39,
+      "value": "F"
+    },
+    {
+      "start": 0.39,
+      "end": 0.67,
+      "value": "B"
+    },
+    {
+      "start": 0.67,
+      "end": 0.74,
+      "value": "C"
+    },
+    {
+      "start": 0.74,
+      "end": 0.88,
+      "value": "A"
+    },
+    {
+      "start": 0.88,
+      "end": 1.31,
+      "value": "B"
+    },
+    {
+      "start": 1.31,
+      "end": 1.55,
+      "value": "X"
+    }
+  ]
+}

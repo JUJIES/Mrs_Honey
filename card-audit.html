@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fffaf1" />
+    <title>Lernwort Kartencheck</title>
+    <link rel="stylesheet" href="styles.css?v=card-audit-2" />
+    <style>
+      html,
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .audit-shell {
+        width: min(100%, 1480px);
+        margin: 0 auto;
+        padding: 28px 18px 56px;
+      }
+
+      .audit-header {
+        display: grid;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      .audit-header h1 {
+        max-width: none;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+      }
+
+      .audit-header p {
+        color: var(--muted);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .audit-toolbar {
+        position: sticky;
+        top: 10px;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        padding: 12px;
+        border: 1px solid rgba(69, 85, 109, 0.08);
+        border-radius: 24px;
+        background: rgba(255, 252, 245, 0.92);
+        box-shadow: 0 16px 32px rgba(40, 52, 72, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .audit-toolbar label,
+      .audit-toolbar span {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 800;
+      }
+
+      .audit-toolbar select {
+        min-height: 42px;
+        padding: 0 14px;
+        border: 1px solid rgba(69, 85, 109, 0.14);
+        border-radius: 16px;
+        background: #fffdf8;
+        color: #223246;
+        font: inherit;
+      }
+
+      .audit-toolbar .legend {
+        margin-left: auto;
+      }
+
+      .audit-sets {
+        display: grid;
+        gap: 34px;
+        margin-top: 26px;
+      }
+
+      .audit-set {
+        display: grid;
+        gap: 18px;
+        padding: 20px;
+        border: 1px solid rgba(69, 85, 109, 0.08);
+        border-radius: 30px;
+        background: rgba(255, 253, 248, 0.78);
+        box-shadow: 0 18px 38px rgba(40, 52, 72, 0.08);
+      }
+
+      .audit-set-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: baseline;
+      }
+
+      .audit-set-header h2 {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+      }
+
+      .audit-set-meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+        font-weight: 800;
+      }
+
+      .audit-modes {
+        display: grid;
+        gap: 22px;
+      }
+
+      .audit-mode {
+        display: grid;
+        gap: 12px;
+      }
+
+      .audit-mode h3 {
+        font-size: 1rem;
+        color: var(--muted);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .audit-hear-grid,
+      .audit-read-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+
+      .audit-speak-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
+
+      .audit-card-stack {
+        display: grid;
+        gap: 8px;
+      }
+
+      .audit-card-label {
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .audit-card-stack .image-card {
+        aspect-ratio: 1;
+      }
+
+      .audit-card-stack .image-card,
+      .audit-card-stack .speak-image-card {
+        cursor: default;
+      }
+
+      .audit-card-stack .speak-image-card {
+        width: 100%;
+        max-width: none;
+      }
+
+      .audit-card-stack .read-word {
+        display: inline-grid;
+        min-height: 56px;
+        align-items: center;
+        justify-items: center;
+        padding: 0 16px;
+        border-radius: 20px;
+        background: rgba(255, 253, 248, 0.84);
+        box-shadow:
+          0 16px 34px rgba(40, 52, 72, 0.08),
+          inset 0 0 0 1px rgba(69, 85, 109, 0.08);
+        color: #1f2a3b;
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .audit-empty {
+        padding: 18px;
+        border-radius: 20px;
+        background: rgba(255, 253, 248, 0.72);
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      @media (max-width: 820px) {
+        .audit-shell {
+          padding-inline: 12px;
+        }
+
+        .audit-set {
+          padding: 16px;
+          border-radius: 24px;
+        }
+
+        .audit-toolbar .legend {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .audit-hear-grid,
+        .audit-read-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .audit-speak-grid {
+          grid-template-columns: 1fr;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-layer" aria-hidden="true"></div>
+    <main class="audit-shell">
+      <header class="audit-header">
+        <h1>Kartencheck</h1>
+        <p>Vollständige Prüfansicht für alle Sets und Karten in Hören, Lesen und Sprechen. Keine Spiel-Logik, nur Bildzuschnitt und Kartenlayout.</p>
+      </header>
+
+      <div class="audit-toolbar">
+        <label for="set-filter">Set</label>
+        <select id="set-filter">
+          <option value="all">Alle Sets</option>
+        </select>
+
+        <label for="mode-filter">Kartentyp</label>
+        <select id="mode-filter">
+          <option value="all">Alle Kartentypen</option>
+          <option value="hear">Hören</option>
+          <option value="read">Lesen</option>
+          <option value="speak">Sprechen</option>
+        </select>
+
+        <span class="legend" id="audit-summary">Lade alle Karten…</span>
+      </div>
+
+      <section class="audit-sets" id="audit-sets">
+        <div class="audit-empty">Lade Sets…</div>
+      </section>
+    </main>
+    <script src="card-audit.js?v=card-audit-4" defer></script>
+  </body>
+</html>

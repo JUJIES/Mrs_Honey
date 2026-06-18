@@ -1,0 +1,32 @@
+{
+  "name": "Lernwort",
+  "short_name": "Lernwort",
+  "description": "Ein kindgerechtes Englisch-Lernspiel mit Bildkarten, Audio und Sprechmodus.",
+  "lang": "de",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#fffaf1",
+  "theme_color": "#fffaf1",
+  "categories": ["education", "kids"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

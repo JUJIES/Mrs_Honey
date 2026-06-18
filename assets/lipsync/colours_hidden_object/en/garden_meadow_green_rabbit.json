@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/garden_meadow_green_rabbit.mp3",
+    "duration": 2.46
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.14,
+      "value": "C"
+    },
+    {
+      "start": 0.14,
+      "end": 0.35,
+      "value": "F"
+    },
+    {
+      "start": 0.35,
+      "end": 0.63,
+      "value": "B"
+    },
+    {
+      "start": 0.63,
+      "end": 0.84,
+      "value": "D"
+    },
+    {
+      "start": 0.84,
+      "end": 1.05,
+      "value": "C"
+    },
+    {
+      "start": 1.05,
+      "end": 1.54,
+      "value": "B"
+    },
+    {
+      "start": 1.54,
+      "end": 1.61,
+      "value": "C"
+    },
+    {
+      "start": 1.61,
+      "end": 1.72,
+      "value": "A"
+    },
+    {
+      "start": 1.72,
+      "end": 2.08,
+      "value": "B"
+    },
+    {
+      "start": 2.08,
+      "end": 2.46,
+      "value": "X"
+    }
+  ]
+}

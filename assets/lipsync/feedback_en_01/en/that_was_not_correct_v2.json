@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/that_was_not_correct_v2.mp3",
+    "duration": 1.29
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.36,
+      "value": "B"
+    },
+    {
+      "start": 0.36,
+      "end": 0.43,
+      "value": "C"
+    },
+    {
+      "start": 0.43,
+      "end": 0.5,
+      "value": "D"
+    },
+    {
+      "start": 0.5,
+      "end": 0.57,
+      "value": "B"
+    },
+    {
+      "start": 0.57,
+      "end": 0.85,
+      "value": "E"
+    },
+    {
+      "start": 0.85,
+      "end": 0.99,
+      "value": "C"
+    },
+    {
+      "start": 0.99,
+      "end": 1.13,
+      "value": "B"
+    },
+    {
+      "start": 1.13,
+      "end": 1.29,
+      "value": "X"
+    }
+  ]
+}

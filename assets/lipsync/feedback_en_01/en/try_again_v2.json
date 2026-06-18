@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/try_again_v2.mp3",
+    "duration": 1.06
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.08,
+      "value": "X"
+    },
+    {
+      "start": 0.08,
+      "end": 0.31,
+      "value": "B"
+    },
+    {
+      "start": 0.31,
+      "end": 0.87,
+      "value": "C"
+    },
+    {
+      "start": 0.87,
+      "end": 1.06,
+      "value": "X"
+    }
+  ]
+}

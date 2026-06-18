@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/playroom_rug_orange_bus.mp3",
+    "duration": 2.41
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.14,
+      "value": "C"
+    },
+    {
+      "start": 0.14,
+      "end": 0.35,
+      "value": "F"
+    },
+    {
+      "start": 0.35,
+      "end": 0.56,
+      "value": "B"
+    },
+    {
+      "start": 0.56,
+      "end": 0.75,
+      "value": "D"
+    },
+    {
+      "start": 0.75,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.12,
+      "value": "E"
+    },
+    {
+      "start": 1.12,
+      "end": 1.4,
+      "value": "B"
+    },
+    {
+      "start": 1.4,
+      "end": 1.48,
+      "value": "A"
+    },
+    {
+      "start": 1.48,
+      "end": 1.74,
+      "value": "D"
+    },
+    {
+      "start": 1.74,
+      "end": 1.81,
+      "value": "C"
+    },
+    {
+      "start": 1.81,
+      "end": 2.05,
+      "value": "B"
+    },
+    {
+      "start": 2.05,
+      "end": 2.41,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "set": "emotions",
+  "display": "scene-card",
+  "contactSheet": "references/source_images/emotions_scene_generation/emotions_scene_contact_sheet.png",
+  "sheets": [
+    {
+      "fromSheet": "references/source_images/emotions_scene_generation/emotions_sheet_source.png",
+      "grid": "2x5",
+      "items": [
+        "happy",
+        "sad",
+        "angry",
+        "scared",
+        "surprised",
+        "tired",
+        "excited",
+        "bored",
+        "proud",
+        "worried"
+      ]
+    }
+  ]
+}

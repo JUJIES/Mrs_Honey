@@ -1,0 +1,608 @@
+{
+  "failures": [],
+  "results": [
+    {
+      "set": "colours",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/colours_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "green",
+            "src": "assets/images/colours_scene/green.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "yellow",
+            "src": "assets/images/colours_scene/yellow.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "pink",
+            "src": "assets/images/colours_scene/pink.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "red",
+            "src": "assets/images/colours_scene/red.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/colours_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "purple",
+            "src": "assets/images/colours_scene/purple.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "yellow",
+            "src": "assets/images/colours_scene/yellow.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "white",
+            "src": "assets/images/colours_scene/white.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "red",
+            "src": "assets/images/colours_scene/red.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "colours",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/colours_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "green",
+            "src": "assets/images/colours_scene/green.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              418,
+              418
+            ],
+            "img": [
+              416,
+              416
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/food_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "carrot",
+            "src": "assets/images/food_scene/carrot.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "cheese",
+            "src": "assets/images/food_scene/cheese.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "banana",
+            "src": "assets/images/food_scene/banana.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "apple",
+            "src": "assets/images/food_scene/apple.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/food_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "apple",
+            "src": "assets/images/food_scene/apple.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "bread",
+            "src": "assets/images/food_scene/bread.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "banana",
+            "src": "assets/images/food_scene/banana.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "rice",
+            "src": "assets/images/food_scene/rice.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "food",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/food_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "milk",
+            "src": "assets/images/food_scene/milk.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              418,
+              418
+            ],
+            "img": [
+              416,
+              416
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "hear",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/school_hear.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "ruler",
+            "src": "assets/images/school_scene/ruler.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "eraser",
+            "src": "assets/images/school_scene/eraser.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "notebook",
+            "src": "assets/images/school_scene/notebook.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "desk",
+            "src": "assets/images/school_scene/desk.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "read",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/school_read.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "book",
+            "src": "assets/images/school_scene/book.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "glue",
+            "src": "assets/images/school_scene/glue.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "ruler",
+            "src": "assets/images/school_scene/ruler.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          },
+          {
+            "label": "chair",
+            "src": "assets/images/school_scene/chair.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              212,
+              212
+            ],
+            "img": [
+              210,
+              210
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    },
+    {
+      "set": "school",
+      "mode": "speak",
+      "screenshotPath": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/colour_food_school_scene_cards/desktop/school_speak.png",
+      "metrics": {
+        "display": "scene-card",
+        "cards": [
+          {
+            "label": "eraser",
+            "src": "assets/images/school_scene/eraser.png",
+            "natural": [
+              768,
+              768
+            ],
+            "card": [
+              418,
+              418
+            ],
+            "img": [
+              416,
+              416
+            ],
+            "cardRadius": "0px",
+            "imgRadius": "0px",
+            "objectFit": "cover"
+          }
+        ]
+      }
+    }
+  ]
+}

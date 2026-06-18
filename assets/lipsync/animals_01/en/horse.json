@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/horse.mp3",
+    "duration": 1.65
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.17,
+      "value": "B"
+    },
+    {
+      "start": 0.17,
+      "end": 0.45,
+      "value": "F"
+    },
+    {
+      "start": 0.45,
+      "end": 0.53,
+      "value": "A"
+    },
+    {
+      "start": 0.53,
+      "end": 0.6,
+      "value": "C"
+    },
+    {
+      "start": 0.6,
+      "end": 0.73,
+      "value": "B"
+    },
+    {
+      "start": 0.73,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 1.22,
+      "value": "E"
+    },
+    {
+      "start": 1.22,
+      "end": 1.43,
+      "value": "B"
+    },
+    {
+      "start": 1.43,
+      "end": 1.65,
+      "value": "X"
+    }
+  ]
+}

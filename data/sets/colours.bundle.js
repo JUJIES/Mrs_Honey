@@ -1,0 +1,245 @@
+window.LERNWORT_BUNDLED_SETS = window.LERNWORT_BUNDLED_SETS || {};
+window.LERNWORT_BUNDLED_SETS["colours"] = {
+  "schemaVersion": 1,
+  "id": "colours",
+  "title": {
+    "en": "Colours"
+  },
+  "category": "colours",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "red",
+      "image": "assets/images/colours_scene/red.png",
+      "labels": {
+        "en": "red"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/red.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you find red?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_red.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's red."
+      }
+    },
+    {
+      "id": "blue",
+      "image": "assets/images/colours_scene/blue.png",
+      "labels": {
+        "en": "blue"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/blue.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Where is blue?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_blue.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's blue."
+      }
+    },
+    {
+      "id": "green",
+      "image": "assets/images/colours_scene/green.png",
+      "labels": {
+        "en": "green"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/green.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you see green?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_green.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! That's green."
+      }
+    },
+    {
+      "id": "yellow",
+      "image": "assets/images/colours_scene/yellow.png",
+      "labels": {
+        "en": "yellow"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/yellow.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you find yellow?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_yellow.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! The color is yellow."
+      }
+    },
+    {
+      "id": "black",
+      "image": "assets/images/colours_scene/black.png",
+      "labels": {
+        "en": "black"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/black.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Where is black?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_black.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! It's black."
+      }
+    },
+    {
+      "id": "white",
+      "image": "assets/images/colours_scene/white.png",
+      "labels": {
+        "en": "white"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/white.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you see white?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_white.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's white."
+      }
+    },
+    {
+      "id": "orange",
+      "image": "assets/images/colours_scene/orange.png",
+      "labels": {
+        "en": "orange"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/orange.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you find orange?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_orange.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's orange."
+      }
+    },
+    {
+      "id": "purple",
+      "image": "assets/images/colours_scene/purple.png",
+      "labels": {
+        "en": "purple"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/purple.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Where is purple?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_purple.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! That's purple."
+      }
+    },
+    {
+      "id": "pink",
+      "image": "assets/images/colours_scene/pink.png",
+      "labels": {
+        "en": "pink"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/pink.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you see pink?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_pink.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! The color is pink."
+      }
+    },
+    {
+      "id": "brown",
+      "image": "assets/images/colours_scene/brown.png",
+      "labels": {
+        "en": "brown"
+      },
+      "audio": {
+        "en": "assets/audio/colours/en/brown.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "colour"
+      ],
+      "speak": {
+        "en": "Can you find brown?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/colours/en/read_feedback_brown.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! It's brown."
+      }
+    }
+  ],
+  "display": "scene-card"
+};

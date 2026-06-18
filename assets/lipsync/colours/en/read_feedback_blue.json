@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours/en/read_feedback_blue.mp3",
+    "duration": 1.76
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.23,
+      "value": "B"
+    },
+    {
+      "start": 0.23,
+      "end": 0.37,
+      "value": "C"
+    },
+    {
+      "start": 0.37,
+      "end": 0.44,
+      "value": "B"
+    },
+    {
+      "start": 0.44,
+      "end": 0.65,
+      "value": "F"
+    },
+    {
+      "start": 0.65,
+      "end": 0.79,
+      "value": "B"
+    },
+    {
+      "start": 0.79,
+      "end": 0.87,
+      "value": "A"
+    },
+    {
+      "start": 0.87,
+      "end": 1.41,
+      "value": "F"
+    },
+    {
+      "start": 1.41,
+      "end": 1.76,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/emotions/en/proud.mp3",
+    "duration": 2.13
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.16,
+      "value": "C"
+    },
+    {
+      "start": 0.16,
+      "end": 0.37,
+      "value": "F"
+    },
+    {
+      "start": 0.37,
+      "end": 0.65,
+      "value": "B"
+    },
+    {
+      "start": 0.65,
+      "end": 0.72,
+      "value": "C"
+    },
+    {
+      "start": 0.72,
+      "end": 0.85,
+      "value": "A"
+    },
+    {
+      "start": 0.85,
+      "end": 0.91,
+      "value": "B"
+    },
+    {
+      "start": 0.91,
+      "end": 0.97,
+      "value": "C"
+    },
+    {
+      "start": 0.97,
+      "end": 1.39,
+      "value": "B"
+    },
+    {
+      "start": 1.39,
+      "end": 1.46,
+      "value": "C"
+    },
+    {
+      "start": 1.46,
+      "end": 1.74,
+      "value": "B"
+    },
+    {
+      "start": 1.74,
+      "end": 2.13,
+      "value": "X"
+    }
+  ]
+}

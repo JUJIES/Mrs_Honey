@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/read_feedback_bird.mp3",
+    "duration": 1.47
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.15,
+      "value": "B"
+    },
+    {
+      "start": 0.15,
+      "end": 0.27,
+      "value": "D"
+    },
+    {
+      "start": 0.27,
+      "end": 0.67,
+      "value": "B"
+    },
+    {
+      "start": 0.67,
+      "end": 0.75,
+      "value": "A"
+    },
+    {
+      "start": 0.75,
+      "end": 0.92,
+      "value": "E"
+    },
+    {
+      "start": 0.92,
+      "end": 1.13,
+      "value": "B"
+    },
+    {
+      "start": 1.13,
+      "end": 1.47,
+      "value": "X"
+    }
+  ]
+}

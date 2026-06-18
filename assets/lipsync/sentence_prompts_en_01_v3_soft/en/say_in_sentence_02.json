@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/sentence_prompts_en_01_v3_soft/en/say_in_sentence_02.mp3",
+    "duration": 2.24
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.22,
+      "value": "X"
+    },
+    {
+      "start": 0.22,
+      "end": 0.63,
+      "value": "F"
+    },
+    {
+      "start": 0.63,
+      "end": 0.77,
+      "value": "B"
+    },
+    {
+      "start": 0.77,
+      "end": 0.84,
+      "value": "C"
+    },
+    {
+      "start": 0.84,
+      "end": 1.05,
+      "value": "B"
+    },
+    {
+      "start": 1.05,
+      "end": 1.12,
+      "value": "C"
+    },
+    {
+      "start": 1.12,
+      "end": 1.26,
+      "value": "B"
+    },
+    {
+      "start": 1.26,
+      "end": 1.33,
+      "value": "C"
+    },
+    {
+      "start": 1.33,
+      "end": 1.54,
+      "value": "B"
+    },
+    {
+      "start": 1.54,
+      "end": 1.62,
+      "value": "A"
+    },
+    {
+      "start": 1.62,
+      "end": 2.09,
+      "value": "B"
+    },
+    {
+      "start": 2.09,
+      "end": 2.24,
+      "value": "X"
+    }
+  ]
+}

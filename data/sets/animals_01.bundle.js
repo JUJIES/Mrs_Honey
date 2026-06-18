@@ -1,0 +1,224 @@
+window.LERNWORT_BUNDLED_SETS = window.LERNWORT_BUNDLED_SETS || {};
+window.LERNWORT_BUNDLED_SETS["animals_01"] = {
+  "schemaVersion": 1,
+  "id": "animals_01",
+  "title": {
+    "en": "Animals"
+  },
+  "category": "animals",
+  "display": "scene-card",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "cat",
+      "image": "assets/images/animals_scene/cat.png",
+      "labels": {
+        "en": "cat"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/cat.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "pet"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_cat.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's a cat."
+      }
+    },
+    {
+      "id": "dog",
+      "image": "assets/images/animals_scene/dog.png",
+      "labels": {
+        "en": "dog"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/dog.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "pet"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_dog.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's a dog."
+      }
+    },
+    {
+      "id": "fish",
+      "image": "assets/images/animals_scene/fish.png",
+      "labels": {
+        "en": "fish"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/fish.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "water"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_fish.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found a fish."
+      }
+    },
+    {
+      "id": "bird",
+      "image": "assets/images/animals_scene/bird.png",
+      "labels": {
+        "en": "bird"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/bird.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_bird.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a bird."
+      }
+    },
+    {
+      "id": "rabbit",
+      "image": "assets/images/animals_scene/rabbit.png",
+      "labels": {
+        "en": "rabbit"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/rabbit.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "pet"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_rabbit.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a rabbit."
+      }
+    },
+    {
+      "id": "mouse",
+      "image": "assets/images/animals_scene/mouse.png",
+      "labels": {
+        "en": "mouse"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/mouse.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_mouse.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's a mouse."
+      }
+    },
+    {
+      "id": "horse",
+      "image": "assets/images/animals_scene/horse.png",
+      "labels": {
+        "en": "horse"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/horse.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "farm"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_horse.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's a horse."
+      }
+    },
+    {
+      "id": "cow",
+      "image": "assets/images/animals_scene/cow.png",
+      "labels": {
+        "en": "cow"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/cow.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "farm"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_cow.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found a cow."
+      }
+    },
+    {
+      "id": "pig",
+      "image": "assets/images/animals_scene/pig.png",
+      "labels": {
+        "en": "pig"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/pig.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "farm"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_pig.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a pig."
+      }
+    },
+    {
+      "id": "duck",
+      "image": "assets/images/animals_scene/duck.png",
+      "labels": {
+        "en": "duck"
+      },
+      "audio": {
+        "en": "assets/audio/animals_01/en/duck.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "animal",
+        "farm",
+        "water"
+      ],
+      "readFeedback": {
+        "en": "assets/audio/animals_01/en/read_feedback_duck.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a duck."
+      }
+    }
+  ]
+};

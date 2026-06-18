@@ -1,0 +1,485 @@
+{
+  "source": "references/source_images/transport_repair_bike_motorcycle_helicopter_v2.png",
+  "imageSize": [
+    1774,
+    887
+  ],
+  "expectedItems": 3,
+  "detectedComponents": 3,
+  "canvas": 512,
+  "padding": 44,
+  "grid": "1x3",
+  "gridCheck": {
+    "enabled": true,
+    "warnings": [],
+    "failures": [],
+    "cells": [
+      {
+        "componentIndex": 0,
+        "row": 0,
+        "col": 0,
+        "bbox": [
+          42,
+          228,
+          560,
+          657
+        ],
+        "centroid": [
+          296.29,
+          489.24
+        ],
+        "margins": [
+          42.0,
+          228.0,
+          31.33,
+          230.0
+        ]
+      },
+      {
+        "componentIndex": 1,
+        "row": 0,
+        "col": 1,
+        "bbox": [
+          612,
+          227,
+          1133,
+          657
+        ],
+        "centroid": [
+          861.94,
+          476.92
+        ],
+        "margins": [
+          20.67,
+          227.0,
+          49.67,
+          230.0
+        ]
+      },
+      {
+        "componentIndex": 2,
+        "row": 0,
+        "col": 2,
+        "bbox": [
+          1220,
+          246,
+          1729,
+          666
+        ],
+        "centroid": [
+          1425.97,
+          464.4
+        ],
+        "margins": [
+          37.33,
+          246.0,
+          45.0,
+          221.0
+        ]
+      }
+    ]
+  },
+  "postProcessing": {
+    "trimOutput": true,
+    "edgeFeather": 0.35,
+    "edgeContract": 0,
+    "despill": true,
+    "keyColor": [
+      255,
+      0,
+      255
+    ]
+  },
+  "transparentHoleItems": [
+    "bicycle",
+    "helicopter",
+    "motorcycle"
+  ],
+  "items": [
+    {
+      "outputSize": [
+        430,
+        357
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        355
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1569,
+            "bbox": [
+              138,
+              104,
+              249,
+              229
+            ]
+          },
+          {
+            "area": 1304,
+            "bbox": [
+              40,
+              189,
+              84,
+              243
+            ]
+          },
+          {
+            "area": 1088,
+            "bbox": [
+              36,
+              267,
+              79,
+              320
+            ]
+          },
+          {
+            "area": 1055,
+            "bbox": [
+              33,
+              230,
+              70,
+              278
+            ]
+          },
+          {
+            "area": 1020,
+            "bbox": [
+              71,
+              272,
+              107,
+              324
+            ]
+          },
+          {
+            "area": 924,
+            "bbox": [
+              97,
+              268,
+              137,
+              317
+            ]
+          },
+          {
+            "area": 879,
+            "bbox": [
+              315,
+              270,
+              351,
+              314
+            ]
+          },
+          {
+            "area": 852,
+            "bbox": [
+              106,
+              237,
+              143,
+              278
+            ]
+          },
+          {
+            "area": 840,
+            "bbox": [
+              352,
+              264,
+              386,
+              311
+            ]
+          },
+          {
+            "area": 770,
+            "bbox": [
+              364,
+              234,
+              397,
+              279
+            ]
+          },
+          {
+            "area": 572,
+            "bbox": [
+              362,
+              200,
+              395,
+              241
+            ]
+          },
+          {
+            "area": 546,
+            "bbox": [
+              337,
+              184,
+              364,
+              224
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1569,
+            "bbox": [
+              138,
+              104,
+              249,
+              229
+            ]
+          },
+          {
+            "area": 1304,
+            "bbox": [
+              40,
+              189,
+              84,
+              243
+            ]
+          },
+          {
+            "area": 1088,
+            "bbox": [
+              36,
+              267,
+              79,
+              320
+            ]
+          },
+          {
+            "area": 1055,
+            "bbox": [
+              33,
+              230,
+              70,
+              278
+            ]
+          },
+          {
+            "area": 1020,
+            "bbox": [
+              71,
+              272,
+              107,
+              324
+            ]
+          },
+          {
+            "area": 924,
+            "bbox": [
+              97,
+              268,
+              137,
+              317
+            ]
+          },
+          {
+            "area": 879,
+            "bbox": [
+              315,
+              270,
+              351,
+              314
+            ]
+          },
+          {
+            "area": 852,
+            "bbox": [
+              106,
+              237,
+              143,
+              278
+            ]
+          },
+          {
+            "area": 840,
+            "bbox": [
+              352,
+              264,
+              386,
+              311
+            ]
+          },
+          {
+            "area": 770,
+            "bbox": [
+              364,
+              234,
+              397,
+              279
+            ]
+          },
+          {
+            "area": 572,
+            "bbox": [
+              362,
+              200,
+              395,
+              241
+            ]
+          },
+          {
+            "area": 546,
+            "bbox": [
+              337,
+              184,
+              364,
+              224
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "bicycle",
+      "path": "references/source_images/transport_repair_out_v2_thr135/bicycle.png",
+      "sourceBbox": [
+        42,
+        228,
+        560,
+        657
+      ],
+      "sourceArea": 113753,
+      "sourceCentroid": [
+        296.29,
+        489.24
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        356
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        354
+      ],
+      "internalTransparency": {
+        "components": [],
+        "largeInternalHoles": [],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "motorcycle",
+      "path": "references/source_images/transport_repair_out_v2_thr135/motorcycle.png",
+      "sourceBbox": [
+        612,
+        227,
+        1133,
+        657
+      ],
+      "sourceArea": 126722,
+      "sourceCentroid": [
+        861.94,
+        476.92
+      ]
+    },
+    {
+      "outputSize": [
+        430,
+        356
+      ],
+      "contentBbox": [
+        2,
+        2,
+        428,
+        354
+      ],
+      "internalTransparency": {
+        "components": [
+          {
+            "area": 1464,
+            "bbox": [
+              160,
+              286,
+              217,
+              330
+            ]
+          },
+          {
+            "area": 559,
+            "bbox": [
+              59,
+              297,
+              112,
+              315
+            ]
+          },
+          {
+            "area": 513,
+            "bbox": [
+              109,
+              318,
+              154,
+              339
+            ]
+          }
+        ],
+        "largeInternalHoles": [
+          {
+            "area": 1464,
+            "bbox": [
+              160,
+              286,
+              217,
+              330
+            ]
+          },
+          {
+            "area": 559,
+            "bbox": [
+              59,
+              297,
+              112,
+              315
+            ]
+          },
+          {
+            "area": 513,
+            "bbox": [
+              109,
+              318,
+              154,
+              339
+            ]
+          }
+        ],
+        "smallInternalHoles": []
+      },
+      "keyResidue": {
+        "greenish": 0,
+        "strong": 0
+      },
+      "warnings": [],
+      "failures": [],
+      "id": "helicopter",
+      "path": "references/source_images/transport_repair_out_v2_thr135/helicopter.png",
+      "sourceBbox": [
+        1220,
+        246,
+        1729,
+        666
+      ],
+      "sourceArea": 104761,
+      "sourceCentroid": [
+        1425.97,
+        464.4
+      ]
+    }
+  ],
+  "warnings": [],
+  "failures": [],
+  "qualityStatus": "pass"
+}

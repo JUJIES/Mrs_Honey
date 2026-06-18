@@ -1,0 +1,2063 @@
+{
+  "sets": [
+    {
+      "setId": "animals_01",
+      "setPath": "data/sets/animals_01.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/animals_scene",
+      "selectedItems": [
+        "cat",
+        "dog",
+        "fish",
+        "bird",
+        "rabbit",
+        "mouse",
+        "horse",
+        "cow",
+        "pig",
+        "duck"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "cat",
+          "path": "assets/images/animals_scene/cat.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.767,
+            "right": 0.986,
+            "top": 0.433,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.023,
+            0.099
+          ]
+        },
+        {
+          "id": "dog",
+          "path": "assets/images/animals_scene/dog.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.735,
+            "right": 0.789,
+            "top": 0.094,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.004,
+            0.159
+          ]
+        },
+        {
+          "id": "fish",
+          "path": "assets/images/animals_scene/fish.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 0.999,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            -0.011
+          ]
+        },
+        {
+          "id": "bird",
+          "path": "assets/images/animals_scene/bird.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.819,
+            "right": 0.742,
+            "top": 0.933,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.007,
+            0.09
+          ]
+        },
+        {
+          "id": "rabbit",
+          "path": "assets/images/animals_scene/rabbit.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.945,
+            "right": 0.94,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.0,
+            0.089
+          ]
+        },
+        {
+          "id": "mouse",
+          "path": "assets/images/animals_scene/mouse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.852,
+            "right": 0.719,
+            "top": 0.999,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.004,
+            0.134
+          ]
+        },
+        {
+          "id": "horse",
+          "path": "assets/images/animals_scene/horse.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.813,
+            "right": 0.699,
+            "top": 0.69,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.006,
+            0.136
+          ]
+        },
+        {
+          "id": "cow",
+          "path": "assets/images/animals_scene/cow.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.705,
+            "right": 0.808,
+            "top": 0.855,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.015,
+            0.113
+          ]
+        },
+        {
+          "id": "pig",
+          "path": "assets/images/animals_scene/pig.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.786,
+            "right": 0.797,
+            "top": 0.534,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.012,
+            0.131
+          ]
+        },
+        {
+          "id": "duck",
+          "path": "assets/images/animals_scene/duck.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.601,
+            "right": 0.742,
+            "top": 0.001,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.157
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "pass"
+    },
+    {
+      "setId": "body_parts",
+      "setPath": "data/sets/body_parts.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/body_parts_scene",
+      "selectedItems": [
+        "head",
+        "hair",
+        "eye",
+        "ear",
+        "nose",
+        "mouth",
+        "tooth",
+        "hand",
+        "finger",
+        "arm",
+        "leg",
+        "foot",
+        "toe",
+        "knee",
+        "shoulder"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "head",
+          "path": "assets/images/body_parts_scene/head.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.003,
+            0.033
+          ]
+        },
+        {
+          "id": "hair",
+          "path": "assets/images/body_parts_scene/hair.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.47
+          },
+          "visualCenterOffset": [
+            0.008,
+            0.025
+          ]
+        },
+        {
+          "id": "eye",
+          "path": "assets/images/body_parts_scene/eye.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.093
+          },
+          "visualCenterOffset": [
+            0.002,
+            -0.008
+          ]
+        },
+        {
+          "id": "ear",
+          "path": "assets/images/body_parts_scene/ear.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.986,
+            "right": 0.879,
+            "top": 0.895,
+            "bottom": 0.99
+          },
+          "visualCenterOffset": [
+            -0.129,
+            0.015
+          ]
+        },
+        {
+          "id": "nose",
+          "path": "assets/images/body_parts_scene/nose.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.652
+          },
+          "visualCenterOffset": [
+            0.001,
+            0.035
+          ]
+        },
+        {
+          "id": "mouth",
+          "path": "assets/images/body_parts_scene/mouth.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.994,
+            "right": 0.976,
+            "top": 0.914,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            -0.01,
+            0.034
+          ]
+        },
+        {
+          "id": "tooth",
+          "path": "assets/images/body_parts_scene/tooth.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.002
+          ]
+        },
+        {
+          "id": "hand",
+          "path": "assets/images/body_parts_scene/hand.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.008,
+            0.012
+          ]
+        },
+        {
+          "id": "finger",
+          "path": "assets/images/body_parts_scene/finger.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.362
+          },
+          "visualCenterOffset": [
+            -0.005,
+            0.104
+          ]
+        },
+        {
+          "id": "arm",
+          "path": "assets/images/body_parts_scene/arm.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.03,
+            -0.013
+          ]
+        },
+        {
+          "id": "leg",
+          "path": "assets/images/body_parts_scene/leg.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.337,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            -0.101
+          ]
+        },
+        {
+          "id": "foot",
+          "path": "assets/images/body_parts_scene/foot.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            0.046,
+            0.016
+          ]
+        },
+        {
+          "id": "toe",
+          "path": "assets/images/body_parts_scene/toe.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.312,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            0.033,
+            -0.006
+          ]
+        },
+        {
+          "id": "knee",
+          "path": "assets/images/body_parts_scene/knee.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.003
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.002
+          ]
+        },
+        {
+          "id": "shoulder",
+          "path": "assets/images/body_parts_scene/shoulder.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.0,
+            "right": 0.0,
+            "top": 0.0,
+            "bottom": 0.383
+          },
+          "visualCenterOffset": [
+            -0.01,
+            0.032
+          ]
+        }
+      ],
+      "warnings": [
+        "hand: possible edge stripe at top"
+      ],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "warn"
+    },
+    {
+      "setId": "colours",
+      "setPath": "data/sets/colours.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/colours_scene",
+      "selectedItems": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "orange",
+        "purple",
+        "pink",
+        "brown"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "red",
+          "path": "assets/images/colours_scene/red.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.6,
+            "right": 0.6,
+            "top": 0.001,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.042,
+            0.159
+          ]
+        },
+        {
+          "id": "blue",
+          "path": "assets/images/colours_scene/blue.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.565,
+            "right": 0.536,
+            "top": 0.377,
+            "bottom": 0.976
+          },
+          "visualCenterOffset": [
+            0.036,
+            0.146
+          ]
+        },
+        {
+          "id": "green",
+          "path": "assets/images/colours_scene/green.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.594,
+            "right": 0.593,
+            "top": 0.0,
+            "bottom": 0.992
+          },
+          "visualCenterOffset": [
+            0.03,
+            0.18
+          ]
+        },
+        {
+          "id": "yellow",
+          "path": "assets/images/colours_scene/yellow.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.574,
+            "right": 0.574,
+            "top": 0.014,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.028,
+            0.16
+          ]
+        },
+        {
+          "id": "black",
+          "path": "assets/images/colours_scene/black.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.559,
+            "right": 0.561,
+            "top": 0.0,
+            "bottom": 0.95
+          },
+          "visualCenterOffset": [
+            0.031,
+            0.199
+          ]
+        },
+        {
+          "id": "white",
+          "path": "assets/images/colours_scene/white.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.556,
+            "right": 0.556,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.024,
+            0.206
+          ]
+        },
+        {
+          "id": "orange",
+          "path": "assets/images/colours_scene/orange.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.595,
+            "right": 0.595,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.028,
+            0.154
+          ]
+        },
+        {
+          "id": "purple",
+          "path": "assets/images/colours_scene/purple.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.607,
+            "right": 0.588,
+            "top": 0.051,
+            "bottom": 0.963
+          },
+          "visualCenterOffset": [
+            0.033,
+            0.154
+          ]
+        },
+        {
+          "id": "pink",
+          "path": "assets/images/colours_scene/pink.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.545,
+            "right": 0.542,
+            "top": 0.152,
+            "bottom": 0.96
+          },
+          "visualCenterOffset": [
+            0.042,
+            0.158
+          ]
+        },
+        {
+          "id": "brown",
+          "path": "assets/images/colours_scene/brown.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.606,
+            "right": 0.607,
+            "top": 0.037,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.036,
+            0.146
+          ]
+        }
+      ],
+      "warnings": [
+        "black: visual center looks off (0.03, 0.20)",
+        "white: visual center looks off (0.02, 0.21)"
+      ],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "warn"
+    },
+    {
+      "setId": "emotions",
+      "setPath": "data/sets/emotions.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/emotions_scene",
+      "selectedItems": [
+        "happy",
+        "sad",
+        "angry",
+        "scared",
+        "surprised",
+        "tired",
+        "excited",
+        "bored",
+        "proud",
+        "worried"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "happy",
+          "path": "assets/images/emotions_scene/happy.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.735,
+            "right": 0.583,
+            "top": 0.549,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.011,
+            0.018
+          ]
+        },
+        {
+          "id": "sad",
+          "path": "assets/images/emotions_scene/sad.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.998,
+            "right": 0.719,
+            "top": 0.988,
+            "bottom": 0.521
+          },
+          "visualCenterOffset": [
+            -0.011,
+            -0.016
+          ]
+        },
+        {
+          "id": "angry",
+          "path": "assets/images/emotions_scene/angry.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.876,
+            "right": 0.818,
+            "top": 0.993,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.037
+          ]
+        },
+        {
+          "id": "scared",
+          "path": "assets/images/emotions_scene/scared.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.675,
+            "right": 1.0,
+            "top": 0.992,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.003,
+            0.064
+          ]
+        },
+        {
+          "id": "surprised",
+          "path": "assets/images/emotions_scene/surprised.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.695,
+            "right": 0.763,
+            "top": 0.556,
+            "bottom": 0.551
+          },
+          "visualCenterOffset": [
+            -0.015,
+            -0.031
+          ]
+        },
+        {
+          "id": "tired",
+          "path": "assets/images/emotions_scene/tired.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.352,
+            "right": 0.719,
+            "top": 0.408,
+            "bottom": 0.971
+          },
+          "visualCenterOffset": [
+            0.061,
+            0.042
+          ]
+        },
+        {
+          "id": "excited",
+          "path": "assets/images/emotions_scene/excited.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.906,
+            "right": 0.943,
+            "top": 0.63,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.006,
+            0.006
+          ]
+        },
+        {
+          "id": "bored",
+          "path": "assets/images/emotions_scene/bored.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.715,
+            "right": 0.02,
+            "top": 0.257,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.042,
+            0.024
+          ]
+        },
+        {
+          "id": "proud",
+          "path": "assets/images/emotions_scene/proud.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.759,
+            "right": 0.527,
+            "top": 0.035,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.023,
+            0.134
+          ]
+        },
+        {
+          "id": "worried",
+          "path": "assets/images/emotions_scene/worried.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.69,
+            "right": 0.606,
+            "top": 0.498,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.052,
+            -0.018
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "pass"
+    },
+    {
+      "setId": "food",
+      "setPath": "data/sets/food.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/food_scene",
+      "selectedItems": [
+        "apple",
+        "banana",
+        "bread",
+        "cheese",
+        "egg",
+        "milk",
+        "rice",
+        "soup",
+        "carrot",
+        "cake"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "apple",
+          "path": "assets/images/food_scene/apple.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.417,
+            "right": 0.676,
+            "top": 0.762,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            0.019,
+            0.028
+          ]
+        },
+        {
+          "id": "banana",
+          "path": "assets/images/food_scene/banana.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.899,
+            "right": 0.924,
+            "top": 0.996,
+            "bottom": 0.997
+          },
+          "visualCenterOffset": [
+            0.017,
+            0.022
+          ]
+        },
+        {
+          "id": "bread",
+          "path": "assets/images/food_scene/bread.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.969,
+            "right": 0.97,
+            "top": 0.968,
+            "bottom": 0.971
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.066
+          ]
+        },
+        {
+          "id": "cheese",
+          "path": "assets/images/food_scene/cheese.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.319,
+            "right": 0.361,
+            "top": 0.0,
+            "bottom": 0.993
+          },
+          "visualCenterOffset": [
+            0.029,
+            0.099
+          ]
+        },
+        {
+          "id": "egg",
+          "path": "assets/images/food_scene/egg.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.379,
+            "right": 0.379,
+            "top": 0.013,
+            "bottom": 0.999
+          },
+          "visualCenterOffset": [
+            0.005,
+            0.181
+          ]
+        },
+        {
+          "id": "milk",
+          "path": "assets/images/food_scene/milk.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.429,
+            "right": 0.428,
+            "top": 0.0,
+            "bottom": 0.973
+          },
+          "visualCenterOffset": [
+            -0.006,
+            0.214
+          ]
+        },
+        {
+          "id": "rice",
+          "path": "assets/images/food_scene/rice.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.805,
+            "right": 0.921,
+            "top": 0.996,
+            "bottom": 0.999
+          },
+          "visualCenterOffset": [
+            0.016,
+            0.067
+          ]
+        },
+        {
+          "id": "soup",
+          "path": "assets/images/food_scene/soup.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.417,
+            "right": 0.77,
+            "top": 0.947,
+            "bottom": 0.993
+          },
+          "visualCenterOffset": [
+            0.009,
+            0.076
+          ]
+        },
+        {
+          "id": "carrot",
+          "path": "assets/images/food_scene/carrot.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.449,
+            "right": 0.449,
+            "top": 0.0,
+            "bottom": 0.748
+          },
+          "visualCenterOffset": [
+            0.026,
+            0.159
+          ]
+        },
+        {
+          "id": "cake",
+          "path": "assets/images/food_scene/cake.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.405,
+            "right": 0.49,
+            "top": 0.001,
+            "bottom": 0.997
+          },
+          "visualCenterOffset": [
+            0.02,
+            0.054
+          ]
+        }
+      ],
+      "warnings": [
+        "apple: possible edge stripe at left",
+        "egg: visual center looks off (0.00, 0.18)",
+        "milk: visual center looks off (-0.01, 0.21)",
+        "soup: possible edge stripe at left"
+      ],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "warn"
+    },
+    {
+      "setId": "home",
+      "setPath": "data/sets/home.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/home_scene",
+      "selectedItems": [
+        "house",
+        "door",
+        "window",
+        "stairs",
+        "kitchen",
+        "bedroom",
+        "bathroom",
+        "toilet",
+        "sink",
+        "table"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "house",
+          "path": "assets/images/home_scene/house.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.922,
+            "right": 0.864,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.057
+          ]
+        },
+        {
+          "id": "door",
+          "path": "assets/images/home_scene/door.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.94,
+            "right": 0.99,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.038
+          ]
+        },
+        {
+          "id": "window",
+          "path": "assets/images/home_scene/window.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.14,
+            "right": 0.091,
+            "top": 0.029,
+            "bottom": 0.879
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.005
+          ]
+        },
+        {
+          "id": "stairs",
+          "path": "assets/images/home_scene/stairs.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.939,
+            "right": 0.992,
+            "top": 0.993,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.028
+          ]
+        },
+        {
+          "id": "kitchen",
+          "path": "assets/images/home_scene/kitchen.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.754,
+            "right": 0.995,
+            "top": 0.46,
+            "bottom": 0.979
+          },
+          "visualCenterOffset": [
+            -0.03,
+            0.072
+          ]
+        },
+        {
+          "id": "bedroom",
+          "path": "assets/images/home_scene/bedroom.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.213,
+            "right": 0.671,
+            "top": 0.127,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.03,
+            0.098
+          ]
+        },
+        {
+          "id": "bathroom",
+          "path": "assets/images/home_scene/bathroom.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.539,
+            "right": 0.01,
+            "top": 0.467,
+            "bottom": 0.0
+          },
+          "visualCenterOffset": [
+            -0.075,
+            0.055
+          ]
+        },
+        {
+          "id": "toilet",
+          "path": "assets/images/home_scene/toilet.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.003,
+            "right": 0.004,
+            "top": 0.0,
+            "bottom": 0.479
+          },
+          "visualCenterOffset": [
+            0.012,
+            0.162
+          ]
+        },
+        {
+          "id": "sink",
+          "path": "assets/images/home_scene/sink.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.053,
+            "right": 0.054,
+            "top": 0.048,
+            "bottom": 0.732
+          },
+          "visualCenterOffset": [
+            0.056,
+            0.074
+          ]
+        },
+        {
+          "id": "table",
+          "path": "assets/images/home_scene/table.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.84,
+            "right": 0.994,
+            "top": 0.885,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.001,
+            0.051
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "pass"
+    },
+    {
+      "setId": "school",
+      "setPath": "data/sets/school.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/school_scene",
+      "selectedItems": [
+        "pencil",
+        "book",
+        "ruler",
+        "eraser",
+        "scissors",
+        "glue",
+        "notebook",
+        "backpack",
+        "desk",
+        "chair"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "pencil",
+          "path": "assets/images/school_scene/pencil.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.557,
+            "right": 0.488,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.005,
+            0.171
+          ]
+        },
+        {
+          "id": "book",
+          "path": "assets/images/school_scene/book.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.821,
+            "right": 0.8,
+            "top": 0.996,
+            "bottom": 0.995
+          },
+          "visualCenterOffset": [
+            -0.008,
+            0.012
+          ]
+        },
+        {
+          "id": "ruler",
+          "path": "assets/images/school_scene/ruler.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.635,
+            "right": 0.613,
+            "top": 0.014,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.126
+          ]
+        },
+        {
+          "id": "eraser",
+          "path": "assets/images/school_scene/eraser.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.568,
+            "right": 0.568,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.026,
+            0.182
+          ]
+        },
+        {
+          "id": "scissors",
+          "path": "assets/images/school_scene/scissors.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.362,
+            "right": 0.364,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.006,
+            0.254
+          ]
+        },
+        {
+          "id": "glue",
+          "path": "assets/images/school_scene/glue.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.928,
+            "right": 0.87,
+            "top": 0.816,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.042
+          ]
+        },
+        {
+          "id": "notebook",
+          "path": "assets/images/school_scene/notebook.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.626,
+            "right": 0.733,
+            "top": 0.004,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.005,
+            0.121
+          ]
+        },
+        {
+          "id": "backpack",
+          "path": "assets/images/school_scene/backpack.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.938,
+            "right": 0.999,
+            "top": 0.858,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.003,
+            0.067
+          ]
+        },
+        {
+          "id": "desk",
+          "path": "assets/images/school_scene/desk.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.499,
+            "right": 1.0,
+            "top": 0.993,
+            "bottom": 0.993
+          },
+          "visualCenterOffset": [
+            0.0,
+            0.007
+          ]
+        },
+        {
+          "id": "chair",
+          "path": "assets/images/school_scene/chair.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.822,
+            "right": 0.853,
+            "top": 0.65,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.003,
+            0.076
+          ]
+        }
+      ],
+      "warnings": [
+        "eraser: visual center looks off (0.03, 0.18)",
+        "scissors: visual center looks off (-0.01, 0.25)",
+        "desk: possible edge stripe at left"
+      ],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "warn"
+    },
+    {
+      "setId": "tools",
+      "setPath": "data/sets/tools.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/tools_scene",
+      "selectedItems": [
+        "hammer",
+        "screwdriver",
+        "wrench",
+        "pliers",
+        "saw",
+        "drill",
+        "tape_measure",
+        "level",
+        "paintbrush",
+        "chisel",
+        "file",
+        "clamp",
+        "shovel",
+        "rake",
+        "trowel"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "hammer",
+          "path": "assets/images/tools_scene/hammer.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.211,
+            "right": 0.21,
+            "top": 0.0,
+            "bottom": 0.363
+          },
+          "visualCenterOffset": [
+            -0.013,
+            0.168
+          ]
+        },
+        {
+          "id": "screwdriver",
+          "path": "assets/images/tools_scene/screwdriver.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.957,
+            "right": 0.957,
+            "top": 0.956,
+            "bottom": 0.958
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.081
+          ]
+        },
+        {
+          "id": "wrench",
+          "path": "assets/images/tools_scene/wrench.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.893,
+            "right": 1.0,
+            "top": 0.445,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.049,
+            0.093
+          ]
+        },
+        {
+          "id": "pliers",
+          "path": "assets/images/tools_scene/pliers.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.889,
+            "right": 0.992,
+            "top": 0.827,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.004,
+            0.078
+          ]
+        },
+        {
+          "id": "saw",
+          "path": "assets/images/tools_scene/saw.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.048
+          ]
+        },
+        {
+          "id": "drill",
+          "path": "assets/images/tools_scene/drill.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.608,
+            "right": 0.33,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.029,
+            0.056
+          ]
+        },
+        {
+          "id": "tape_measure",
+          "path": "assets/images/tools_scene/tape_measure.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.863,
+            "right": 0.49,
+            "top": 0.193,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.058,
+            0.102
+          ]
+        },
+        {
+          "id": "level",
+          "path": "assets/images/tools_scene/level.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.049
+          ]
+        },
+        {
+          "id": "paintbrush",
+          "path": "assets/images/tools_scene/paintbrush.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.36,
+            "right": 0.322,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            0.189
+          ]
+        },
+        {
+          "id": "chisel",
+          "path": "assets/images/tools_scene/chisel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.802,
+            "right": 0.672,
+            "top": 0.82,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.094
+          ]
+        },
+        {
+          "id": "file",
+          "path": "assets/images/tools_scene/file.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.753,
+            "right": 0.948,
+            "top": 0.938,
+            "bottom": 0.948
+          },
+          "visualCenterOffset": [
+            0.011,
+            0.083
+          ]
+        },
+        {
+          "id": "clamp",
+          "path": "assets/images/tools_scene/clamp.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.003,
+            0.029
+          ]
+        },
+        {
+          "id": "shovel",
+          "path": "assets/images/tools_scene/shovel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.828,
+            "right": 0.846,
+            "top": 0.001,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.016,
+            0.111
+          ]
+        },
+        {
+          "id": "rake",
+          "path": "assets/images/tools_scene/rake.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.998,
+            "right": 0.883,
+            "top": 0.481,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.059
+          ]
+        },
+        {
+          "id": "trowel",
+          "path": "assets/images/tools_scene/trowel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 0.841,
+            "top": 0.498,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.017,
+            0.059
+          ]
+        }
+      ],
+      "warnings": [
+        "hammer: possible edge stripe at left, right, top, bottom",
+        "paintbrush: visual center looks off (-0.01, 0.19)"
+      ],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "warn"
+    },
+    {
+      "setId": "transport",
+      "setPath": "data/sets/transport.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/transport_scene",
+      "selectedItems": [
+        "airplane",
+        "ferry",
+        "boat",
+        "car",
+        "bus",
+        "train",
+        "bicycle",
+        "motorcycle",
+        "truck",
+        "helicopter"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "airplane",
+          "path": "assets/images/transport_scene/airplane.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.543,
+            "right": 0.564,
+            "top": 1.0,
+            "bottom": 0.726
+          },
+          "visualCenterOffset": [
+            0.038,
+            0.007
+          ]
+        },
+        {
+          "id": "ferry",
+          "path": "assets/images/transport_scene/ferry.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.846,
+            "right": 0.661,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.013,
+            0.09
+          ]
+        },
+        {
+          "id": "boat",
+          "path": "assets/images/transport_scene/boat.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.864,
+            "right": 0.823,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.001,
+            0.106
+          ]
+        },
+        {
+          "id": "car",
+          "path": "assets/images/transport_scene/car.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.657,
+            "right": 0.643,
+            "top": 1.0,
+            "bottom": 0.984
+          },
+          "visualCenterOffset": [
+            0.019,
+            0.05
+          ]
+        },
+        {
+          "id": "bus",
+          "path": "assets/images/transport_scene/bus.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.677,
+            "right": 0.712,
+            "top": 1.0,
+            "bottom": 0.97
+          },
+          "visualCenterOffset": [
+            0.033,
+            0.035
+          ]
+        },
+        {
+          "id": "train",
+          "path": "assets/images/transport_scene/train.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.669,
+            "right": 0.769,
+            "top": 1.0,
+            "bottom": 0.858
+          },
+          "visualCenterOffset": [
+            0.01,
+            0.087
+          ]
+        },
+        {
+          "id": "bicycle",
+          "path": "assets/images/transport_scene/bicycle.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.875,
+            "right": 0.923,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.007,
+            0.043
+          ]
+        },
+        {
+          "id": "motorcycle",
+          "path": "assets/images/transport_scene/motorcycle.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.683,
+            "right": 0.639,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.018,
+            0.053
+          ]
+        },
+        {
+          "id": "truck",
+          "path": "assets/images/transport_scene/truck.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.671,
+            "right": 0.703,
+            "top": 1.0,
+            "bottom": 0.964
+          },
+          "visualCenterOffset": [
+            0.052,
+            -0.006
+          ]
+        },
+        {
+          "id": "helicopter",
+          "path": "assets/images/transport_scene/helicopter.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.608,
+            "right": 0.568,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.0,
+            0.073
+          ]
+        }
+      ],
+      "warnings": [],
+      "failures": [],
+      "written": [],
+      "qualityStatus": "pass"
+    }
+  ],
+  "summary": {
+    "sets": 9,
+    "status": "warn",
+    "warnings": 12,
+    "failures": 0,
+    "written": []
+  }
+}

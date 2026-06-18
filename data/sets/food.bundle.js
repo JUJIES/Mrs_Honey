@@ -1,0 +1,249 @@
+window.LERNWORT_BUNDLED_SETS = window.LERNWORT_BUNDLED_SETS || {};
+window.LERNWORT_BUNDLED_SETS["food"] = {
+  "schemaVersion": 1,
+  "id": "food",
+  "title": {
+    "en": "Food"
+  },
+  "category": "food",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "apple",
+      "image": "assets/images/food_scene/apple.png",
+      "labels": {
+        "en": "apple"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/apple.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food",
+        "fruit"
+      ],
+      "speak": {
+        "en": "Can you find the apple?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_apple.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's an apple."
+      }
+    },
+    {
+      "id": "banana",
+      "image": "assets/images/food_scene/banana.png",
+      "labels": {
+        "en": "banana"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/banana.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food",
+        "fruit"
+      ],
+      "speak": {
+        "en": "Where is the banana?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_banana.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's a banana."
+      }
+    },
+    {
+      "id": "bread",
+      "image": "assets/images/food_scene/bread.png",
+      "labels": {
+        "en": "bread"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/bread.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Can you see the bread?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_bread.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found bread."
+      }
+    },
+    {
+      "id": "cheese",
+      "image": "assets/images/food_scene/cheese.png",
+      "labels": {
+        "en": "cheese"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/cheese.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Can you find the cheese?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_cheese.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's cheese."
+      }
+    },
+    {
+      "id": "egg",
+      "image": "assets/images/food_scene/egg.png",
+      "labels": {
+        "en": "egg"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/egg.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Where is the egg?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_egg.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's an egg."
+      }
+    },
+    {
+      "id": "milk",
+      "image": "assets/images/food_scene/milk.png",
+      "labels": {
+        "en": "milk"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/milk.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food",
+        "drink"
+      ],
+      "speak": {
+        "en": "Can you see the milk?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_milk.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's milk."
+      }
+    },
+    {
+      "id": "rice",
+      "image": "assets/images/food_scene/rice.png",
+      "labels": {
+        "en": "rice"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/rice.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Can you find the rice?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_rice.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's rice."
+      }
+    },
+    {
+      "id": "soup",
+      "image": "assets/images/food_scene/soup.png",
+      "labels": {
+        "en": "soup"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/soup.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Where is the soup?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_soup.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found soup."
+      }
+    },
+    {
+      "id": "carrot",
+      "image": "assets/images/food_scene/carrot.png",
+      "labels": {
+        "en": "carrot"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/carrot.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food",
+        "vegetable"
+      ],
+      "speak": {
+        "en": "Can you see the carrot?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_carrot.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a carrot."
+      }
+    },
+    {
+      "id": "cake",
+      "image": "assets/images/food_scene/cake.png",
+      "labels": {
+        "en": "cake"
+      },
+      "audio": {
+        "en": "assets/audio/food/en/cake.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "food"
+      ],
+      "speak": {
+        "en": "Can you find the cake?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/food/en/read_feedback_cake.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a cake."
+      }
+    }
+  ],
+  "display": "scene-card"
+};

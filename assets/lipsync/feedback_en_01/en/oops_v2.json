@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/oops_v2.mp3",
+    "duration": 0.79
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.12,
+      "value": "X"
+    },
+    {
+      "start": 0.12,
+      "end": 0.2,
+      "value": "F"
+    },
+    {
+      "start": 0.2,
+      "end": 0.36,
+      "value": "A"
+    },
+    {
+      "start": 0.36,
+      "end": 0.65,
+      "value": "B"
+    },
+    {
+      "start": 0.65,
+      "end": 0.79,
+      "value": "X"
+    }
+  ]
+}

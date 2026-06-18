@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/colours_hidden_object/en/classroom_art_yellow_duck.mp3",
+    "duration": 2.22
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.14,
+      "value": "C"
+    },
+    {
+      "start": 0.14,
+      "end": 0.35,
+      "value": "F"
+    },
+    {
+      "start": 0.35,
+      "end": 0.56,
+      "value": "B"
+    },
+    {
+      "start": 0.56,
+      "end": 0.75,
+      "value": "D"
+    },
+    {
+      "start": 0.75,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.19,
+      "value": "C"
+    },
+    {
+      "start": 1.19,
+      "end": 1.33,
+      "value": "E"
+    },
+    {
+      "start": 1.33,
+      "end": 1.68,
+      "value": "B"
+    },
+    {
+      "start": 1.68,
+      "end": 2.22,
+      "value": "X"
+    }
+  ]
+}

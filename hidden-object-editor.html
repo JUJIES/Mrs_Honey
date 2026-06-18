@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7fbff" />
+    <meta name="color-scheme" content="light" />
+    <title>Wimmelbild Editor</title>
+    <link rel="stylesheet" href="hidden-object-editor.css?v=1" />
+  </head>
+  <body>
+    <main class="editor-shell">
+      <section class="editor-panel">
+        <header class="editor-topbar">
+          <div class="select-row">
+            <label>
+              <span>Bild</span>
+              <select id="scene-select"></select>
+            </label>
+            <label>
+              <span>Motiv</span>
+              <select id="target-select"></select>
+            </label>
+          </div>
+          <div class="tool-row" aria-label="Werkzeuge">
+            <button class="icon-button" id="prev-target" type="button" aria-label="Vorheriges Motiv">‹</button>
+            <button class="icon-button" id="next-target" type="button" aria-label="Nächstes Motiv">›</button>
+            <div class="segmented-control">
+              <button id="mode-points" type="button" data-mode="points">Punkte</button>
+              <button id="mode-move" type="button" data-mode="move">Fläche</button>
+              <button id="mode-draw" type="button" data-mode="draw">Neu</button>
+            </div>
+            <button class="icon-button" id="undo-button" type="button" aria-label="Rückgängig">↶</button>
+            <button class="icon-button" id="redo-button" type="button" aria-label="Wiederholen">↷</button>
+          </div>
+        </header>
+
+        <section class="stage-card">
+          <div class="stage-wrap" id="stage-wrap">
+            <img id="scene-image" alt="" draggable="false" />
+            <svg id="overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Polygon Editor">
+              <g id="all-polygons"></g>
+              <polygon id="active-polygon"></polygon>
+              <g id="point-layer"></g>
+            </svg>
+          </div>
+        </section>
+
+        <footer class="editor-actions">
+          <div class="status-line" id="status-line">Bereit</div>
+          <div class="action-row">
+            <button id="add-point-button" type="button">Punkt +</button>
+            <button id="delete-point-button" type="button">Punkt -</button>
+            <button id="reset-target-button" type="button">Zurücksetzen</button>
+            <button id="copy-button" type="button">Kopieren</button>
+            <button id="download-button" type="button">Datei</button>
+          </div>
+        </footer>
+      </section>
+
+      <aside class="target-strip" id="target-strip" aria-label="Motive"></aside>
+    </main>
+
+    <script src="data/minigames/colours_hidden_object.bundle.js?v=hidden-object-hotspots-2"></script>
+    <script src="hidden-object-editor.js?v=1"></script>
+  </body>
+</html>

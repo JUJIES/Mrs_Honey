@@ -1,0 +1,305 @@
+{
+  "sets": [
+    {
+      "setId": "tools",
+      "setPath": "data/sets/tools.json",
+      "display": "scene-card",
+      "targetDir": "assets/images/tools_scene",
+      "selectedItems": [
+        "chisel"
+      ],
+      "importedFromSheet": null,
+      "items": [
+        {
+          "id": "hammer",
+          "path": "assets/images/tools_scene/hammer.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.211,
+            "right": 0.21,
+            "top": 0.0,
+            "bottom": 0.363
+          },
+          "visualCenterOffset": [
+            -0.013,
+            0.168
+          ]
+        },
+        {
+          "id": "screwdriver",
+          "path": "assets/images/tools_scene/screwdriver.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.957,
+            "right": 0.957,
+            "top": 0.956,
+            "bottom": 0.958
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.081
+          ]
+        },
+        {
+          "id": "wrench",
+          "path": "assets/images/tools_scene/wrench.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.893,
+            "right": 1.0,
+            "top": 0.445,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.049,
+            0.093
+          ]
+        },
+        {
+          "id": "pliers",
+          "path": "assets/images/tools_scene/pliers.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.889,
+            "right": 0.992,
+            "top": 0.827,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.004,
+            0.078
+          ]
+        },
+        {
+          "id": "saw",
+          "path": "assets/images/tools_scene/saw.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.048
+          ]
+        },
+        {
+          "id": "drill",
+          "path": "assets/images/tools_scene/drill.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.608,
+            "right": 0.33,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.029,
+            0.056
+          ]
+        },
+        {
+          "id": "tape_measure",
+          "path": "assets/images/tools_scene/tape_measure.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.863,
+            "right": 0.49,
+            "top": 0.193,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.058,
+            0.102
+          ]
+        },
+        {
+          "id": "level",
+          "path": "assets/images/tools_scene/level.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.001,
+            0.049
+          ]
+        },
+        {
+          "id": "paintbrush",
+          "path": "assets/images/tools_scene/paintbrush.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.36,
+            "right": 0.322,
+            "top": 0.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.005,
+            0.189
+          ]
+        },
+        {
+          "id": "chisel",
+          "path": "assets/images/tools_scene/chisel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.802,
+            "right": 0.672,
+            "top": 0.82,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.014,
+            0.094
+          ]
+        },
+        {
+          "id": "file",
+          "path": "assets/images/tools_scene/file.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.753,
+            "right": 0.948,
+            "top": 0.938,
+            "bottom": 0.948
+          },
+          "visualCenterOffset": [
+            0.011,
+            0.083
+          ]
+        },
+        {
+          "id": "clamp",
+          "path": "assets/images/tools_scene/clamp.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 1.0,
+            "top": 1.0,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.003,
+            0.029
+          ]
+        },
+        {
+          "id": "shovel",
+          "path": "assets/images/tools_scene/shovel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.828,
+            "right": 0.846,
+            "top": 0.001,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            0.016,
+            0.111
+          ]
+        },
+        {
+          "id": "rake",
+          "path": "assets/images/tools_scene/rake.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 0.998,
+            "right": 0.883,
+            "top": 0.481,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.009,
+            0.059
+          ]
+        },
+        {
+          "id": "trowel",
+          "path": "assets/images/tools_scene/trowel.png",
+          "size": [
+            768,
+            768
+          ],
+          "edgeSalience": {
+            "left": 1.0,
+            "right": 0.841,
+            "top": 0.498,
+            "bottom": 1.0
+          },
+          "visualCenterOffset": [
+            -0.017,
+            0.059
+          ]
+        }
+      ],
+      "warnings": [
+        "hammer: possible edge stripe at left, right, top, bottom",
+        "paintbrush: visual center looks off (-0.01, 0.19)"
+      ],
+      "failures": [],
+      "written": [
+        "data/sets/tools.bundle.js"
+      ],
+      "contactSheet": "references/source_images/problem_regen/final_tools_contact.png",
+      "qualityStatus": "warn"
+    }
+  ],
+  "summary": {
+    "sets": 1,
+    "status": "warn",
+    "warnings": 2,
+    "failures": 0,
+    "written": [
+      "data/sets/tools.bundle.js"
+    ]
+  }
+}

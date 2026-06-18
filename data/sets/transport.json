@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "id": "transport",
+  "title": {
+    "en": "Transport"
+  },
+  "category": "transport",
+  "display": "scene-card",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "airplane",
+      "image": "assets/images/transport_scene/airplane.png",
+      "labels": {
+        "en": "airplane"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/airplane.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you find the airplane?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_airplane.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's an airplane."
+      }
+    },
+    {
+      "id": "ferry",
+      "image": "assets/images/transport_scene/ferry.png",
+      "labels": {
+        "en": "ferry"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/ferry.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Where is the ferry?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_ferry.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's a ferry."
+      }
+    },
+    {
+      "id": "boat",
+      "image": "assets/images/transport_scene/boat.png",
+      "labels": {
+        "en": "boat"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/boat.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you see the boat?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_boat.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found a boat."
+      }
+    },
+    {
+      "id": "car",
+      "image": "assets/images/transport_scene/car.png",
+      "labels": {
+        "en": "car"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/car.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you find the car?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_car.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a car."
+      }
+    },
+    {
+      "id": "bus",
+      "image": "assets/images/transport_scene/bus.png",
+      "labels": {
+        "en": "bus"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/bus.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Where is the bus?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_bus.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a bus."
+      }
+    },
+    {
+      "id": "train",
+      "image": "assets/images/transport_scene/train.png",
+      "labels": {
+        "en": "train"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/train.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you see the train?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_train.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's a train."
+      }
+    },
+    {
+      "id": "bicycle",
+      "image": "assets/images/transport_scene/bicycle.png",
+      "labels": {
+        "en": "bicycle"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/bicycle.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you find the bicycle?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_bicycle.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! It's a bicycle."
+      }
+    },
+    {
+      "id": "motorcycle",
+      "image": "assets/images/transport_scene/motorcycle.png",
+      "labels": {
+        "en": "motorcycle"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/motorcycle.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Where is the motorcycle?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_motorcycle.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found a motorcycle."
+      }
+    },
+    {
+      "id": "truck",
+      "image": "assets/images/transport_scene/truck.png",
+      "labels": {
+        "en": "truck"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/truck.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you see the truck?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_truck.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a truck."
+      }
+    },
+    {
+      "id": "helicopter",
+      "image": "assets/images/transport_scene/helicopter.png",
+      "labels": {
+        "en": "helicopter"
+      },
+      "audio": {
+        "en": "assets/audio/transport/en/helicopter.mp3"
+      },
+      "difficulty": 1,
+      "tags": [
+        "transport"
+      ],
+      "speak": {
+        "en": "Can you find the helicopter?"
+      },
+      "readFeedback": {
+        "en": "assets/audio/transport/en/read_feedback_helicopter.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a helicopter."
+      }
+    }
+  ]
+}

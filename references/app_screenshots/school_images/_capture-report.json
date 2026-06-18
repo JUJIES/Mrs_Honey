@@ -1,0 +1,392 @@
+[
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/01-pencil.png",
+    "cards": [
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      },
+      {
+        "id": "book",
+        "naturalHeight": 420,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/book.png"
+      },
+      {
+        "id": "pencil",
+        "naturalHeight": 430,
+        "naturalWidth": 304,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/pencil.png"
+      },
+      {
+        "id": "glue",
+        "naturalHeight": 430,
+        "naturalWidth": 220,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/glue.png"
+      }
+    ],
+    "progress": "1 / 10",
+    "target": "pencil"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/02-book.png",
+    "cards": [
+      {
+        "id": "pencil",
+        "naturalHeight": 430,
+        "naturalWidth": 304,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/pencil.png"
+      },
+      {
+        "id": "book",
+        "naturalHeight": 420,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/book.png"
+      },
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      },
+      {
+        "id": "scissors",
+        "naturalHeight": 430,
+        "naturalWidth": 340,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/scissors.png"
+      }
+    ],
+    "progress": "2 / 10",
+    "target": "book"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/03-desk.png",
+    "cards": [
+      {
+        "id": "eraser",
+        "naturalHeight": 430,
+        "naturalWidth": 424,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/eraser.png"
+      },
+      {
+        "id": "desk",
+        "naturalHeight": 413,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/desk.png"
+      },
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      },
+      {
+        "id": "scissors",
+        "naturalHeight": 430,
+        "naturalWidth": 340,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/scissors.png"
+      }
+    ],
+    "progress": "3 / 10",
+    "target": "desk"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/04-chair.png",
+    "cards": [
+      {
+        "id": "pencil",
+        "naturalHeight": 430,
+        "naturalWidth": 304,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/pencil.png"
+      },
+      {
+        "id": "glue",
+        "naturalHeight": 430,
+        "naturalWidth": 220,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/glue.png"
+      },
+      {
+        "id": "chair",
+        "naturalHeight": 430,
+        "naturalWidth": 297,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/chair.png"
+      },
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      }
+    ],
+    "progress": "4 / 10",
+    "target": "chair"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/05-eraser.png",
+    "cards": [
+      {
+        "id": "backpack",
+        "naturalHeight": 430,
+        "naturalWidth": 381,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/backpack.png"
+      },
+      {
+        "id": "pencil",
+        "naturalHeight": 430,
+        "naturalWidth": 304,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/pencil.png"
+      },
+      {
+        "id": "scissors",
+        "naturalHeight": 430,
+        "naturalWidth": 340,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/scissors.png"
+      },
+      {
+        "id": "eraser",
+        "naturalHeight": 430,
+        "naturalWidth": 424,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/eraser.png"
+      }
+    ],
+    "progress": "5 / 10",
+    "target": "eraser"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/06-scissors.png",
+    "cards": [
+      {
+        "id": "eraser",
+        "naturalHeight": 430,
+        "naturalWidth": 424,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/eraser.png"
+      },
+      {
+        "id": "backpack",
+        "naturalHeight": 430,
+        "naturalWidth": 381,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/backpack.png"
+      },
+      {
+        "id": "book",
+        "naturalHeight": 420,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/book.png"
+      },
+      {
+        "id": "scissors",
+        "naturalHeight": 430,
+        "naturalWidth": 340,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/scissors.png"
+      }
+    ],
+    "progress": "6 / 10",
+    "target": "scissors"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/07-backpack.png",
+    "cards": [
+      {
+        "id": "backpack",
+        "naturalHeight": 430,
+        "naturalWidth": 381,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/backpack.png"
+      },
+      {
+        "id": "glue",
+        "naturalHeight": 430,
+        "naturalWidth": 220,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/glue.png"
+      },
+      {
+        "id": "notebook",
+        "naturalHeight": 430,
+        "naturalWidth": 361,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/notebook.png"
+      },
+      {
+        "id": "book",
+        "naturalHeight": 420,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/book.png"
+      }
+    ],
+    "progress": "7 / 10",
+    "target": "backpack"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/08-glue.png",
+    "cards": [
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      },
+      {
+        "id": "desk",
+        "naturalHeight": 413,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/desk.png"
+      },
+      {
+        "id": "chair",
+        "naturalHeight": 430,
+        "naturalWidth": 297,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/chair.png"
+      },
+      {
+        "id": "glue",
+        "naturalHeight": 430,
+        "naturalWidth": 220,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/glue.png"
+      }
+    ],
+    "progress": "8 / 10",
+    "target": "glue"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/09-notebook.png",
+    "cards": [
+      {
+        "id": "desk",
+        "naturalHeight": 413,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/desk.png"
+      },
+      {
+        "id": "notebook",
+        "naturalHeight": 430,
+        "naturalWidth": 361,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/notebook.png"
+      },
+      {
+        "id": "book",
+        "naturalHeight": 420,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/book.png"
+      },
+      {
+        "id": "chair",
+        "naturalHeight": 430,
+        "naturalWidth": 297,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/chair.png"
+      }
+    ],
+    "progress": "9 / 10",
+    "target": "notebook"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/school_images/10-ruler.png",
+    "cards": [
+      {
+        "id": "ruler",
+        "naturalHeight": 430,
+        "naturalWidth": 298,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/ruler.png"
+      },
+      {
+        "id": "chair",
+        "naturalHeight": 430,
+        "naturalWidth": 297,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/chair.png"
+      },
+      {
+        "id": "desk",
+        "naturalHeight": 413,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/desk.png"
+      },
+      {
+        "id": "backpack",
+        "naturalHeight": 430,
+        "naturalWidth": 381,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/school/backpack.png"
+      }
+    ],
+    "progress": "10 / 10",
+    "target": "ruler"
+  }
+]

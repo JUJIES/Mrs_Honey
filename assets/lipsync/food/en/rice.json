@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/rice.mp3",
+    "duration": 1.74
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.14,
+      "value": "B"
+    },
+    {
+      "start": 0.14,
+      "end": 0.42,
+      "value": "F"
+    },
+    {
+      "start": 0.42,
+      "end": 0.5,
+      "value": "A"
+    },
+    {
+      "start": 0.5,
+      "end": 0.56,
+      "value": "C"
+    },
+    {
+      "start": 0.56,
+      "end": 0.69,
+      "value": "B"
+    },
+    {
+      "start": 0.69,
+      "end": 0.83,
+      "value": "C"
+    },
+    {
+      "start": 0.83,
+      "end": 1.04,
+      "value": "B"
+    },
+    {
+      "start": 1.04,
+      "end": 1.18,
+      "value": "C"
+    },
+    {
+      "start": 1.18,
+      "end": 1.53,
+      "value": "B"
+    },
+    {
+      "start": 1.53,
+      "end": 1.74,
+      "value": "X"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_carrot.mp3",
+    "duration": 1.81
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.25,
+      "value": "E"
+    },
+    {
+      "start": 0.25,
+      "end": 0.32,
+      "value": "C"
+    },
+    {
+      "start": 0.32,
+      "end": 0.53,
+      "value": "B"
+    },
+    {
+      "start": 0.53,
+      "end": 0.82,
+      "value": "X"
+    },
+    {
+      "start": 0.82,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.19,
+      "value": "C"
+    },
+    {
+      "start": 1.19,
+      "end": 1.47,
+      "value": "B"
+    },
+    {
+      "start": 1.47,
+      "end": 1.81,
+      "value": "X"
+    }
+  ]
+}

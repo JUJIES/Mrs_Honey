@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/cat.mp3",
+    "duration": 1.63
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.21,
+      "value": "C"
+    },
+    {
+      "start": 0.21,
+      "end": 0.25,
+      "value": "E"
+    },
+    {
+      "start": 0.25,
+      "end": 0.44,
+      "value": "F"
+    },
+    {
+      "start": 0.44,
+      "end": 0.52,
+      "value": "A"
+    },
+    {
+      "start": 0.52,
+      "end": 0.57,
+      "value": "C"
+    },
+    {
+      "start": 0.57,
+      "end": 0.75,
+      "value": "B"
+    },
+    {
+      "start": 0.75,
+      "end": 1.1,
+      "value": "C"
+    },
+    {
+      "start": 1.1,
+      "end": 1.38,
+      "value": "B"
+    },
+    {
+      "start": 1.38,
+      "end": 1.63,
+      "value": "X"
+    }
+  ]
+}

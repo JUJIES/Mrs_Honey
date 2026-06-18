@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/transport/en/read_feedback_bus.mp3",
+    "duration": 1.92
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.18,
+      "value": "F"
+    },
+    {
+      "start": 0.18,
+      "end": 0.8,
+      "value": "C"
+    },
+    {
+      "start": 0.8,
+      "end": 1.08,
+      "value": "B"
+    },
+    {
+      "start": 1.08,
+      "end": 1.16,
+      "value": "A"
+    },
+    {
+      "start": 1.16,
+      "end": 1.48,
+      "value": "D"
+    },
+    {
+      "start": 1.48,
+      "end": 1.53,
+      "value": "C"
+    },
+    {
+      "start": 1.53,
+      "end": 1.71,
+      "value": "B"
+    },
+    {
+      "start": 1.71,
+      "end": 1.92,
+      "value": "X"
+    }
+  ]
+}

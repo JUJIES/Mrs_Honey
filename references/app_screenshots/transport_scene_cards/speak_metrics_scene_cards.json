@@ -1,0 +1,42 @@
+[
+  {
+    "suffix": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "metrics": {
+      "src": "assets/images/transport_scene/train.png",
+      "img": {
+        "width": 578,
+        "height": 578
+      },
+      "card": {
+        "width": 600,
+        "height": 350
+      },
+      "fits": false,
+      "objectFit": "contain"
+    }
+  },
+  {
+    "suffix": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "metrics": {
+      "src": "assets/images/transport_scene/ferry.png",
+      "img": {
+        "width": 340,
+        "height": 340
+      },
+      "card": {
+        "width": 362,
+        "height": 360
+      },
+      "fits": true,
+      "objectFit": "contain"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/transport/en/read_feedback_airplane.mp3",
+    "duration": 2.39
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.42,
+      "value": "C"
+    },
+    {
+      "start": 0.42,
+      "end": 0.7,
+      "value": "B"
+    },
+    {
+      "start": 0.7,
+      "end": 0.95,
+      "value": "X"
+    },
+    {
+      "start": 0.95,
+      "end": 1.15,
+      "value": "B"
+    },
+    {
+      "start": 1.15,
+      "end": 1.43,
+      "value": "C"
+    },
+    {
+      "start": 1.43,
+      "end": 1.51,
+      "value": "A"
+    },
+    {
+      "start": 1.51,
+      "end": 1.75,
+      "value": "C"
+    },
+    {
+      "start": 1.75,
+      "end": 1.96,
+      "value": "B"
+    },
+    {
+      "start": 1.96,
+      "end": 2.39,
+      "value": "X"
+    }
+  ]
+}

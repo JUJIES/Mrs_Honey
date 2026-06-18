@@ -1,0 +1,12 @@
+Bitte baue den MVP anhand von `codex/CODEX_BRIEFING.md`.
+
+Wichtig:
+- Tablet-first für iPad 9
+- HTML/CSS/Vanilla JS
+- JSON-Lernset `data/sets/animals_01.json`
+- erster funktionaler Modus: English / Animals / Read & Tap
+- 4 Bildkarten im 2x2-Raster
+- zufällig gemischt, keine Überlagerung
+- statischer Hintergrund `assets/backgrounds/calm-learning-bg.png`
+- keine nativen Input-Felder für Kindereingaben
+- ruhiger, minimalistischer, kindgerechter Stil wie in `references/ui/`

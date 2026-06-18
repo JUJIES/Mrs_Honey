@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/transport/en/motorcycle.mp3",
+    "duration": 1.93
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.15,
+      "value": "F"
+    },
+    {
+      "start": 0.15,
+      "end": 0.26,
+      "value": "C"
+    },
+    {
+      "start": 0.26,
+      "end": 0.61,
+      "value": "B"
+    },
+    {
+      "start": 0.61,
+      "end": 0.7,
+      "value": "A"
+    },
+    {
+      "start": 0.7,
+      "end": 0.77,
+      "value": "E"
+    },
+    {
+      "start": 0.77,
+      "end": 0.83,
+      "value": "B"
+    },
+    {
+      "start": 0.83,
+      "end": 0.97,
+      "value": "E"
+    },
+    {
+      "start": 0.97,
+      "end": 1.11,
+      "value": "B"
+    },
+    {
+      "start": 1.11,
+      "end": 1.18,
+      "value": "C"
+    },
+    {
+      "start": 1.18,
+      "end": 1.53,
+      "value": "B"
+    },
+    {
+      "start": 1.53,
+      "end": 1.93,
+      "value": "X"
+    }
+  ]
+}

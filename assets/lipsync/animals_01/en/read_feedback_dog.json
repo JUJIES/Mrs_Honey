@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/animals_01/en/read_feedback_dog.mp3",
+    "duration": 1.42
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.28,
+      "value": "C"
+    },
+    {
+      "start": 0.28,
+      "end": 0.7,
+      "value": "B"
+    },
+    {
+      "start": 0.7,
+      "end": 0.98,
+      "value": "E"
+    },
+    {
+      "start": 0.98,
+      "end": 1.12,
+      "value": "C"
+    },
+    {
+      "start": 1.12,
+      "end": 1.26,
+      "value": "B"
+    },
+    {
+      "start": 1.26,
+      "end": 1.42,
+      "value": "X"
+    }
+  ]
+}

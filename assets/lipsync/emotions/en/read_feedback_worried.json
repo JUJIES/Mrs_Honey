@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/emotions/en/read_feedback_worried.mp3",
+    "duration": 2.9
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.11,
+      "value": "X"
+    },
+    {
+      "start": 0.11,
+      "end": 0.17,
+      "value": "F"
+    },
+    {
+      "start": 0.17,
+      "end": 0.37,
+      "value": "C"
+    },
+    {
+      "start": 0.37,
+      "end": 0.44,
+      "value": "B"
+    },
+    {
+      "start": 0.44,
+      "end": 0.86,
+      "value": "D"
+    },
+    {
+      "start": 0.86,
+      "end": 0.93,
+      "value": "C"
+    },
+    {
+      "start": 0.93,
+      "end": 1.07,
+      "value": "B"
+    },
+    {
+      "start": 1.07,
+      "end": 1.25,
+      "value": "X"
+    },
+    {
+      "start": 1.25,
+      "end": 1.3,
+      "value": "B"
+    },
+    {
+      "start": 1.3,
+      "end": 1.35,
+      "value": "C"
+    },
+    {
+      "start": 1.35,
+      "end": 1.49,
+      "value": "B"
+    },
+    {
+      "start": 1.49,
+      "end": 1.63,
+      "value": "C"
+    },
+    {
+      "start": 1.63,
+      "end": 1.98,
+      "value": "B"
+    },
+    {
+      "start": 1.98,
+      "end": 2.12,
+      "value": "F"
+    },
+    {
+      "start": 2.12,
+      "end": 2.26,
+      "value": "E"
+    },
+    {
+      "start": 2.26,
+      "end": 2.47,
+      "value": "B"
+    },
+    {
+      "start": 2.47,
+      "end": 2.9,
+      "value": "X"
+    }
+  ]
+}

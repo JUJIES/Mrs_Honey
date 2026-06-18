@@ -1,0 +1,17 @@
+{
+  "created": "2026-06-12T16:33:17.904491Z",
+  "project": "Lernwort-App MVP",
+  "target_device": "iPad 9",
+  "first_set": "animals_01",
+  "first_mode": "Read & Tap",
+  "assets": {
+    "animal_cutouts": 10,
+    "background": "assets/backgrounds/calm-learning-bg.png",
+    "ui_references": [
+      "01_language_selection.png",
+      "02_learning_set_selection.png",
+      "03_mode_selection.png",
+      "04_game_screen_read_tap.png"
+    ]
+  }
+}

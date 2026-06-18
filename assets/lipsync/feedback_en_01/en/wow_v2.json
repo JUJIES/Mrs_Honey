@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/feedback_en_01/en/wow_v2.mp3",
+    "duration": 0.81
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.21,
+      "value": "F"
+    },
+    {
+      "start": 0.21,
+      "end": 0.42,
+      "value": "D"
+    },
+    {
+      "start": 0.42,
+      "end": 0.56,
+      "value": "E"
+    },
+    {
+      "start": 0.56,
+      "end": 0.81,
+      "value": "X"
+    }
+  ]
+}

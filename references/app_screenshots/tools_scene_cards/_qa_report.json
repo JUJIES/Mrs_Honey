@@ -1,0 +1,325 @@
+{
+  "generatedAt": "2026-06-13T20:42:22.037Z",
+  "desktop": {
+    "name": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "initial": {
+      "title": "Lernwort",
+      "text": "Was möchtest du lernen?\n🇬🇧\nEnglish",
+      "buttons": [
+        "🇬🇧\nEnglish"
+      ]
+    },
+    "english": {
+      "ok": true,
+      "clicked": "🇬🇧\n          English"
+    },
+    "setPicker": true,
+    "tools": {
+      "ok": true,
+      "clicked": "Tools"
+    },
+    "screenshots": {
+      "setPicker": "references/app_screenshots/tools_scene_cards/desktop/set_picker.png",
+      "modePicker": "references/app_screenshots/tools_scene_cards/desktop/mode_picker.png"
+    },
+    "modes": {
+      "hear": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Hören"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/desktop/hear.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/paintbrush.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/clamp.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/wrench.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/tape_measure.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "read": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Lesen"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/desktop/read.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15\npaintbrush",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/screwdriver.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/rake.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/clamp.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/paintbrush.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "speak": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Sprechen"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/desktop/speak.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15\nDrück das Mikro",
+          "gameDisplay": "scene-card",
+          "imageCount": 1,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/drill.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 444,
+                "height": 444
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      }
+    }
+  },
+  "mobile": {
+    "name": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "initial": {
+      "title": "Lernwort",
+      "text": "Was möchtest du lernen?\n🇬🇧\nEnglish",
+      "buttons": [
+        "🇬🇧\nEnglish"
+      ]
+    },
+    "english": {
+      "ok": true,
+      "clicked": "🇬🇧\n          English"
+    },
+    "setPicker": true,
+    "tools": {
+      "ok": true,
+      "clicked": "Tools"
+    },
+    "screenshots": {
+      "setPicker": "references/app_screenshots/tools_scene_cards/mobile/set_picker.png",
+      "modePicker": "references/app_screenshots/tools_scene_cards/mobile/mode_picker.png"
+    },
+    "modes": {
+      "hear": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Hören"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/mobile/hear.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/clamp.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/drill.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/file.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/level.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "read": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Lesen"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/mobile/read.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15\nlevel",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/level.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/rake.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/file.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/tools_scene/screwdriver.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "speak": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Sprechen"
+        },
+        "shot": "references/app_screenshots/tools_scene_cards/mobile/speak.png",
+        "state": {
+          "body": "‹\nEnglish / Tools\n1 / 15\nDrück das Mikro",
+          "gameDisplay": "scene-card",
+          "imageCount": 1,
+          "images": [
+            {
+              "src": "assets/images/tools_scene/tape_measure.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 366,
+                "height": 366
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      }
+    }
+  }
+}

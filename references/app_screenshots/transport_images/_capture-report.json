@@ -1,0 +1,392 @@
+[
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/01-helicopter.png",
+    "cards": [
+      {
+        "id": "helicopter",
+        "naturalHeight": 270,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/helicopter.png"
+      },
+      {
+        "id": "boat",
+        "naturalHeight": 399,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/boat.png"
+      },
+      {
+        "id": "motorcycle",
+        "naturalHeight": 329,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/motorcycle.png"
+      },
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      }
+    ],
+    "progress": "1 / 10",
+    "target": "helicopter"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/02-motorcycle.png",
+    "cards": [
+      {
+        "id": "motorcycle",
+        "naturalHeight": 329,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/motorcycle.png"
+      },
+      {
+        "id": "bicycle",
+        "naturalHeight": 352,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bicycle.png"
+      },
+      {
+        "id": "ferry",
+        "naturalHeight": 360,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/ferry.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      }
+    ],
+    "progress": "2 / 10",
+    "target": "motorcycle"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/03-bicycle.png",
+    "cards": [
+      {
+        "id": "bicycle",
+        "naturalHeight": 352,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bicycle.png"
+      },
+      {
+        "id": "helicopter",
+        "naturalHeight": 270,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/helicopter.png"
+      },
+      {
+        "id": "boat",
+        "naturalHeight": 399,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/boat.png"
+      },
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      }
+    ],
+    "progress": "3 / 10",
+    "target": "bicycle"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/04-airplane.png",
+    "cards": [
+      {
+        "id": "helicopter",
+        "naturalHeight": 270,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/helicopter.png"
+      },
+      {
+        "id": "truck",
+        "naturalHeight": 348,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/truck.png"
+      },
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      },
+      {
+        "id": "bicycle",
+        "naturalHeight": 352,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bicycle.png"
+      }
+    ],
+    "progress": "4 / 10",
+    "target": "airplane"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/05-truck.png",
+    "cards": [
+      {
+        "id": "truck",
+        "naturalHeight": 348,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/truck.png"
+      },
+      {
+        "id": "motorcycle",
+        "naturalHeight": 329,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/motorcycle.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      },
+      {
+        "id": "train",
+        "naturalHeight": 242,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/train.png"
+      }
+    ],
+    "progress": "5 / 10",
+    "target": "truck"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/06-bus.png",
+    "cards": [
+      {
+        "id": "helicopter",
+        "naturalHeight": 270,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/helicopter.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      },
+      {
+        "id": "truck",
+        "naturalHeight": 348,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/truck.png"
+      },
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      }
+    ],
+    "progress": "6 / 10",
+    "target": "bus"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/07-train.png",
+    "cards": [
+      {
+        "id": "train",
+        "naturalHeight": 242,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/train.png"
+      },
+      {
+        "id": "ferry",
+        "naturalHeight": 360,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/ferry.png"
+      },
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      }
+    ],
+    "progress": "7 / 10",
+    "target": "train"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/08-ferry.png",
+    "cards": [
+      {
+        "id": "bicycle",
+        "naturalHeight": 352,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bicycle.png"
+      },
+      {
+        "id": "truck",
+        "naturalHeight": 348,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/truck.png"
+      },
+      {
+        "id": "ferry",
+        "naturalHeight": 360,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/ferry.png"
+      },
+      {
+        "id": "motorcycle",
+        "naturalHeight": 329,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/motorcycle.png"
+      }
+    ],
+    "progress": "8 / 10",
+    "target": "ferry"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/09-boat.png",
+    "cards": [
+      {
+        "id": "train",
+        "naturalHeight": 242,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/train.png"
+      },
+      {
+        "id": "ferry",
+        "naturalHeight": 360,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/ferry.png"
+      },
+      {
+        "id": "boat",
+        "naturalHeight": 399,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/boat.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      }
+    ],
+    "progress": "9 / 10",
+    "target": "boat"
+  },
+  {
+    "file": "/Users/Julius/coding_projects/games/Lernspiel Oskar/lernwort_mvp_codex_package/references/app_screenshots/transport_images/10-car.png",
+    "cards": [
+      {
+        "id": "airplane",
+        "naturalHeight": 263,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/airplane.png"
+      },
+      {
+        "id": "ferry",
+        "naturalHeight": 360,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/ferry.png"
+      },
+      {
+        "id": "bus",
+        "naturalHeight": 279,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/bus.png"
+      },
+      {
+        "id": "car",
+        "naturalHeight": 311,
+        "naturalWidth": 430,
+        "renderedHeight": 88,
+        "renderedWidth": 260,
+        "src": "assets/images/transport/car.png"
+      }
+    ],
+    "progress": "10 / 10",
+    "target": "car"
+  }
+]

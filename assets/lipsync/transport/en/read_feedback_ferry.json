@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/transport/en/read_feedback_ferry.mp3",
+    "duration": 1.81
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.35,
+      "value": "C"
+    },
+    {
+      "start": 0.35,
+      "end": 0.56,
+      "value": "B"
+    },
+    {
+      "start": 0.56,
+      "end": 0.68,
+      "value": "X"
+    },
+    {
+      "start": 0.68,
+      "end": 0.85,
+      "value": "B"
+    },
+    {
+      "start": 0.85,
+      "end": 0.92,
+      "value": "C"
+    },
+    {
+      "start": 0.92,
+      "end": 1.03,
+      "value": "A"
+    },
+    {
+      "start": 1.03,
+      "end": 1.18,
+      "value": "C"
+    },
+    {
+      "start": 1.18,
+      "end": 1.46,
+      "value": "B"
+    },
+    {
+      "start": 1.46,
+      "end": 1.81,
+      "value": "X"
+    }
+  ]
+}

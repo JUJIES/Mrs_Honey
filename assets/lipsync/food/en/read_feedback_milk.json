@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/food/en/read_feedback_milk.mp3",
+    "duration": 1.69
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.1,
+      "value": "X"
+    },
+    {
+      "start": 0.1,
+      "end": 0.4,
+      "value": "C"
+    },
+    {
+      "start": 0.4,
+      "end": 0.61,
+      "value": "B"
+    },
+    {
+      "start": 0.61,
+      "end": 0.84,
+      "value": "X"
+    },
+    {
+      "start": 0.84,
+      "end": 1.03,
+      "value": "B"
+    },
+    {
+      "start": 1.03,
+      "end": 1.12,
+      "value": "A"
+    },
+    {
+      "start": 1.12,
+      "end": 1.46,
+      "value": "B"
+    },
+    {
+      "start": 1.46,
+      "end": 1.69,
+      "value": "X"
+    }
+  ]
+}

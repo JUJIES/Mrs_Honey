@@ -1,0 +1,325 @@
+{
+  "generatedAt": "2026-06-13T21:58:35.284Z",
+  "desktop": {
+    "name": "desktop",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "initial": {
+      "title": "Lernwort",
+      "text": "Was möchtest du lernen?\n🇬🇧\nEnglish",
+      "buttons": [
+        "🇬🇧\nEnglish"
+      ]
+    },
+    "english": {
+      "ok": true,
+      "clicked": "🇬🇧\n          English"
+    },
+    "setPicker": true,
+    "emotions": {
+      "ok": true,
+      "clicked": "Emotions"
+    },
+    "screenshots": {
+      "setPicker": "references/app_screenshots/emotions_scene_cards/desktop/set_picker.png",
+      "modePicker": "references/app_screenshots/emotions_scene_cards/desktop/mode_picker.png"
+    },
+    "modes": {
+      "hear": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Hören"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/desktop/hear.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/surprised.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/sad.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/bored.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/worried.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "read": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Lesen"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/desktop/read.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10\nsad",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/tired.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/sad.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/bored.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/surprised.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 221,
+                "height": 221
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "speak": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Sprechen"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/desktop/speak.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10\nDrück das Mikro",
+          "gameDisplay": "scene-card",
+          "imageCount": 1,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/sad.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 444,
+                "height": 444
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      }
+    }
+  },
+  "mobile": {
+    "name": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "initial": {
+      "title": "Lernwort",
+      "text": "Was möchtest du lernen?\n🇬🇧\nEnglish",
+      "buttons": [
+        "🇬🇧\nEnglish"
+      ]
+    },
+    "english": {
+      "ok": true,
+      "clicked": "🇬🇧\n          English"
+    },
+    "setPicker": true,
+    "emotions": {
+      "ok": true,
+      "clicked": "Emotions"
+    },
+    "screenshots": {
+      "setPicker": "references/app_screenshots/emotions_scene_cards/mobile/set_picker.png",
+      "modePicker": "references/app_screenshots/emotions_scene_cards/mobile/mode_picker.png"
+    },
+    "modes": {
+      "hear": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Hören"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/mobile/hear.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/tired.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/proud.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/surprised.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/excited.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "read": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Lesen"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/mobile/read.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10\nsad",
+          "gameDisplay": "scene-card",
+          "imageCount": 4,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/proud.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/bored.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/sad.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            },
+            {
+              "src": "assets/images/emotions_scene/tired.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 179,
+                "height": 179
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      },
+      "speak": {
+        "clicked": {
+          "ok": true,
+          "clicked": "Sprechen"
+        },
+        "shot": "references/app_screenshots/emotions_scene_cards/mobile/speak.png",
+        "state": {
+          "body": "‹\nEnglish / Emotions\n1 / 10\nDrück das Mikro",
+          "gameDisplay": "scene-card",
+          "imageCount": 1,
+          "images": [
+            {
+              "src": "assets/images/emotions_scene/tired.png",
+              "naturalWidth": 768,
+              "naturalHeight": 768,
+              "rect": {
+                "width": 366,
+                "height": 366
+              }
+            }
+          ],
+          "audioManifestLoaded": true,
+          "bundledSetLoaded": true,
+          "readFeedbackInSet": true
+        }
+      }
+    }
+  }
+}

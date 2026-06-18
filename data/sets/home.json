@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "id": "home",
+  "title": {
+    "en": "Home"
+  },
+  "category": "home",
+  "display": "scene-card",
+  "languages": [
+    "en"
+  ],
+  "items": [
+    {
+      "id": "house",
+      "image": "assets/images/home_scene/house.png",
+      "labels": {
+        "en": "house"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/house.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_house.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's a house."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home"
+      ],
+      "speak": {
+        "en": "Can you find the house?"
+      }
+    },
+    {
+      "id": "door",
+      "image": "assets/images/home_scene/door.png",
+      "labels": {
+        "en": "door"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/door.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_door.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! That's a door."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home"
+      ],
+      "speak": {
+        "en": "Where is the door?"
+      }
+    },
+    {
+      "id": "window",
+      "image": "assets/images/home_scene/window.png",
+      "labels": {
+        "en": "window"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/window.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_window.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found the window."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home"
+      ],
+      "speak": {
+        "en": "Can you see the window?"
+      }
+    },
+    {
+      "id": "stairs",
+      "image": "assets/images/home_scene/stairs.png",
+      "labels": {
+        "en": "stairs"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/stairs.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_stairs.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! Those are stairs."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home"
+      ],
+      "speak": {
+        "en": "Can you find the stairs?"
+      }
+    },
+    {
+      "id": "kitchen",
+      "image": "assets/images/home_scene/kitchen.png",
+      "labels": {
+        "en": "kitchen"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/kitchen.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_kitchen.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a kitchen."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "room"
+      ],
+      "speak": {
+        "en": "Where is the kitchen?"
+      }
+    },
+    {
+      "id": "bedroom",
+      "image": "assets/images/home_scene/bedroom.png",
+      "labels": {
+        "en": "bedroom"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/bedroom.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_bedroom.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Yes! That's a bedroom."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "room"
+      ],
+      "speak": {
+        "en": "Can you see the bedroom?"
+      }
+    },
+    {
+      "id": "bathroom",
+      "image": "assets/images/home_scene/bathroom.png",
+      "labels": {
+        "en": "bathroom"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/bathroom.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_bathroom.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Great! That's a bathroom."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "room"
+      ],
+      "speak": {
+        "en": "Can you find the bathroom?"
+      }
+    },
+    {
+      "id": "toilet",
+      "image": "assets/images/home_scene/toilet.png",
+      "labels": {
+        "en": "toilet"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/toilet.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_toilet.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Nice! You found the toilet."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "bathroom"
+      ],
+      "speak": {
+        "en": "Where is the toilet?"
+      }
+    },
+    {
+      "id": "sink",
+      "image": "assets/images/home_scene/sink.png",
+      "labels": {
+        "en": "sink"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/sink.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_sink.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Correct! That's a sink."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "bathroom",
+        "kitchen"
+      ],
+      "speak": {
+        "en": "Can you see the sink?"
+      }
+    },
+    {
+      "id": "table",
+      "image": "assets/images/home_scene/table.png",
+      "labels": {
+        "en": "table"
+      },
+      "audio": {
+        "en": "assets/audio/home/en/table.mp3"
+      },
+      "readFeedback": {
+        "en": "assets/audio/home/en/read_feedback_table.mp3"
+      },
+      "readFeedbackText": {
+        "en": "Well done! That's a table."
+      },
+      "difficulty": 1,
+      "tags": [
+        "home",
+        "furniture"
+      ],
+      "speak": {
+        "en": "Can you find the table?"
+      }
+    }
+  ]
+}

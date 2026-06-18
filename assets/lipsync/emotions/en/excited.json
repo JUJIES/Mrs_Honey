@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "soundFile": "assets/audio/emotions/en/excited.mp3",
+    "duration": 2.41
+  },
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.21,
+      "value": "B"
+    },
+    {
+      "start": 0.21,
+      "end": 0.42,
+      "value": "F"
+    },
+    {
+      "start": 0.42,
+      "end": 0.5,
+      "value": "A"
+    },
+    {
+      "start": 0.5,
+      "end": 0.56,
+      "value": "C"
+    },
+    {
+      "start": 0.56,
+      "end": 1.11,
+      "value": "B"
+    },
+    {
+      "start": 1.11,
+      "end": 1.18,
+      "value": "C"
+    },
+    {
+      "start": 1.18,
+      "end": 1.53,
+      "value": "B"
+    },
+    {
+      "start": 1.53,
+      "end": 1.67,
+      "value": "D"
+    },
+    {
+      "start": 1.67,
+      "end": 2.02,
+      "value": "B"
+    },
+    {
+      "start": 2.02,
+      "end": 2.41,
+      "value": "X"
+    }
+  ]
+}
