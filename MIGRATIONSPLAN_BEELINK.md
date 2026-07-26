@@ -9,8 +9,8 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 | Projekt / Zweck | Mrs Honey, dauerhaft erreichbare Englisch-Lern-PWA mit lokaler Whisper-Sprechprüfung |
 | Klasse | `service`, weil App und stabile URL dauerhaft verfügbar sein sollen |
 | Quellrepository / Branch | `git@github.com:JUJIES/Mrs_Honey.git`, `main` |
-| Produkt-Freeze-Commit auf GitHub | wird nach Freeze gesetzt |
-| Readiness-Dokumentationscommit | wird nach Freeze gesetzt |
+| Produkt-Freeze-Commit auf GitHub | `fda31f55b1a856babffd1c8c6196c4cbcc9da4f3` |
+| Readiness-Dokumentationscommit | dieser nachfolgende reine Dokumentationscommit; Hash wird im Abschlussstand ergänzt |
 | Schreibender Arbeitsort | Mac-Repository; Beelink `_dev\Mrs_Honey` reproduziert nur gepushte Commits |
 | Persistente Daten | keine Lern- oder Nutzerdaten; Runtime enthält nur reproduzierbare Dependencies, temporäre Dateien und redigierte Betriebslogs |
 | Secrets / personenbezogene Daten | Mikrofon-Audio und Transkript nur anfragebezogen; keine dauerhafte Speicherung; Named-Tunnel-Credential ausschließlich ACL-geschützt außerhalb von Git |
@@ -24,10 +24,10 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 | Gate | Status | Knappe Evidenz oder Blocker |
 |---|---|---|
 | Produktlogik, Datenfluss, Persistenz und bisheriger Startweg verstanden | bestanden | Statische PWA und `/api/speech/check` laufen same-origin; Speech-Dateien sind temporär; Browserzustand ist nicht persistent |
-| Dirty-/Remote-/Branch-Drift geklärt; Freeze-Commit auf GitHub vorhanden | offen | Ausgangsstand `06f0d49624ba9e668721132330f51bdea1b96d63` war sauber und exakt `origin/main`; Freeze folgt nach Produktchecks |
-| Readiness-Commit enthält nur Plan-/Evidenzdokumentation und ist gepusht | offen | folgt nach Produkt-Freeze |
+| Dirty-/Remote-/Branch-Drift geklärt; Freeze-Commit auf GitHub vorhanden | bestanden | Freeze `fda31f55b1a856babffd1c8c6196c4cbcc9da4f3` ist gepusht und von `origin/main` erreichbar |
+| Readiness-Commit enthält nur Plan-/Evidenzdokumentation und ist gepusht | offen | dieser Commit ändert ausschließlich `MIGRATIONSPLAN_BEELINK.md`; Push folgt |
 | Secrets, Nutzerdaten, Logs und Backup-Scope klassifiziert | bestanden | keine App-Secrets oder persistenten Nutzerdaten; Transkripte standardmäßig redigiert; Tunnel-Credential bleibt externe geheime Konfiguration |
-| `_dev` reproduziert Setup, Tests und Produktverhalten | offen | Beelink-Reproduktion folgt nach Readiness |
+| `_dev` reproduziert Setup, Tests und Produktverhalten | offen | frischer Mac-Clone des Freeze bestand Unit-, Syntax-, Pipeline-, Start- und Releasechecks; Beelink-`_dev` folgt |
 | Kandidat auf freiem Port lokal gesund / Tool-Dry-run bestanden | bestanden | lokaler integrierter Server auf 5190; `/health/ready` 200; reales `cat.mp3` wurde korrekt als `cat` erkannt |
 | Persistenz und Runtime liegen außerhalb des Releases | bestanden | minimaler Release enthält nur 856 Runtime-Dateien; Modell, Binaries, Temp und Logs liegen außerhalb |
 | Unveränderlicher `_services`-Release erzeugt | offen | folgt aus Freeze-Commit |
@@ -56,7 +56,7 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 ## 5. Abschluss
 
 - Ergebnis: `offen`
-- Produkt-Freeze-Commit: offen
+- Produkt-Freeze-Commit: `fda31f55b1a856babffd1c8c6196c4cbcc9da4f3`
 - Readiness-Dokumentationscommit: offen
 - Control-Center-Commit oder `nicht relevant`: offen
 - Lokaler Healthcheck: offen
