@@ -6,6 +6,9 @@ Dieses Paket enthält die tablet- und handytaugliche Mrs-Honey-Lernwort-WebApp f
 
 Eine ruhige, minimalistische, kindgerechte WebApp für iPad 9.
 
+Produktiv ist die App dauerhaft unter
+[`https://mrshoney.jujies.app`](https://mrshoney.jujies.app) erreichbar.
+
 Startflow:
 
 1. Sprache wählen
@@ -65,7 +68,7 @@ Der integrierte Server liefert App und Spracherkennung aus demselben Origin:
 
 ```bash
 export WHISPER_CPP_BIN=/pfad/zu/whisper-cli
-export WHISPER_CPP_MODEL=/pfad/zu/ggml-small.bin
+export WHISPER_CPP_MODEL=/pfad/zu/ggml-base.en.bin
 export FFMPEG_BIN=/pfad/zu/ffmpeg
 python3 server/local_app_server.py
 ```

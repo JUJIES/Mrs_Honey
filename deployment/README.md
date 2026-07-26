@@ -4,7 +4,13 @@ Mrs Honey is deployed as a long-running `service`. GitHub and the exact product-
 
 ## Runtime boundary
 
-`deployment/build_release.py` copies only the files required by the public PWA:
+The productive `_services` directory is a clean detached Git worktree at the
+exact product-freeze commit. This lets the Control Center verify both the commit
+and the clean release state without making the app dependent on the Control
+Center.
+
+`deployment/build_release.py` remains the audit/build helper that proves the
+minimal runtime boundary and creates a portable package containing only:
 
 - `index.html`, CSS, runtime JavaScript, manifests and service worker
 - `assets/` and `data/`
@@ -20,7 +26,9 @@ python deployment/build_release.py \
   --commit "<commit>"
 ```
 
-The generated `RELEASE.json` records every runtime file with its size and SHA-256 hash.
+The generated `RELEASE.json` records every runtime file with its size and
+SHA-256 hash. It is not used as the productive `_services` checkout because the
+standard Control Center service contract requires Git commit evidence there.
 
 ## Beelink contract
 
@@ -34,3 +42,9 @@ The generated `RELEASE.json` records every runtime file with its size and SHA-25
 App and tunnel are separate automatic Windows services and must remain operational without the Control Center. Templates under `deployment/windows/` contain no credentials. The named-tunnel credential belongs only in the ACL-protected ProgramData tunnel directory.
 
 The Control Center integration is status-only. It observes the pinned release, readiness endpoint, Windows services, tunnel and registered logs; it does not host or parent the app.
+
+The Beelink benchmark selected `ggml-base.en.bin` for production: four
+representative vocabulary words were recognized correctly with materially lower
+latency than `ggml-small.bin`. The small model remains a checksum-pinned fallback.
+Exact runtime versions and hashes are recorded in
+`deployment/windows/runtime-dependencies.json`.

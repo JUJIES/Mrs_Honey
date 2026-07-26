@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-07-26",
+  "releaseCommit": "fda31f55b1a856babffd1c8c6196c4cbcc9da4f3",
+  "dependencies": [
+    {
+      "name": "Python",
+      "version": "3.12.10",
+      "runtimePath": "C:\\Users\\Julius Herrmann\\Coding Projects\\_runtime\\Mrs_Honey\\python\\python.exe",
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+      "source": "https://www.python.org/downloads/release/python-31210/"
+    },
+    {
+      "name": "whisper.cpp CLI",
+      "version": "1.9.1",
+      "runtimePath": "C:\\Users\\Julius Herrmann\\Coding Projects\\_runtime\\Mrs_Honey\\whisper\\whisper-cli.exe",
+      "sha256": "58245314fb73b30fbd0cf0542c5c172e23f02b6eb7cad7b51e792439cf5e1755",
+      "archiveSha256": "7d8be46ecd31828e1eb7a2ecdd0d6b314feafd82163038ab6092594b0a063539",
+      "source": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.1"
+    },
+    {
+      "name": "Whisper base.en model",
+      "version": "ggml-base.en",
+      "runtimePath": "C:\\Users\\Julius Herrmann\\Coding Projects\\_runtime\\Mrs_Honey\\models\\ggml-base.en.bin",
+      "sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "source": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.en.bin"
+    },
+    {
+      "name": "Whisper small fallback model",
+      "version": "ggml-small",
+      "runtimePath": "C:\\Users\\Julius Herrmann\\Coding Projects\\_runtime\\Mrs_Honey\\models\\ggml-small.bin",
+      "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+      "source": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin"
+    },
+    {
+      "name": "FFmpeg",
+      "version": "8.1.2",
+      "runtimePath": "C:\\Users\\Julius Herrmann\\Coding Projects\\_runtime\\Mrs_Honey\\ffmpeg\\bin\\ffmpeg.exe",
+      "sha256": "ad8f211bc894755e0061c55ab280ae00e8d3d4f15a8cc4372b24cfa247b5942e",
+      "source": "existing verified Beelink runtime dependency"
+    },
+    {
+      "name": "WinSW",
+      "version": "2.11.0",
+      "runtimePath": "C:\\ProgramData\\Beelink\\Services\\mrs-honey\\service-5900.exe",
+      "sha256": "31dca0d9bd3c5ab7e119172bdb927b90c9da935d0f4963335eaf60e7d8f7aabf",
+      "source": "https://github.com/winsw/winsw/releases/tag/v2.11.0"
+    },
+    {
+      "name": "cloudflared",
+      "version": "2026.6.1",
+      "runtimePath": "C:\\Program Files (x86)\\cloudflared\\cloudflared.exe",
+      "sha256": "5253e66f1f493c4e13539749f1aa86fd0c61e3072900fec29a44ba046a6d97e2",
+      "source": "existing shared Beelink installation"
+    }
+  ],
+  "serviceArtifacts": {
+    "appConfigSha256": "80f996a5f11f2be1c9971e39ad677e723817e0a1543d161a70dd22e32a20b6b2",
+    "tunnelConfigSha256": "aaffd849c3c90dc02066095e823376886b789d558ca7733888a52c59bce758a2",
+    "tunnelServiceConfigSha256": "b2f7febb36cc2d9209fa8edc1c9791562a883cbe8b0bbb723fbdc3f89535e0c2"
+  }
+}
