@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <id>BeelinkApp-MrsHoney</id>
+  <name>Beelink App - Mrs Honey</name>
+  <description>Mrs Honey English learning PWA and local Whisper speech check</description>
+  <executable>C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\python\python.exe</executable>
+  <arguments>-u &quot;C:\Users\Julius Herrmann\Coding Projects\_services\Mrs_Honey\__RELEASE_COMMIT__\server\local_app_server.py&quot;</arguments>
+  <workingdirectory>C:\Users\Julius Herrmann\Coding Projects\_services\Mrs_Honey\__RELEASE_COMMIT__</workingdirectory>
+  <startmode>Automatic</startmode>
+  <stoptimeout>30sec</stoptimeout>
+  <stopparentprocessfirst>true</stopparentprocessfirst>
+  <serviceaccount>
+    <domain>NT AUTHORITY</domain>
+    <user>LocalService</user>
+  </serviceaccount>
+  <env name="LERNWORT_APP_HOST" value="127.0.0.1" />
+  <env name="LERNWORT_APP_PORT" value="5900" />
+  <env name="WHISPER_CPP_BIN" value="C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\whisper\whisper-cli.exe" />
+  <env name="WHISPER_CPP_MODEL" value="C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\models\ggml-small.bin" />
+  <env name="FFMPEG_BIN" value="C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\ffmpeg\bin\ffmpeg.exe" />
+  <env name="LERNWORT_CORS_ORIGIN" value="https://mrshoney.jujies.app" />
+  <env name="LERNWORT_MAX_REQUEST_BYTES" value="4194304" />
+  <env name="LERNWORT_SPEECH_CONCURRENCY" value="1" />
+  <env name="LERNWORT_LOG_TRANSCRIPTS" value="0" />
+  <env name="PYTHONUNBUFFERED" value="1" />
+  <env name="TEMP" value="C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\tmp" />
+  <env name="TMP" value="C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\tmp" />
+  <onfailure action="restart" delay="5 sec" />
+  <onfailure action="restart" delay="15 sec" />
+  <onfailure action="none" />
+  <resetfailure>1 hour</resetfailure>
+  <logpath>C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\logs\service</logpath>
+  <log mode="roll-by-size">
+    <sizeThreshold>10240</sizeThreshold>
+    <keepFiles>5</keepFiles>
+  </log>
+</service>

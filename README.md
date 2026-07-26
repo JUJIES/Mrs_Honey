@@ -1,6 +1,6 @@
 # Lernwort-App MVP – Codex-Paket
 
-Dieses Paket enthält alles für den ersten MVP einer tabletfreundlichen Lernwort-WebApp für Klasse 1/2.
+Dieses Paket enthält die tablet- und handytaugliche Mrs-Honey-Lernwort-WebApp für Klasse 1/2.
 
 ## Ziel
 
@@ -13,7 +13,7 @@ Startflow:
 3. Modus wählen
 4. Spiel startet sofort
 
-Erstes Lernset: `Animals 1` mit 10 Tieren.
+Die App enthält neun englische Lernsets, Audioübungen, Memory und das Farben-Wimmelspiel.
 
 ## Enthalten
 
@@ -43,10 +43,10 @@ MVP enthält:
 - Lernset wählen
 - Modus wählen
 - funktionale Modi: English / Hear, Lesen, Sprechen
-- 4 Bildkarten im 2x2-Raster
+- Bildkarten, Memory und Farben-Wimmelspiel
 - zufällig gemischte Antwortkarten
 - lokaler Whisper-Endpoint für Einzelwort-Erkennung im Sprechen-Modus
-- lokales JSON-Lernset
+- lokale JSON-/Bundle-Lernsets
 - lokale PNG-Bilder
 - statischer Hintergrund
 
@@ -56,6 +56,20 @@ MVP enthält noch nicht:
 - Benutzerkonten
 - Fortschritt pro Kind
 - Lehrer-Editor
-- gehostetes Backend
 - freie Satzbewertung
 - native iPad-Tastatur
+
+## Start und Produktion
+
+Der integrierte Server liefert App und Spracherkennung aus demselben Origin:
+
+```bash
+export WHISPER_CPP_BIN=/pfad/zu/whisper-cli
+export WHISPER_CPP_MODEL=/pfad/zu/ggml-small.bin
+export FFMPEG_BIN=/pfad/zu/ffmpeg
+python3 server/local_app_server.py
+```
+
+Liveness: `GET /health`. Vollständige Speech-Bereitschaft: `GET /health/ready`.
+
+Der dauerhafte Beelink-Betrieb, das minimale Release und die getrennten Windows-Dienste für App und Tunnel sind unter `deployment/` dokumentiert. Der aktuelle Migrations- und Abnahmestand steht in `MIGRATIONSPLAN_BEELINK.md`.

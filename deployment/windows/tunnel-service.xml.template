@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <id>BeelinkTunnel-MrsHoney</id>
+  <name>Beelink Tunnel - Mrs Honey</name>
+  <description>Independent Cloudflare named tunnel for Mrs Honey</description>
+  <executable>C:\Program Files (x86)\cloudflared\cloudflared.exe</executable>
+  <arguments>tunnel --config &quot;C:\ProgramData\Beelink\Tunnels\mrs-honey\config.yml&quot; run __TUNNEL_ID__</arguments>
+  <workingdirectory>C:\ProgramData\Beelink\Tunnels\mrs-honey</workingdirectory>
+  <startmode>Automatic</startmode>
+  <stoptimeout>15sec</stoptimeout>
+  <stopparentprocessfirst>true</stopparentprocessfirst>
+  <serviceaccount>
+    <domain>NT AUTHORITY</domain>
+    <user>LocalService</user>
+  </serviceaccount>
+  <onfailure action="restart" delay="5 sec" />
+  <onfailure action="restart" delay="15 sec" />
+  <onfailure action="none" />
+  <resetfailure>1 hour</resetfailure>
+  <logpath>C:\Users\Julius Herrmann\Coding Projects\_runtime\Mrs_Honey\logs\tunnel</logpath>
+  <log mode="roll-by-size">
+    <sizeThreshold>10240</sizeThreshold>
+    <keepFiles>5</keepFiles>
+  </log>
+</service>

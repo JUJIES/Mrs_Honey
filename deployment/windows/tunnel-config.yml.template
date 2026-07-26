@@ -1,0 +1,7 @@
+tunnel: __TUNNEL_ID__
+credentials-file: C:\ProgramData\Beelink\Tunnels\mrs-honey\credentials.json
+
+ingress:
+  - hostname: mrshoney.jujies.app
+    service: http://127.0.0.1:5900
+  - service: http_status:404

@@ -19,7 +19,8 @@ class LocalAppHandler(SpeechCheckHandler):
     server_version = "LernwortLocalApp/0.1"
 
     def do_GET(self):
-        if self.path == "/health" or self.path.startswith("/api/"):
+        parsed_path = urlparse(self.path).path
+        if parsed_path in {"/health", "/health/ready"} or parsed_path.startswith("/api/"):
             super().do_GET()
             return
 
@@ -47,6 +48,8 @@ class LocalAppHandler(SpeechCheckHandler):
         self.send_response(200)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(payload)))
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "same-origin")
         if candidate.name in {"index.html", "service-worker.js"}:
             self.send_header("Cache-Control", "no-store")
         self.end_headers()

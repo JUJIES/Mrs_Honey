@@ -33,14 +33,19 @@ The app currently expects local MP3 files only for English learning modes.
 Required MVP inventory:
 
 - `assets/audio/animals_01/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
+- `assets/audio/body_parts/en/*.mp3`: 30 files (15 item prompts + 15 read-feedback prompts)
 - `assets/audio/colours/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
+- `assets/audio/colours_hidden_object/en/*.mp3`: 42 files
+- `assets/audio/emotions/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
 - `assets/audio/food/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
+- `assets/audio/home/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
 - `assets/audio/school/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
 - `assets/audio/transport/en/*.mp3`: 20 files (10 item prompts + 10 read-feedback prompts)
+- `assets/audio/tools/en/*.mp3`: 30 files (15 item prompts + 15 read-feedback prompts)
 - `assets/audio/feedback_en_01/en/*.mp3`: 42 files
 - `assets/audio/sentence_prompts_en_01_v3_soft/en/*.mp3`: 5 files
 
-Expected total: 147 MP3 files.
+Expected total: 289 MP3 files.
 
 Every MP3 must be listed in:
 
@@ -161,7 +166,7 @@ NODE
 node "/Users/Julius/coding_projects/tools/11labs wizard/tools/tts/qa-learning-audio.mjs" --dir "assets/audio/animals_01/en" --report /tmp/animals_01_en.qa.json --fail-on-issues off
 ```
 
-Repeat for `colours/en`, `food/en`, `school/en`, `transport/en`, `feedback_en_01/en`, and `sentence_prompts_en_01_v3_soft/en`.
+Repeat for `body_parts/en`, `colours/en`, `colours_hidden_object/en`, `emotions/en`, `food/en`, `home/en`, `school/en`, `tools/en`, `transport/en`, `feedback_en_01/en`, and `sentence_prompts_en_01_v3_soft/en`.
 
 Accept only if every group has `filesWithIssues: 0`.
 

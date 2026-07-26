@@ -1,3 +1,5 @@
 .DS_Store
 .pipeline_locks
 server/models/ggml-base.en.bin
+__pycache__/
+*.pyc
