@@ -1,10 +1,10 @@
-const CACHE_NAME = "lernwort-pwa-v27";
+const CACHE_NAME = "lernwort-pwa-v28";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=mode-child-1",
-  "./app.js?v=mode-child-1",
+  "./styles.css?v=competency-2",
+  "./app.js?v=competency-2",
   "./manifest.webmanifest",
   "./assets/backgrounds/calm-learning-bg.png",
   "./assets/icons/apple-touch-icon.png",
@@ -34,9 +34,9 @@ const PRECACHE_URLS = [
   "./assets/images/set_cards/transport.jpg",
   "./assets/images/set_cards/tools.jpg",
   "./assets/images/set_cards/emotions.jpg",
-  "./assets/images/mode_cards/hear-child.png",
-  "./assets/images/mode_cards/read-child.png",
-  "./assets/images/mode_cards/speak-child.png",
+  "./assets/images/mode_cards/hear-competency-v2.jpg",
+  "./assets/images/mode_cards/read-competency-v2.jpg",
+  "./assets/images/mode_cards/speak-competency-v2.jpg",
   "./assets/images/memory_difficulty/memory-small.svg",
   "./assets/images/memory_difficulty/memory-medium.svg",
   "./assets/images/memory_difficulty/memory-large.svg",

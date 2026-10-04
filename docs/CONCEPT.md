@@ -31,9 +31,9 @@ Die App soll:
 
 Drei Taps bis zum Spiel:
 
-1. Sprache wählen: Deutsch / English
+1. Sprache wählen: English (aktueller MVP ist English-only)
 2. Lernset wählen: z. B. Animals
-3. Modus wählen: Hear & Tap / Read & Tap / Match Pairs
+3. Modus wählen: Hören / Lesen / Sprechen
 
 Pro Screen wird nur eine Entscheidung angezeigt.
 
@@ -47,7 +47,7 @@ Erstmal rezeptiv:
 - Wort lesen
 - passendes Bild antippen
 
-### Deutsch
+### Deutsch (nur spätere Idee, nicht im MVP)
 
 Später produktiver:
 
@@ -68,7 +68,10 @@ Kind sieht ein englisches Wort und tippt das passende Bild. Lautsprecherbutton z
 
 ### Sprechen
 
-Kind sieht ein Bild, kann die Aussprache anhören und spricht das Wort selbst. Die Aufnahme wird an einen lokalen Whisper-Dienst geschickt und tolerant gegen das erwartete Einzelwort geprüft.
+Kind sieht ein Bild, kann die Aussprache anhören und benennt es auf Englisch in
+einem Satz (z. B. `It's a cat.`). Die Aufnahme wird an den same-origin
+Whisper-Dienst geschickt. Er prüft tolerant das erwartete Wort und die unterstützten
+Satzmuster (`requiresSentence=true`), nicht frei die Grammatik beliebiger Sätze.
 
 ## Erster funktionaler Modus
 

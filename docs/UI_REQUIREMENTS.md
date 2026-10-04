@@ -43,10 +43,7 @@ Titel:
 
 `Was möchtest du lernen?`
 
-Karten:
-
-- 🇩🇪 Deutsch
-- 🇬🇧 English
+Aktuell nur English (🇬🇧); keine deutsche Lernsprache im MVP.
 
 Flagge immer mit Textlabel.
 
@@ -63,7 +60,7 @@ Für English:
 - Colours
 - School things
 
-Im MVP nur Animals aktiv.
+Aktuell neun aktive englische Sets; die Auswahl in `app.js` ist maßgeblich.
 
 ### Modus wählen
 
@@ -73,11 +70,18 @@ Titel:
 
 Karten:
 
-- Hear & Tap
-- Read & Tap
-- Match Pairs
+- **Hören**: „Hör zu und tippe auf das passende Bild.“ Ohr/Schall und Bildauswahl.
+- **Lesen**: „Lies das Wort und finde das passende Bild.“ Wortkarte `cat` und passendes Bild.
+- **Sprechen**: „Sag auf Englisch in einem Satz, was du siehst.“ Bild, Mikrofon und Beispielsatz `It's a cat.`
 
-Layout ähnlich Referenz `references/ui/03_mode_selection.png`.
+Die warmen, ruhigen Illustrationen liegen als weboptimierte JPEGs unter `assets/images/mode_cards/*-competency-v2.jpg`.
+Keine dunkle Textüberlagerung und kein Beschnitt: Titel und Lernziel stehen separat unter dem Bild.
+Auf dem Tablet/Desktop drei gleichwertige Karten nebeneinander, auf schmalen Handys
+untereinander mit Bild links und Text rechts. Ganze Karte bleibt ein Touch-/Tastatur-Ziel;
+das dekorative Bild hat einen leeren Alternativtext, Titel und Lernziel ergeben den zugänglichen Namen.
+Die Bilder sind im PWA-Precache enthalten; Asset-Version und Cache-Version müssen bei Änderungen zusammen aktualisiert werden.
+
+Memory und Farben-Wimmelspiel sind eigene Auswahlpfade, keine Kompetenzkarten.
 
 ### Spielscreen
 

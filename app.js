@@ -386,7 +386,8 @@ const modes = [
   {
     id: "hear-tap",
     title: "Hören",
-    cover: "assets/images/mode_cards/hear-child.png?v=mode-child-1",
+    description: "Hör zu und tippe auf das passende Bild.",
+    cover: "assets/images/mode_cards/hear-competency-v2.jpg",
     icon: lucideIcon("volume2"),
     tone: "blue",
     active: true,
@@ -394,7 +395,8 @@ const modes = [
   {
     id: "read-tap",
     title: "Lesen",
-    cover: "assets/images/mode_cards/read-child.png?v=mode-child-1",
+    description: "Lies das Wort und finde das passende Bild.",
+    cover: "assets/images/mode_cards/read-competency-v2.jpg",
     icon: lucideIcon("bookOpenText"),
     tone: "green",
     active: true,
@@ -402,7 +404,8 @@ const modes = [
   {
     id: "speak",
     title: "Sprechen",
-    cover: "assets/images/mode_cards/speak-child.png?v=mode-child-1",
+    description: "Sag auf Englisch in einem Satz, was du siehst.",
+    cover: "assets/images/mode_cards/speak-competency-v2.jpg",
     icon: lucideIcon("mic"),
     tone: "yellow",
     active: true,
@@ -474,7 +477,7 @@ function renderSetScreen() {
 function renderModeScreen() {
   stopTutorIdleAnimation();
   app.innerHTML = `
-    <section class="screen">
+    <section class="screen mode-screen">
       <button class="screen-back-button" type="button" aria-label="Zurück zur Set-Auswahl">
         ${lucideIcon("arrowLeft")}
       </button>
@@ -483,15 +486,15 @@ function renderModeScreen() {
       </div>
       <div class="choice-grid mode-grid">
         ${modes
-          .map((mode) =>
-            choiceCard({
-              id: mode.id,
-              title: mode.title,
-              backgroundImage: mode.cover,
-              tone: mode.tone,
-              active: mode.active,
-            }),
-          )
+          .map((mode) => `
+            <button class="choice-card competency-card" type="button" data-id="${mode.id}" data-tone="${mode.tone}" ${mode.active ? "" : "disabled"}>
+              <img class="competency-illustration" src="${mode.cover}" alt="" loading="eager" decoding="async" />
+              <span class="competency-copy">
+                <strong>${mode.title}</strong>
+                <span class="competency-description">${mode.description}</span>
+              </span>
+            </button>
+          `)
           .join("")}
       </div>
     </section>

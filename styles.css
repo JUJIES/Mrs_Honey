@@ -2758,6 +2758,120 @@ h1 {
   }
 }
 
+/* Competency cards use uncropped artwork and separate, readable learning goals.
+   Keep this scoped: set covers and the actual exercise layouts stay unchanged. */
+.mode-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.choice-card.competency-card {
+  min-height: 0;
+  padding: 0;
+  gap: 0;
+  align-content: start;
+  justify-items: stretch;
+  grid-template-rows: auto 1fr;
+  background: #fffdf7;
+  border: 1px solid rgba(98, 112, 127, 0.2);
+  color: var(--ink);
+  text-align: center;
+}
+
+.competency-card .competency-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+
+.competency-card .competency-copy {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+  padding: 20px 18px 24px;
+  border-top: 1px solid rgba(98, 112, 127, 0.1);
+}
+
+.competency-card strong {
+  color: var(--ink);
+  font-size: clamp(1.5rem, 3.4svh, 2.2rem);
+  line-height: 1.15;
+}
+
+.competency-card .competency-description {
+  min-height: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.competency-card:focus-visible {
+  outline: 3px solid #2f6f9f;
+  outline-offset: 4px;
+}
+
+@media (orientation: portrait) and (max-width: 680px) {
+  .mode-screen {
+    gap: 24px;
+  }
+
+  .mode-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .choice-card.competency-card {
+    grid-template-columns: minmax(100px, 42%) minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: left;
+  }
+
+  .competency-card .competency-copy {
+    padding: 16px 14px 16px 8px;
+    border-top: 0;
+    gap: 6px;
+  }
+
+  .competency-card strong {
+    font-size: 1.5rem;
+  }
+
+  .competency-card .competency-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 540px) {
+  .mode-screen {
+    min-height: 0;
+    gap: 18px;
+    padding-top: 44px;
+  }
+
+  .competency-card .competency-illustration {
+    height: clamp(85px, 29dvh, 145px);
+  }
+
+  .competency-card .competency-copy {
+    padding: 12px 10px 14px;
+    gap: 6px;
+  }
+
+  .competency-card strong {
+    font-size: 1.35rem;
+  }
+
+  .competency-card .competency-description {
+    font-size: 0.85rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
