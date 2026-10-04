@@ -67,3 +67,12 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 - Öffentlicher Produktcheck: Start-, Lernset-, Modus- und Sprechen-Ansicht im Desktop-/Mobil-Viewport; Speech-API mit realem MP3 → korrekt/200
 - Backup-/Restore-Nachweis: `nicht relevant`, weil keine persistenten App-/Nutzerdaten existieren; Abhängigkeiten sind reproduzierbar und hashverzeichnet
 - Bewusst offene Praxischecks: voller Host-Reboot erst nach ausdrücklicher Freigabe; reale Mikrofonberechtigung einmal auf dem konkreten Handy bestätigen
+
+## 6. Folgeupdate 2026-10-04 – Kompetenzauswahl
+
+- Geprüfter App-Release: `75d089cf52ec6441ad4f33aac44d936b5cfae338` (GitHub `main`). Drei neue Kompetenzmotive, kurze Lernziele und responsives Kartenlayout; keine Änderung an Übungen, Audio, Setdaten oder Speech-API.
+- Checks vor Cutover: JS-Syntax und Diffprüfung, fünf Speech-Unit-Tests, Browserprüfung Desktop/Handy/Querformat ohne horizontalen Überlauf, Start/Zurück in allen drei Modi. Beelink-Kandidat auf freiem Port 5191: vollständige Speech-Readiness und sechs UI-/Asset-Requests erfolgreich.
+- Neuer `_services\Mrs_Honey\75d089cf52ec6441ad4f33aac44d936b5cfae338`-Worktree bleibt sauber und detached. Bestehender App-Dienst, Tunnel, Runtime, Port und Zugriffsmodell bleiben bestehen.
+- Rückfall vor Cutover festgelegt: `service-5900.before.xml` unter `_runtime\Mrs_Honey\ops\competencies-20261004` wiederherstellen und ausschließlich `BeelinkApp-MrsHoney` neu starten. Alter Freeze-Worktree bleibt erhalten; keine Route oder Credentials ändern.
+- Control Center: ausschließlich Versions-/Pfadnachweise und WinSW-XML-Hash für `mrs-honey` anpassen, ausgehend vom tatsächlich laufenden Control-Center-Commit `de5226560ddf24265ee733e26d50da345b0f82b8`. Andere Workloads, Zugriffskonfiguration und Aktionen müssen byte-/semantikgleich bleiben. Vorherige Task-Aktion und CC-Release sind der getrennte Rückfall.
+- Produktiver Cutover und öffentlicher Postcheck: ausstehend; erst nach erfolgreicher Prüfung als aktiv melden.
