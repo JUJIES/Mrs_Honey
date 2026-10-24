@@ -1514,7 +1514,7 @@
       paused = true;
       message.textContent =
         round.mode === "challenge"
-          ? "60 Sekunden: 10 Punkte pro Treffer. Die Uhr läuft auch bei Pause weiter."
+          ? "60 Sekunden: direkt 10, eine Bande 15, zwei Banden 20 Punkte. Die Uhr läuft auch bei Pause weiter."
           : "Unten ziehen zum Zielen. Loslassen schießt!";
       resume.textContent = "Los geht’s!";
       resume.hidden = false;

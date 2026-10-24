@@ -10,7 +10,7 @@
   Auswahl erklärt die Wertung; Validierung prüft die tatsächliche Treffer-/Punktespanne.
 - 73 Node-Tests, Eingabe-Smoke, echter Minutentest mit Speicherung und echter
   Banden-Treffer im Browser bestanden; eigene Bonus-Prüfseite ohne Namensspeicherung.
-- App/CSS `word-blaster-bonus-1`, PWA-Shell v58. Keine neuen Runtime-Medien oder Dependencies.
+- App/CSS `word-blaster-bonus-2`, PWA-Shell v59. Keine neuen Runtime-Medien oder Dependencies.
 
 ## 2026-10-24 – Kanone tiefer eingesetzt
 

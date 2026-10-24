@@ -183,7 +183,7 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 ## 13. Folgeupdate 2026-10-24 – Kanonensitz und Bandenbonus
 
 - Autorisiert: Kanone tiefer im Lager, gestrichelte Fokusellipse entfernen und
-  Bandenbonus online veröffentlichen. Runtime `word-blaster-bonus-1`, Shell v58;
+  Bandenbonus online veröffentlichen. Runtime `word-blaster-bonus-2`, Shell v59;
   Bilder, MP3s und Setdaten bleiben unverändert.
 - Challenge-Wertung direkt/eine/zwei Banden: 10/15/20 Punkte, gemeinsame
   Trefferprüfung für Anzeige und Highscore. Regelversion v2 trennt frühere
