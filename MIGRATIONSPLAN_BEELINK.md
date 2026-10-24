@@ -151,3 +151,30 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   und bestehende Dienst-XML. XML in separatem Ops-Ordner sichern, Kandidat auf
   freiem Port prüfen. Nur `BeelinkApp-MrsHoney` umstellen, Tunnel und Control Center
   unverändert lassen. Online-Abnahme und exakte Release-ID werden danach ergänzt.
+
+- Aktivierung **bestanden**: Freeze `bb8bacd728bc3036215a91de0256507266491284` ist
+  auf GitHub, im sauberen detached `_services`-Worktree und als Eigentümer des
+  Listeners 5900 bestätigt. Windows: erneut 69 JS- und 8 Server-Tests sowie
+  unverändert reproduzierbares Inventar bestanden. Kandidat 5198 mit vollständiger
+  Speech-Readiness, acht Ressourcen und sechs gesperrten Quellpfaden erfolgreich;
+  Kandidatenprozess anschließend beendet. LocalService erhielt nur RX.
+- Nur App-Dienst umgestellt; App und Tunnel laufen. Aktive Dienst-XML-SHA256:
+  `a7ae85c25f89af3b2d601f42f12ef8563a7866d405af19fbb83a2bdf83f3ca24`.
+  Rückfall: `_runtime\Mrs_Honey\ops\bonus-games-20261024-bb8bacd\service-5900.before.xml`
+  wiederherstellen und ausschließlich `BeelinkApp-MrsHoney` neu starten; vorheriger
+  sauberer Freeze bleibt vorhanden. Ops-Ordner enthält Kandidaten-/Test-/Aktivierungsnachweise.
+- Öffentlich **bestanden**: `/health/ready` 200, elf Runtime-Ressourcen entsprechen
+  dem Release (Text mit Windows-CRLF/LF-Normalisierung, PNGs bytegenau SHA-256).
+  Fünf vorhandene Entwicklungs-/Referenzpfade liefern 403. Bestehende synthetische
+  `cat.mp3` über öffentliche Speech-API: verfügbar, korrekt, Konfidenz 1.0.
+- Öffentlicher Browser: neue App/CSS-Version und Inventar geladen; vollständige
+  Animals-Leserunde mit zehn Treffern bis zur neuen Bonusauswahl. Catch a Pair
+  mit echtem Paar und Zähler 1/10; Word Blaster mit Mittel/Challenge, geladenen
+  Kapseln, Gelenkkanone, Countdown und Tastaturbedienung geöffnet. Keine Testnamen
+  in öffentlichen Bestenlisten gespeichert. Nachweise: `public-catch-pair-20261024.png`,
+  `public-word-blaster-levels-20261024.png`, `public-word-blaster-game-20261024.png`
+  unter `references/app_screenshots/` (HTTP-gesperrt).
+- Folgender reiner Doku-/Nachweiscommit auf `main` benötigt keinen erneuten
+  Runtime-Cutover. Bestehender separater Control-Center-Versionsabgleich sowie
+  physisches iPad/Safari bleiben außerhalb dieser Online-Abnahme. Kein Reboot,
+  keine Tunnel-/Control-Center-Änderung und kein Cleanup früherer Releases.
