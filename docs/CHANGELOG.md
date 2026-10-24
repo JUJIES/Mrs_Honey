@@ -1,5 +1,15 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Zuverlässiges Laden auf iPad und Handy
+
+- Ein wiederverwendetes Audioelement wird beim ersten Tippen freigeschaltet; spätere Wörter und Rückmeldungen verwenden dasselbe Element. Lipsync blockiert die Wiedergabe nicht mehr.
+- Audio erhält getrennte Zeitfenster für Netzwerkstart (12 s) und Wiedergabe (8 s); blockierte oder fehlgeschlagene Wiedergabe zeigt einen Hinweis zum erneuten Antippen von Mrs. Honey.
+- Hören/Lesen geben Antworten und automatisches Vorlesen erst frei, wenn alle vier Bilder dekodiert sind. Bei Ladefehlern folgt ein automatischer Versuch ohne den alten Cache, danach eine sichtbare Wiederholungsoption. Fehlgeschlagene Lernset-Anfragen lassen die Auswahl bedienbar.
+- Verlassene Bild-/Antwortrunden dürfen keine neue Aufgabe oder Feedback im nächsten Bildschirm starten.
+- Der Bär verwendet ein quadratisches, von nativen Buttonabständen unabhängiges Koordinatensystem; Kopfposition bleibt über Geräteausrichtungen hinweg gleich.
+- Body-Set-Bundle und Set-Cover im PWA-Precache ergänzt. Neue App-/CSS-URLs und Cache-Version verhindern die Weiterverwendung der alten Ladeabläufe. Vollständiger Offline-Audiobetrieb wird weiterhin nicht versprochen.
+- Neue Regressionstests: `node --test tests/mobile-reliability.test.cjs`. Lerninhalte und Audioaufnahmen bleiben unverändert.
+
 ## 2026-10-04 – Verständliche Kompetenzauswahl
 
 - Drei neue ruhige Gouache-Motive erklären die tatsächliche Aufgabe: Hören → Bild auswählen; Lesen → Wort/Bild zuordnen; Sprechen → Bild in einem englischen Satz benennen.

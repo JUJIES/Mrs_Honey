@@ -233,6 +233,8 @@ const state = {
   },
   sentencePromptPool: { order: [], index: 0, lastPath: null },
   lipsyncCache: new Map(),
+  audioPlayer: null,
+  audioUnlocked: false,
   activeAudio: null,
   activeAudioFinish: null,
   autoAudioTimer: null,
@@ -278,8 +280,9 @@ const feedbackTiming = {
   afterCorrectFeedback: 520,
   afterWrongFeedback: 360,
   nextWordDelay: 620,
-  maxAudioPlayback: 2600,
-  maxFeedbackSequence: 3600,
+  audioLoadTimeout: 12000,
+  maxAudioPlayback: 8000,
+  maxFeedbackSequence: 22000,
 };
 
 const audioLevels = {
@@ -468,8 +471,27 @@ function renderSetScreen() {
     .filter((set) => set.active)
     .forEach((set) => {
       app.querySelector(`[data-id="${set.id}"]`).addEventListener("click", async () => {
-        await loadSet(set);
-        renderModeScreen();
+        const chooser = app.querySelector(".set-grid");
+        chooser.querySelectorAll("button").forEach((button) => { button.disabled = true; });
+        let status = app.querySelector(".set-load-status");
+        if (!status) {
+          status = document.createElement("p");
+          status.className = "set-load-status";
+          status.setAttribute("role", "status");
+          chooser.after(status);
+        }
+        status.textContent = "Lernset lädt …";
+        try {
+          const data = await withTimeout(loadSet(set), 12000);
+          if (!chooser.isConnected) return;
+          state.set = data;
+          state.items = data.items;
+          renderModeScreen();
+        } catch {
+          if (!chooser.isConnected) return;
+          status.textContent = "Lernset konnte nicht geladen werden. Bitte tippe es erneut an.";
+          chooser.querySelectorAll("button").forEach((button) => { button.disabled = false; });
+        }
       });
     });
 }
@@ -530,13 +552,11 @@ function choiceCard({ id, title, icon, tone, active, backgroundImage }) {
 }
 
 async function loadSet(setMeta) {
-  if (state.set?.id === setMeta.id && state.items.length > 0) return;
+  if (state.set?.id === setMeta.id && state.items.length > 0) return state.set;
 
   const bundledSet = window.LERNWORT_BUNDLED_SETS?.[setMeta.id];
   if (bundledSet) {
-    state.set = bundledSet;
-    state.items = bundledSet.items;
-    return;
+    return bundledSet;
   }
 
   const response = await fetch(setMeta.file);
@@ -545,8 +565,8 @@ async function loadSet(setMeta) {
   }
 
   const set = await response.json();
-  state.set = set;
-  state.items = set.items;
+  if (!Array.isArray(set.items) || !set.items.length) throw new Error("Learning set has no items");
+  return set;
 }
 
 function startGame(mode) {
@@ -563,9 +583,6 @@ function startGame(mode) {
   renderGameScreen();
   void getFeedbackCatalog();
 
-  if (mode === "hear-tap") {
-    scheduleCurrentAudio(feedbackTiming.nextWordDelay);
-  }
 }
 
 function prepareRound() {
@@ -614,6 +631,8 @@ function renderGameScreen() {
       <div class="game-companion-layout">
         ${honeyCompanionMarkup}
         <div class="game-content">
+          <div class="image-load-status" role="status"></div>
+          <div class="audio-load-status" role="status"></div>
           <div class="prompt-panel">
             ${promptMarkup}
           </div>
@@ -621,7 +640,7 @@ function renderGameScreen() {
             ${state.choices
               .map(
                 (item) => `
-                  <button class="image-card" type="button" data-id="${item.id}" aria-label="${item.labels[state.language]}">
+                  <button class="image-card" type="button" disabled data-id="${item.id}" aria-label="${item.labels[state.language]}">
                     <img src="${item.image}" alt="" draggable="false" />
                   </button>
                 `,
@@ -647,11 +666,50 @@ function renderGameScreen() {
   } else {
     stopTutorIdleAnimation();
   }
+  void loadRoundImages(app.querySelector(".game-screen"));
   app.querySelectorAll(".image-card").forEach((card) => {
     card.addEventListener("click", () => {
       void handleAnswer(card);
     });
   });
+}
+
+async function loadRoundImages(screen) {
+  const status = screen.querySelector(".image-load-status");
+  const cards = [...screen.querySelectorAll(".image-card")];
+  status.textContent = "Bilder laden …";
+  screen.classList.add("images-loading");
+  cards.forEach((card) => { card.disabled = true; });
+  const ready = await Promise.all(cards.map(async (card) => {
+    const image = card.querySelector("img");
+    const original = image.getAttribute("src").split("?")[0];
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      if (!screen.isConnected) return false;
+      if (attempt) image.src = `${original}?retry=${Date.now()}`;
+      try {
+        await withTimeout(image.decode(), 12000);
+        return image.naturalWidth > 0;
+      } catch {
+        // Retry an actual network/decode failure once, bypassing a bad cached response.
+      }
+    }
+    return false;
+  }));
+  if (!screen.isConnected) return;
+  if (!ready.every(Boolean)) {
+    status.textContent = "Ein Bild konnte nicht geladen werden. ";
+    const retry = document.createElement("button");
+    retry.type = "button";
+    retry.className = "asset-retry-button";
+    retry.textContent = "Erneut laden";
+    retry.addEventListener("click", () => { void loadRoundImages(screen); });
+    status.append(retry);
+    return;
+  }
+  status.textContent = "";
+  screen.classList.remove("images-loading");
+  cards.forEach((card) => { card.disabled = false; });
+  if (state.mode === "hear-tap") scheduleCurrentAudio(feedbackTiming.nextWordDelay);
 }
 
 function renderSpeakGameScreen(current) {
@@ -701,6 +759,7 @@ function renderSpeakGameScreen(current) {
 async function handleAnswer(card) {
   if (state.locked) return;
 
+  const roundScreen = card.closest(".game-screen");
   const current = getCurrentItem();
   const isCorrect = card.dataset.id === current.id;
 
@@ -711,6 +770,7 @@ async function handleAnswer(card) {
     card.classList.add("wrong");
     await playFeedbackAudioSafely("negative");
     await wait(feedbackTiming.afterWrongFeedback);
+    if (!roundScreen.isConnected) return;
     card.classList.remove("wrong");
     state.locked = false;
     return;
@@ -724,6 +784,7 @@ async function handleAnswer(card) {
     await playFeedbackAudioSafely("positive");
   }
   await wait(feedbackTiming.afterCorrectFeedback);
+  if (!roundScreen.isConnected) return;
   state.currentIndex += 1;
 
   if (state.currentIndex >= state.order.length) {
@@ -734,9 +795,6 @@ async function handleAnswer(card) {
   prepareRound();
   renderGameScreen();
 
-  if (state.mode === "hear-tap") {
-    scheduleCurrentAudio(feedbackTiming.nextWordDelay);
-  }
 }
 
 async function handleSpeechAttempt() {
@@ -1325,25 +1383,20 @@ function getCurrentItem() {
   return state.order[state.currentIndex];
 }
 
-async function playCurrentAudio() {
+function playCurrentAudio() {
+  clearScheduledAudio();
   const current = getCurrentItem();
-  if (!current) return;
+  const audioPath = current?.audio?.[state.language];
+  if (!audioPath) return Promise.resolve("error");
 
-  const audioPath = current.audio?.[state.language];
-  const spokenWord = current.labels[state.language] || "";
-  const canUseAudio = audioPath ? await audioExists(audioPath) : false;
-
-  if (canUseAudio) {
-    const mouthCues = await loadLipsyncCues(audioPath);
-
-    await playAudioFile(audioPath, audioLevels.word, feedbackTiming.maxAudioPlayback, {
-      onStart: (audio) => syncTutorMouthToAudio(audio, mouthCues, spokenWord),
-      onFinish: () => setTutorSpeaking(false),
-    });
-  }
+  // Start media without awaiting metadata/network: iOS needs the tap's activation.
+  return playAudioFile(audioPath, audioLevels.word, feedbackTiming.maxAudioPlayback, {
+    spokenText: current.labels[state.language] || "",
+  });
 }
 
 async function playHiddenObjectPrompt() {
+  const screen = app.firstElementChild;
   const currentTarget = getCurrentHiddenObjectTarget();
   if (!currentTarget) return;
   clearScheduledAudio();
@@ -1352,6 +1405,7 @@ async function playHiddenObjectPrompt() {
   if (audioPath && (await audioExists(audioPath))) {
     const promptText = currentTarget.promptText || "";
     const mouthCues = await loadLipsyncCues(audioPath);
+    if (!screen?.isConnected) return;
 
     await playAudioFile(audioPath, audioLevels.feedbackVoice, 4200, {
       onStart: (audio) => {
@@ -1916,14 +1970,13 @@ async function loadLipsyncCues(audioPath) {
   if (state.lipsyncCache.has(jsonPath)) return state.lipsyncCache.get(jsonPath);
 
   try {
-    const response = await fetch(jsonPath, { cache: "force-cache" });
+    const response = await withTimeout(fetch(jsonPath, { cache: "force-cache" }), 3000);
     if (!response.ok) throw new Error(`Missing lipsync JSON: ${jsonPath}`);
     const data = await response.json();
     const cues = normalizeMouthCues(data.mouthCues);
     state.lipsyncCache.set(jsonPath, cues);
     return cues;
   } catch {
-    state.lipsyncCache.set(jsonPath, null);
     return null;
   }
 }
@@ -2113,10 +2166,13 @@ async function getAudioManifest() {
 
   try {
     const response = await fetch("assets/audio/audio-manifest.json");
-    const data = response.ok ? await response.json() : { files: [] };
-    state.audioManifest = new Set(data.files || []);
+    if (!response.ok) throw new Error("Audio manifest unavailable");
+    const data = await response.json();
+    if (!Array.isArray(data.files)) throw new Error("Invalid audio manifest");
+    state.audioManifest = new Set(data.files);
   } catch {
-    state.audioManifest = new Set();
+    // A transient network error must not disable audio for the whole session.
+    return new Set();
   }
 
   return state.audioManifest;
@@ -2135,12 +2191,12 @@ async function getFeedbackCatalog() {
 
   try {
     const response = await fetch(feedbackBundlePath);
-    const data = response.ok ? await response.json() : { items: [] };
-    const items = Array.isArray(data.items) ? data.items : [];
-
-    state.feedbackCatalog = buildFeedbackCatalog(items);
+    if (!response.ok) throw new Error("Feedback catalog unavailable");
+    const data = await response.json();
+    if (!Array.isArray(data.items)) throw new Error("Invalid feedback catalog");
+    state.feedbackCatalog = buildFeedbackCatalog(data.items);
   } catch {
-    state.feedbackCatalog = {
+    return {
       positive: [],
       negative: [],
     };
@@ -2172,6 +2228,7 @@ function buildFeedbackTracks(items, kind, fallbackText) {
 }
 
 async function playFeedbackAudio(kind) {
+  const screen = app.firstElementChild;
   clearScheduledAudio();
   stopActiveAudio();
 
@@ -2181,7 +2238,8 @@ async function playFeedbackAudio(kind) {
   await playFeedbackCue(kind);
   await wait(feedbackTiming.cueToVoiceGap);
 
-  if (track?.path && (await audioExists(track.path))) {
+  if (screen?.isConnected && track?.path && (await audioExists(track.path))) {
+    if (!screen.isConnected) return;
     const result = await playAudioFile(track.path, audioLevels.feedbackVoice, feedbackTiming.maxAudioPlayback, {
       spokenText: track.text,
     });
@@ -2206,9 +2264,12 @@ async function playReadFeedbackAudioSafely(item) {
 }
 
 async function playReadFeedbackAudio(item) {
+  const screen = app.firstElementChild;
   const track = item?.readFeedback?.[state.language];
 
-  if (!track || !(await audioExists(track))) {
+  const hasTrack = track && (await audioExists(track));
+  if (!screen?.isConnected) return;
+  if (!hasTrack) {
     await playFeedbackAudio("positive");
     return;
   }
@@ -2217,6 +2278,7 @@ async function playReadFeedbackAudio(item) {
   stopActiveAudio();
   await playFeedbackCue("positive");
   await wait(feedbackTiming.cueToVoiceGap);
+  if (!screen?.isConnected) return;
   await playAudioFile(track, audioLevels.feedbackVoice, feedbackTiming.maxAudioPlayback, {
     spokenText: item?.readFeedbackText?.[state.language] || item?.labels?.[state.language] || "",
   });
@@ -2337,57 +2399,98 @@ function playToneSequence(context, notes) {
   });
 }
 
-async function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlayback, options = {}) {
-  stopActiveAudio();
+function getAudioPlayer() {
+  if (!state.audioPlayer) {
+    state.audioPlayer = document.createElement("audio");
+    state.audioPlayer.hidden = true;
+    document.body.append(state.audioPlayer);
+    state.audioPlayer.preload = "auto";
+    state.audioPlayer.setAttribute("playsinline", "");
+  }
+  return state.audioPlayer;
+}
 
+function unlockAudioPlayback() {
+  if (state.audioUnlocked || state.activeAudio) return;
+  const audio = getAudioPlayer();
+  // A short silent WAV unlocks this same element for later, scheduled prompts.
+  // Do not mute it: muted playback does not grant audible playback permission.
+  audio.src = "data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQIAAACAgA==";
+  audio.play().then(() => {
+    state.audioUnlocked = true;
+    if (!state.activeAudio) audio.pause();
+  }).catch(() => {}); // A later tap can retry if the browser still blocks it.
+}
+
+function showAudioStatus(message = "") {
+  const status = app.querySelector(".audio-load-status");
+  if (status) status.textContent = message;
+}
+
+function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlayback, options = {}) {
+  stopActiveAudio();
+  const audio = getAudioPlayer();
   const shouldAutoSyncTutor = !options.onStart && app.querySelector(".honey-listen-button");
-  const autoMouthCues = shouldAutoSyncTutor ? await loadLipsyncCues(path) : null;
+  // Lipsync is decorative and must never delay or prevent sound.
+  let mouthCues = null;
+  const mouthCuesPromise = shouldAutoSyncTutor ? loadLipsyncCues(path) : Promise.resolve(null);
   const autoMouthText = options.spokenText || fallbackTextForAudioPath(path);
+  showAudioStatus("Audio lädt …");
 
   return new Promise((resolve) => {
-    const audio = new Audio(path);
-    audio.volume = volume;
-    state.activeAudio = audio;
     let finished = false;
     let started = false;
     let startCleanup = null;
     let timeout = null;
-
     const start = () => {
       if (started || finished) return;
       started = true;
-      startCleanup =
-        options.onStart?.(audio) ||
-        (shouldAutoSyncTutor ? syncTutorMouthToAudio(audio, autoMouthCues, autoMouthText) : null);
+      state.audioUnlocked = true;
+      window.clearTimeout(timeout);
+      timeout = window.setTimeout(() => finish("timeout"), timeoutMs);
+      showAudioStatus();
+      startCleanup = options.onStart?.(audio) ||
+        (shouldAutoSyncTutor ? syncTutorMouthToAudio(audio, mouthCues, autoMouthText) : null);
     };
-
+    const ended = () => finish("ended");
+    const failed = () => finish("error");
     const finish = (result) => {
       if (finished) return;
       finished = true;
       window.clearTimeout(timeout);
+      audio.removeEventListener("playing", start);
+      audio.removeEventListener("ended", ended);
+      audio.removeEventListener("error", failed);
       startCleanup?.();
-      startCleanup = null;
-
       if (state.activeAudio === audio) {
-        if (result === "timeout") {
-          audio.pause();
-        }
-
+        if (result !== "ended") audio.pause();
         state.activeAudio = null;
         state.activeAudioFinish = null;
       }
-
+      if (["error", "blocked", "timeout"].includes(result)) {
+        showAudioStatus("Kein Ton? Tippe auf Mrs. Honey, um es erneut zu versuchen.");
+      } else {
+        showAudioStatus();
+      }
       options.onFinish?.(result);
       resolve(result);
     };
-
+    void mouthCuesPromise.then((cues) => {
+      mouthCues = cues;
+      if (cues && started && !finished && shouldAutoSyncTutor) {
+        startCleanup?.();
+        startCleanup = syncTutorMouthToAudio(audio, cues, autoMouthText);
+      }
+    });
+    audio.src = path;
+    audio.volume = volume;
+    state.activeAudio = audio;
     state.activeAudioFinish = finish;
-    timeout = window.setTimeout(() => finish("timeout"), timeoutMs);
-    audio.addEventListener("playing", start, { once: true });
-    audio.addEventListener("ended", () => finish("ended"), { once: true });
-    audio.addEventListener("error", () => finish("error"), { once: true });
-
-    audio.play().then(start).catch(() => finish("error"));
+    timeout = window.setTimeout(() => finish("timeout"), feedbackTiming.audioLoadTimeout);
+    audio.addEventListener("playing", start);
+    audio.addEventListener("ended", ended);
+    audio.addEventListener("error", failed);
+    audio.play().then(start).catch((error) => finish(error.name === "NotAllowedError" ? "blocked" : "error"));
   });
 }
 
@@ -2456,6 +2559,8 @@ function shuffle(items) {
 
   return result;
 }
+
+document.addEventListener("click", unlockAudioPlayback, { capture: true });
 
 renderLanguageScreen();
 

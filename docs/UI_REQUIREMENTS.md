@@ -115,3 +115,13 @@ Für MVP nur kleine UI-Animationen:
 - sanftes Wackeln bei Fehlern
 
 Kein animierter Hintergrund im MVP.
+
+## Zuverlässiges Laden auf Mobilgeräten
+
+- Hören/Lesen: Erst wenn alle vier Bilddateien erfolgreich dekodiert sind, werden die Antwortkarten und automatisches Vorlesen freigegeben. Ladefehler werden einmal mit neuer URL wiederholt; danach bleibt die Auswahl gesperrt und bietet „Erneut laden“. Kein Platzhalter darf als unsichtbare Antwort dienen.
+- Ein einziges Audioelement bleibt außerhalb des ersetzten Spiel-DOMs bestehen. Der erste echte Klick schaltet es frei; vor direkter Wortwiedergabe darf kein Metadaten-/Lipsync-Fetch abgewartet werden (iPad/Safari).
+- Audioladen und Abspielen haben getrennte Timeouts. Fehler müssen sichtbar und per Bärenbutton wiederholbar sein. Optionale Lipsync-Daten dürfen Audio nicht blockieren.
+- Kopf und Körper des Bären teilen ein quadratisches Koordinatensystem. Native Buttonabstände und gerätespezifische Kopfversätze vermeiden. Auf iPad hoch/quer und Handy prüfen, auch während Wiedergabe.
+- Service Worker: App-/CSS-Version und Cache zusammen erhöhen. Der Precache enthält alle Set-Bundles/Cover, aber nicht sämtliche Lernbilder oder MP3s; erster Aufruf eines Lernsets benötigt eine Verbindung. Eine HTTP-200-Dateiprüfung allein ist kein Wiedergabe- oder Gerätefunktionsnachweis.
+
+Checks: `node --test tests/mobile-reliability.test.cjs`, `python3 -m unittest discover -s server -p 'test_*.py'`, dazu reale Browserprüfung mit verzögertem Audio und fehlschlagenden Bildanfragen. Ein Browser-Viewport ersetzt keine Abnahme auf dem physischen iPad.

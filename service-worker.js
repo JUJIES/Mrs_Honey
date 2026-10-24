@@ -1,10 +1,10 @@
-const CACHE_NAME = "lernwort-pwa-v28";
+const CACHE_NAME = "lernwort-pwa-v31";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=competency-2",
-  "./app.js?v=competency-2",
+  "./styles.css?v=mobile-reliability-3",
+  "./app.js?v=mobile-reliability-3",
   "./manifest.webmanifest",
   "./assets/backgrounds/calm-learning-bg.png",
   "./assets/icons/apple-touch-icon.png",
@@ -28,11 +28,12 @@ const PRECACHE_URLS = [
   "./assets/images/ui/mrs-honey-eye-rig/eye-right-closed-v2.png",
   "./assets/images/set_cards/animals_01.jpg",
   "./assets/images/set_cards/food.jpg",
-  "./assets/images/set_cards/colours.jpg",
+  "./assets/images/set_cards/colours.jpg?v=set-card-bg-2",
   "./assets/images/set_cards/school.jpg",
-  "./assets/images/set_cards/home.jpg",
+  "./assets/images/set_cards/home.jpg?v=home-1",
+  "./assets/images/set_cards/body_parts.jpg",
   "./assets/images/set_cards/transport.jpg",
-  "./assets/images/set_cards/tools.jpg",
+  "./assets/images/set_cards/tools.jpg?v=set-card-bg-2",
   "./assets/images/set_cards/emotions.jpg",
   "./assets/images/mode_cards/hear-competency-v2.jpg",
   "./assets/images/mode_cards/read-competency-v2.jpg",
@@ -57,6 +58,7 @@ const PRECACHE_URLS = [
   "./data/sets/colours.bundle.js?v=scene-batches-1",
   "./data/sets/school.bundle.js?v=scene-batches-1",
   "./data/sets/home.bundle.js?v=home-1",
+  "./data/sets/body_parts.bundle.js?v=body-parts-1",
   "./data/sets/transport.bundle.js?v=read-feedback-1",
   "./data/sets/tools.bundle.js?v=tools-1",
   "./data/sets/emotions.bundle.js?v=emotions-1"
