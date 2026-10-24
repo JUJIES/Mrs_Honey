@@ -1086,6 +1086,8 @@ h1 {
 
 .memory-word-panel {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
   min-height: 78px;
   align-items: center;
   justify-self: center;
@@ -1101,6 +1103,39 @@ h1 {
   font-weight: 900;
   line-height: 1;
   text-align: center;
+  transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.memory-replay {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: #f7eac8;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.memory-replay[hidden] { display: none; }
+.memory-replay svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; }
+.memory-replay:disabled { opacity: 0.55; cursor: default; }
+.memory-replay:focus-visible { outline: 3px solid #2f6f9f; outline-offset: 3px; }
+.memory-word-panel .memory-audio-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.memory-audio-status:empty { display: none; }
+
+.memory-screen.is-match-speaking .memory-word-panel {
+  transform: translateY(-2px) scale(1.025);
+  background: #fff0cb;
+  box-shadow: 0 0 0 3px rgba(220, 171, 70, 0.35), 0 12px 25px rgba(40, 52, 72, 0.1);
 }
 
 .memory-win-badge {
@@ -1169,6 +1204,16 @@ h1 {
   border-radius: 22px;
   background: transparent;
   perspective: 900px;
+  transition: transform 220ms ease;
+}
+
+.memory-card.is-match-speaking {
+  z-index: 4;
+  transform: translateY(-2px) scale(1.025);
+}
+
+.memory-card.is-matched.is-match-speaking .memory-card-front {
+  box-shadow: 0 0 0 5px rgba(220, 171, 70, 0.55), 0 12px 24px rgba(40, 52, 72, 0.16);
 }
 
 .memory-card[disabled] {

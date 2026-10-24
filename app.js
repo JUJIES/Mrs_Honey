@@ -247,6 +247,7 @@ const state = {
     selected: [],
     matchedIds: new Set(),
     lastMatch: null,
+    lastMatchCardIds: [],
     difficulty: null,
     gridSize: null,
     isWinning: false,
@@ -1135,6 +1136,7 @@ function startMemoryGame(difficulty = "easy") {
     selected: [],
     matchedIds: new Set(),
     lastMatch: null,
+    lastMatchCardIds: [],
     difficulty: option.id,
     gridSize: option.gridSize,
     isWinning: false,
@@ -1164,6 +1166,7 @@ function resetMemoryState() {
     selected: [],
     matchedIds: new Set(),
     lastMatch: null,
+    lastMatchCardIds: [],
     difficulty: null,
     gridSize: null,
     isWinning: false,
@@ -1274,7 +1277,11 @@ function renderMemoryScreen() {
         <div class="progress">${matchedPairs} / ${totalPairs}</div>
       </div>
       <div class="memory-word-panel" aria-live="polite">
-        <span>${displayWord || "Memory"}</span>
+        <span class="memory-current-word">${displayWord || "Memory"}</span>
+        <button class="memory-replay" type="button" aria-label="Trefferwort noch einmal anhören" ${displayWord ? "" : "hidden"} ${state.locked ? "disabled" : ""}>
+          ${lucideIcon("volume2")}
+        </button>
+        <span class="audio-load-status memory-audio-status" role="status"></span>
       </div>
       <div class="memory-grid">
         ${state.memory.cards.map((card) => memoryCardMarkup(card)).join("")}
@@ -1293,6 +1300,44 @@ function renderMemoryScreen() {
       void handleMemoryCard(card.dataset.cardId);
     });
   });
+  app.querySelector(".memory-replay").addEventListener("click", () => {
+    void replayMemoryMatch();
+  });
+}
+
+// Keep card nodes mounted: replacing the board on every tap interrupts flips
+// and would restart the visual emphasis while its audio is still playing.
+function updateMemoryScreen(screen) {
+  const memory = state.memory;
+  for (const node of screen.querySelectorAll(".memory-card")) {
+    const card = memory.cards.find((entry) => entry.id === node.dataset.cardId);
+    const matched = memory.matchedIds.has(card.id);
+    const open = matched || memory.selected.some((entry) => entry.id === card.id);
+    node.classList.toggle("is-open", open);
+    node.classList.toggle("is-matched", matched);
+    node.disabled = matched;
+    node.setAttribute("aria-label", open ? card.item.labels[state.language] : "Verdeckte Memory-Karte");
+    node.querySelector(".memory-card-word").textContent = matched ? card.item.labels[state.language] : "";
+  }
+  screen.querySelector(".progress").textContent = `${memory.matchedIds.size / 2} / ${memory.cards.length / 2}`;
+  screen.querySelector(".memory-current-word").textContent = memory.lastMatch?.labels[state.language] || "Memory";
+  const replay = screen.querySelector(".memory-replay");
+  replay.hidden = !memory.lastMatch;
+  replay.disabled = state.locked;
+}
+
+function isCurrentMemoryScreen(screen, memory) {
+  return screen?.isConnected && screen.classList.contains("memory-screen") && state.memory === memory;
+}
+
+function highlightMemoryMatch(screen, cardIds) {
+  screen.classList.add("is-match-speaking");
+  const cards = [...screen.querySelectorAll(".memory-card")].filter((node) => cardIds.includes(node.dataset.cardId));
+  cards.forEach((node) => node.classList.add("is-match-speaking"));
+  return () => {
+    screen.classList.remove("is-match-speaking");
+    cards.forEach((node) => node.classList.remove("is-match-speaking"));
+  };
 }
 
 function memoryCardMarkup(card) {
@@ -1315,60 +1360,89 @@ function memoryCardMarkup(card) {
 
 async function handleMemoryCard(cardId) {
   if (state.locked) return;
+  const screen = app.firstElementChild;
+  const memory = state.memory;
+  if (!isCurrentMemoryScreen(screen, memory)) return;
 
   const card = state.memory.cards.find((memoryCard) => memoryCard.id === cardId);
   if (!card || state.memory.matchedIds.has(card.id)) return;
   if (state.memory.selected.some((selectedCard) => selectedCard.id === card.id)) return;
 
   state.memory.selected.push(card);
-  renderMemoryScreen();
+  updateMemoryScreen(screen);
 
   if (state.memory.selected.length < 2) return;
 
   state.locked = true;
+  updateMemoryScreen(screen);
   const [firstCard, secondCard] = state.memory.selected;
 
   if (firstCard.matchId !== secondCard.matchId) {
     await wait(760);
+    if (!isCurrentMemoryScreen(screen, memory)) return;
     state.memory.selected = [];
     state.locked = false;
-    renderMemoryScreen();
+    updateMemoryScreen(screen);
     return;
   }
 
   state.memory.matchedIds.add(firstCard.id);
   state.memory.matchedIds.add(secondCard.id);
   state.memory.lastMatch = firstCard.item;
+  state.memory.lastMatchCardIds = [firstCard.id, secondCard.id];
   state.memory.selected = [];
-  renderMemoryScreen();
-  await playMemoryMatchFeedback(firstCard.item);
-  await wait(300);
+  updateMemoryScreen(screen);
+  // Let the second card's 220-ms flip reveal the image before speech begins.
+  await wait(220);
+  if (!isCurrentMemoryScreen(screen, memory)) return;
+  await playMemoryMatchFeedback(firstCard.item, screen, memory);
+  if (!isCurrentMemoryScreen(screen, memory)) return;
+  await wait(220); // Let the emphasis settle without adding a long fixed pause.
+  if (!isCurrentMemoryScreen(screen, memory)) return;
 
   if (state.memory.matchedIds.size >= state.memory.cards.length) {
     state.memory.isWinning = true;
     renderMemoryScreen();
     await playWinningSequence();
+    if (!isCurrentMemoryScreen(app.firstElementChild, memory)) return;
     clearScheduledAudio();
     state.locked = false;
+    updateMemoryScreen(app.firstElementChild);
     return;
   }
 
   state.locked = false;
+  updateMemoryScreen(screen);
 }
 
-async function playMemoryMatchFeedback(item) {
-  const track = item?.readFeedback?.[state.language];
-
-  if (track && (await audioExists(track))) {
-    await playReadFeedbackAudioSafely(item);
-    return;
+async function playMemoryMatchFeedback(item, screen, memory) {
+  // Set references are authoritative. Attempt playback directly rather than
+  // suppressing a valid clip because a manifest request failed/offline.
+  const tracks = [...new Set([item?.readFeedback?.[state.language], item?.audio?.[state.language]].filter(Boolean))];
+  for (const track of tracks) {
+    if (!isCurrentMemoryScreen(screen, memory)) return "stopped";
+    const result = await playAudioFile(track, audioLevels.word, feedbackTiming.maxAudioPlayback, {
+      onStart: () => highlightMemoryMatch(screen, memory.lastMatchCardIds),
+      errorMessage: "Kein Ton? Tippe auf den Lautsprecher, um es erneut zu versuchen.",
+    });
+    if (["ended", "blocked", "stopped"].includes(result)) return result;
   }
+  return "error";
+}
 
-  await playFeedbackAudioSafely("positive");
-
-  const wordAudio = item?.audio?.[state.language];
-  if (wordAudio && (await audioExists(wordAudio))) {
-    await playAudioFile(wordAudio, audioLevels.word);
+async function replayMemoryMatch() {
+  const screen = app.firstElementChild;
+  const memory = state.memory;
+  if (state.locked || !memory.lastMatch || !isCurrentMemoryScreen(screen, memory)) return;
+  state.locked = true;
+  updateMemoryScreen(screen);
+  try {
+    await playMemoryMatchFeedback(memory.lastMatch, screen, memory);
+  } finally {
+    if (isCurrentMemoryScreen(screen, memory)) {
+      state.locked = false;
+      updateMemoryScreen(screen);
+    }
   }
 }
 
@@ -2543,7 +2617,7 @@ function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlay
         state.activeAudioFinish = null;
       }
       if (["error", "blocked", "timeout"].includes(result)) {
-        showAudioStatus("Kein Ton? Tippe auf Mrs. Honey, um es erneut zu versuchen.");
+        showAudioStatus(options.errorMessage || "Kein Ton? Tippe auf Mrs. Honey, um es erneut zu versuchen.");
       } else {
         showAudioStatus();
       }
