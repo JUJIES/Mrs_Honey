@@ -114,3 +114,11 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 - Finale Mobil-/Tabletprüfung **bestanden**: erneut Transport bis Memory mit UI `memory-feedback-2`, „motorcycle“ 2,775 s vollständig beendet, korrekte Hervorhebung während Wiedergabe und Wiederholung. 390×844 und 810×1080 ohne horizontalen Überlauf oder defekte Kartenbilder. Das lange Kartenlabel ist auf dem Handy kompakt (ca. 14 px Höhe statt zuvor ca. 52 px im schmaleren Zwischencheck); das Bild bleibt sichtbar. Screenshots unter `references/app_screenshots/memory-feedback-20261024/`.
 - Endgültiger Rückfall: XML aus `_runtime\Mrs_Honey\ops\memory-feedback-20261024-layout\service-5900.before.xml` stellt den geprüften Audio-Freeze `a75b565...` wieder her; der vorherige komplette Betriebsstand `5641366...` samt XML bleibt im ursprünglichen `memory-feedback-20261024`-Ordner erhalten. Kein Cleanup, kein Reboot, keine Tunnel- oder Control-Center-Änderung.
 - Physisches iPad/Safari und Geräte-Lautstärke bleiben Praxisprüfung. Der bereits vorbestehende, separat dokumentierte Control-Center-Versions-/XML-Nachweisdrift wird von diesem App-Update nicht geändert.
+
+## 10. Folgeupdate 2026-10-24 – Safari-Kopfbeschnitt
+
+- Gemeldeten Fehler direkt in der bestehenden echten Mac-Safari-Sitzung reproduziert: Kopf/Ohrbereich horizontal an der oberen Filterfläche abgeschnitten. Lokaler Fix in separatem Safari-Tab: vollständiger Kopf im Ruhezustand und während Audiowiedergabe/Mundbewegung.
+- Enger CSS-Fix: äußerer `drop-shadow`-Filter entfernt, radialer Bodenschatten mit eigenem Begrenzungsrahmen. Avatar-Geometrie, Kopf-/Augen-/Mundanimation, Medien und Produktlogik bleiben bestehen. CSS `safari-avatar-1`, Shell v38, App-JavaScript `memory-feedback-2` unverändert. WebKit-Referenz: `https://bugs.webkit.org/show_bug.cgi?id=313665`.
+- Vorabchecks: 28 vorhandene JS-/Memory-/Cache-Tests, 5 Speech- und 2 Inventartests; Inventar weiter 733 Dateien / `69ea418066b0b570`, Syntax-/Diffprüfung.
+- Rollback: sauberer aktueller Freeze `6631217569d4ad0067da05562eb14b51eaefb575`; Dienst-XML vor Cutover unter `_runtime\Mrs_Honey\ops\safari-avatar-20261024` sichern. Kandidat auf freiem Port 5196; nur `BeelinkApp-MrsHoney` umstellen, Tunnel und Control Center nicht verändern.
+- Aktivierung/öffentlicher Safari-Postcheck noch ausstehend. Physisches iPad bleibt gesonderte Geräteprüfung.

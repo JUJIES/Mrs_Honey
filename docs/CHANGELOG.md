@@ -1,5 +1,11 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Safari schneidet Bärenkopf nicht mehr ab
+
+- Äußeren `drop-shadow`-Filter am Bärenbutton in Ruhe und während Wiedergabe entfernt; begrenzter radialer Bodenschatten statt Filter über überstehenden, transformierten Kopfebenen.
+- Den gemeldeten horizontalen Kopfbeschnitt in der echten Mac-Safari-Sitzung reproduziert und die vollständige Figur nach der Korrektur auch während Mund-/Kopfbewegung visuell bestätigt. Geometrie, Lernlogik und Audio unverändert.
+- CSS `safari-avatar-1`, Shell-Cache v38; Medieninventar unverändert. Hintergrund: WebKit-Bug 313665, `https://bugs.webkit.org/show_bug.cgi?id=313665`.
+
 ## 2026-10-24 – Gesprochene Memory-Treffer
 
 - Jedes gefundene Paar spricht direkt die vorhandene itembezogene Lese-Rückmeldung mit voller Medienlautstärke, ohne vorheriges allgemeines Lob oder Erfolgs-Cue; keine MP3 neu erzeugt oder verändert.
