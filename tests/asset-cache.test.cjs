@@ -118,7 +118,7 @@ test('a recovered origin is retried even without an online event',async()=>{
 
 test('activating a shell update preserves downloaded lessons and unrelated caches',async()=>{
   const handlers=new Map(),deleted=[];
-  const context=vm.createContext({importScripts(){},caches:{keys:async()=>['lernwort-pwa-v31','lernwort-pwa-v34','lernwort-content-v1','other-app'],delete:async key=>deleted.push(key)},clients:{claim:async()=>{}},addEventListener:(name,fn)=>handlers.set(name,fn)});
+  const context=vm.createContext({importScripts(){},caches:{keys:async()=>['lernwort-pwa-v31','lernwort-pwa-v35','lernwort-content-v1','other-app'],delete:async key=>deleted.push(key)},clients:{claim:async()=>{}},addEventListener:(name,fn)=>handlers.set(name,fn)});
   context.self=context;vm.runInContext(fs.readFileSync(path.join(__dirname,'../service-worker.js'),'utf8'),context);
   let work;handlers.get('activate')({waitUntil(p){work=p;}});await work;
   assert.deepEqual(deleted,['lernwort-pwa-v31']);

@@ -4,7 +4,7 @@ import argparse
 import hashlib
 import json
 import re
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'data/offline-assets.bundle.js'
@@ -33,7 +33,7 @@ def build():
         paths.update(referenced(json.loads(source.read_text(encoding='utf-8'))))
     for path in list(paths):
         if path.startswith('assets/audio/') and path.endswith(('.mp3', '.wav')):
-            cue = str(Path(path.replace('assets/audio/', 'assets/lipsync/')).with_suffix('.json'))
+            cue = str(PurePosixPath(path.replace('assets/audio/', 'assets/lipsync/')).with_suffix('.json'))
             if (ROOT / cue).exists():
                 paths.add(cue)
     # Existing UI paths are declared by app.js / the shell precache; don't maintain
@@ -42,7 +42,8 @@ def build():
         paths.update(p.split('?')[0] for p in re.findall(r'"(?:\./)?(assets/[^"\s]+)"', (ROOT / source).read_text())
                      if (ROOT / p.split('?')[0]).is_file())
     files = {}
-    for path in sorted(paths):
+    # Script bundles belong to the shell, not to the media/JSON hash store.
+    for path in sorted(p for p in paths if PurePosixPath(p).suffix in TYPES):
         content = (ROOT / path).read_bytes()
         files[path] = {'sha256': hashlib.sha256(content).hexdigest(), 'bytes': len(content),
                        'type': TYPES.get(Path(path).suffix, 'application/octet-stream')}

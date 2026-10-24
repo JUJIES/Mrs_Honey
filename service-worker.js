@@ -1,13 +1,13 @@
-importScripts("./data/offline-assets.bundle.js?v=bc836dfbd91687ae", "./asset-cache.js?v=background-cache-3");
-const CACHE_NAME = "lernwort-pwa-v34";
+importScripts("./data/offline-assets.bundle.js?v=69ea418066b0b570", "./asset-cache.js?v=background-cache-4");
+const CACHE_NAME = "lernwort-pwa-v35";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=background-cache-3",
-  "./app.js?v=background-cache-3",
-  "./asset-cache.js?v=background-cache-3",
-  "./data/offline-assets.bundle.js?v=bc836dfbd91687ae",
+  "./styles.css?v=background-cache-4",
+  "./app.js?v=background-cache-4",
+  "./asset-cache.js?v=background-cache-4",
+  "./data/offline-assets.bundle.js?v=69ea418066b0b570",
   "./manifest.webmanifest",
   "./assets/backgrounds/calm-learning-bg.png",
   "./assets/icons/apple-touch-icon.png",
