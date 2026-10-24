@@ -1,5 +1,18 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Neue Audios über GPT-Audio-1.5
+
+- Nach drei echten Hörproben hat Julius `alloy` mit der warmen, langsamen britisch-englischen Regie als Standard für alle neuen Audios freigegeben. Das bestehende Standardprofil entspricht exakt den Proben; bisherige MP3s bleiben unverändert.
+
+- Key-Formular im eingebauten Browser geprüft: `same-origin` statt `no-referrer` erhält den POST-Origin. Fremde/null-Origins bleiben gesperrt; die ursprüngliche Einstellung hatte legitimes Speichern abgelehnt.
+
+- Neue englische Audios entstehen mit `gpt-audio-1.5` / `alloy` nach dem Video-Lab-Muster: Chat Completions, WAV plus Transkript, Wortvergleich, geprüfter Cache und MP3-Konvertierung. Warme langsame britisch-englische Regie liegt versioniert im Profil. Kein Modellfallback oder automatisches Retry.
+- Eigener Oskar-Key über kurzlebiges Loopback-Passwortformular, private Datei außerhalb von Repo/Webroot. Kein Key im Chat, Frontend oder Release; keine Übernahme fremder Projekt-Keys.
+- Bestehende MP3s bleiben erhalten. Import erstellt nur fehlende Dateien und übernimmt Profil-/Hash-Metadaten aus Renderer-Sidecars. Stimmen-QA vergleicht Profile getrennt; kleine unbewertbare Gruppen bleiben ein sichtbarer Prüffehler.
+- Neue Lipsync-Dateien erhalten den vollständigen Sprechertext als Dialoghilfe statt nur das Wortlabel; alte MP3s/Lipsync-Dateien werden dabei nicht neu erzeugt.
+- Neue lokale CLI ersetzt die externe Wizard-Pflicht für Oskar; gemeinsamer Wizard und Video Lab bleiben unverändert. Entwicklungswerkzeug ohne neue Dependencies, kein neuer Runtime-Dienst. Hörproben/Cache liegen außerhalb des Repos.
+- Pipeline-, Setup- und Agent-Doku aktualisiert; veraltete deutsch/englische Beispiele in der Datenstruktur auf den aktuellen English-only-Vertrag korrigiert.
+
 ## 2026-10-24 – Zuverlässiges Laden auf iPad und Handy
 
 - Ein wiederverwendetes Audioelement wird beim ersten Tippen freigeschaltet; spätere Wörter und Rückmeldungen verwenden dasselbe Element. Lipsync blockiert die Wiedergabe nicht mehr.

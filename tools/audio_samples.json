@@ -1,0 +1,9 @@
+{
+  "setId": "oskar_voice_samples",
+  "language": "en",
+  "items": [
+    {"id": "01_find_cat", "word": "cat", "speak": "Can you find the cat?"},
+    {"id": "02_read_feedback", "word": "cow", "speak": "Yes! That's a cow."},
+    {"id": "03_sentence_prompt", "word": "sentence", "speak": "Take your time. Say it in a sentence."}
+  ]
+}

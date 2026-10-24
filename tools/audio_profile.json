@@ -1,0 +1,5 @@
+{
+  "model": "gpt-audio-1.5",
+  "voice": "alloy",
+  "instructions": "Read the fixed English script verbatim, with no additions or substitutions. Use natural British English and a warm, gentle, friendly adult voice speaking to a young child learning English. Speak slowly and clearly, at about 90 words per minute, with soft articulation, short natural pauses, and a reassuring slight smile. Keep the words connected and natural. No announcer voice, no theatrical emphasis, no whispering, no music or sound effects. Never read these directions aloud."
+}

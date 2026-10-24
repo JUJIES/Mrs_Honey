@@ -316,128 +316,74 @@ window.LERNWORT_BUNDLED_SETS.<set_id> = { ...setJson };
 
 ## Audio Pipeline
 
-Generate MP3s only through:
+New audio uses the local development CLI `tools/render_openai_audio.py`, following
+Video Lab's GPT-Audio-1.5 contract. The app remains a consumer of static English
+MP3s; it never calls OpenAI. Existing ElevenLabs MP3s are preserved byte-for-byte.
+The previous external Wizard-only generation rule is superseded by this workflow.
 
-```txt
-/Users/Julius/coding_projects/tools/11labs wizard
-```
-
-Do not call ElevenLabs directly from the app repo.
-
-For this English-only app, use the generic MP3 renderer with flat temporary prompt JSON files. This avoids older bilingual renderers that expect German fields.
-
-The generic renderer is configured for the Lernspiel Oskar child-friendly voice profile. For `eleven_multilingual_v2`, the expected settings are:
-
-```json
-{
-  "stability": 0.92,
-  "similarity_boost": 0.9,
-  "style": 0.0,
-  "speed": 0.78,
-  "use_speaker_boost": true
-}
-```
-
-Do not use the older neutral defaults (`stability: 0.5`, no `speed`) for this app; they sound faster and harsher.
-
-Each set needs two audio groups:
-
-- item prompts for Hören mode: `assets/audio/<set_id>/en/<item_id>.mp3`
-- item-specific read feedback for Lesen mode: `assets/audio/<set_id>/en/read_feedback_<item_id>.mp3`
-
-Temporary item-prompt JSON shape:
-
-```json
-{
-  "setId": "<set_id>",
-  "language": "en",
-  "items": [
-    {
-      "id": "<item_id>",
-      "word": "<word>",
-      "speak": "Can you find the <word>?"
-    }
-  ]
-}
-```
-
-Temporary read-feedback prompt JSON shape:
-
-```json
-{
-  "setId": "<set_id>_read_feedback",
-  "language": "en",
-  "items": [
-    {
-      "id": "read_feedback_<item_id>",
-      "word": "<word>",
-      "speak": "Yes! That's a <word>."
-    }
-  ]
-}
-```
-
-Generate both temporary prompt files directly from the set JSON:
+Read `docs/OPENAI_AUDIO.md` for credentials, profile, cache, QA and listening samples.
+Configure your own Oskar key through the loopback password form:
 
 ```bash
-tools/build_audio_prompts.py --set <set_id> --out-dir /tmp
+python3 tools/configure_openai_audio.py
 ```
 
-The command prints the matching 11labs wizard commands and avoids hand-writing prompt JSON paths and `read_feedback_` ids.
+Open the printed local URL. The key is saved outside the repository/web root under
+`~/.config/lernspiel-oskar/openai-tts.key` (0600; parent 0700). No key in chat,
+arguments, project files, generated ZIPs or exports. No inherited key from another
+project is used. Saving alone makes no provider request.
 
-Recommended commands from the wizard repo:
+For a new set, preserve the existing prompt data contract (`setId`, `language: en`,
+`items: [{id, word, speak}]`) and the two flat ZIP groups:
+
+- Hören: `<item_id>.mp3`, from each item's `speak.en`
+- Lesen: `read_feedback_<item_id>.mp3`, from `readFeedbackText.en`
+
+Build both prompt groups from the canonical set JSON:
 
 ```bash
-npm run audio -- --dry-run --in /tmp/<set_id>_en_prompts.json --out dist/<set_id>-bundle.zip --lang en --voice hpp4J3VqNfWAUOO0d1Us --skip-existing
+python3 tools/build_audio_prompts.py --set <set_id> --out-dir /tmp
 ```
+
+This prints renderer commands with explicit output paths outside the repository.
+Without `--generate`, commands validate only and write nothing. For example:
 
 ```bash
-npm run audio -- --in /tmp/<set_id>_en_prompts.json --out dist/<set_id>-bundle.zip --lang en --voice hpp4J3VqNfWAUOO0d1Us --skip-existing
+python3 tools/render_openai_audio.py --in /tmp/<set_id>_en_prompts.json --out "$HOME/.cache/lernspiel-oskar/audio/<set_id>-bundle.zip" --dry-run
+python3 tools/render_openai_audio.py --in /tmp/<set_id>_en_prompts.json --out "$HOME/.cache/lernspiel-oskar/audio/<set_id>-bundle.zip" --generate
+python3 tools/render_openai_audio.py --in /tmp/<set_id>_read_feedback_prompts.json --out "$HOME/.cache/lernspiel-oskar/audio/<set_id>-read-feedback-bundle.zip" --generate
 ```
 
-Use the same commands for read feedback with `/tmp/<set_id>_read_feedback_prompts.json` and `dist/<set_id>-read-feedback-bundle.zip`.
+`tools/audio_profile.json` selects `gpt-audio-1.5`, `alloy` and warm, slow British
+English for young learners. Model, voice, instructions, exact text and renderer
+revision determine the cache key. No automatic retry or model fallback.
 
-Then always run repair QA:
+The renderer requests WAV plus provider transcript, rejects normalized word
+mismatches into a review cache, normalizes to -19 LUFS / -2 dBTP and adds 180/260 ms
+head/tail padding before MP3 encoding. Full MP3 decoding, non-silence and measured
+duration are checked. This technical QA does not replace listening for natural
+pronunciation, pace, warmth or omissions in the actual waveform. Provider
+transcripts are not independent speech recognition.
+
+Every ZIP has a matching `.metadata.json` sidecar containing profile, text,
+transcript, processing QA and per-file SHA-256. Keep the sidecar beside the ZIP.
+Listen to the standalone MP3s in the directory named after the ZIP stem, then import:
 
 ```bash
-npm run spelling:qa -- --zip dist/<set_id>-bundle.zip --fix --out dist/<set_id>-bundle.qa.zip --report dist/<set_id>-bundle.qa.json --fail-on-issues off
+python3 tools/import_audio_bundles.py --set <set_id> \
+  --words-zip "$HOME/.cache/lernspiel-oskar/audio/<set_id>-bundle.zip" \
+  --read-feedback-zip "$HOME/.cache/lernspiel-oskar/audio/<set_id>-read-feedback-bundle.zip" --dry-run
 ```
 
-Run the same repair QA for the read-feedback bundle:
+Repeat without `--dry-run` to import. The importer validates both complete flat
+ZIPs and their sidecars before writes, creates only missing MP3s, and never replaces
+existing paths (including modification times). `preserved` lists skipped originals.
+For new OpenAI files it records checksums/profile in `assets/audio/audio-provenance.json`.
+Legacy repaired Wizard ZIPs without sidecars remain importable as legacy audio.
+There is no bulk replacement flag; replacing old recordings is a separate task.
 
-```bash
-npm run spelling:qa -- --zip dist/<set_id>-read-feedback-bundle.zip --fix --out dist/<set_id>-read-feedback-bundle.qa.zip --report dist/<set_id>-read-feedback-bundle.qa.json --fail-on-issues off
-```
-
-Import the repaired MP3s into:
-
-```txt
-assets/audio/<set_id>/en/*.mp3
-```
-
-The MP3 file names must match item ids:
-
-```txt
-assets/audio/<set_id>/en/<item_id>.mp3
-assets/audio/<set_id>/en/read_feedback_<item_id>.mp3
-```
-
-Prefer the importer for repaired QA ZIPs:
-
-```bash
-tools/import_audio_bundles.py \
-  --set <set_id> \
-  --words-zip "/Users/Julius/coding_projects/tools/11labs wizard/dist/<set_id>-bundle.qa.zip" \
-  --read-feedback-zip "/Users/Julius/coding_projects/tools/11labs wizard/dist/<set_id>-read-feedback-bundle.qa.zip"
-```
-
-The importer validates exact flat MP3 filenames before extracting and then runs `tools/sync_audio_assets.py`.
-
-After importing MP3s, run the app audio sync so the manifest and Rhubarb lipsync files stay aligned with the new audio:
-
-```bash
-python3 tools/sync_audio_assets.py
-```
+The importer then runs `tools/sync_audio_assets.py` for manifest, Rhubarb and
+voice-group QA. No app playback or learning-set schema change is needed.
 
 ## Audio Sync Pipeline
 
@@ -450,7 +396,7 @@ After importing MP3s:
 - verify every set `audio.en` / `readFeedback.en` path exists
 - verify every manifest MP3 has a matching Lipsync JSON
 - verify no German audio files were added
-- run voice-consistency QA to detect very low-pitched ElevenLabs voice drift outliers
+- run voice-consistency QA within each recorded voice profile; untagged existing audio forms the legacy ElevenLabs group
 
 Use the project automation:
 
@@ -459,7 +405,7 @@ tools/sync_audio_assets.py
 ```
 
 This command is idempotent. It skips existing Lipsync JSONs when the MP3 is unchanged, and regenerates a JSON automatically when the MP3 file is newer than its existing Lipsync file.
-It also runs `tools/voice_consistency_qa.py` by default. If it reports `voice-too-low-outlier`, re-render the affected MP3 or restore a known-good backup, then run sync again.
+It also runs `tools/voice_consistency_qa.py` by default. Provenance checksums must match. Voice profiles have separate pitch baselines; a group with fewer than eight reliably pitched clips fails with an explicit manual-review requirement. Do not bypass QA or regenerate old audio automatically to make it pass. Investigate an outlier before any separately authorized replacement.
 
 To force all Lipsync files after a voice/style change:
 

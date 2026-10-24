@@ -34,7 +34,25 @@ Für neue Wortlisten ist die feste Bild-/Audio-Pipeline dokumentiert in:
 
 - `docs/SET_GENERATION_PIPELINE.md`
 
-Standard für neue Sets: quadratische Szenenbilder statt Freisteller, English-only Setdaten, MP3-Erzeugung über den 11labs Wizard, Audio-QA und visuelle App-Prüfung in allen drei Modi.
+Standard für neue Sets: quadratische Szenenbilder statt Freisteller, English-only Setdaten, neue MP3s über OpenAI GPT-Audio-1.5 nach dem Video-Lab-Verfahren, Audio-QA und visuelle App-Prüfung in allen drei Modi.
+
+## Audio-Erzeugung und eigener API-Key
+
+Die App spielt weiterhin lokale MP3s ab. Die bisherigen 289 Aufnahmen bleiben
+unverändert. Neue Aufnahmen entstehen bewusst über einen lokalen Entwicklungs-CLI
+mit `gpt-audio-1.5`, warmer langsamer englischer Stimme, Transkriptprüfung und Cache.
+
+```bash
+python3 tools/configure_openai_audio.py
+python3 tools/render_openai_audio.py --dry-run
+python3 tools/render_openai_audio.py --generate
+```
+
+Den eigenen API-Key ausschließlich im ausgegebenen lokalen Passwortformular
+eintragen. Er liegt mit privaten Dateirechten außerhalb des Projekt-/Webordners;
+der Player und Exporte brauchen keinen Key. Das Speichern ruft OpenAI nicht auf.
+`--generate` erzeugt drei getrennte Hörproben außerhalb des Audio-Bestands.
+Details und Set-Import: [OpenAI-Audio](docs/OPENAI_AUDIO.md).
 
 ## MVP-Abgrenzung
 

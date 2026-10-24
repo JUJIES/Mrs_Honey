@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import array
 import json
 import math
@@ -43,36 +44,24 @@ def main() -> int:
         raise SystemExit(f"No MP3 files found in {root}")
 
     analyses = [analyze_mp3(path, root) for path in mp3_files]
-    voiced_f0 = [entry["medianF0Hz"] for entry in analyses if entry["medianF0Hz"] is not None]
-    if len(voiced_f0) < 8:
-        raise SystemExit("Not enough voiced MP3 files for voice-consistency QA.")
-
-    baseline_f0 = statistics.median(voiced_f0)
-    mad_f0 = median_abs_deviation(voiced_f0, baseline_f0) or 1.0
+    provenance_path = AUDIO_ROOT / "audio-provenance.json"
+    provenance = json.loads(provenance_path.read_text()) if provenance_path.exists() else {"files": {}}
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for path, entry in zip(mp3_files, analyses):
+        record = provenance["files"].get(rel(path))
+        if record and record["sha256"] != hashlib.sha256(path.read_bytes()).hexdigest():
+            raise SystemExit(f"Audio provenance hash mismatch: {rel(path)}")
+        entry["profileId"] = record["profileId"] if record else "legacy-elevenlabs"
+        groups.setdefault(entry["profileId"], []).append(entry)
 
     issues = []
-    for entry in analyses:
-        f0 = entry["medianF0Hz"]
-        if f0 is None:
-            entry["f0RatioToBaseline"] = None
-            entry["robustF0Z"] = None
-            entry["flags"] = ["no-reliable-pitch"]
-            continue
-
-        ratio = f0 / baseline_f0
-        robust_z = (f0 - baseline_f0) / (1.4826 * mad_f0)
-        entry["f0RatioToBaseline"] = round(ratio, 4)
-        entry["robustF0Z"] = round(robust_z, 4)
-        entry["flags"] = []
-
-        if (
-            entry["voicedFrames"] >= args.min_voiced_frames
-            and f0 <= args.max_low_f0_hz
-            and ratio <= args.max_low_f0_ratio
-            and robust_z <= args.max_low_robust_z
-        ):
-            entry["flags"].append("voice-too-low-outlier")
-            issues.append(entry)
+    baselines = {}
+    for profile, entries in groups.items():
+        group_issues, baseline = evaluate_group(entries, args)
+        baselines[profile] = baseline
+        issues.extend(group_issues)
+        print(f"Voice group {profile[:20]}: {len(entries)} files, {baseline['status']}")
+    voiced_f0 = [entry["medianF0Hz"] for entry in analyses if entry["medianF0Hz"] is not None]
 
     report = {
         "checkedAt": iso_now(),
@@ -86,10 +75,9 @@ def main() -> int:
         "summary": {
             "files": len(analyses),
             "voicedFiles": len(voiced_f0),
-            "baselineMedianF0Hz": round(baseline_f0, 2),
-            "baselineMadF0Hz": round(mad_f0, 2),
             "filesWithIssues": len(issues),
         },
+        "voiceGroups": baselines,
         "issues": compact_entries(issues),
         "files": compact_entries(analyses),
     }
@@ -101,7 +89,7 @@ def main() -> int:
 
     print(
         "Voice consistency QA: "
-        f"{len(analyses)} MP3, baseline F0 {baseline_f0:.1f} Hz, issues {len(issues)}."
+        f"{len(analyses)} MP3, {len(groups)} voice groups, issues {len(issues)}."
     )
     for issue in issues:
         print(
@@ -110,9 +98,36 @@ def main() -> int:
             f"ratio={issue['f0RatioToBaseline']:.2f} z={issue['robustF0Z']:.1f}"
         )
 
-    if issues and args.fail_on_issues == "on":
+    if (issues or any(b["status"].startswith("insufficient") for b in baselines.values())) and args.fail_on_issues == "on":
         return 2
     return 0
+
+
+def evaluate_group(analyses, args):
+    """Compare like voices; a new provider must never use the legacy pitch baseline."""
+    voiced = [e["medianF0Hz"] for e in analyses if e["medianF0Hz"] is not None]
+    if len(voiced) < 8:
+        for entry in analyses:
+            entry.update(f0RatioToBaseline=None, robustF0Z=None, flags=["insufficient-voice-baseline"])
+        # This is an unassessed group, not a successful consistency check.
+        return [], {"status": "insufficient-baseline; manual listening required", "files": len(analyses)}
+    baseline = statistics.median(voiced)
+    mad = median_abs_deviation(voiced, baseline) or 1.0
+    issues = []
+    for entry in analyses:
+        f0 = entry["medianF0Hz"]
+        if f0 is None:
+            entry.update(f0RatioToBaseline=None, robustF0Z=None, flags=["no-reliable-pitch"])
+            continue
+        ratio = f0 / baseline
+        robust_z = (f0 - baseline) / (1.4826 * mad)
+        entry.update(f0RatioToBaseline=round(ratio, 4), robustF0Z=round(robust_z, 4), flags=[])
+        if (entry["voicedFrames"] >= args.min_voiced_frames and f0 <= args.max_low_f0_hz
+                and ratio <= args.max_low_f0_ratio and robust_z <= args.max_low_robust_z):
+            entry["flags"].append("voice-too-low-outlier")
+            issues.append(entry)
+    return issues, {"status": "passed" if not issues else "outliers", "files": len(analyses),
+                    "baselineMedianF0Hz": round(baseline, 2), "baselineMadF0Hz": round(mad, 2)}
 
 
 def analyze_mp3(path: Path, root: Path) -> dict[str, Any]:
@@ -239,6 +254,7 @@ def compact_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 key: entry[key]
                 for key in (
                     "path",
+                    "profileId",
                     "durationSec",
                     "medianF0Hz",
                     "voicedFrames",

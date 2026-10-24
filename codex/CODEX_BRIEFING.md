@@ -107,7 +107,7 @@ Für MVP:
 
 - Wenn Audio-Datei vorhanden ist: abspielen
 - Wenn nicht vorhanden: kein Fehler in der Konsole; Button deaktivieren oder Web Speech API als Fallback nutzen
-- Keine ElevenLabs-API im Frontend
+- Keine Audio-Provider-API oder Keys im Frontend; neue Audio-Erzeugung nach `docs/OPENAI_AUDIO.md`
 
 ## UI-Stil
 

@@ -18,10 +18,10 @@ Default for new regular vocabulary sets:
 - store images in `assets/images/<set_id>_scene/`
 - use `display: "scene-card"`
 - do not create transparent cutouts unless explicitly requested
-- create English MP3 prompts through the 11labs wizard generic MP3 renderer
+- create new English MP3 prompts through `tools/render_openai_audio.py` (`gpt-audio-1.5`), following `docs/OPENAI_AUDIO.md`
 - create item-specific English read-feedback MP3s for Lesen mode, e.g. `Yes! That's a cow.`
-- keep the 11labs wizard's child-friendly soft voice profile; do not use fast/neutral renderer defaults
-- run audio QA repair before importing MP3s
+- use the user-approved warm, slow British English `alloy` profile in `tools/audio_profile.json` for all new audio; approved after three listening samples on 2026-10-24. Preserve this voice and direction unless the user requests a change; listen to new clips for content/quality before importing
+- require transcript/MP3 QA and preserve the renderer metadata sidecars before importing MP3s
 - rebuild set bundle files
 - run `tools/sync_audio_assets.py` after importing MP3s so the audio manifest and Lipsync JSONs are updated together
 - visually verify Hören, Lesen, and Sprechen in the app
@@ -45,7 +45,7 @@ Required MVP inventory:
 - `assets/audio/feedback_en_01/en/*.mp3`: 42 files
 - `assets/audio/sentence_prompts_en_01_v3_soft/en/*.mp3`: 5 files
 
-Expected total: 289 MP3 files.
+Existing migration baseline: 289 MP3 files. New sets may increase this count; never regenerate the baseline to migrate providers.
 
 Every MP3 must be listed in:
 
@@ -60,17 +60,27 @@ assets/lipsync/<same-relative-path>.json
 
 Every learning-set item audio path must exist on disk and be present in the manifest.
 
-## Audio Source Repo
+## Audio Generation (OpenAI)
 
-Generate or repair MP3 files in:
+Read `docs/OPENAI_AUDIO.md` and `docs/SET_GENERATION_PIPELINE.md`.
+The old external Wizard-only rule has been replaced: Oskar owns a focused offline
+Python CLI using Video Lab's GPT-Audio-1.5 / Chat Completions pattern. No runtime
+service, frontend API call, external Wizard dependency or new package dependency.
+Do not modify Video Lab or the shared ElevenLabs Wizard for this workflow.
 
-```txt
-/Users/Julius/coding_projects/tools/11labs wizard
-```
-
-Read that repo's `AGENTS.md` before generating audio.
-
-Do not call ElevenLabs directly from this app repo. Use the wizard repo scripts and import the resulting files.
+- Own key: `python3 tools/configure_openai_audio.py`, local password form only.
+- Secret: `~/.config/lernspiel-oskar/openai-tts.key`, outside repo/web root, 0600.
+  Never read, print, copy, screenshot or put the real key in chat/arguments/exports.
+  Do not inherit another project's environment key.
+- Outputs/cache: `~/.cache/lernspiel-oskar/audio/`, outside the repository.
+- Default runs are dry; paid generation requires `--generate` and user authorization.
+- Existing MP3s are immutable for this migration. Import creates missing files only.
+- Keep `.metadata.json` sidecars beside ZIPs. Import records profile/checksum for
+  new audio in `assets/audio/audio-provenance.json`; legacy audio needs no rewrite.
+- Provider transcripts are a word-comparison guard, not independent ASR or proof of
+  exact pronunciation. The default voice profile is user-approved; new recordings still need content/quality listening checks.
+- Run `python3 -B -m unittest discover -s tools -p 'test_audio_pipeline.py'` after
+  renderer, credentials, importer or voice QA changes. No real key/call in tests.
 
 ## App Data Files
 
@@ -123,7 +133,7 @@ tools/sync_audio_assets.py
 ```
 
 This rebuilds both audio manifest files, generates missing or stale Lipsync JSONs, and validates the result.
-It also runs `tools/voice_consistency_qa.py` to catch low-pitched voice outliers that indicate an ElevenLabs voice drift/regeneration failure.
+It also runs `tools/voice_consistency_qa.py` to catch low-pitched outliers within each voice profile and verify provenance hashes. Legacy and OpenAI voices must not share a pitch baseline.
 
 If debugging is needed, run these checks after importing or changing audio:
 
@@ -160,15 +170,13 @@ console.log({
 NODE
 ```
 
-3. Audio QA for each English group from the wizard repo:
+3. New OpenAI audio QA:
 
-```bash
-node "/Users/Julius/coding_projects/tools/11labs wizard/tools/tts/qa-learning-audio.mjs" --dir "assets/audio/animals_01/en" --report /tmp/animals_01_en.qa.json --fail-on-issues off
-```
-
-Repeat for `body_parts/en`, `colours/en`, `colours_hidden_object/en`, `emotions/en`, `food/en`, `home/en`, `school/en`, `tools/en`, `transport/en`, `feedback_en_01/en`, and `sentence_prompts_en_01_v3_soft/en`.
-
-Accept only if every group has `filesWithIssues: 0`.
+The renderer normalizes/pads MP3s, checks full decoding, non-silence and measured
+duration, and compares provider transcript words with the exact source text.
+The importer verifies sidecar hashes and source text before accepting new audio.
+Listen for pronunciation, pace and warmth; technical checks cannot establish these.
+Legacy files stay unchanged and do not need a fresh Wizard repair pass.
 
 4. Voice consistency outliers:
 
@@ -176,7 +184,7 @@ Accept only if every group has `filesWithIssues: 0`.
 tools/voice_consistency_qa.py --report /tmp/oskar_voice_consistency.json
 ```
 
-Accept only if `filesWithIssues: 0`. Re-render or restore any `voice-too-low-outlier` MP3 before importing or shipping audio.
+Accept only if every voice group is assessed and passes. Fewer than eight reliably voiced files is an explicit insufficient baseline and fails by default. Investigate failures; do not bypass checks or replace old files automatically.
 
 ## MVP Bias
 

@@ -46,9 +46,10 @@ def collect_dialog_map() -> dict[str, str]:
 
         for item in data.get("items", []):
             labels = item.get("labels", {})
+            spoken = item.get("speak", {})
             for language, audio_path in (item.get("audio") or {}).items():
                 if audio_path:
-                    dialogs[audio_path] = labels.get(language) or item.get("id") or dialog_from_filename(audio_path)
+                    dialogs[audio_path] = spoken.get(language) or labels.get(language) or item.get("id") or dialog_from_filename(audio_path)
 
             feedback_text = item.get("readFeedbackText", {})
             for language, audio_path in (item.get("readFeedback") or {}).items():

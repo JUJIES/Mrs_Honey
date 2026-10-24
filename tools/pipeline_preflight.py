@@ -7,9 +7,10 @@ import shutil
 import socket
 from pathlib import Path
 
+from audio_credentials import load_key
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-WIZARD_ROOT = Path("/Users/Julius/coding_projects/tools/11labs wizard")
 RHUBARB_BIN = PROJECT_ROOT / "tools" / "rhubarb" / "Rhubarb-Lip-Sync-1.14.0-macOS" / "rhubarb"
 CHROME_APP = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
@@ -28,8 +29,12 @@ def main() -> int:
     checks.append(check_free_space(Path("/tmp"), args.min_free_mb))
     checks.append(check_exists(RHUBARB_BIN, "rhubarb"))
     checks.append(check_tool("ffmpeg"))
-    checks.append(check_exists(WIZARD_ROOT / "package.json", "11labs wizard package.json"))
-    checks.append(check_exists(WIZARD_ROOT / ".env", "11labs wizard .env"))
+    checks.append(check_tool("ffprobe"))
+    checks.append(check_exists(PROJECT_ROOT / "tools" / "audio_profile.json", "OpenAI audio profile"))
+    try:
+        checks.append({"name": "own Oskar OpenAI key", "ok": bool(load_key())})
+    except ValueError:
+        checks.append({"name": "own Oskar OpenAI key", "ok": False})
     checks.append(check_exists(CHROME_APP, "Google Chrome"))
     if args.port:
         checks.append(check_port_available(args.port))

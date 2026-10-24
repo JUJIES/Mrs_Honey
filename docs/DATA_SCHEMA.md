@@ -10,20 +10,18 @@ Beispiel:
 
 ## Prinzip
 
-Ein Item enthält Bild, deutsche und englische Labels sowie optionale Audios.
+Das aktuelle MVP ist English-only (`languages: ["en"]`). Ein Item enthält
+Bild, englisches Label, Sprechertext, Audio und optional Lesen-Rückmeldung:
 
 ```json
 {
   "id": "cat",
   "image": "assets/images/animals_01/cat.png",
-  "labels": {
-    "de": "Katze",
-    "en": "cat"
-  },
-  "audio": {
-    "de": "assets/audio/animals_01/de/cat.mp3",
-    "en": "assets/audio/animals_01/en/cat.mp3"
-  },
+  "labels": {"en": "cat"},
+  "speak": {"en": "Can you find the cat?"},
+  "audio": {"en": "assets/audio/animals_01/en/cat.mp3"},
+  "readFeedbackText": {"en": "Yes! That's a cat."},
+  "readFeedback": {"en": "assets/audio/animals_01/en/read_feedback_cat.mp3"},
   "difficulty": 1,
   "tags": ["animal", "pet"]
 }
@@ -31,18 +29,15 @@ Ein Item enthält Bild, deutsche und englische Labels sowie optionale Audios.
 
 ## Audios
 
-Für MVP können Audiodateien fehlen. Die App soll damit robust umgehen:
+Die App konsumiert lokale MP3s und passende Rhubarb-JSONs. Alle referenzierten
+Audios müssen existieren und im Audio-Manifest stehen. Nach Set-JSON-Änderungen
+auch das zugehörige Bundle neu erzeugen. Keine Provider-Keys oder Generierung im
+Frontend; fehlende Audios nicht mit stiller Browser-TTS-Regenerierung kaschieren.
 
-- wenn MP3 vorhanden: abspielen
-- wenn MP3 fehlt: Button deaktivieren oder Browser-TTS als Fallback nutzen
-- keine ElevenLabs-API-Keys im Frontend
-
-Zielpfade später:
-
-```text
-assets/audio/animals_01/en/cat.mp3
-assets/audio/animals_01/de/cat.mp3
-```
+Neue Audios: `docs/OPENAI_AUDIO.md`. Das Lernset-Modell bleibt anbieterunabhängig.
+`assets/audio/audio-provenance.json` ergänzt ausschließlich für neu importierte
+OpenAI-Dateien Profil und Prüfsumme; Altdateien bleiben der Legacy-Stimmgruppe
+zugeordnet. Die Datei steuert Entwicklungs-QA, nicht die Wiedergabe.
 
 ## Bilder
 

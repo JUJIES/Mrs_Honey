@@ -3,23 +3,22 @@ from __future__ import annotations
 
 import argparse
 import json
+import shlex
 from pathlib import Path
 from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SET_DIR = PROJECT_ROOT / "data" / "sets"
-DEFAULT_VOICE = "hpp4J3VqNfWAUOO0d1Us"
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build flat 11labs wizard prompt JSON files from a Lernwort set JSON.",
+        description="Build English prompt JSON files for the OpenAI audio renderer.",
     )
     parser.add_argument("--set", dest="set_id", required=True, help="Set id, e.g. tools.")
-    parser.add_argument("--lang", default="en", help="Language key to export. Default: en.")
+    parser.add_argument("--lang", default="en", choices=("en",), help="English-only MVP.")
     parser.add_argument("--out-dir", default="/tmp", help="Output directory for prompt JSON files.")
-    parser.add_argument("--voice", default=DEFAULT_VOICE, help="Voice id to include in printed wizard commands.")
     parser.add_argument("--no-commands", action="store_true", help="Only write JSON files; do not print wizard commands.")
     return parser.parse_args()
 
@@ -83,15 +82,12 @@ def main() -> int:
 
     if not args.no_commands:
         print()
-        print("# 11labs wizard commands")
-        print(
-            f"npm run audio -- --in {words_path} --out dist/{args.set_id}-bundle.zip "
-            f"--lang {args.lang} --voice {args.voice} --skip-existing"
-        )
-        print(
-            f"npm run audio -- --in {feedback_path} --out dist/{args.set_id}-read-feedback-bundle.zip "
-            f"--lang {args.lang} --voice {args.voice} --skip-existing"
-        )
+        print("# OpenAI audio commands (dry-run by default; add --generate for paid generation)")
+        runtime = Path.home() / ".cache" / "lernspiel-oskar" / "audio"
+        for source, name in ((words_path, f"{args.set_id}-bundle.zip"),
+                             (feedback_path, f"{args.set_id}-read-feedback-bundle.zip")):
+            print(shlex.join(["python3", "tools/render_openai_audio.py", "--in", str(source),
+                              "--out", str(runtime / name)]))
     return 0
 
 
