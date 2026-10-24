@@ -8,7 +8,7 @@
 - Verlassene Bild-/Antwortrunden dürfen keine neue Aufgabe oder Feedback im nächsten Bildschirm starten.
 - Der Bär verwendet ein quadratisches, von nativen Buttonabständen unabhängiges Koordinatensystem; Kopfposition bleibt über Geräteausrichtungen hinweg gleich.
 - Body-Set-Bundle und Set-Cover im PWA-Precache ergänzt. Neue App-/CSS-URLs und Cache-Version verhindern die Weiterverwendung der alten Ladeabläufe. Vollständiger Offline-Audiobetrieb wird weiterhin nicht versprochen.
-- Neue Regressionstests: `node --test tests/mobile-reliability.test.cjs`. Lerninhalte und Audioaufnahmen bleiben unverändert.
+- Fehlgeschlagene Manifest-/Feedback-Anfragen deaktivieren Audio nicht mehr dauerhaft für die Sitzung. Neue Regressionstests: `node --test tests/mobile-reliability.test.cjs`. Lerninhalte und Audioaufnahmen bleiben unverändert.
 
 ## 2026-10-04 – Verständliche Kompetenzauswahl
 
