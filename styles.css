@@ -1104,7 +1104,10 @@ h1 {
   line-height: 1;
   text-align: center;
   transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+  max-width: 100%;
 }
+
+.memory-current-word { min-width: 0; overflow-wrap: anywhere; }
 
 .memory-replay {
   display: grid;
@@ -2916,6 +2919,19 @@ h1 {
 
   .competency-card .competency-description {
     font-size: 0.85rem;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 680px) {
+  .memory-screen[data-grid="4"] .memory-card-word,
+  .memory-screen[data-grid="6"] .memory-card-word {
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    padding: 2px 3px;
+    border-radius: 8px;
+    font-size: clamp(0.55rem, 2.4vw, 0.72rem);
+    line-height: 1.1;
   }
 }
 

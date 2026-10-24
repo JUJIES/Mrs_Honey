@@ -1,11 +1,11 @@
 importScripts("./data/offline-assets.bundle.js?v=69ea418066b0b570", "./asset-cache.js?v=background-cache-4");
-const CACHE_NAME = "lernwort-pwa-v36";
+const CACHE_NAME = "lernwort-pwa-v37";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=memory-feedback-1",
-  "./app.js?v=memory-feedback-1",
+  "./styles.css?v=memory-feedback-2",
+  "./app.js?v=memory-feedback-2",
   "./asset-cache.js?v=background-cache-4",
   "./data/offline-assets.bundle.js?v=69ea418066b0b570",
   "./manifest.webmanifest",

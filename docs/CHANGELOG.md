@@ -5,7 +5,7 @@
 - Jedes gefundene Paar spricht direkt die vorhandene itembezogene Lese-Rückmeldung mit voller Medienlautstärke, ohne vorheriges allgemeines Lob oder Erfolgs-Cue; keine MP3 neu erzeugt oder verändert.
 - Beide Trefferkarten und das Wort werden vom tatsächlichen Audioanfang bis zum Ende gemeinsam hervorgehoben. Erhaltene Kartenknoten ermöglichen flüssige Flip-/Farbübergänge; 220 ms Vorlauf/Ausklang statt langer Zusatzpause.
 - Sichtbarer Wiederholungsknopf, passender Fehlerhinweis und Schutz gegen veraltete asynchrone Abläufe nach Zurück/Neustart. Regeln und Tests unter `docs/MEMORY_FEEDBACK.md`.
-- App-/CSS-URLs versioniert, Shell-Cache v36; vorbereitete Medien bleiben im getrennten Inhaltsspeicher.
+- App-/CSS-URLs `memory-feedback-2`, Shell-Cache v37; vorbereitete Medien bleiben im getrennten Inhaltsspeicher. Kompakte Labels in dichten mobilen Rastern erhalten auch bei langen Wörtern das sichtbare Bild.
 
 ## 2026-10-24 – Automatisches Vorladen für unterwegs
 
