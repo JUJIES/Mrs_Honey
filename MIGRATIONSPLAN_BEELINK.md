@@ -196,3 +196,26 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   Erst sauberen GitHub-Freeze auf freiem Kandidatenport 5198 prüfen, danach nur
   App-Dienst umstellen. Tunnel und Control Center bleiben unverändert.
   Exakter Release und öffentliche Abnahme folgen nach erfolgreicher Aktivierung.
+
+- Aktivierung **bestanden**: finaler Freeze
+  `23ec5ca841674ddb7f6c36b680398665e24a0f87`, sauberer detached `_services`-Worktree
+  und Eigentümer des Listeners 5900 bestätigt. Der erste Produktcommit
+  `d40dab597a29356634a7cfd922c42f86606931d8` wurde bei der Online-Abnahme um den
+  noch veralteten Starttext ergänzt; finale URLs `word-blaster-bonus-2`, Shell v59.
+- Auf Windows: 73 Node-Tests, acht Server-Tests und unverändertes Inventar bestanden.
+  Kandidat 5198 bereit, acht Runtime-Ressourcen erreichbar, sechs private Pfade
+  gesperrt; danach beendet. Nur LocalService-RX und App-Dienst umgestellt.
+  App und Tunnel laufen, keine Control-Center-/Tunneländerung. Dienst-XML-SHA256:
+  `106b8f3face12a21b3c644acec335f979663743129eeabf1e083b2f3eaf75cc0`.
+- Unmittelbarer Rollback: `_runtime\Mrs_Honey\ops\bank-bonus-20261024-23ec5ca\service-5900.before.xml`
+  stellt `d40dab5` wieder her. Vorheriger stabiler Freeze `bb8bacd` bleibt ebenfalls
+  erhalten; dessen XML liegt unter `bank-bonus-20261024-d40dab5`. Nur App-Dienst
+  stoppen, gesicherte XML wiederherstellen und App-Dienst starten. Kein Cleanup.
+- Öffentlich: Readiness vollständig, Index/App/Word-Blaster-JS/CSS/Service-Worker
+  entsprechen dem finalen Release nach CRLF/LF-Normalisierung. Fünf private
+  Quell-/Test-/Referenzpfade gesperrt. Reguläre Animals-Leserunde bis Bonus,
+  Challenge-Auswahl und Starttext mit 10/15/20, geladene Kanone ohne Fokusellipse
+  sowie Pfeiltasten/Schuss geprüft. Keine Testnamen gespeichert. Nachweise unter
+  `references/app_screenshots/public-bank-bonus-{rules,game}-20261024.png`.
+- Doku-/Nachweiscommit nach dem Freeze benötigt keinen Runtime-Cutover.
+  Physische iPad-Abnahme bleibt offen; Browserprüfung belegt keine Geräteleistung.
