@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 
-function harness() {
+function harness(options = {}) {
   let gesture = false;
   const instances = [], timers = new Map();
   let nextTimer = 0;
@@ -26,11 +26,11 @@ function harness() {
   const audioStatus = {textContent:''};
   const app = {querySelector:(s) => s === '.audio-load-status' ? audioStatus : null};
   const document = {querySelector:()=>app,createElement:(tag)=>tag==='audio'?new Media():{addEventListener(){},type:'',textContent:''},body:{append(){}}};
-  const window = {location:{protocol:"https:",hostname:"localhost"},setTimeout(fn,ms){const id=++nextTimer;timers.set(id,{fn,ms});return id;},clearTimeout(id){timers.delete(id);}};
+  const window = {matchMedia:()=>({matches:Boolean(options.reducedMotion)}),location:{protocol:"https:",hostname:"localhost"},setTimeout(fn,ms){const id=++nextTimer;timers.set(id,{fn,ms});return id;},clearTimeout(id){timers.delete(id);}};
   const context = vm.createContext({window,document,console,Set,Map,Promise,Date,fetch:()=>new Promise(()=>{})});
   const source=fs.readFileSync(require('node:path').join(__dirname,'../app.js'),'utf8');
   vm.runInContext(source.slice(0,source.indexOf('\ndocument.addEventListener("click", unlockAudioPlayback')), context);
-  return {context,instances,timers,audioStatus,run:(s)=>vm.runInContext(s,context),gesture(fn){gesture=true;fn();gesture=false;}};
+  return {context,app,instances,timers,audioStatus,run:(s)=>vm.runInContext(s,context),gesture(fn){gesture=true;fn();gesture=false;}};
 }
 
 test('one element unlocked by a tap plays later prompts; loading does not consume playback time', async()=>{
@@ -114,4 +114,68 @@ test('the actual generated manifest bundle supports offline feedback without a J
   const h=harness();let calls=0;h.context.fetch=()=>{calls++;throw new Error('offline');};
   h.run('window.LERNWORT_AUDIO_MANIFEST={files:["cat.mp3"]}');
   assert.equal(await h.run('audioExists("cat.mp3")'),true);assert.equal(calls,0);
+});
+
+
+function frameHarness(options) {
+  const h=harness(options),images=[];
+  h.context.Image=class {
+    constructor(){images.push(this);}
+    decode(){return new Promise((resolve,reject)=>{this.resolve=resolve;this.reject=reject;});}
+  };
+  const node=()=>({attributes:{},style:{},setAttribute(k,v){this.attributes[k]=v;}});
+  const body=node(),blend=node(),left=node(),right=node(),head=node();
+  h.app.querySelector=(selector)=>selector==='.honey-head-rig'?head:selector==='.honey-listen-button'?{
+    querySelector:(s)=>s==='.honey-body-frame-blend'?blend:s.includes('body-frame')?body:s.includes('left')?left:right
+  }:null;
+  return {...h,images,body,blend,left,right,head};
+}
+
+test('avatar decode work is reused and failed files can be retried',async()=>{
+  const h=frameHarness();const a=h.run('loadTutorFrame(tutorBodyFrames[0])'),b=h.run('loadTutorFrame(tutorBodyFrames[0])');
+  assert.equal(a,b);assert.equal(h.images.length,1);h.images[0].reject(new Error('network'));
+  assert.equal(await a,false);const retry=h.run('loadTutorFrame(tutorBodyFrames[0])');
+  assert.equal(h.images.length,2);h.images[1].resolve();assert.equal(await retry,true);
+});
+
+test('breathing never swaps to a half-decoded pair of images',async()=>{
+  const h=frameHarness();const a=h.run('loadTutorFrame(tutorBodyFrames[2])'),b=h.run('loadTutorFrame(tutorBodyFrames[3])');
+  h.run('setTutorBodyFrame(2.5)');assert.equal(h.body.attributes.src,undefined);
+  h.images[0].resolve();await a;h.run('setTutorBodyFrame(2.5)');assert.equal(h.body.attributes.src,undefined);
+  h.images[1].resolve();await b;h.run('setTutorBodyFrame(2.5)');
+  assert.match(h.body.attributes.src,/breathe-02/);assert.match(h.blend.attributes.src,/breathe-03/);assert.equal(h.blend.style.opacity,'0.500');
+});
+
+test('a failed animation frame preserves the already displayed body',async()=>{
+  const h=frameHarness();const initial=h.run('Promise.all([loadTutorFrame(tutorBodyFrames[0]),loadTutorFrame(tutorBodyFrames[1])])');
+  h.images.forEach(i=>i.resolve());await initial;h.run('setTutorBodyFrame(0.25)');const before=h.body.attributes.src;
+  const missing=h.run('loadTutorFrame(tutorBodyFrames[2])');h.images[2].reject(new Error('decode failed'));await missing;
+  h.run('setTutorBodyFrame(1.5)');assert.equal(h.body.attributes.src,before);assert.equal(h.blend.style.opacity,'0.250');
+});
+
+test('blinks wait for all eye variants and remove completed timer references',async()=>{
+  const h=frameHarness();h.run('triggerTutorBlink()');assert.equal(h.timers.size,0);
+  const ready=h.run('preloadTutorFrames()');h.images.forEach(i=>i.resolve());await ready;
+  const again=h.run('preloadTutorFrames()');await again;assert.equal(h.images.length,14);
+  h.run('triggerTutorBlink()');assert.equal(h.run('state.tutorBlinkFrameTimers.length'),4);
+  for(const timer of [...h.timers.values()])timer.fn();
+  assert.equal(h.run('state.tutorBlinkFrameTimers.length'),0);assert.match(h.left.attributes.src,/left-open/);
+});
+
+test('a long Safari suspension resumes at rest without replaying missed breaths',()=>{
+  const h=frameHarness();h.run('state.tutorBreathCycle=createTutorBreathCycle(0)');
+  assert.equal(h.run('getTutorBreathValue(600)'),0);assert.equal(h.run('state.tutorBreathCycle.start'),600);
+  const next=h.run('getTutorBreathValue(600.016)');assert.ok(next>=0&&next<0.02);
+});
+
+test('reduced-motion preference keeps the speaking head at rest',()=>{
+  const h=frameHarness({reducedMotion:true});h.run('state.tutorHeadMotion={translateX:1,translateY:1,rotate:1};updateTutorSpeakingHeadMotion(2,1)');
+  assert.equal(h.run('state.tutorHeadMotion.rotate'),0);assert.match(h.head.style.transform,/rotate\(0.00deg\)/);
+});
+
+test('hiding the page cancels decorative work without stopping audio',()=>{
+  const h=frameHarness();let cancelled;
+  h.context.window.cancelAnimationFrame=id=>{cancelled=id;};h.context.document.visibilityState='hidden';
+  h.run('state.tutorAnimationFrame=42;state.tutorBlinkTimer=17;state.activeAudio={pause(){throw new Error("audio must continue")}};handleTutorVisibilityChange()');
+  assert.equal(cancelled,42);assert.equal(h.run('state.tutorAnimationFrame'),null);assert.equal(h.run('state.tutorBlinkTimer'),null);assert.ok(h.run('state.activeAudio'));
 });

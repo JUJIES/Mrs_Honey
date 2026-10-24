@@ -1,5 +1,12 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Rendering-Härtung und Safari-Freigabevertrag
+
+- Überholte SVG-/Portrait- und Größenregeln entfernt; nur das bestehende Companion-Rig bleibt als Runtime-Darstellung.
+- Body-/Augenframes einmal dekodieren und erst vollständig vorbereitet austauschen; bei Fehlern aktuelle Darstellung erhalten und später erneut versuchen.
+- Dekorative Arbeit in verdeckten Tabs pausieren, lange Atempausen sauber neu starten, abgeschlossene Blink-Timer entfernen und reduzierte Bewegung respektieren.
+- Sieben neue Regressionstests und wiederverwendbarer, lesender Layout-Audit; reale Safari-Sichtprüfung bleibt ausdrücklich Teil der Freigabe. Vertrag in `docs/RENDERING.md` und `AGENTS.md`.
+
 ## 2026-10-24 – Safari schneidet Bärenkopf nicht mehr ab
 
 - Äußeren `drop-shadow`-Filter am Bärenbutton in Ruhe und während Wiedergabe entfernt; begrenzter radialer Bodenschatten statt Filter über überstehenden, transformierten Kopfebenen.

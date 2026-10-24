@@ -1,0 +1,282 @@
+[
+  {
+    "mode": "Hören",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 164.53170776367188,
+          "width": 164.53173828125,
+          "x": 112.73413848876952,
+          "y": 430.8926086425781
+        },
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Hören",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 292.90655517578125,
+          "width": 292.9065856933594,
+          "x": 258.5467224121094,
+          "y": 583.7764282226562
+        },
+        "viewport": {
+          "height": 1080,
+          "width": 810
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Hören",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 299.4153137207031,
+          "width": 299.4153137207031,
+          "x": 77.0892105102539,
+          "y": 131.61660766601562
+        },
+        "viewport": {
+          "height": 810,
+          "width": 1080
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Hören",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 134.9989013671875,
+          "width": 134.9989013671875,
+          "x": 178.50054931640625,
+          "y": 82.85832214355469
+        },
+        "viewport": {
+          "height": 390,
+          "width": 844
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 164.53170776367188,
+          "width": 164.53173828125,
+          "x": 112.73413848876952,
+          "y": 508.8926086425781
+        },
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 292.90655517578125,
+          "width": 292.9065856933594,
+          "x": 258.5467224121094,
+          "y": 602.1748657226562
+        },
+        "viewport": {
+          "height": 1080,
+          "width": 810
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 299.4153137207031,
+          "width": 299.4153137207031,
+          "x": 77.0892105102539,
+          "y": 131.61660766601562
+        },
+        "viewport": {
+          "height": 810,
+          "width": 1080
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 134.9989013671875,
+          "width": 134.9989013671875,
+          "x": 178.50054931640625,
+          "y": 82.85832214355469
+        },
+        "viewport": {
+          "height": 390,
+          "width": 844
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen kompakt",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 154.28811645507812,
+          "width": 154.28811645507812,
+          "x": 82.8559341430664,
+          "y": 313.1266784667969
+        },
+        "viewport": {
+          "height": 568,
+          "width": 320
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Lesen kompakt",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 4,
+        "head": {
+          "height": 134.9989013671875,
+          "width": 134.9989013671875,
+          "x": 40.50054931640625,
+          "y": 47.85832214355469
+        },
+        "viewport": {
+          "height": 320,
+          "width": 568
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Sprechen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 0,
+        "head": {
+          "height": 164.53173828125,
+          "width": 164.53173828125,
+          "x": 112.73413848876952,
+          "y": 588.642578125
+        },
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Sprechen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 0,
+        "head": {
+          "height": 292.90655517578125,
+          "width": 292.9065856933594,
+          "x": 258.5467224121094,
+          "y": 685.7764282226562
+        },
+        "viewport": {
+          "height": 1080,
+          "width": 810
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Sprechen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 0,
+        "head": {
+          "height": 299.4153137207031,
+          "width": 299.4153137207031,
+          "x": 77.0892105102539,
+          "y": 131.61660766601562
+        },
+        "viewport": {
+          "height": 810,
+          "width": 1080
+        }
+      },
+      "ok": true
+    }
+  },
+  {
+    "mode": "Sprechen",
+    "audit": {
+      "issues": [],
+      "metrics": {
+        "cards": 0,
+        "head": {
+          "height": 134.9989013671875,
+          "width": 134.9989013671875,
+          "x": 178.50054931640625,
+          "y": 82.85832214355469
+        },
+        "viewport": {
+          "height": 390,
+          "width": 844
+        }
+      },
+      "ok": true
+    }
+  }
+]

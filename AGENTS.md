@@ -196,3 +196,13 @@ Only re-render an MP3 when:
 - the expected word/sentence is wrong
 - the voice/language is obviously wrong
 - manual listening catches a distracting issue
+
+## Rendering / Safari release checks
+
+After changes to avatar markup, animation or shared layouts, follow
+`docs/RENDERING.md`: run the read-only browser audit, the responsive matrix,
+and inspect the real Safari view while idle, speaking and after returning to
+the tab. DOM geometry/unit tests do not prove correct composited pixels.
+Use the single Companion rig; do not reintroduce old portrait CSS, filtered
+overflow ancestors or a second Safari-specific model. Record unavailable
+physical-device checks explicitly.

@@ -126,3 +126,7 @@ Kein animierter Hintergrund im MVP.
 - Automatisches Vorladen: ausgewähltes Set und gemeinsame Rückmeldungen ohne zusätzliche Bedienung vorbereiten; aktuelle/nächste Aufgabe priorisieren. Gespeicherte Bilder und Audio aus einem vom Shell-Update unabhängigen Inhaltsspeicher bedienen. Details, Updatevertrag und Generierung: [OFFLINE_LOADING.md](OFFLINE_LOADING.md). Noch fehlende Inhalte benötigen weiterhin Verbindung; eine HTTP-200-Dateiprüfung allein ist kein Offline-/Gerätenachweis.
 
 Checks: `node --test tests/*.test.cjs`, `python3 -m unittest discover -s server -p 'test_*.py'`, dazu reale Browserprüfung mit verzögertem Audio und fehlschlagenden Bildanfragen. Ein Browser-Viewport ersetzt keine Abnahme auf dem physischen iPad.
+
+## Rendering-Freigabe
+
+Für Avatar-/Layoutänderungen gilt [RENDERING.md](RENDERING.md): eine Runtime-Darstellung, dekodierte Animationsframes, pausierbare Dekoration und ein wiederholbarer Browser-Audit. Echte Safari-Sichtprüfung zusätzlich zu Unit-Tests und DOM-Messung.

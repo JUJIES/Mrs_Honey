@@ -315,6 +315,10 @@ const tutorEyeFrames = {
   },
 };
 
+// Ephemeral decode readiness, separate from the persistent download cache.
+const tutorFrameCache = new Map();
+const tutorReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+
 const tutorHeadBaseTransform = "translate(-50%, -46%)";
 
 const feedbackTiming = {
@@ -1798,6 +1802,7 @@ function startTutorIdleAnimation() {
   setTutorMouthShape(tutorMouthRest);
   resetTutorHeadMotion();
   setTutorEyeFrame("open");
+  if (tutorReducedMotion?.matches || document.visibilityState === "hidden") return;
   scheduleTutorBlink();
 
   const startedAt = window.performance.now();
@@ -1831,11 +1836,36 @@ function stopTutorIdleAnimation() {
   state.tutorHeadMotion = { translateX: 0, translateY: 0, rotate: 0 };
 }
 
-function preloadTutorFrames() {
-  [...tutorBodyFrames, ...Object.values(tutorEyeFrames).flatMap((frame) => [frame.left, frame.right])].forEach((src) => {
-    const image = new Image();
-    image.src = assetUrl(src);
+function loadTutorFrame(src) {
+  const existing = tutorFrameCache.get(src);
+  if (existing) return existing.promise;
+  const image = new Image();
+  const entry = { image, ready: false, promise: null };
+  tutorFrameCache.set(src, entry);
+  image.src = assetUrl(src);
+  entry.promise = image.decode().then(() => {
+    entry.ready = true;
+    return true;
+  }).catch(() => {
+    // Keep the displayed frame; a later round/visibility return may retry.
+    tutorFrameCache.delete(src);
+    return false;
   });
+  return entry.promise;
+}
+
+function handleTutorVisibilityChange() {
+  if (document.visibilityState === "hidden") stopTutorIdleAnimation();
+  else if (app.querySelector(".honey-listen-button")) startTutorIdleAnimation();
+}
+
+function preloadTutorFrames() {
+  const paths = [...tutorBodyFrames, ...Object.values(tutorEyeFrames).flatMap((frame) => [frame.left, frame.right])];
+  return Promise.all(paths.map(loadTutorFrame));
+}
+
+function tutorFrameReady(src) {
+  return tutorFrameCache.get(src)?.ready === true;
 }
 
 function setTutorBodyFrame(position) {
@@ -1850,6 +1880,7 @@ function setTutorBodyFrame(position) {
   const baseIndex = Math.floor(framePosition);
   const blendIndex = Math.min(baseIndex + 1, tutorBodyFrames.length - 1);
   const blendAmount = framePosition - baseIndex;
+  if (!tutorFrameReady(tutorBodyFrames[baseIndex]) || !tutorFrameReady(tutorBodyFrames[blendIndex])) return;
 
   if (baseIndex !== state.tutorBodyFrameIndex) {
     state.tutorBodyFrameIndex = baseIndex;
@@ -1865,11 +1896,13 @@ function setTutorBodyFrame(position) {
 }
 
 function getTutorBreathValue(seconds) {
-  const cycleDuration = 60 / 9;
   let cycle = state.tutorBreathCycle || createTutorBreathCycle(0);
 
   if (seconds >= cycle.start + cycle.duration) {
-    cycle = createTutorBreathCycle(cycle.start + cycle.duration);
+    // Safari may suspend a tab for minutes; resume gently instead of replaying
+    // one missed breathing cycle per frame until the old clock catches up.
+    const nextStart = seconds >= cycle.start + cycle.duration * 2 ? seconds : cycle.start + cycle.duration;
+    cycle = createTutorBreathCycle(nextStart);
     state.tutorBreathCycle = cycle;
   }
 
@@ -1918,6 +1951,8 @@ function scheduleTutorBlink() {
 }
 
 function triggerTutorBlink(doubleBlink = false) {
+  if (tutorReducedMotion?.matches || !Object.values(tutorEyeFrames).every((frame) =>
+    tutorFrameReady(frame.left) && tutorFrameReady(frame.right))) return;
   const sequence = [
     ["half", 42],
     ["closed", 74],
@@ -1930,7 +1965,10 @@ function triggerTutorBlink(doubleBlink = false) {
 
   let elapsed = 0;
   sequence.forEach(([frame, duration]) => {
-    const timer = window.setTimeout(() => setTutorEyeFrame(frame), elapsed);
+    const timer = window.setTimeout(() => {
+      state.tutorBlinkFrameTimers = state.tutorBlinkFrameTimers.filter((id) => id !== timer);
+      setTutorEyeFrame(frame);
+    }, elapsed);
     state.tutorBlinkFrameTimers.push(timer);
     elapsed += duration;
   });
@@ -1938,6 +1976,7 @@ function triggerTutorBlink(doubleBlink = false) {
 
 function setTutorEyeFrame(frameName) {
   const frame = tutorEyeFrames[frameName] || tutorEyeFrames.open;
+  if (!tutorFrameReady(frame.left) || !tutorFrameReady(frame.right)) return;
   const tutorButton = app.querySelector(".honey-listen-button");
   if (!tutorButton) return;
 
@@ -1948,6 +1987,10 @@ function setTutorEyeFrame(frameName) {
 }
 
 function updateTutorSpeakingHeadMotion(seconds, mouthOpen) {
+  if (tutorReducedMotion?.matches) {
+    resetTutorHeadMotion();
+    return;
+  }
   const amount = 0.4;
   const open = clamp(Number(mouthOpen) || 0, 0, 1);
   const nod = Math.sin(seconds * 4.2) * 0.7 + Math.sin(seconds * 2.1 + 0.8) * 0.38;
@@ -2710,6 +2753,8 @@ function shuffle(items) {
 }
 
 document.addEventListener("click", unlockAudioPlayback, { capture: true });
+document.addEventListener("visibilitychange", handleTutorVisibilityChange);
+tutorReducedMotion?.addEventListener?.("change", handleTutorVisibilityChange);
 
 renderLanguageScreen();
 
