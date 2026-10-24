@@ -1,0 +1,435 @@
+/* Scoped bonus game: real CSS pixels, responsive arena, direct drag-to-aim controls. */
+.screen.word-blaster-screen {
+  min-height: 0;
+  align-content: start;
+  align-self: start;
+  gap: 0;
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  padding: 14px 20px 20px;
+  margin: 0 auto;
+}
+.word-blaster-screen > .back-button {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 2;
+}
+.wb-game {
+  color: #34564a;
+  outline: none;
+}
+.wb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-left: 68px;
+  min-height: 58px;
+  margin-bottom: 10px;
+}
+.wb-header h1 {
+  margin: 0;
+  font-size: clamp(21px, 3vw, 30px);
+  line-height: 1.1;
+}
+.wb-header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #607b69;
+}
+.wb-tools {
+  display: flex;
+  gap: 8px;
+}
+.wb-game button {
+  border: 2px solid #b9cbb4;
+  border-radius: 16px;
+  background: #fffaf1;
+  color: #34564a;
+  font: inherit;
+  font-weight: 600;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 8px 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #c4cfb9;
+  touch-action: manipulation;
+}
+.wb-game button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #c4cfb9;
+}
+.wb-game button:focus-visible {
+  outline: 3px solid #518fba;
+  outline-offset: 3px;
+}
+.wb-game button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.wb-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 2px;
+  min-height: 58px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #fffaf1;
+}
+.wb-instruction {
+  font-size: 14px;
+  color: #667c69;
+}
+.wb-word {
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.wb-count {
+  margin-left: auto;
+  font-size: 22px;
+  font-weight: 600;
+  color: #9c762e;
+  white-space: nowrap;
+}
+.wb-stage {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #edf1e4;
+  isolation: isolate;
+}
+.wb-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f8f7edee;
+  text-align: center;
+}
+.wb-overlay[hidden],
+.wb-game [hidden] {
+  display: none;
+}
+.wb-message {
+  max-width: 360px;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+.wb-overlay button {
+  padding: 14px 30px;
+  background: #e8cd87;
+  border-color: #c7a862;
+}
+.wb-gesture {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  height: var(--wb-gesture-height, 148px);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  border-radius: 18px;
+  outline: none;
+}
+.wb-gesture[data-state="aiming"],
+.wb-gesture[data-state="armed"] {
+  cursor: grabbing;
+}
+.wb-gesture[aria-disabled="true"] {
+  pointer-events: none;
+}
+.wb-gesture[data-state="idle"]:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 116px;
+  height: 54px;
+  border: 2px dashed #518fba;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.wb-key-help {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+@media (hover: none) and (pointer: coarse) {
+  .wb-key-help {
+    display: none;
+  }
+}
+.wb-help {
+  text-align: center;
+  font-size: 13px;
+  margin: 9px 0 0;
+  color: #647b68;
+}
+.wb-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@media (max-width: 600px) {
+  .word-blaster-screen {
+    padding: 12px 8px 16px;
+  }
+  .word-blaster-screen > .back-button {
+    top: 12px;
+    left: 8px;
+  }
+  .wb-header {
+    padding-left: 58px;
+    gap: 5px;
+  }
+  .wb-tools {
+    gap: 5px;
+  }
+  .wb-game .wb-tools button {
+    font-size: 12px;
+    padding: 6px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .wb-task {
+    column-gap: 8px;
+    padding: 8px 12px;
+  }
+  .wb-instruction {
+    width: 100%;
+    font-size: 12px;
+  }
+  .wb-word {
+    font-size: 28px;
+  }
+  .wb-help {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wb-game button:active {
+    transform: none;
+  }
+}
+/* The compact landscape game may scroll; other app screens keep their policy. */
+body:has(.word-blaster-screen) {
+  overflow: auto;
+}
+@media (max-width: 400px) {
+  .screen.word-blaster-screen {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wb-header > div:first-child {
+    min-width: 0;
+  }
+}
+/* Set-round and challenge share the same arena; setup and results use native UI. */
+.screen.wb-setup-screen {
+  max-width: 1050px;
+  min-height: 0;
+  align-content: start;
+  gap: 20px;
+  padding: 20px 0;
+}
+.wb-setup-screen .screen-header p {
+  margin: 6px 0 0;
+}
+.wb-mode-choices,
+.wb-level-choices {
+  display: grid;
+  gap: 14px;
+}
+.wb-mode-choices {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.wb-level-choices {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.wb-mode-choices button,
+.wb-level-choices button {
+  font: inherit;
+  color: #34564a;
+  background: #fffaf1;
+  border: 2px solid #bdcdb6;
+  border-radius: 22px;
+  padding: 22px;
+  text-align: left;
+  cursor: pointer;
+  min-height: 104px;
+  box-shadow: 0 5px 0 #c9d1bc;
+}
+.wb-mode-choices strong,
+.wb-level-choices strong {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.wb-mode-choices span,
+.wb-level-choices span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.wb-mode-choices [aria-pressed="true"],
+.wb-level-choices [aria-pressed="true"] {
+  border-color: #5a927a;
+  background: #eaf2e2;
+  box-shadow: 0 5px 0 #7fa38a;
+}
+.wb-mode-choices button:focus-visible,
+.wb-level-choices button:focus-visible,
+.wb-setup-start:focus-visible {
+  outline: 3px solid #518fba;
+  outline-offset: 3px;
+}
+.wb-setup-rule {
+  margin: 0;
+  color: #59715e;
+  line-height: 1.6;
+}
+.wb-setup-start {
+  min-height: 56px;
+  padding: 14px 32px;
+  justify-self: center;
+  border: 2px solid #c7a862;
+  border-radius: 18px;
+  background: #e8cd87;
+  color: #34564a;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.wb-setup-board,
+.wb-results {
+  padding: 24px;
+  border-radius: 24px;
+  background: #fffaf1;
+  color: #34564a;
+}
+.wb-setup-board[hidden] {
+  display: none;
+}
+.wb-results h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 0 0 10px;
+}
+.wb-score-form {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 10px;
+}
+.wb-score-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  flex: 1;
+  min-width: min(100%, 180px);
+}
+.wb-score-form input {
+  min-height: 48px;
+  width: 100%;
+  font: inherit;
+  border: 2px solid #b9cbb4;
+  border-radius: 12px;
+  background: #fffdf7;
+  color: #34564a;
+  padding: 10px 12px;
+}
+.wb-score-form input:focus-visible {
+  outline: 3px solid #518fba;
+  outline-offset: 2px;
+}
+.wb-scoreboard ol {
+  padding-left: 28px;
+  margin: 0;
+}
+.wb-scoreboard li {
+  padding: 10px 8px;
+  border-bottom: 1px solid #dce4d3;
+}
+.wb-scoreboard li span {
+  display: inline-block;
+  max-width: 65%;
+  overflow-wrap: anywhere;
+}
+.wb-scoreboard li strong {
+  float: right;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+.wb-storage-note,
+.wb-setup-board > p {
+  font-size: 13px;
+  color: #6c7d67;
+}
+.wb-time {
+  min-width: 62px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 650;
+  white-space: nowrap;
+  color: #54785d;
+}
+.wb-time.is-urgent {
+  color: #aa7337;
+}
+body:has(.wb-setup-screen) {
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  .wb-mode-choices,
+  .wb-level-choices {
+    gap: 9px;
+  }
+  .wb-mode-choices button,
+  .wb-level-choices button {
+    padding: 14px;
+  }
+  .wb-level-choices {
+    grid-template-columns: 1fr;
+  }
+  .wb-level-choices button {
+    min-height: 72px;
+  }
+  .wb-level-choices strong {
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+  .wb-mode-choices strong {
+    font-size: 19px;
+  }
+  .wb-time {
+    font-size: 21px;
+  }
+  .wb-results {
+    padding: 18px;
+  }
+}

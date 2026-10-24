@@ -81,7 +81,26 @@ untereinander mit Bild links und Text rechts. Ganze Karte bleibt ein Touch-/Tast
 das dekorative Bild hat einen leeren Alternativtext, Titel und Lernziel ergeben den zugänglichen Namen.
 Die Bilder sind im PWA-Precache enthalten; Asset-Version und Cache-Version müssen bei Änderungen zusammen aktualisiert werden.
 
-Memory und Farben-Wimmelspiel sind eigene Auswahlpfade, keine Kompetenzkarten.
+Nach der Lernrunde folgt eine Bonusauswahl: Catch a Pair, Word Blaster und Memory, bei Colours
+zusätzlich das Farben-Wimmelspiel. Diese Spiele sind keine Kompetenzkarten.
+Catch a Pair: zwei gemischte Bahnen, ganze Sockel als Touchziele mit fest
+eingesetzten Bildern/Wörtern, nur wechselnde
+Teile gesperrt; Details unter `CATCH_A_PAIR.md`.
+Word Blaster: Wort lesen → Bild mit drehbarer Kanone treffen. Im freien Bereich
+um die Kanone ziehen und zum Schießen loslassen; keine Richtungsbuttons,
+Winkelleiste oder Feuertaste. Desktop behält Pfeile/Leertaste. Bilder sind keine
+Tap-Ziele. Vor dem Spiel Set-Runde/60-Sekunden-Challenge und drei Stufen wählen;
+Challenge-Bestenliste mit lokalem Namenseintrag pro Set/Stufe. Details unter `WORD_BLASTER.md`.
+
+Die Bonusauswahl verwendet eigene freigestellte PNG-Motive unter
+`assets/images/bonus_games/`: Memory zeigt gleiche Tierkarten, Catch a Pair
+Bild und Wort in Sockeln, Word Blaster eine Spielzeug-Lichtkanone mit Wandtreffer. Alpha bleibt erhalten; `object-fit: contain` zeigt das
+gesamte Motiv ohne Beschnitt. Desktop/Tablet: Bild über dem Text, schmales Handy:
+Bild links neben dem Text. Ganze Schaltfläche ist weiterhin ein natives
+Touch-/Tastaturziel, das dekorative Bild hat `alt=""`. Titel und Beschreibung
+bleiben außerhalb des Bilds. Die drei Motive werden gemeinsam vorgeladen und
+im PWA-Precache erfasst. Originale, Prompts und Freistell-QA liegen ausschließlich
+unter `references/source_images/bonus_games/`, nicht im Runtime-Export.
 
 ### Spielscreen
 

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catch a Pair lifecycle smoke test</title>
+  <link rel="stylesheet" href="../../catch-pair.css" />
+  <button id="run" type="button">Run lifecycle smoke test</button>
+  <pre id="result">Ready</pre>
+  <div id="fixture" style="max-width: 1040px; margin: auto"></div>
+  <script src="../../data/sets/animals_01.bundle.js"></script>
+  <script type="module">
+    await new Promise((resolve, reject) => {
+      const style = document.querySelector('link[rel="stylesheet"]');
+      style.onload = resolve;
+      style.onerror = reject;
+      style.href = "../../catch-pair.css?smoke=" + Date.now();
+    });
+    await import("../../catch-pair.js?smoke=" + Date.now());
+    /* Explicit test fixture, never loaded or exported by the app shell. */
+    const fixture = document.querySelector("#fixture");
+    const result = document.querySelector("#result");
+    const button = document.querySelector("#run");
+    const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    const assert = (condition, message) => {
+      if (!condition) throw Error(message);
+    };
+    async function until(predicate) {
+      const deadline = Date.now() + 16000;
+      while (Date.now() < deadline) {
+        if (predicate()) return;
+        await pause(30);
+      }
+      throw Error("Timed out waiting for game state");
+    }
+    const cards = () => [...fixture.querySelectorAll(".pair-socket[data-id]")];
+    const idle = () =>
+      until(() => cards().length && cards().every((card) => !card.disabled));
+    let session, phaseObserver;
+    function mount(count = 1) {
+      session?.destroy();
+      fixture.style.width = "";
+      session = LernwortCatchPair.mount(fixture, {
+        items: LERNWORT_BUNDLED_SETS.animals_01.items.slice(0, count),
+        title: "Lifecycle test",
+        urlFor: (path) => "../../" + path,
+      });
+    }
+    button.addEventListener("click", async () => {
+      button.disabled = true;
+      result.textContent = "";
+      const pass = (name) => {
+        result.textContent += "PASS " + name + "\n";
+      };
+      try {
+        mount();
+        await idle();
+        const phases = [];
+        phaseObserver = new MutationObserver(() =>
+          phases.push({
+            phase: fixture.dataset.movePhase,
+            lifting: fixture.querySelectorAll(".pair-pieces .is-lifting")
+              .length,
+            flying: fixture.querySelectorAll(".pair-pieces .is-moving").length,
+            arriving: fixture.querySelectorAll(".pair-pieces .is-arriving")
+              .length,
+          }),
+        );
+        phaseObserver.observe(fixture, {
+          attributes: true,
+          attributeFilter: ["data-move-phase"],
+        });
+        const selected = cards()[0];
+        selected.focus();
+        selected.click();
+        assert(
+          selected.getAttribute("aria-pressed") === "true",
+          "Selection did not latch",
+        );
+        await until(() => selected.dataset.state === "pending");
+        assert(
+          fixture.querySelectorAll('.pair-socket[data-state="pending"]')
+            .length === 2,
+          "Two docks must announce the switch in yellow",
+        );
+        assert(
+          selected.getAttribute("aria-pressed") !== "true",
+          "Switch must release the selection",
+        );
+        assert(
+          selected.getAttribute("aria-pressed") === "false",
+          "ARIA selection persisted",
+        );
+        assert(
+          cards().every((card) => card.disabled),
+          "Both switching parts must be locked",
+        );
+        await idle();
+        assert(
+          document.activeElement === selected,
+          "Keyboard focus must return to the same socket, not follow its old picture",
+        );
+        assert(
+          selected.getAttribute("aria-pressed") !== "true",
+          "Selection unexpectedly returned",
+        );
+        assert(
+          cards().every(
+            (dock) =>
+              dock.tagName === "BUTTON" && dock.querySelector(".pair-piece"),
+          ),
+          "Inserts must rest inside the actual socket buttons",
+        );
+        assert(
+          phases.some((p) => p.phase === "lifting" && p.lifting === 2),
+          "Both contents must lift out before travelling",
+        );
+        assert(
+          phases.some((p) => p.phase === "moving" && p.flying === 2),
+          "Only the detached contents must travel",
+        );
+        assert(
+          phases.some((p) => p.phase === "arriving" && p.arriving === 2),
+          "Both contents must sink before being released",
+        );
+        phaseObserver.disconnect();
+        const inserts = [...fixture.querySelectorAll(".pair-body")];
+        const poses = inserts.map((el) => getComputedStyle(el).transform);
+        await pause(250);
+        assert(
+          inserts.every(
+            (el, i) =>
+              getComputedStyle(el).transform === poses[i] &&
+              getComputedStyle(el).animationName === "none",
+          ),
+          "Seated inserts must not bob",
+        );
+        pass("socket selection, lift/seat and stationary seated inserts");
+
+        cards().forEach((card) => card.click());
+        await until(
+          () => fixture.querySelector(".pair-count").textContent === "1 / 1",
+        );
+        // Force reflow while the final rails are still shrinking. The victory
+        // must survive cancellation/replacement of that animation on rotation.
+        fixture.style.width = "700px";
+        await until(() => !fixture.querySelector(".pair-finale").hidden);
+        await pause(2200);
+        fixture.querySelector(".pair-replay").click();
+        await idle();
+        assert(cards().length === 2, "Replay lost cards");
+        assert(
+          fixture.querySelector(".pair-count").textContent === "0 / 1",
+          "Replay kept score",
+        );
+        pass("one-pair finale, shared vortex and replay");
+
+        await until(() =>
+          cards().some((card) => card.dataset.state === "pending"),
+        );
+        const oldRoot = fixture.querySelector(".pair-game");
+        session.destroy();
+        fixture.replaceChildren();
+        await pause(2500);
+        assert(
+          !fixture.children.length,
+          "Disposed movement changed the next screen",
+        );
+        assert(
+          !oldRoot.querySelector(
+            ".is-moving,.is-lifting,.is-cued,.is-arriving",
+          ),
+          "Movement lock survived disposal",
+        );
+        pass("dispose during switch announcement");
+
+        for (const phase of ["lifting", "arriving"]) {
+          mount();
+          await idle();
+          await until(() => fixture.dataset.movePhase === phase);
+          const oldGame = fixture.querySelector(".pair-game");
+          session.destroy();
+          fixture.replaceChildren();
+          await pause(350);
+          assert(
+            !fixture.children.length,
+            "Disposed " + phase + " reattached an old insert",
+          );
+          assert(
+            !oldGame.querySelector(".is-lifting,.is-moving,.is-arriving"),
+            "Disposed " + phase + " retained motion state",
+          );
+          pass("dispose during " + phase);
+        }
+
+        mount();
+        await idle();
+        cards().forEach((card) => card.click());
+        const counter = fixture.querySelector(".pair-count");
+        session.destroy();
+        fixture.replaceChildren();
+        await pause(700);
+        assert(
+          counter.textContent === "0 / 1",
+          "Disposed puff completed a stale match",
+        );
+        pass("dispose during match prevents stale completion");
+
+        const originalDecode = HTMLImageElement.prototype.decode;
+        HTMLImageElement.prototype.decode = () => pause(500);
+        try {
+          mount();
+          session.destroy();
+          fixture.replaceChildren();
+          await pause(700);
+          assert(
+            !fixture.children.length,
+            "Disposed image load remounted the game",
+          );
+        } finally {
+          HTMLImageElement.prototype.decode = originalDecode;
+        }
+        pass("dispose during image loading");
+
+        mount(3);
+        await idle();
+        const first = cards()[0],
+          id = first.dataset.id.replace(/-(image|word)$/, "");
+        first.click();
+        assert(
+          fixture.querySelectorAll('.pair-socket[data-state="selected"]')
+            .length === 1,
+          "Selection must light one dock",
+        );
+        const wrong = cards().find(
+          (card) =>
+            !card.dataset.id.startsWith(id + "-") &&
+            Math.abs(
+              card.getBoundingClientRect().top -
+                first.getBoundingClientRect().top,
+            ) > 100,
+        );
+        assert(wrong, "Need a wrong partner on the opposite lane");
+        wrong.click();
+        assert(
+          fixture.querySelectorAll('.pair-socket[data-state="wrong"]')
+            .length === 1,
+          "Only the mistaken dock must turn red",
+        );
+        assert(
+          first.getAttribute("aria-pressed") === "true",
+          "Mistake released the original selection",
+        );
+        await pause(550);
+        assert(
+          !fixture.querySelector('.pair-socket[data-state="wrong"]'),
+          "Mistake tint did not clear",
+        );
+        cards()
+          .find(
+            (card) => card !== first && card.dataset.id.startsWith(id + "-"),
+          )
+          .click();
+        assert(
+          fixture.querySelectorAll('.pair-socket[data-state="correct"]')
+            .length === 2,
+          "Both matching docks must turn green",
+        );
+        pass("socket selection, yellow warning, red mistake and green match");
+        await until(
+          () => fixture.querySelector(".pair-count").textContent === "1 / 3",
+        );
+        await idle();
+        fixture.style.width = "400px";
+        await pause(200);
+        await idle();
+        assert(
+          fixture.querySelector(".pair-count").textContent === "1 / 3",
+          "Resize reset progress",
+        );
+        assert(
+          !cards().some((card) => card.dataset.id.startsWith(id + "-")),
+          "Resize revived a found pair",
+        );
+        pass("resize preserves progress and excludes completed pairs");
+        result.textContent += "ALL PASSED";
+      } catch (error) {
+        result.textContent += "FAIL " + error.stack;
+      } finally {
+        phaseObserver?.disconnect();
+        session?.destroy();
+        button.disabled = false;
+      }
+    });
+  </script>
+</html>

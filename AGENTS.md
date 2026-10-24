@@ -197,6 +197,17 @@ Only re-render an MP3 when:
 - the voice/language is obviously wrong
 - manual listening catches a distracting issue
 
+## Catch a Pair bonus
+
+Read `docs/CATCH_A_PAIR.md` before changing bonus navigation or the game.
+Socket buttons own selection; inserts are decorative children while seated and
+only detach for lift/travel/seat. Do not restore independent idle bobbing.
+The app owns the bonus mount/dispose sessions via `stopBonusGames()`; keep set data authoritative and
+dispose the controller before replacing its DOM. Runtime files `catch-pair.js`
+and `catch-pair.css` must remain in Index, PWA precache and release export.
+Run `node --test tests/*.test.cjs` and the read-only Catch a Pair browser audit;
+viewport checks do not establish physical iPad-9 performance.
+
 ## Rendering / Safari release checks
 
 After changes to avatar markup, animation or shared layouts, follow
@@ -206,3 +217,36 @@ the tab. DOM geometry/unit tests do not prove correct composited pixels.
 Use the single Companion rig; do not reintroduce old portrait CSS, filtered
 overflow ancestors or a second Safari-specific model. Record unavailable
 physical-device checks explicitly.
+
+## Word Blaster bonus
+
+Read `docs/WORD_BLASTER.md` before changing this game. First prototype is read-word
+→ hit-picture only. Fixed cannon angle, drag/release in the free cannon area plus desktop arrows/Space, shared swept wall geometry
+for aim and shots; preserve generation guards, two-bounce/two-shot limits and
+pause-on-resize/visibility. Runtime JS/CSS belong in Index, PWA and release export.
+Run Node physics tests and the explicit browser smoke test; do not claim physical
+iPad performance from viewport checks. No new audio/key needed.
+
+Word Blaster cannon art uses generated raster layers in `assets/images/word_blaster/`.
+Keep `cannonPose` authoritative for the painted muzzle, recoil, aim and laser;
+do not restore code-drawn cannon placeholders. All four sprites must load before
+start; keep their PWA precache entries and reduced-motion behavior.
+
+Word Blaster touch input is relative horizontal drag + release, with a 10px dead
+zone. Do not restore direction/fire buttons or a range slider. Keep pointercancel,
+lost capture, multi-contact, resize/pause and stale-prompt releases non-firing;
+use `dragAim` and the existing `shoot()` path for all input methods.
+
+The V2 cannon uses rear bearing → rotating/recoiling barrel → fixed front
+bearing cap → flash. Keep `drawCannon` shared with the angle preview and keep
+layer rectangles central in `CANNON`; never move/rotate the foreground bearing
+with the barrel or restore an exposed pointed/long shaft. Retired V1 base/barrel
+are archived under references, not runtime.
+
+Word Blaster has three `DIFFICULTIES` profiles and round/challenge modes within
+the same round model. The 60-second deadline continues during pause/visibility
+loss; check expiry before every shot/hit and dispose the owned timer. Challenge
+refills must preserve surviving target positions and unique visible IDs. Local
+Top 10 keys are per set/level/rules version; render names as text, validate records
+and keep failed saves retryable. See `docs/WORD_BLASTER.md`; run model/storage tests
+and the real-minute browser challenge smoke test after changing these contracts.

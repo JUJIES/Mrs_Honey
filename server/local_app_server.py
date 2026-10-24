@@ -10,6 +10,23 @@ from speech_check_server import SpeechCheckHandler
 HOST = os.environ.get("LERNWORT_APP_HOST", "0.0.0.0")
 PORT = int(os.environ.get("LERNWORT_APP_PORT", "5173"))
 WEB_ROOT = Path(__file__).resolve().parents[1]
+# A clean release worktree also contains tools, source references and .git.
+# Only this runtime surface is public, regardless of what else exists on disk.
+PUBLIC_ENTRYPOINTS = frozenset({
+    "index.html", "styles.css", "app.js", "catch-pair.js", "catch-pair.css",
+    "word-blaster.js", "word-blaster.css", "asset-cache.js", "service-worker.js",
+    "manifest.json", "manifest.webmanifest",
+})
+
+
+def is_public_file(candidate):
+    relative = candidate.relative_to(WEB_ROOT)
+    if any(part.startswith(".") for part in relative.parts):
+        return False
+    return (
+        len(relative.parts) == 1 and relative.name in PUBLIC_ENTRYPOINTS
+        or len(relative.parts) > 1 and relative.parts[0] in {"assets", "data"}
+    )
 
 mimetypes.add_type("application/manifest+json", ".webmanifest")
 mimetypes.add_type("text/javascript", ".js")
@@ -37,6 +54,10 @@ class LocalAppHandler(SpeechCheckHandler):
 
         if candidate.is_dir():
             candidate = candidate / "index.html"
+
+        if not is_public_file(candidate):
+            self.send_error(403)
+            return
 
         if not candidate.exists() or not candidate.is_file():
             self.send_error(404)

@@ -6,7 +6,7 @@
 - Beim Öffnen werden gemeinsame UI-/Feedback-Dateien vorbereitet. In der Modusauswahl wird die erste Aufgabe bereits festgelegt und das gewählte Set vorgeladen; `startGame` verwendet dieselbe Reihenfolge.
 - Aktuelle Antwortbilder, Wort/Rückmeldung und nächste Aufgabe haben Vorrang. Höchstens ein Hintergrundtransfer läuft gleichzeitig; ein zweiter Platz bleibt für dringende Dateien. Ein Setwechsel verwirft nur wartende Downloads des vorherigen Sets, nicht vollständige Dateien.
 - Erstaufruf und noch nicht geladene Inhalte benötigen Netz. Nur eine tatsächliche Verzögerung zeigt nach 600 ms „Einen Moment …“. Die bestehenden Bild-/Audiofehler bleiben sichtbar und wiederholbar, Bildrunden versuchen es außerdem automatisch erneut.
-- Mit vollständig vorbereiteten Dateien funktionieren Hören, Lesen und Memory offline; beim Colours-Set wird auch der Wimmel-Bonus nachrangig vorbereitet. Die Sprechprüfung bleibt ein Online-Dienst; Aufnahmen werden nicht für spätere Uploads gespeichert.
+- Mit vollständig vorbereiteten Dateien funktionieren Hören, Lesen, Memory, Catch a Pair und Word Blaster offline; beim Colours-Set wird auch der Wimmel-Bonus nachrangig vorbereitet. Catch a Pair und Word Blaster verwenden dieselben Setbilder und lokale synthetisierte Effektklänge. Die Sprechprüfung bleibt ein Online-Dienst; Aufnahmen werden nicht für spätere Uploads gespeichert.
 - Automatisches Vorladen läuft bei geöffneter, sichtbarer Seite. Keine Zusage für Downloads bei geschlossener iPad-App, kein ungefragtes Herunterladen aller Sets, keine dauerhafte Speicherzusage bei vom Browser entfernten Website-Daten.
 
 ## Eine gemeinsame Asset-Schicht

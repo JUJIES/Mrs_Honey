@@ -1,0 +1,77 @@
+{
+  "created": "2026-10-24",
+  "generator": "built-in image_gen (not API/CLI generation)",
+  "reference": "assets/images/bonus_games/word-blaster-v1.png; style only",
+  "prompts": [
+    "prompt-parts.txt",
+    "prompt-flash.txt"
+  ],
+  "raw": [
+    "parts-raw.png",
+    "flash-raw.png"
+  ],
+  "processor": "generate2dsprite.py process; deterministic chroma-key/extraction/scale only",
+  "processing": {
+    "parts": {
+      "rows": 1,
+      "cols": 2,
+      "cellSize": 384,
+      "fitScale": 0.8,
+      "componentMode": "largest",
+      "threshold": 100,
+      "edgeThreshold": 150
+    },
+    "flash": {
+      "rows": 2,
+      "cols": 2,
+      "cellSize": 192,
+      "fitScale": 0.8,
+      "sharedScale": true,
+      "componentMode": "all",
+      "threshold": 220,
+      "edgeThreshold": 230,
+      "frameDurationMs": 40
+    }
+  },
+  "runtime": {
+    "pivot": "arena origin; fixed base; barrel rotates about local (0,0)",
+    "baseRect": [
+      -52,
+      -10,
+      104,
+      52.85
+    ],
+    "barrelRect": [
+      -22,
+      -65,
+      44,
+      76.75
+    ],
+    "muzzleLocal": [
+      0,
+      -54.5
+    ],
+    "recoilMs": 220,
+    "flashMs": 160
+  },
+  "qa": "No edge-touch frames. Original flash segmentation left purple spill; reprocessed with stronger key thresholds, then visually inspected both sheets on arena background. Parts trimmed after processor export; flash cells retain shared scale and centered alignment. No generated SVG/Canvas source art.",
+  "assets": [
+    {
+      "path": "assets/images/word_blaster/cannon-base-v1.png",
+      "bytes": 65067,
+      "sha256": "f9fc9e9facbfc4f882b976e93110c35ced1ad8a97f4d103e14e9e3d184394219"
+    },
+    {
+      "path": "assets/images/word_blaster/cannon-barrel-v1.png",
+      "bytes": 81678,
+      "sha256": "7b2dba0adc368fe69d377511672683be7fb821404d62e536b03055fef2fbeb3e"
+    },
+    {
+      "path": "assets/images/word_blaster/muzzle-flash-v1.png",
+      "bytes": 53616,
+      "sha256": "877bdeaa1b3a61cb73ccdcb3cf6d8f78e55405582afedf1d85c9dcc88464fda1"
+    }
+  ],
+  "supersededBy": "references/source_images/word-blaster-cannon-v2/generation.json",
+  "retiredRuntimeAssets": "runtime-retired/cannon-base-v1.png and runtime-retired/cannon-barrel-v1.png; archived unchanged"
+}

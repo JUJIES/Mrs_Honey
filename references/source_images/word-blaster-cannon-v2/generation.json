@@ -1,0 +1,90 @@
+{
+  "created": "2026-10-24",
+  "generator": "built-in image_gen; generation and one targeted bearing-cap edit; no API/CLI generation",
+  "reference": "user screenshot of old loose barrel / pedestal; preserve materials, fix depth and connection",
+  "prompts": [
+    "prompt-parts.txt",
+    "prompt-bearing-edit.txt"
+  ],
+  "raw": [
+    "parts-initial.png",
+    "parts-raw.png"
+  ],
+  "processor": "generate2dsprite.py process; 2x2, 512px cells, shared-scale, fit-scale .8, largest component, reject-edge-touch; ImageMagick trim on components",
+  "neckCrop": "barrel-full.png 170x370 -> crop top 170x318; shorten concealed mounting shaft only; source shaft remains archived",
+  "runtime": {
+    "baseRect": [
+      -52,
+      -13,
+      104,
+      70.306
+    ],
+    "barrelRect": [
+      -21,
+      -81,
+      42,
+      78.565
+    ],
+    "mountRect": [
+      -36.75,
+      -19.2,
+      73.5,
+      46.131
+    ],
+    "pivot": "arena origin; floor seating derived from baseRect, 1px inside frame; current pivot is 70.306px above canvas bottom",
+    "muzzleLocal": [
+      0,
+      -69.5
+    ],
+    "layerOrder": [
+      "rear base and recessed bearing",
+      "rotating/recoiling barrel",
+      "fixed foreground bearing cap and cheeks",
+      "muzzle flash"
+    ],
+    "render": "drawCannon shared between game and angle preview",
+    "flash": "Existing muzzle-flash-v1.png retained unchanged",
+    "clearance": "Capsule lower boundary derives from rotating barrel corner radius + recoil overshoot + 10px clearance; gesture height derives from same envelope (currently 148px)"
+  },
+  "qa": "2x2 processor: no edge touch; alpha exterior; rear bearing ball, front bearing rivet and barrel pivot registered together. Five angles -75/-45/0/45/75 inspected using actual runtime renderer; original pointed bottle tip removed. Foreground cap hides shortened shaft during rotation and recoil. Fourth generated cell is assembly reference only and is not runtime-exported.",
+  "assets": [
+    {
+      "path": "assets/images/word_blaster/cannon-base-v2.png",
+      "bytes": 137933,
+      "sha256": "b03aba4db93d730cbcc90b44a5cebd2677636ecfb45f2003f25c662e6502ee72"
+    },
+    {
+      "path": "assets/images/word_blaster/cannon-barrel-v2.png",
+      "bytes": 86256,
+      "sha256": "a2b329adc2bc7a33ba07883b453b135efb139edfda10a89b46c0e34f9cd88eae"
+    },
+    {
+      "path": "assets/images/word_blaster/cannon-mount-v2.png",
+      "bytes": 95487,
+      "sha256": "f271d900ae17a0d2427d8807c955ca1ffbd7e68a987a6301be1b2fd01bb52498"
+    }
+  ],
+  "rootOcclusionQA": {
+    "angles": "-75 through 75 degrees, 5-degree increments",
+    "recoilOffsets": [
+      0,
+      5,
+      -0.6
+    ],
+    "sampledShaftX": [
+      -10,
+      -5,
+      0,
+      5,
+      10
+    ],
+    "sampledShaftY": [
+      -10,
+      -6,
+      -2.5
+    ],
+    "samples": 1395,
+    "minimumForegroundAlpha": 255,
+    "method": "Analyze generated foreground alpha at rotated shaft-envelope samples using recorded runtime mountRect; no image synthesis or modification"
+  }
+}

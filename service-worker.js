@@ -1,15 +1,26 @@
-importScripts("./data/offline-assets.bundle.js?v=69ea418066b0b570", "./asset-cache.js?v=background-cache-4");
-const CACHE_NAME = "lernwort-pwa-v39";
+importScripts("./data/offline-assets.bundle.js?v=9d401a9541925218", "./asset-cache.js?v=background-cache-4");
+const CACHE_NAME = "lernwort-pwa-v56";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=render-stability-1",
-  "./app.js?v=render-stability-1",
+  "./styles.css?v=word-blaster-levels-2",
+  "./app.js?v=word-blaster-levels-2",
+  "./catch-pair.js?v=word-blaster-levels-2",
+  "./catch-pair.css?v=word-blaster-levels-2",
+  "./word-blaster.js?v=word-blaster-levels-2",
+  "./word-blaster.css?v=word-blaster-levels-2",
   "./asset-cache.js?v=background-cache-4",
-  "./data/offline-assets.bundle.js?v=69ea418066b0b570",
+  "./data/offline-assets.bundle.js?v=9d401a9541925218",
   "./manifest.webmanifest",
   "./assets/backgrounds/calm-learning-bg.png",
+  "./assets/images/bonus_games/catch-a-pair-v1.png",
+  "./assets/images/bonus_games/memory-v1.png",
+  "./assets/images/bonus_games/word-blaster-v1.png",
+  "./assets/images/word_blaster/cannon-base-v2.png",
+  "./assets/images/word_blaster/cannon-barrel-v2.png",
+  "./assets/images/word_blaster/cannon-mount-v2.png",
+  "./assets/images/word_blaster/muzzle-flash-v1.png",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",

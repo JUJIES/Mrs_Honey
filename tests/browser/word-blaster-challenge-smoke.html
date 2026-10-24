@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Word Blaster Challenge Smoke</title
+  ><link rel="stylesheet" href="../../word-blaster.css" /><style>
+    body {
+      font: 16px system-ui;
+      margin: 16px;
+      color: #34564a;
+      background: #fffaf1;
+    }
+    #report {
+      height: 150px;
+      overflow: auto;
+      white-space: pre-wrap;
+    }
+    #host {
+      max-width: 800px;
+    }
+    button {
+      min-height: 44px;
+    }
+  </style>
+  <button id="run">60-Sekunden-Test starten</button>
+  <pre id="report">Noch nicht gestartet. Laufzeit etwa 61 Sekunden.</pre>
+  <div id="host"></div>
+  <script src="../../data/sets/animals_01.bundle.js"></script>
+  <script src="../../word-blaster.js"></script>
+  <script>
+    const out = document.querySelector("#report"),
+      host = document.querySelector("#host"),
+      results = [];
+    let session;
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    async function until(fn, timeout = 5000) {
+      const end = Date.now() + timeout;
+      while (!fn()) {
+        if (Date.now() > end) throw Error("Timeout");
+        await wait(40);
+      }
+    }
+    function check(v, label) {
+      if (!v) throw Error(label);
+      results.push("PASS " + label);
+      out.textContent = results.join("\n");
+    }
+    function key(code) {
+      host
+        .querySelector(".wb-gesture")
+        .dispatchEvent(new KeyboardEvent("keydown", { code, bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent("keyup", { code }));
+    }
+    document.querySelector("#run").onclick = async () => {
+      session?.destroy();
+      results.length = 0;
+      const map = new Map(),
+        storage = {
+          getItem: (k) => map.get(k) || null,
+          setItem: (k, v) => map.set(k, v),
+        };
+      try {
+        session = LernwortWordBlaster.mount(host, {
+          items: [LERNWORT_BUNDLED_SETS.animals_01.items[0]],
+          mode: "challenge",
+          difficulty: "hard",
+          setId: "qa-only",
+          storage,
+          urlFor: (p) => "../../" + p,
+        });
+        await until(() => !host.querySelector(".wb-continue").hidden);
+        check(
+          host.querySelector(".wb-time").textContent === "60 s",
+          "Vor Start sind volle 60 Sekunden verfügbar",
+        );
+        host.querySelector(".wb-continue").click();
+        key("Space");
+        await until(
+          () => host.querySelector(".wb-count").textContent === "10 Punkte",
+        );
+        await wait(250);
+        key("Space");
+        await until(
+          () => host.querySelector(".wb-count").textContent === "20 Punkte",
+        );
+        check(
+          true,
+          "Ein einzelnes Setwort kommt erneut und zählt zwei gültige Treffer",
+        );
+        host.querySelector(".wb-pause").click();
+        const before = parseInt(host.querySelector(".wb-time").textContent);
+        await wait(1200);
+        check(
+          parseInt(host.querySelector(".wb-time").textContent) < before,
+          "Die Minute läuft während Pause weiter",
+        );
+        await until(() => !host.querySelector(".wb-results").hidden, 65000);
+        check(
+          host.querySelector(".wb-stage").hidden &&
+            host.querySelector(".wb-time").textContent === "0 s",
+          "Nach echten 60 Sekunden endet das Spiel mit Ergebnis",
+        );
+        const score = host.querySelector(".wb-count").textContent;
+        key("Space");
+        await wait(50);
+        check(
+          host.querySelector(".wb-count").textContent === score,
+          "Späte Eingaben ändern das Ergebnis nicht",
+        );
+        const name = host.querySelector('input[name="player"]');
+        name.value = "<img src=x> Test";
+        host.querySelector(".wb-score-form").requestSubmit();
+        check(
+          host
+            .querySelector(".wb-save-status")
+            .textContent.includes("Gespeichert"),
+          "Ergebnis lässt sich lokal mit Namen speichern",
+        );
+        check(
+          host
+            .querySelector(".wb-scoreboard")
+            .textContent.includes("<img src=x> Test") &&
+            !host.querySelector(".wb-scoreboard img"),
+          "Gespeicherte Namen erscheinen als Text",
+        );
+        host.querySelector(".wb-score-form").requestSubmit();
+        check(
+          LernwortWordBlaster.readHighscores("qa-only", "hard", storage)
+            .length === 1,
+          "Doppeltes Speichern erzeugt keinen zweiten Eintrag",
+        );
+        host.querySelector(".wb-replay").click();
+        check(
+          !host.querySelector(".wb-stage").hidden &&
+            host.querySelector(".wb-results").hidden &&
+            host.querySelector(".wb-count").textContent === "0 Punkte",
+          "Neustart setzt die Runde zurück und erhält die Bestenliste",
+        );
+        session.destroy();
+        await wait(250);
+        check(
+          host.children.length === 0,
+          "Destroy beendet auch den Challenge-Timer",
+        );
+        out.textContent += "\nALL PASSED";
+      } catch (e) {
+        out.textContent += "\nFAIL " + e.message;
+        console.error(e);
+      }
+    };
+  </script>
+</html>

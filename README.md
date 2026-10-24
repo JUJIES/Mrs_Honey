@@ -16,7 +16,13 @@ Startflow:
 3. Modus wählen
 4. Spiel startet sofort
 
-Die App enthält neun englische Lernsets, Audioübungen, Memory und das Farben-Wimmelspiel.
+Die App enthält neun englische Lernsets, Audioübungen, Memory, Catch a Pair, Word Blaster und das Farben-Wimmelspiel.
+Nach einer Lernrunde wählt das Kind ein Belohnungsspiel. Catch a Pair verbindet
+bewegte Bild-/Wortpaare auf zwei Bahnen und ist für Desktop und Tablet ausgelegt.
+Produktlogik und Modulvertrag: [docs/CATCH_A_PAIR.md](docs/CATCH_A_PAIR.md).
+Word Blaster lässt Kinder mit drehbarer Kanone und Wandabprallern das passende
+Bild treffen: drei Schwierigkeitsgrade, entspannte Set-Runden und eine 60-Sekunden-
+Challenge mit lokalen Top 10. Grundmodus und Bedienung: [docs/WORD_BLASTER.md](docs/WORD_BLASTER.md).
 
 ## Enthalten
 

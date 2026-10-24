@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Kanonenlager – Winkelprüfung</title>
+  <style>
+    body {
+      margin: 18px;
+      background: #fffaf1;
+      color: #34564a;
+      font: 16px system-ui;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    button {
+      font: inherit;
+      min-height: 44px;
+      padding: 8px 16px;
+      background: #e8cd87;
+      border: 2px solid #c7a862;
+      border-radius: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+    }
+    figure {
+      margin: 0;
+      max-width: 240px;
+      background: #edf1e4;
+      border-radius: 20px;
+      padding: 8px;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      text-align: center;
+    }
+    #status {
+      min-height: 24px;
+    }
+  </style>
+  <h1>Kanonenlager: Drehung und Rückstoß</h1>
+  <button id="fire" disabled>Schussbewegung zeigen</button>
+  <p id="status">Bilder laden …</p>
+  <div class="grid"></div>
+  <script src="../../word-blaster.js?v=word-blaster-levels-2"></script>
+  <script>
+    const angles = [-75, -45, 0, 45, 75],
+      art = new Map(),
+      views = [],
+      grid = document.querySelector(".grid"),
+      button = document.querySelector("button");
+    let raf = 0;
+    for (const angle of angles) {
+      const figure = document.createElement("figure"),
+        canvas = document.createElement("canvas"),
+        caption = document.createElement("figcaption");
+      canvas.width = 400;
+      canvas.height = 400;
+      canvas.setAttribute("aria-label", "Kanone bei " + angle + " Grad");
+      caption.textContent = angle + "°";
+      figure.append(canvas, caption);
+      grid.append(figure);
+      const ctx = canvas.getContext("2d");
+      ctx.scale(2, 2);
+      views.push({ ctx, angle: (angle * Math.PI) / 180 });
+    }
+    function draw(remaining = 0) {
+      for (const { ctx, angle } of views) {
+        ctx.clearRect(0, 0, 200, 200);
+        ctx.fillStyle = "#edf1e4";
+        ctx.fillRect(0, 0, 200, 200);
+        LernwortWordBlaster.drawCannon(
+          ctx,
+          art,
+          { x: 100, y: 130 },
+          angle,
+          remaining,
+        );
+      }
+    }
+    Promise.all(
+      Object.entries({
+        base: "cannon-base-v2.png",
+        barrel: "cannon-barrel-v2.png",
+        mount: "cannon-mount-v2.png",
+        flash: "muzzle-flash-v1.png",
+      }).map(
+        ([id, name]) =>
+          new Promise((resolve, reject) => {
+            const image = new Image();
+            image.onload = () => {
+              art.set(id, image);
+              resolve();
+            };
+            image.onerror = reject;
+            image.src = "../../assets/images/word_blaster/" + name;
+          }),
+      ),
+    )
+      .then(() => {
+        draw();
+        button.disabled = false;
+        document.querySelector("#status").textContent =
+          "Bereit – dieselbe Zeichenfunktion wie im Spiel.";
+      })
+      .catch(
+        () =>
+          (document.querySelector("#status").textContent = "Bildladefehler"),
+      );
+    button.onclick = () => {
+      cancelAnimationFrame(raf);
+      let start;
+      function tick(t) {
+        start ??= t;
+        const remaining = Math.max(0, 0.22 - (t - start) / 1000);
+        draw(remaining);
+        if (remaining > 0) raf = requestAnimationFrame(tick);
+      }
+      raf = requestAnimationFrame(tick);
+    };
+  </script>
+</html>

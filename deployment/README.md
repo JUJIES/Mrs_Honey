@@ -23,7 +23,10 @@ minimal runtime boundary and creates a portable package containing only:
 - `assets/` and `data/`
 - the integrated Python app and speech server
 
-Reference material, generation tools, editor pages, Avatar Lab, repository metadata and local models are not published.
+Reference material, generation tools, editor pages, Avatar Lab, repository metadata and local models are not published. `server/local_app_server.py` enforces this
+boundary even when the runtime is a full Git worktree: only named app entrypoints
+plus non-hidden files under `assets/` and `data/` are served. Tests cover encoded
+paths and traversal; server sources, `.git`, tools and references receive 403.
 
 Example:
 

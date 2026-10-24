@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Word Blaster Smoke</title>
+  <link rel="stylesheet" href="../../word-blaster.css" /><style>
+    body {
+      margin: 16px;
+      background: #fffaf1;
+      font: 16px system-ui;
+      color: #34564a;
+    }
+    #host {
+      max-width: 800px;
+    }
+    /* Keep log growth from shifting the active synthetic-pointer target. */
+    #report {
+      white-space: pre-wrap;
+      height: 160px;
+      overflow: auto;
+    }
+    button {
+      min-height: 44px;
+    }
+  </style>
+  <button id="run">Smoke-Test starten</button>
+  <pre id="report">Noch nicht ausgeführt.</pre>
+  <div id="host"></div>
+  <script src="../../data/sets/animals_01.bundle.js"></script>
+  <script src="../../word-blaster.js"></script>
+  <script>
+    const report = document.querySelector("#report"),
+      host = document.querySelector("#host");
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    const painted = () =>
+      new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    async function until(fn, timeout = 4000) {
+      const end = performance.now() + timeout;
+      while (!fn()) {
+        if (performance.now() > end) throw Error("Timeout");
+        await wait(20);
+      }
+    }
+    let session;
+    const results = [];
+    function check(value, label) {
+      if (!value) throw Error(label);
+      results.push("PASS " + label);
+      report.textContent = results.join("\n");
+    }
+    function key(code) {
+      const game = host.querySelector(".wb-game");
+      game.dispatchEvent(new KeyboardEvent("keydown", { code, bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent("keyup", { code }));
+    }
+    function cannonPixels() {
+      const c = host.querySelector("canvas"),
+        r = c.getBoundingClientRect(),
+        d = c.width / r.width;
+      return String(
+        c
+          .getContext("2d")
+          .getImageData(
+            Math.round((r.width / 2 - 30) * d),
+            Math.round((r.height - 100) * d),
+            Math.round(60 * d),
+            Math.round(65 * d),
+          ).data,
+      );
+    }
+    function gestureDriver() {
+      const zone = host.querySelector(".wb-gesture"),
+        canvas = host.querySelector("canvas"),
+        r = zone.getBoundingClientRect(),
+        captured = new Set();
+      // Synthetic DOM PointerEvents cannot establish native capture. Shim only this
+      // test element's capture methods; verify real browser capture separately by drag.
+      zone.setPointerCapture = (id) => captured.add(id);
+      zone.hasPointerCapture = (id) => captured.has(id);
+      zone.releasePointerCapture = (id) => captured.delete(id);
+      const ctx = canvas.getContext("2d"),
+        draw = ctx.drawImage.bind(ctx),
+        flashes = [];
+      ctx.drawImage = (...a) => {
+        if (a[0].src?.includes("muzzle-flash")) flashes.push(a.slice(1, 3));
+        return draw(...a);
+      };
+      const x = r.left + r.width / 2,
+        y = r.top + r.height * 0.45;
+      return {
+        zone,
+        x,
+        y,
+        flashes,
+        event(type, dx = 0, dy = 0, id = 1) {
+          zone.dispatchEvent(
+            new PointerEvent(type, {
+              pointerId: id,
+              pointerType: "touch",
+              isPrimary: id === 1,
+              button: 0,
+              buttons: type === "pointerup" ? 0 : 1,
+              clientX: x + dx,
+              clientY: y + dy,
+              bubbles: true,
+              cancelable: true,
+            }),
+          );
+        },
+      };
+    }
+    document.querySelector("#run").onclick = async () => {
+      results.length = 0;
+      session?.destroy();
+      try {
+        const item = window.LERNWORT_BUNDLED_SETS.animals_01.items[0];
+        session = LernwortWordBlaster.mount(host, {
+          items: [item],
+          title: "Ein Wort – Lebenszyklus",
+          urlFor: (p) => "../../" + p,
+        });
+        await until(
+          () =>
+            host.querySelector(".wb-continue")?.textContent === "Los geht’s!" &&
+            !host.querySelector(".wb-continue").hidden,
+        );
+        host.querySelector(".wb-continue").click();
+        check(
+          host.querySelector(".wb-overlay").hidden,
+          "Start gibt das Spielfeld frei",
+        );
+        check(
+          !host.querySelector(
+            'input[type="range"],.wb-controls,.wb-fire,.wb-left,.wb-right',
+          ),
+          "Buttons und Winkelleiste sind entfernt",
+        );
+        await painted();
+        const before = cannonPixels();
+        key("ArrowRight");
+        await painted();
+        check(cannonPixels() !== before, "Pfeiltaste dreht die gemalte Kanone");
+        key("ArrowLeft");
+        key("Space");
+        await until(
+          () => host.querySelector(".wb-count").textContent === "1 / 1",
+        );
+        check(true, "Leertaste schießt und zählt den Treffer genau einmal");
+        await until(() => !host.querySelector(".wb-overlay").hidden);
+        check(
+          host.querySelector(".wb-continue").textContent === "Noch mal!",
+          "Letzter Treffer öffnet den Abschluss",
+        );
+        host.querySelector(".wb-continue").click();
+        check(
+          host.querySelector(".wb-count").textContent === "0 / 1",
+          "Replay setzt Fortschritt zurück",
+        );
+        let d = gestureDriver();
+        d.event("pointerdown");
+        d.event("pointerup");
+        await painted();
+        check(!d.flashes.length, "Kurzer Tap feuert nicht");
+        d.event("pointerdown");
+        d.event("pointermove", 3, 4);
+        d.event("pointerup", 3, 4);
+        await painted();
+        check(
+          !d.flashes.length,
+          "Kleine Fingerbewegungen bleiben in der Totzone",
+        );
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        check(
+          d.zone.dataset.state === "armed",
+          "Ziehen zeigt den schussbereiten Zustand",
+        );
+        d.event("pointermove");
+        d.event("pointerup");
+        await painted();
+        check(
+          !d.flashes.length && d.zone.dataset.state === "idle",
+          "Zurückziehen bricht den Schuss ab",
+        );
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        d.event("pointercancel", 50);
+        d.event("pointerup", 50);
+        await painted();
+        check(!d.flashes.length, "Pointercancel feuert nicht");
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        d.event("lostpointercapture", 50);
+        d.event("pointerup", 50);
+        await painted();
+        check(!d.flashes.length, "Verlorene Pointer-Capture feuert nicht");
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        d.event("pointerdown", 20, 0, 2);
+        d.event("pointerup", 50);
+        d.event("pointerup", 20, 0, 2);
+        await painted();
+        check(
+          !d.flashes.length,
+          "Zweiter Finger bricht ab und keine Freigabe schießt",
+        );
+        d.event("pointerdown");
+        d.event("pointermove", 1000);
+        d.event("pointerup", 1000);
+        await painted();
+        check(
+          !d.flashes.length,
+          "Loslassen außerhalb des Rahmens feuert nicht",
+        );
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        host.querySelector(".wb-pause").click();
+        d.event("pointerup", 50);
+        await painted();
+        check(
+          !d.flashes.length &&
+            !host.querySelector(".wb-overlay").hidden &&
+            d.zone.getAttribute("aria-disabled") === "true",
+          "Pause während einer Geste verwirft den Schuss",
+        );
+        host.querySelector(".wb-continue").click();
+        // An armed release produces the actual painted muzzle flash, not a test counter.
+        d.event("pointerdown");
+        d.event("pointermove", 25);
+        await painted();
+        check(!d.flashes.length, "Beim Halten wird noch nicht geschossen");
+        d.event("pointerup", 25);
+        await painted();
+        check(
+          d.flashes.length > 0 && d.zone.dataset.state === "idle",
+          "Loslassen einer Ziehgeste schießt mit Sprite-Blitz",
+        );
+        await wait(250);
+        d.flashes.length = 0;
+        d.event("pointerdown");
+        d.event("pointermove", 50);
+        const prior = host.querySelector(".wb-count").textContent;
+        host.style.width = "280px";
+        await until(() => !host.querySelector(".wb-overlay").hidden);
+        d.event("pointerup", 50);
+        await painted();
+        check(
+          !d.flashes.length &&
+            host.querySelector(".wb-count").textContent === prior,
+          "Resize während einer Geste pausiert und erhält Fortschritt ohne Schuss",
+        );
+        host.querySelector(".wb-continue").click();
+        key("Space");
+        session.destroy();
+        await wait(250);
+        check(
+          host.children.length === 0,
+          "Destroy beim Schuss entfernt DOM und spätere Arbeit",
+        );
+        for (const missingArt of [false, true]) {
+          session = LernwortWordBlaster.mount(host, {
+            items: [
+              missingArt ? item : { ...item, image: "missing-qa-image.png" },
+            ],
+            urlFor: (p) =>
+              "../../" +
+              (missingArt && p.includes("/word_blaster/")
+                ? "missing-cannon-qa.png"
+                : p),
+          });
+          await until(
+            () =>
+              host.querySelector(".wb-continue")?.textContent ===
+              "Erneut versuchen",
+          );
+          check(
+            host.querySelector(".wb-gesture").getAttribute("aria-disabled") ===
+              "true",
+            missingArt
+              ? "Fehlende Sprites sperren Gesten"
+              : "Fehlende Setbilder sperren Gesten",
+          );
+          session.destroy();
+        }
+        session = LernwortWordBlaster.mount(host, {
+          items: [item],
+          urlFor: (p) => "../../" + p,
+        });
+        session.destroy();
+        await wait(200);
+        check(host.children.length === 0, "Destroy beim Bildladen bleibt leer");
+        host.style.width = "";
+        report.textContent += "\nALL PASSED";
+      } catch (e) {
+        report.textContent += "\nFAIL " + e.message;
+        console.error(e);
+      }
+    };
+  </script>
+</html>

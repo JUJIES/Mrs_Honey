@@ -1,0 +1,175 @@
+{
+  "target": "asset",
+  "mode": "integrated-cannon",
+  "prompt": "Use case: illustration-story. Asset type: coherent modular cannon prop kit for a polished children's vocabulary game, clean HD gouache. The screenshot reference shows the PROBLEM to fix, not a layout to copy: its pear-shaped barrel looks placed loosely on a flat pedestal. Redesign it as a mechanically integrated toy light turret with a rounded ball joint nested inside a deep bearing cradle. Keep warm ivory painted wood, muted sage green, honey gold, mint light, one small star; no realistic weapon, no military look.\nCreate EXACTLY four equal cells in a 2x2 grid on a square sheet, reading left to right:\nTOP LEFT: the STATIONARY REAR MOUNT assembly only, front view with a little top surface: squat sage/gold footed pedestal connected to a deep rounded bowl housing, dark recessed circular bearing pocket at its top center and a sage rounded ball-like rear joint seated inside. No barrel. The bearing pocket and contact shadows must read as deep, solid, load-bearing, not a flat platform. Symmetric about vertical center.\nTOP RIGHT: ONLY the detachable barrel pointing EXACTLY straight UP along its vertical center axis. A short chunky mostly cylindrical ivory light barrel, gold oval muzzle rim and mint luminous lens, sage collar, small gold star. Lower barrel neck is a straight short plain narrow shaft intended to disappear INSIDE the bearing. Absolutely NO pointed gold bottle tip, no pear-shaped teardrop bottom, no foot, no base, no side support, no ball or mounting bracket attached. The lower shaft must fit inside the mount's circular pocket.\nBOTTOM LEFT: ONLY the FIXED FOREGROUND BEARING LIP that overlays the lower barrel neck: a shallow curved sage-and-gold lower semicircular/U-shaped front retaining shell, open at its upper center, substantial shaded inner edge, matching rounded gold bearing cheeks at both ends. Both cheeks and the low curved lip form one connected object. No whole pedestal, no back disk, no barrel. It is a trim foreground occluder, not a tall upright arch; it covers the lower part of the joint without covering the moving barrel's upper half, and accommodates rotation 75 degrees left or right.\nBOTTOM RIGHT: a small fully ASSEMBLED upright cannon using exactly these same three parts, showing the barrel deeply seated behind the foreground lip and between the two bearing cheeks. This cell is an assembly reference, not an extra component.\nAll four views exactly same art direction, camera and shared materials; front-facing 2D game view with slight top visibility, no diagonal/isometric view. Parts must visibly fit together in a real sliding/rotating joint. Soft neutral painted shading; convincing contact shadows at the bearing. Entire subjects fully inside central 65-70% of each cell with generous margin, no edge crossing, no guides, cell outlines, text, numbers, labels, UI or watermark. No flashes, smoke, trails, scene or ground. Exterior background is perfectly flat solid #FF00FF magenta everywhere outside objects, for chroma key. Not pixel art.\n\nTARGETED EDIT:\nUse case: precise-object-edit. Edit this modular toy-cannon kit. Keep the entire TOP LEFT rear mount and TOP RIGHT barrel EXACTLY unchanged. Keep the flat solid #FF00FF background, four-cell 2x2 layout, palette, camera and gouache materials unchanged.\nChange ONLY the BOTTOM LEFT foreground bearing part: preserve the U-shaped retaining shell and its two gold side cheeks, but FILL its central open gap with a solid rounded FRONT BEARING CAP, a sage-green circular disk with a honey-gold rim and a tiny gold round axle rivet at its center. This disk is in FRONT of the cannon's rotation pivot; it will hide the barrel's plain lower neck in all aim directions. The disk should be approximately half the total part width in diameter, centered horizontally, centered vertically near the top of the two side cheeks, with its upper round edge extending above them. Connect disk and cheeks via the existing shallow curved lip so it is one coherent solid foreground object. It must be a filled opaque disk, no transparent hole, no window, no barrel in this cell. Keep all of it contained in the central 70% of its cell; never touch the cell edge.\nAlso update only the BOTTOM RIGHT assembly reference to show exactly this front bearing disk concealing the barrel root, so the tube visibly emerges from behind a round joint face and the matching cradle, with no exposed straight wooden stick or pointed tip. No text, no extra detached objects, no flash or trails.\n",
+  "role": "",
+  "input": "references/source_images/word-blaster-cannon-v2/parts-raw.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 512,
+  "fit_scale": 0.8,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "largest",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "integrated-cannon-1",
+    "integrated-cannon-2",
+    "integrated-cannon-3",
+    "integrated-cannon-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 146180,
+      "selected_component_bbox": [
+        60,
+        193,
+        610,
+        565
+      ],
+      "crop_bbox": [
+        60,
+        193,
+        610,
+        565
+      ],
+      "edge_touch": false,
+      "output_size": [
+        392,
+        265
+      ],
+      "paste_position": [
+        60,
+        123
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 100553,
+      "selected_component_bbox": [
+        187,
+        60,
+        426,
+        579
+      ],
+      "crop_bbox": [
+        187,
+        60,
+        426,
+        579
+      ],
+      "edge_touch": false,
+      "output_size": [
+        170,
+        370
+      ],
+      "paste_position": [
+        171,
+        71
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 99269,
+      "selected_component_bbox": [
+        101,
+        166,
+        568,
+        460
+      ],
+      "crop_bbox": [
+        101,
+        166,
+        568,
+        460
+      ],
+      "edge_touch": false,
+      "output_size": [
+        333,
+        209
+      ],
+      "paste_position": [
+        89,
+        151
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 181049,
+      "selected_component_bbox": [
+        34,
+        4,
+        581,
+        578
+      ],
+      "crop_bbox": [
+        34,
+        4,
+        581,
+        578
+      ],
+      "edge_touch": false,
+      "output_size": [
+        390,
+        409
+      ],
+      "paste_position": [
+        61,
+        51
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

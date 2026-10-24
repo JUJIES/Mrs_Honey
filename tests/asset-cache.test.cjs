@@ -74,14 +74,24 @@ test('a full or denied storage area keeps the online response playable',async()=
 
 test('one background slot is reserved; urgent work overtakes pending background files',async()=>{
   const h=harness();const pending=[];
-  h.setHandler(url=>new Promise(resolve=>pending.push({url,resolve})));
+  let requestStarted=()=>{};
+  h.setHandler(url=>new Promise(resolve=>{pending.push({url,resolve});requestStarted();}));
+  function waitForRequest(index) {
+    if(pending[index])return Promise.resolve();
+    return new Promise((resolve,reject)=>{
+      const timeout=setTimeout(()=>{requestStarted=()=>{};reject(new Error(`Request ${index} never started`));},2000);
+      requestStarted=()=>{if(pending[index]){clearTimeout(timeout);requestStarted=()=>{};resolve();}};
+    });
+  }
   const p=h.api.createPreloader();const background=p.background(['a.mp3','b.mp3','c.mp3']);
   await new Promise(setImmediate);assert.equal(pending.length,1);
   const urgent=p.warm(['d.mp3']);await new Promise(setImmediate);
   assert.equal(pending.length,2);assert.ok(pending[1].url.includes('/d.mp3?'));
   const finish=job=>job.resolve(new Response(h.payloads[new URL(job.url).pathname.slice(1)]));
   finish(pending[1]);await urgent;finish(pending[0]);
-  for(let i=2;i<4;i++){await new Promise(setImmediate);await new Promise(setImmediate);finish(pending[i]);}
+  // Verification/hash work can outlive two event-loop turns under parallel load.
+  // Wait for the real request; keep the ordering/slot assertions unchanged.
+  for(let i=2;i<4;i++){await waitForRequest(i);finish(pending[i]);}
   await background;
 });
 

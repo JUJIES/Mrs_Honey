@@ -1,0 +1,18 @@
+{
+  "created": "2026-10-24",
+  "generator": "built-in image_gen; transparent_background=true; no API/CLI generation",
+  "prompt": "Use case: illustration-story. Asset type: transparent cutout menu illustration for Word Blaster, a playful vocabulary ricochet game for young children. Match a warm hand-painted gouache children's-book app: creamy ivory, sage green, honey gold, gentle turquoise. A friendly rounded toy light-cannon at lower left on a small chunky wooden sage-and-gold base, barrel angled upward right. A bright mint light trail goes from its muzzle up to a small rounded gold wall corner, bounces and reaches a floating rounded-square ivory picture tile showing a smiling ginger cat; a few small honey-gold stars at the tile communicate success. Clear simple compact composition readable at 200px, tactile matte painted texture, clean unified silhouette, playful non-military toy, no human characters, no violence, no realistic weapon, no dark sci-fi. Genuine transparent exterior background and transparent empty spaces; opaque cannon and opaque card interior. No scenery, no ground plane, no enclosing rectangular background, no text or letters, no watermark. Complete motif centered in a square with generous transparent margin, nothing clipped. This is only the isolated game-selection illustration, not a full button or app screenshot.",
+  "original": "word-blaster-generated-v1.png",
+  "segmentation": "word-blaster-cutout-v1.png",
+  "runtime": "assets/images/bonus_games/word-blaster-v1.png",
+  "cutout": "Local Image Tools / birefnet-general-lite. Native alpha >10% protected; segmentation constrained to native alpha; ImageMagick trim/592px fit/640px transparent canvas/1px edge erosion/0.35px feather; final alpha normalization. Full process follows generation.json.",
+  "qa": "Inspected native transparency and cream-background composite; complete cannon, bounce trail, cat tile and stars.",
+  "sha256": "52cec35353ca558ddb9154596d436f88e97214a0d2337fb9c79f56399c852ea9",
+  "bytes": 246655,
+  "alphaBounds": [
+    25,
+    61,
+    615,
+    579
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "target": "asset",
+  "mode": "muzzle-flash",
+  "prompt": "Use case: illustration-story. Asset type: a four-frame 2x2 muzzle-flash FX sprite sheet for the warm hand-painted toy light cannon just shown. This sheet contains ONLY the mint light flash, NO cannon or base. Exactly FOUR equally sized square cells in a 2x2 grid, read left to right then next row. The same small, friendly mint-and-ivory magical light puff expands and dissipates over 160 milliseconds: top-left a compact bright ignition spark, top-right a larger smooth four-point mint star puff with a white center, bottom-left a soft expanding mint ring with three small honey-gold glints, bottom-right a few tiny mint and gold fading glints. Each frame has its energy source at the EXACT center of its cell, stable scale reference and same origin in all frames; effects fully contained within central 65% safe area of each cell. Clean HD gouache game art, soft painted edges and controlled local luminosity, charming and satisfying, no pixel art, no harsh explosion, no fire or smoke. Exterior background throughout must be exactly solid flat #FF00FF magenta, no gradients in background, no grey checkerboard. No text, numbers, labels, panel lines, UI or watermark. No laser trails or other objects. Colors only mint turquoise, ivory white and honey gold within the effect; absolutely no pink in the effect.",
+  "role": "",
+  "input": "references/source_images/word-blaster-cannon-v1/flash-raw.png",
+  "threshold": 220,
+  "edge_threshold": 230,
+  "duration": 40,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 192,
+  "fit_scale": 0.8,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "muzzle-flash-1",
+    "muzzle-flash-2",
+    "muzzle-flash-3",
+    "muzzle-flash-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 16,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        301,
+        137,
+        535,
+        381
+      ],
+      "edge_touch": false,
+      "output_size": [
+        88,
+        91
+      ],
+      "paste_position": [
+        52,
+        50
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        768,
+        0,
+        1536,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 15,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        166,
+        92,
+        502,
+        424
+      ],
+      "edge_touch": false,
+      "output_size": [
+        126,
+        124
+      ],
+      "paste_position": [
+        33,
+        34
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        512,
+        768,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 53,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        242,
+        36,
+        650,
+        433
+      ],
+      "edge_touch": false,
+      "output_size": [
+        153,
+        149
+      ],
+      "paste_position": [
+        19,
+        21
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        768,
+        512,
+        1536,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 19,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        185,
+        118,
+        477,
+        388
+      ],
+      "edge_touch": false,
+      "output_size": [
+        109,
+        101
+      ],
+      "paste_position": [
+        41,
+        45
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

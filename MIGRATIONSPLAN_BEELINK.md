@@ -133,3 +133,21 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
 - Rollback: aktueller sauberer Freeze `cd55b99a7aafc6a2eb6726fd301eef398fa800f0`; Dienst-XML unter `_runtime\Mrs_Honey\ops\render-stability-20261024` sichern, Kandidat auf freiem Port 5197 prüfen. Nur App-Dienst umstellen; Tunnel/Control Center bleiben unverändert. App/CSS `render-stability-1`, Shell-Cache v39.
 - Aktivierung **bestanden**: sauberer Freeze `f76ae1ff8871d1f4df4efc499e2c15baa6958023`, Kandidat 5197 mit Inventar, Readiness und acht Ressourcenpfaden erfolgreich, danach beendet. Dienst-XML-SHA256 `e8d36c920c802f0c428c0ef4636eba7dfc5deeb01f109623581296ea17fe445e`; App und Tunnel laufen. Rollback-XML liegt im oben genannten Ops-Ordner.
 - Öffentlicher Postcheck **bestanden**: `/health/ready` 200 und App/CSS `render-stability-1`; öffentlicher DOM-Audit ohne Befund. Echte Mac-Safari-Ansicht nach Shell-Aktualisierung vollständig, Wortwiederholung bedienbar und Tab-Rückkehr ohne Kopfbeschnitt; Nachweis `safari-public.jpg`. Lokale Safari-Sprechansicht zuvor ebenfalls visuell geprüft. Physisches iPad bleibt gesonderte Praxisabnahme; keine Garantie gegen sämtliche künftigen Browserfehler. Tunnel/Control Center unverändert.
+
+## 12. Folgeupdate 2026-10-24 – Bonusspiele und Challenge
+
+- Autorisierter Gesamtstand: Catch a Pair mit Sockeln, Word Blaster mit generierter
+  Gelenkkanone, Zieh-/Loslasssteuerung, drei Stufen und 60-Sekunden-Challenge.
+  Lokale Challenge-Top-10 pro Set/Stufe; keine Speicherung von Namen auf dem Server.
+- Vorab: 69 JS-Tests, 8 Server-Tests, Medieninventar 740 Dateien / `9d401a9541925218`.
+  Gesten-/Lifecycle-Smokes, echte 60-Sekunden-Runde mit isoliertem Testspeicher und
+  36 Kombinationen aus Stufe/Modus/Viewport bestanden; Memory/Catch a Pair weiter
+  erreichbar. Physisches iPad und abschließende Safari-Geräteabnahme bleiben offen.
+- Veröffentlichungsgrenze korrigiert: der Git-Worktree enthält Referenz-/Tool-Dateien;
+  HTTP liefert nur App-Entryfiles, Assets und Setdaten. Private-/Quellpfade und
+  Traversal sind per HTTP-Test gesperrt. Export enthält nur aktuelle Laufzeitdateien.
+- App/CSS `word-blaster-levels-2`, Shell v56. Vorhandene MP3s unverändert.
+- Rückfall vor Cutover: laufender sauberer Freeze `f76ae1ff8871d1f4df4efc499e2c15baa6958023`
+  und bestehende Dienst-XML. XML in separatem Ops-Ordner sichern, Kandidat auf
+  freiem Port prüfen. Nur `BeelinkApp-MrsHoney` umstellen, Tunnel und Control Center
+  unverändert lassen. Online-Abnahme und exakte Release-ID werden danach ergänzt.

@@ -3,6 +3,8 @@ const lessonAssets = window.LernwortAssets;
 const assetPreloader = lessonAssets?.createPreloader();
 const roundImageLoads = new WeakMap();
 let offlineRegistration = null;
+let catchPairSession = null;
+let wordBlasterSession = null;
 
 function assetUrl(path) { return lessonAssets?.urlFor(path) || path; }
 
@@ -14,6 +16,8 @@ function sharedLearningAssets() {
   return Object.keys(window.LERNWORT_OFFLINE_ASSETS?.files || {}).filter((path) =>
     path === "assets/audio/audio-manifest.json" ||
     path.startsWith("assets/images/ui/") ||
+    path.startsWith("assets/images/bonus_games/") ||
+    path.startsWith("assets/images/word_blaster/") ||
     path.startsWith("assets/audio/feedback_en_01/") ||
     path.startsWith("assets/audio/ui/") ||
     path.startsWith("assets/audio/sentence_prompts_") ||
@@ -35,7 +39,7 @@ function warmSelectedSet() {
 }
 
 function activateOfflineUpdateAtMenu() {
-  if (!app.querySelector(".game-screen, .memory-screen, .hidden-object-screen")) {
+  if (!app.querySelector(".game-screen, .memory-screen, .hidden-object-screen, .catch-pair-screen, .word-blaster-screen")) {
     offlineRegistration?.waiting?.postMessage({ type: "ACTIVATE_AT_MENU" });
   }
 }
@@ -242,6 +246,7 @@ const state = {
   currentIndex: 0,
   choices: [],
   locked: false,
+  wordBlaster: { difficulty: "easy", mode: "round" },
   memory: {
     cards: [],
     selected: [],
@@ -462,6 +467,7 @@ const modes = [
 ];
 
 function renderLanguageScreen() {
+  stopBonusGames();
   stopTutorIdleAnimation();
   app.innerHTML = `
     <section class="screen">
@@ -484,6 +490,7 @@ function renderLanguageScreen() {
 }
 
 function renderSetScreen() {
+  stopBonusGames();
   stopTutorIdleAnimation();
   app.innerHTML = `
     <section class="screen">
@@ -543,6 +550,7 @@ function renderSetScreen() {
 }
 
 function renderModeScreen() {
+  stopBonusGames();
   stopTutorIdleAnimation();
   // Prepare the same first item that startGame will use, while choosing a mode.
   state.order = shuffle([...state.items]);
@@ -951,7 +959,7 @@ function renderMemoryDifficultyScreen() {
   app.querySelector(".back-button").addEventListener("click", () => {
     clearScheduledAudio();
     stopActiveAudio();
-    renderModeScreen();
+    renderBonusScreen();
   });
 
   app.querySelectorAll(".memory-difficulty-card").forEach((card) => {
@@ -1190,17 +1198,186 @@ function resetHiddenObjectState() {
 }
 
 async function startRoundEndBonus() {
-  if (state.set?.id === "colours") {
+  renderBonusScreen();
+}
+
+function stopBonusGames() {
+  wordBlasterSession?.destroy();
+  wordBlasterSession = null;
+  catchPairSession?.destroy();
+  catchPairSession = null;
+}
+
+function renderBonusScreen() {
+  stopBonusGames();
+  clearScheduledAudio();
+  stopActiveAudio();
+  stopTutorIdleAnimation();
+  state.locked = false;
+  app.innerHTML = `
+    <section class="screen bonus-screen">
+      <div class="topbar">
+        <button class="screen-back-button back-button" type="button" aria-label="Zurück zur Modusauswahl">${lucideIcon("arrowLeft")}</button>
+        <div class="progress">Bonus</div>
+      </div>
+      <div class="screen-header"><h1>Zeit zum Spielen!</h1></div>
+      <div class="bonus-grid">
+        <button class="bonus-card" data-bonus="catch-pair" type="button">
+          <span class="bonus-card-art" aria-hidden="true"><img class="bonus-illustration" src="${assetUrl("assets/images/bonus_games/catch-a-pair-v1.png")}" alt="" decoding="async" draggable="false" /></span>
+          <span class="bonus-card-copy"><strong>Catch a Pair!</strong><span>Fange Bild und Wort.</span></span>
+        </button>
+        <button class="bonus-card" data-bonus="word-blaster" type="button">
+          <span class="bonus-card-art" aria-hidden="true"><img class="bonus-illustration" src="${assetUrl("assets/images/bonus_games/word-blaster-v1.png")}" alt="" decoding="async" draggable="false" /></span>
+          <span class="bonus-card-copy"><strong>Word Blaster</strong><span>Ziele auf das passende Bild.</span></span>
+        </button>
+        <button class="bonus-card" data-bonus="memory" type="button">
+          <span class="bonus-card-art" aria-hidden="true"><img class="bonus-illustration" src="${assetUrl("assets/images/bonus_games/memory-v1.png")}" alt="" decoding="async" draggable="false" /></span>
+          <span class="bonus-card-copy"><strong>Memory</strong><span>Decke die Paare auf.</span></span>
+        </button>
+        ${state.set.id === "colours" ? '<button class="bonus-card" data-bonus="hidden-object" type="button"><span class="bonus-card-art" aria-hidden="true">◉</span><span class="bonus-card-copy"><strong>Wimmelspiel</strong><span>Finde die Farben.</span></span></button>' : ""}
+      </div>
+    </section>`;
+  app.querySelector(".back-button").addEventListener("click", renderModeScreen);
+  app.querySelector('[data-bonus="memory"]').addEventListener("click", renderMemoryDifficultyScreen);
+  app.querySelector('[data-bonus="catch-pair"]').addEventListener("click", startCatchPairGame);
+  app.querySelector('[data-bonus="word-blaster"]').addEventListener("click", renderWordBlasterSetup);
+  app.querySelector('[data-bonus="hidden-object"]')?.addEventListener("click", async () => {
+    const chooser = app.firstElementChild;
+    chooser.querySelectorAll(".bonus-card").forEach((button) => { button.disabled = true; });
     try {
       await startColoursHiddenObjectGame();
     } catch (error) {
-      console.info("Hidden object bonus fallback.", error);
-      renderMemoryDifficultyScreen();
+      if (chooser.isConnected) renderBonusScreen();
+      console.info("Hidden object bonus unavailable.", error);
     }
-    return;
-  }
+  });
+}
 
-  renderMemoryDifficultyScreen();
+function startCatchPairGame() {
+  stopBonusGames();
+  clearScheduledAudio();
+  stopActiveAudio();
+  stopTutorIdleAnimation();
+  state.locked = false;
+  app.innerHTML = `
+    <section class="screen catch-pair-screen">
+      <button class="screen-back-button back-button" type="button" aria-label="Zurück zur Spieleauswahl">${lucideIcon("arrowLeft")}</button>
+      <div class="catch-pair-host"></div>
+    </section>`;
+  app.querySelector(".back-button").addEventListener("click", renderBonusScreen);
+  catchPairSession = window.LernwortCatchPair.mount(app.querySelector(".catch-pair-host"), {
+    items: state.items,
+    title: state.set.title[state.language],
+    urlFor: assetUrl,
+    viewportReserve: 188,
+  });
+}
+
+function renderWordBlasterSetup() {
+  stopBonusGames();
+  clearScheduledAudio();
+  stopActiveAudio();
+  stopTutorIdleAnimation();
+  state.locked = false;
+  const game = window.LernwortWordBlaster;
+  app.innerHTML = `<section class="screen wb-setup-screen">
+    <div class="topbar"><button class="screen-back-button back-button" type="button" aria-label="Zurück zur Spieleauswahl">${lucideIcon("arrowLeft")}</button><div class="progress">Word Blaster</div></div>
+    <div class="screen-header"><h1>Wie möchtest du spielen?</h1><p class="wb-setup-set"></p></div>
+    <div class="wb-mode-choices" role="group" aria-label="Spielart">
+      <button type="button" data-wb-mode="round"><strong>Set-Runde</strong><span>Alle Wörter finden. Ohne Zeitdruck.</span></button>
+      <button type="button" data-wb-mode="challenge"><strong>60-Sekunden-Challenge</strong><span>So viele Treffer wie möglich. Mit Highscore!</span></button>
+    </div>
+    <div class="wb-level-choices" role="group" aria-label="Schwierigkeitsgrad">${Object.values(
+      game.DIFFICULTIES,
+    )
+      .map(
+        (level) =>
+          `<button type="button" data-wb-level="${level.id}"><strong>${level.label}</strong><span>${level.description}</span></button>`,
+      )
+      .join("")}</div>
+    <p class="wb-setup-rule"></p><button class="wb-setup-start" type="button">Zum Spielfeld</button>
+    <section class="wb-setup-board" hidden><h2 class="wb-setup-board-title"></h2><div class="wb-scoreboard"></div><p>Nur in diesem Browser gespeichert.</p></section>
+  </section>`;
+  app.querySelector(".wb-setup-set").textContent =
+    state.set.title[state.language];
+  function update() {
+    app
+      .querySelectorAll("[data-wb-mode]")
+      .forEach((b) =>
+        b.setAttribute(
+          "aria-pressed",
+          String(b.dataset.wbMode === state.wordBlaster.mode),
+        ),
+      );
+    app
+      .querySelectorAll("[data-wb-level]")
+      .forEach((b) =>
+        b.setAttribute(
+          "aria-pressed",
+          String(b.dataset.wbLevel === state.wordBlaster.difficulty),
+        ),
+      );
+    const challenge = state.wordBlaster.mode === "challenge";
+    app.querySelector(".wb-setup-board").hidden = !challenge;
+    app.querySelector(".wb-setup-rule").textContent = challenge
+      ? "60 Sekunden · 10 Punkte pro Treffer · Die Uhr läuft bei Pause und Tabwechsel weiter."
+      : "Einmal durch dein Set · Kein Zeitlimit · Ziehen und loslassen oder Pfeiltasten und Leertaste.";
+    if (challenge) {
+      app.querySelector(".wb-setup-board-title").textContent =
+        "Top 10 · " + game.difficultyFor(state.wordBlaster.difficulty).label;
+      game.renderHighscores(
+        app.querySelector(".wb-scoreboard"),
+        game.readHighscores(state.set.id, state.wordBlaster.difficulty),
+      );
+    }
+  }
+  app
+    .querySelector(".back-button")
+    .addEventListener("click", renderBonusScreen);
+  app.querySelectorAll("[data-wb-mode]").forEach((b) =>
+    b.addEventListener("click", () => {
+      state.wordBlaster.mode = b.dataset.wbMode;
+      update();
+    }),
+  );
+  app.querySelectorAll("[data-wb-level]").forEach((b) =>
+    b.addEventListener("click", () => {
+      state.wordBlaster.difficulty = b.dataset.wbLevel;
+      update();
+    }),
+  );
+  app
+    .querySelector(".wb-setup-start")
+    .addEventListener("click", () => startWordBlasterGame(state.wordBlaster));
+  update();
+}
+
+function startWordBlasterGame(
+  settings = { difficulty: "easy", mode: "round" },
+) {
+  stopBonusGames();
+  clearScheduledAudio();
+  stopActiveAudio();
+  stopTutorIdleAnimation();
+  state.locked = false;
+  app.innerHTML = `<section class="screen word-blaster-screen">
+    <button class="screen-back-button back-button" type="button" aria-label="Zurück zur Spieleauswahl">${lucideIcon("arrowLeft")}</button>
+    <div class="word-blaster-host"></div>
+  </section>`;
+  app
+    .querySelector(".back-button")
+    .addEventListener("click", renderWordBlasterSetup);
+  wordBlasterSession = window.LernwortWordBlaster.mount(
+    app.querySelector(".word-blaster-host"),
+    {
+      items: state.items,
+      title: state.set.title[state.language],
+      setId: state.set.id,
+      difficulty: settings.difficulty,
+      mode: settings.mode,
+      urlFor: assetUrl,
+    },
+  );
 }
 
 async function getColoursHiddenObjectConfig() {
@@ -1234,6 +1411,7 @@ function getCurrentHiddenObjectTarget() {
 }
 
 async function startColoursHiddenObjectGame() {
+  const originatingScreen = app.firstElementChild;
   clearScheduledAudio();
   stopActiveAudio();
   stopTutorIdleAnimation();
@@ -1241,6 +1419,7 @@ async function startColoursHiddenObjectGame() {
   resetHiddenObjectState();
 
   const config = await getColoursHiddenObjectConfig();
+  if (!originatingScreen?.isConnected) return;
   const scene = pickHiddenObjectScene(config.scenes || [], state.hiddenObject.lastSceneId);
   if (!scene) {
     renderMemoryDifficultyScreen();

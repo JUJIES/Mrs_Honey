@@ -1,5 +1,125 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Word Blaster: drei Stufen und 60-Sekunden-Challenge
+
+- Auswahl vor dem Spiel: Leicht/Mittel/Knifflig und Set-Runde/Challenge.
+  Bewegung, Mindestbildgröße und Zielhilfe folgen einem gemeinsamen Profil.
+- Challenge füllt Ziele aus demselben Set nach, zählt 10 Punkte pro Treffer und
+  endet nach einer echten Minute. Pause/Tabwechsel verlängern die Deadline nicht.
+  Vorhandener Treffer-/Generationspfad, kurze Erfolgsphase und kollisionsfreies
+  Nachfüllen am frei gewordenen Platz; kein Zurücksetzen der übrigen Kapseln.
+- Lokale Top 10 pro Set/Stufe mit Namenseintrag, sicherer Textdarstellung und
+  verständlichem Verhalten bei gesperrtem Speicher. Kein Server-/Lernfortschritt-
+  Modell verändert; neues Storage-Format unter eigenem versionierten Namespace.
+- Produktvertrag, Modell-/Storage-Tests und echter 60-Sekunden-Browser-Smoke
+  ergänzt. App/CSS `word-blaster-levels-2`, Shell v56. Bestehende Bilder und
+  MP3s bleiben unverändert.
+
+## 2026-10-24 – Integriertes Kanonenlager statt aufgesetztem Rohr
+
+- Gemeinsam gestaltete V2-Bildteile: tiefe hintere Aufnahme, zylindrisches Rohr
+  ohne spitzes Flaschenende und feste vordere Achskappe mit Lagerwangen.
+- Zeichenreihenfolge verdeckt den gekürzten Montageschaft hinter dem Vorderlager;
+  nur das Rohr dreht und federt zurück. Gemeinsamer Renderer und zentrale
+  Bildrechtecke statt unabhängiger Positionierung einzelner Teile.
+- Mündung, Sockelhöhe, Target-Freiraum und Touchfläche an die größere Einheit
+  angepasst. Ziehen/Loslassen und Desktop-Pfeile/Leertaste bleiben bestehen.
+- Winkel-Vorschau nutzt denselben Renderer wie das Spiel. V1-Bilder archiviert,
+  aktuelle Teile in Inventar und Precache; bestehender Blitz und MP3s bleiben.
+  App/CSS `word-blaster-joint-2`, Shell v54; Details in `WORD_BLASTER.md`.
+
+## 2026-10-24 – Direktes Ziehen und Loslassen bei Word Blaster
+
+- Touch-Steuerleiste vollständig entfernt. Freie Fläche um die Kanone nimmt
+  relative horizontale Ziehbewegungen an; Loslassen schießt. Desktop-Pfeile und
+  Leertaste bleiben. Mehr Spielfeldhöhe durch entfallene Richtungs-/Feuertasten.
+- 10px Totzone gegen versehentliche Taps, Rückkehr zum Startpunkt zum Abbrechen,
+  sichtbarer Sockelring. Zweiter Kontakt, Pointercancel/Capture-Verlust, Pause,
+  Resize, Tab-Verlust und Release außerhalb des Rahmens feuern nicht.
+- Eine Eingabelogik für Touch/Maus/Stift über Pointer-Capture; kein neuer
+  Schusspfad. Vorhandene Winkelgrenzen, Schusslimits und Generationen bleiben.
+- Browser-Smoke-/Layout- und Unit-Prüfungen auf Gesten umgestellt und erweitert;
+  Produktvertrag in `WORD_BLASTER.md`. App/CSS `word-blaster-drag-2`, Shell v52.
+  Medienbestand und bestehende MP3s unverändert.
+
+## 2026-10-24 – Gemalte, bewegliche Kanone
+
+- Gezeichnete Kanonenformen durch Imagegen-Rastermotive ersetzt: fester Sockel,
+  separat drehbares Rohr und vierstufiger Sprite-Mündungsblitz. 220ms Rückstoß
+  bewegt nur das Rohr entlang seiner Achse; Reduced Motion hält es still.
+- Gemalter Mündungsmittelpunkt ist gemeinsame Quelle für Zielhilfe, Schuss und
+  Blitz. Target-Bereich hält den größeren Rohrumfang bei allen Winkeln frei.
+- Pflichtbilder laden vor Spielstart über den vorhandenen Assetpfad; Ladefehler
+  bieten Wiederholung. Kanonenbilder in Vorladen, Offline-Inventar und Precache.
+- Originale/Prompts/Alpha-/Frame-QC unter `references/source_images/word-blaster-cannon-v1/`.
+  App-Version `word-blaster-cannon-1`, Shell v50; vorhandene Lernbilder/MP3s bleiben.
+
+## 2026-10-24 – Word Blaster als weiteres Belohnungsspiel
+
+- Grundmodus Wort → Bild: drehbare Kanone, Pfeiltasten/Leertaste und große
+  Touch-Steuerung, bewegte Kapseln, Schutz bei falschen Bildern und Erfolgsimpuls.
+- Gemeinsame Reflexionsgeometrie für Zielhilfe und Laser, feste Physikschritte,
+  kontinuierliche Trefferprüfung, maximal zwei Abpraller und zwei aktive Schüsse.
+  Wandtreffer erhalten zusätzliche goldene Effekte, ohne den Zähler zu verändern.
+- Eigene Mount/Destroy-Session, Pause bei Tab-/Größenwechsel, Generationsschutz
+  gegen alte Schüsse. Gruppenweise alle Setitems; bestehende Bilder/MP3s bleiben.
+- Neues transparentes Auswahlmotiv mit lokalem Freistellnachweis, PWA/Export
+  ergänzt. App/CSS `word-blaster-2`, Shell v49. Produktvertrag: `WORD_BLASTER.md`.
+- Bild → Wort und Hören → Bild sind noch nicht umgesetzt; iPad-9-Praxisabnahme offen.
+
+## 2026-10-24 – Freigestellte Spielmotive für die Bonusauswahl
+
+- Eigene Gouache-Motive für Memory (gleiche Tierkarten) und Catch a Pair
+  (Bild-/Wortpaar im Sockel) statt Textsymbolen. Titel und Erklärung bleiben Text.
+- Lokal mit BiRefNet freigestellt und unter Erhalt der nativen Innenflächen
+  kantenbereinigt; transparente 640px-PNGs ohne Beschnitt auf den Schaltflächen.
+  Desktop/Tablet vertikal, schmales Handy horizontal angeordnet.
+- Gemeinsames Vorladen, Medieninventar und PWA-Precache ergänzt. Prompts,
+  Originale und Bearbeitungsnachweis unter `references/source_images/bonus_games/`.
+  App/CSS `bonus-art-2`, Shell v47; bestehende Lernbilder und MP3s unverändert.
+
+## 2026-10-24 – Sockel auswählen und Einsätze herausheben
+
+- Sockel sind echte auswählbare Buttons; Bild-/Wortknoten sitzen darin als
+  dekorative Einsätze. Auswahl gehört dem festen Platz und bewegt sich nicht
+  mit dem Bild. Gemeinsames kurzes Rütteln statt unabhängiger Bildbewegung.
+- Dauerhaftes Bobbing und Jelly-Drücken entfernt. Inhalte sitzen ruhig unter
+  der Sockellippe; Wechsel heben 180ms heraus und senken am Ziel 220ms ein,
+  einschließlich der Anfangsanimation. Sperre bleibt bis zum Einsenken bestehen.
+- Abbruch, Zielzuordnung, Fokus, Resize und Fortschritt mit dem bestehenden
+  Mount/Destroy-Vertrag abgestimmt; Kollisions-/Browserprüfungen erweitert.
+- Bestehenden Cache-Prioritätstest auf echte Request-Starts synchronisiert statt
+  zwei feste Eventloop-Durchläufe anzunehmen; Prioritätsaussagen unverändert.
+- App/CSS `catch-pair-9`, Shell v45; Bilder und MP3s unverändert.
+
+## 2026-10-24 – Ein klarer Paarzähler
+
+- Sichtbare Zustandsbeschreibungen und doppelte Fortschrittsangaben entfernt.
+  Ein großer mittiger Zähler `3 / 10 Paare` ersetzt die kleine Eckanzeige;
+  der Kopf zeigt nur den Setnamen. Screenreader-Rückmeldungen und sichtbare
+  Lade-/Fehlerhinweise bleiben erhalten. Spielregeln unverändert.
+
+## 2026-10-24 – Passende Sockel und gemeinsame Zustandssignale
+
+- Zentrierte Vertiefungen mit gemeinsamen Karten-/Bildradien statt versetzter
+  Plattformen; weniger Schatten, keine blauen Doppelrahmen oder Auswahlsterne.
+- Sockel zeigen Auswahl dezent türkis, bevorstehenden Wechsel gelb, Fehlversuch
+  kurz rot und Treffer grün. Erste Auswahl bleibt bei Fehler bestehen.
+- Zentrale Zustandsableitung und Timer-Cleanup schützen vor alten Farben nach
+  Tausch, Größenwechsel oder Neustart; Zustands-/Browserprüfungen erweitert.
+- App/CSS `catch-pair-5`, Shell v41; Medieninventar und MP3s unverändert.
+
+## 2026-10-24 – Catch a Pair als Belohnungsspiel
+
+- Nach Lernrunden zwischen Catch a Pair, Memory und bei Colours Wimmelspiel wählen.
+- Gewähltes Set mit gemischten Gegenbahnen, angekündigten zufälligen Wechseln,
+  Einrasten, Verpuffen, nachrutschenden Karten und kürzeren neutralen Bahnen.
+  Ausgewählte Karten dürfen wechseln und verlieren dabei ihre Markierung.
+- Gemeinsamer Abschlusswirbel aus beiden Bahnpunkten, lokale Effektklänge,
+  adaptive Karten/Abschnitte für Desktop und Tablet; keine MP3-/Setänderungen.
+- Eigenes Modul mit Mount/Destroy, bestehende Asset-Schicht, PWA-/Release-Dateien
+  ergänzt (Shell v40, App/CSS `catch-pair-3`). Regeln und Prüfgrenzen unter `CATCH_A_PAIR.md`.
+
 ## 2026-10-24 – Rendering-Härtung und Safari-Freigabevertrag
 
 - Überholte SVG-/Portrait- und Größenregeln entfernt; nur das bestehende Companion-Rig bleibt als Runtime-Darstellung.

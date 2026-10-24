@@ -1,0 +1,51 @@
+{
+  "created": "2026-10-24",
+  "generator": "built-in image_gen; transparent_background=true",
+  "style": "Warm gouache children's-book illustrations; ivory, sage, honey and ginger cat",
+  "assets": [
+    {
+      "name": "Memory",
+      "runtime": "assets/images/bonus_games/memory-v1.png",
+      "original": "references/source_images/bonus_games/memory-generated-v1.png",
+      "segmentation": "references/source_images/bonus_games/memory-cutout-v1.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent cutout illustration for the MEMORY bonus-game selection button in a warm primary-school vocabulary app, matching a soft hand-painted gouache children's-book style with gently dimensional rounded wooden/paper game tiles, creamy ivory, muted sage green, warm honey-yellow and friendly ginger cat colors. Create ONE isolated compact composition of FOUR thick rounded-square memory cards in a small loose fan: TWO clearly visible face-up cards in front, both showing the SAME smiling little ginger cat portrait (matching picture-picture pair); behind them TWO face-down sage-green cards with a simple small honeycomb pattern. Make the two matching pictures obvious even when this image is shown at 200px wide. Modest perspective, tactile matte edges, soft painted texture, clear unified silhouette, high-quality charming polished game illustration, no photorealism and no glossy plastic. All card interiors opaque. True transparent exterior background, generous clear margin all sides, no rectangular canvas background, no scenery, no floor, no frame around entire composition, no cast shadow extending far beyond the objects. No letters, no words, no numbers, no watermarks. Centered square composition; complete cards entirely inside canvas. This is an illustration asset, not a screenshot or full button mockup.",
+      "sha256": "7e3f896aa299f4fef6b2722d00609199dcd902f7f269d7a58d5d6a34811c0819",
+      "bytes": 495339,
+      "alphaBounds": [
+        25,
+        42,
+        616,
+        597
+      ]
+    },
+    {
+      "name": "Catch a Pair",
+      "runtime": "assets/images/bonus_games/catch-a-pair-v1.png",
+      "original": "references/source_images/bonus_games/catch-a-pair-generated-v1.png",
+      "segmentation": "references/source_images/bonus_games/catch-a-pair-cutout-v1.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent cutout illustration for the CATCH A PAIR bonus-game selection button in a warm primary-school vocabulary app. Create ONE isolated compact square composition that communicates matching a picture to an English word. Match the companion Memory illustration: soft hand-painted gouache children's-book art, tactile chunky rounded wooden/paper tiles, creamy ivory surfaces, muted sage-green recessed sockets, warm honey-gold details, friendly ginger cat. TWO distinct chunky ivory tiles sit inside two separate small rounded sage-green socket frames: upper-left tile shows a smiling ginger cat portrait, lower-right tile carries ONLY the clearly legible lowercase English word \"cat\" in large rounded dark sage lettering. Both tiles fully visible, nearly front-on with a very slight dimensional tilt, no overlapping one on top of the other. One short graceful mint-and-honey curved swoosh links the two tiles and suggests swapping/catching a pair. The grouping is a single coherent friendly emblem at small 200px size. Painted matte texture, polished playful charm, not glossy plastic, not a realistic product photo. Scene/backdrop: genuine transparent exterior, no scenery, no background rectangle, no floor, no checkerboard. Card interiors must be solid opaque cream; sockets opaque sage. No other text, no title, no extra characters, no hand, no watermark. Entire motif centered with enough transparent margin on all sides; do not clip the sockets or tiles. This is just the illustration asset, not a full user-interface button.",
+      "sha256": "6dbc70fd7f24b676794b59a7821b42ea163a1a356339a2048ac0dfa26c2734f2",
+      "bytes": 414053,
+      "alphaBounds": [
+        26,
+        42,
+        615,
+        598
+      ]
+    }
+  ],
+  "cutout": {
+    "tool": "Local Image Tools CLI (coding_projects/tools/Bildbearbeitung/local-image-tools/cli.py remove-bg)",
+    "model": "birefnet-general-lite",
+    "qa": "Unconstrained segmentation removed parts of the rear Memory card. Preserve the original alpha wherever it exceeds 10%, use the model mask for faint outside edges, and cap the combined alpha by the original alpha. This keeps textured card interiors intact without reintroducing an exterior background.",
+    "finish": "ImageMagick: copy constrained alpha onto original RGB; reset compose to Over; trim; resize to fit 592x592; center in transparent 640x640; erode alpha by 1px and feather alpha sigma 0.35; strip metadata; PNG32. Normalize final alpha 0%–99.5% to 0–255 to remove a one-level resampling loss in solid interiors.",
+    "runtimeSize": [
+      640,
+      640
+    ],
+    "qaBackgrounds": [
+      "transparent",
+      "#fffaf1"
+    ]
+  }
+}
