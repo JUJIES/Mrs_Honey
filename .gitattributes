@@ -1,0 +1,3 @@
+# Offline content hashes must match on macOS and Windows release checkouts.
+*.json text eol=lf
+*.svg text eol=lf

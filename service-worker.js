@@ -1,10 +1,13 @@
-const CACHE_NAME = "lernwort-pwa-v31";
+importScripts("./data/offline-assets.bundle.js?v=bc836dfbd91687ae", "./asset-cache.js?v=background-cache-3");
+const CACHE_NAME = "lernwort-pwa-v34";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=mobile-reliability-3",
-  "./app.js?v=mobile-reliability-3",
+  "./styles.css?v=background-cache-3",
+  "./app.js?v=background-cache-3",
+  "./asset-cache.js?v=background-cache-3",
+  "./data/offline-assets.bundle.js?v=bc836dfbd91687ae",
   "./manifest.webmanifest",
   "./assets/backgrounds/calm-learning-bg.png",
   "./assets/icons/apple-touch-icon.png",
@@ -12,20 +15,9 @@ const PRECACHE_URLS = [
   "./assets/icons/icon-512.png",
   "./assets/icons/maskable-icon-512.png",
   "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-00.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-01.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-02.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-03.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-04.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-05.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-06.png",
-  "./assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-07.png",
   "./assets/images/ui/mrs-honey-body-rig/head-round-no-neck-imagegen.png",
   "./assets/images/ui/mrs-honey-eye-rig/eye-left-open-v2.png",
-  "./assets/images/ui/mrs-honey-eye-rig/eye-left-half-v2.png",
-  "./assets/images/ui/mrs-honey-eye-rig/eye-left-closed-v2.png",
   "./assets/images/ui/mrs-honey-eye-rig/eye-right-open-v2.png",
-  "./assets/images/ui/mrs-honey-eye-rig/eye-right-half-v2.png",
-  "./assets/images/ui/mrs-honey-eye-rig/eye-right-closed-v2.png",
   "./assets/images/set_cards/animals_01.jpg",
   "./assets/images/set_cards/food.jpg",
   "./assets/images/set_cards/colours.jpg?v=set-card-bg-2",
@@ -46,12 +38,6 @@ const PRECACHE_URLS = [
   "./assets/audio/ui/animated-small-group-applause.wav",
   "./data/minigames/colours_hidden_object.json",
   "./data/minigames/colours_hidden_object.bundle.js?v=hidden-object-hotspots-3",
-  "./assets/images/colours_hidden_object/garden-meadow.png",
-  "./assets/images/colours_hidden_object/park-road.png",
-  "./assets/images/colours_hidden_object/playroom-rug.png",
-  "./assets/images/colours_hidden_object/pond-picnic.png",
-  "./assets/images/colours_hidden_object/beach-sand.png",
-  "./assets/images/colours_hidden_object/classroom-art.png",
   "./assets/audio/feedback_en_01/feedback_en_01.bundle.js",
   "./data/sets/animals_01.bundle.js?v=read-feedback-1",
   "./data/sets/food.bundle.js?v=scene-batches-1",
@@ -68,8 +54,12 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => cache.addAll(PRECACHE_URLS))
-      .then(() => self.skipWaiting()),
+      .then(async (cache) => {
+        const content = PRECACHE_URLS.filter((path) => self.LernwortAssets.info(path));
+        await cache.addAll(PRECACHE_URLS.filter((path) => !self.LernwortAssets.info(path)));
+        // Use the same versioned, verified store as gameplay, avoiding duplicate URLs.
+        await self.LernwortAssets.createPreloader().warm(content);
+      }),
   );
 });
 
@@ -77,7 +67,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => /^lernwort-pwa-v/.test(key) && key !== CACHE_NAME).map((key) => caches.delete(key))))
       .then(() => self.clients.claim()),
   );
 });
@@ -89,7 +79,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
   if (url.pathname.startsWith("/api/")) return;
-  if (url.pathname.endsWith(".mp3")) return;
+  if (self.LernwortAssets.info(request)) {
+    event.respondWith(self.LernwortAssets.respond(request).catch(() =>
+      new Response("Asset temporarily unavailable", { status: 503 })));
+    return;
+  }
 
   if (request.mode === "navigate") {
     event.respondWith(networkFirst(request, "./index.html"));
@@ -106,7 +100,7 @@ async function cacheFirst(request) {
   const response = await fetch(request);
   if (response.ok) {
     const cache = await caches.open(CACHE_NAME);
-    cache.put(request, response.clone());
+    await cache.put(request, response.clone()).catch(() => {});
   }
   return response;
 }
@@ -115,9 +109,14 @@ async function networkFirst(request, fallbackUrl) {
   const cache = await caches.open(CACHE_NAME);
   try {
     const response = await fetch(request);
-    if (response.ok) cache.put(request, response.clone());
+    if (response.ok) await cache.put(request, response.clone()).catch(() => {});
     return response;
   } catch {
     return (await caches.match(request)) || caches.match(fallbackUrl);
   }
 }
+
+// Only the page's menu/startup may activate an update, never a running round.
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "ACTIVATE_AT_MENU") event.waitUntil(self.skipWaiting());
+});

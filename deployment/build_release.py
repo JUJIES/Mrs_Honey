@@ -10,6 +10,7 @@ RUNTIME_PATHS = (
     "index.html",
     "styles.css",
     "app.js",
+    "asset-cache.js",
     "service-worker.js",
     "manifest.json",
     "manifest.webmanifest",

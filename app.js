@@ -1,4 +1,45 @@
 const app = document.querySelector("#app");
+const lessonAssets = window.LernwortAssets;
+const assetPreloader = lessonAssets?.createPreloader();
+const roundImageLoads = new WeakMap();
+let offlineRegistration = null;
+
+function assetUrl(path) { return lessonAssets?.urlFor(path) || path; }
+
+function itemAssets(item) {
+  return [item?.audio?.en, item?.image, item?.readFeedback?.en].filter(Boolean);
+}
+
+function sharedLearningAssets() {
+  return Object.keys(window.LERNWORT_OFFLINE_ASSETS?.files || {}).filter((path) =>
+    path === "assets/audio/audio-manifest.json" ||
+    path.startsWith("assets/images/ui/") ||
+    path.startsWith("assets/audio/feedback_en_01/") ||
+    path.startsWith("assets/audio/ui/") ||
+    path.startsWith("assets/audio/sentence_prompts_") ||
+    path.startsWith("assets/lipsync/feedback_en_01/")
+  );
+}
+
+function warmSelectedSet() {
+  if (!assetPreloader || !state.set) return;
+  const items = state.order.length ? state.order : state.items;
+  const paths = [...items.flatMap(itemAssets), learningSets.find((set) => set.id === state.set.id)?.file].filter(Boolean);
+  const cues = paths.filter((path) => path.startsWith("assets/audio/"))
+    .map(lipsyncPathForAudio).filter(Boolean);
+  const bonus = state.set.id === "colours"
+    ? Object.keys(window.LERNWORT_OFFLINE_ASSETS.files).filter((path) =>
+      path.includes("/colours_hidden_object/") || path === coloursHiddenObjectConfigPath)
+    : [];
+  void assetPreloader.background([...paths, ...sharedLearningAssets(), ...bonus, ...cues]);
+}
+
+function activateOfflineUpdateAtMenu() {
+  if (!app.querySelector(".game-screen, .memory-screen, .hidden-object-screen")) {
+    offlineRegistration?.waiting?.postMessage({ type: "ACTIVATE_AT_MENU" });
+  }
+}
+
 const feedbackBundlePath = "assets/audio/feedback_en_01/feedback_en_01.json";
 const coloursHiddenObjectConfigPath = "data/minigames/colours_hidden_object.json";
 const winningNotificationPath = "assets/audio/ui/winning-notification.wav";
@@ -147,13 +188,13 @@ function mrsHoneyAvatar() {
         <span class="honey-body-rig">
           <img
             class="honey-body-frame"
-            src="assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-00.png"
+            src="${assetUrl("assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-00.png")}"
             alt=""
             draggable="false"
           />
           <img
             class="honey-body-frame honey-body-frame-blend"
-            src="assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-01.png"
+            src="${assetUrl("assets/images/ui/mrs-honey-body-rig/body-head-socket-breathe-01.png")}"
             alt=""
             draggable="false"
           />
@@ -161,19 +202,19 @@ function mrsHoneyAvatar() {
         <span class="honey-head-rig">
           <img
             class="honey-head-base"
-            src="assets/images/ui/mrs-honey-body-rig/head-round-no-neck-imagegen.png"
+            src="${assetUrl("assets/images/ui/mrs-honey-body-rig/head-round-no-neck-imagegen.png")}"
             alt=""
             draggable="false"
           />
           <img
             class="honey-eye-frame honey-eye-frame-left"
-            src="assets/images/ui/mrs-honey-eye-rig/eye-left-open-v2.png"
+            src="${assetUrl("assets/images/ui/mrs-honey-eye-rig/eye-left-open-v2.png")}"
             alt=""
             draggable="false"
           />
           <img
             class="honey-eye-frame honey-eye-frame-right"
-            src="assets/images/ui/mrs-honey-eye-rig/eye-right-open-v2.png"
+            src="${assetUrl("assets/images/ui/mrs-honey-eye-rig/eye-right-open-v2.png")}"
             alt=""
             draggable="false"
           />
@@ -498,6 +539,10 @@ function renderSetScreen() {
 
 function renderModeScreen() {
   stopTutorIdleAnimation();
+  // Prepare the same first item that startGame will use, while choosing a mode.
+  state.order = shuffle([...state.items]);
+  state.currentIndex = 0;
+  warmSelectedSet();
   app.innerHTML = `
     <section class="screen mode-screen">
       <button class="screen-back-button" type="button" aria-label="Zurück zur Set-Auswahl">
@@ -510,7 +555,7 @@ function renderModeScreen() {
         ${modes
           .map((mode) => `
             <button class="choice-card competency-card" type="button" data-id="${mode.id}" data-tone="${mode.tone}" ${mode.active ? "" : "disabled"}>
-              <img class="competency-illustration" src="${mode.cover}" alt="" loading="eager" decoding="async" />
+              <img class="competency-illustration" src="${assetUrl(mode.cover)}" alt="" loading="eager" decoding="async" />
               <span class="competency-copy">
                 <strong>${mode.title}</strong>
                 <span class="competency-description">${mode.description}</span>
@@ -522,6 +567,7 @@ function renderModeScreen() {
     </section>
   `;
 
+  activateOfflineUpdateAtMenu();
   app.querySelector(".screen-back-button").addEventListener("click", () => {
     renderSetScreen();
   });
@@ -537,7 +583,7 @@ function renderModeScreen() {
 
 function choiceCard({ id, title, icon, tone, active, backgroundImage }) {
   const visual = backgroundImage
-    ? `<img class="choice-card-bg" src="${backgroundImage}" alt="" loading="eager" decoding="async" />`
+    ? `<img class="choice-card-bg" src="${assetUrl(backgroundImage)}" alt="" loading="eager" decoding="async" />`
     : `<span class="icon">${icon}</span>`;
   const imageClass = backgroundImage ? "image-choice" : "";
 
@@ -559,7 +605,7 @@ async function loadSet(setMeta) {
     return bundledSet;
   }
 
-  const response = await fetch(setMeta.file);
+  const response = await fetch(assetUrl(setMeta.file));
   if (!response.ok) {
     throw new Error(`Could not load learning set: ${setMeta.file}`);
   }
@@ -573,7 +619,6 @@ function startGame(mode) {
   clearScheduledAudio();
   stopActiveAudio();
   state.mode = mode;
-  state.order = shuffle([...state.items]);
   state.currentIndex = 0;
   state.locked = false;
   resetMemoryState();
@@ -589,6 +634,11 @@ function prepareRound() {
   const current = getCurrentItem();
   const distractors = shuffle(state.items.filter((item) => item.id !== current.id)).slice(0, 3);
   state.choices = shuffle([current, ...distractors]);
+  // Immediate answers and the following question outrank background downloads.
+  void assetPreloader?.warm([
+    ...itemAssets(current), ...state.choices.map((item) => item.image),
+    ...itemAssets(state.order[state.currentIndex + 1]),
+  ]);
   state.locked = false;
   resetSpeechState();
 }
@@ -641,7 +691,7 @@ function renderGameScreen() {
               .map(
                 (item) => `
                   <button class="image-card" type="button" disabled data-id="${item.id}" aria-label="${item.labels[state.language]}">
-                    <img src="${item.image}" alt="" draggable="false" />
+                    <img src="${assetUrl(item.image)}" alt="" draggable="false" />
                   </button>
                 `,
               )
@@ -674,10 +724,20 @@ function renderGameScreen() {
   });
 }
 
-async function loadRoundImages(screen) {
+function loadRoundImages(screen) {
+  if (roundImageLoads.has(screen)) return roundImageLoads.get(screen);
+  const loading = performRoundImageLoad(screen).finally(() => roundImageLoads.delete(screen));
+  roundImageLoads.set(screen, loading);
+  return loading;
+}
+
+async function performRoundImageLoad(screen) {
   const status = screen.querySelector(".image-load-status");
   const cards = [...screen.querySelectorAll(".image-card")];
-  status.textContent = "Bilder laden …";
+  status.textContent = "";
+  const hint = window.setTimeout(() => {
+    if (screen.isConnected) status.textContent = "Einen Moment …";
+  }, 600);
   screen.classList.add("images-loading");
   cards.forEach((card) => { card.disabled = true; });
   const ready = await Promise.all(cards.map(async (card) => {
@@ -685,7 +745,10 @@ async function loadRoundImages(screen) {
     const original = image.getAttribute("src").split("?")[0];
     for (let attempt = 0; attempt < 2; attempt += 1) {
       if (!screen.isConnected) return false;
-      if (attempt) image.src = `${original}?retry=${Date.now()}`;
+      if (attempt) {
+        const source = assetUrl(original);
+        image.src = `${source}${source.includes("?") ? "&" : "?"}retry=${Date.now()}`;
+      }
       try {
         await withTimeout(image.decode(), 12000);
         return image.naturalWidth > 0;
@@ -695,6 +758,7 @@ async function loadRoundImages(screen) {
     }
     return false;
   }));
+  window.clearTimeout(hint);
   if (!screen.isConnected) return;
   if (!ready.every(Boolean)) {
     status.textContent = "Ein Bild konnte nicht geladen werden. ";
@@ -704,6 +768,9 @@ async function loadRoundImages(screen) {
     retry.textContent = "Erneut laden";
     retry.addEventListener("click", () => { void loadRoundImages(screen); });
     status.append(retry);
+    window.setTimeout(() => {
+      if (screen.isConnected && screen.classList.contains("images-loading")) void loadRoundImages(screen);
+    }, 8000);
     return;
   }
   status.textContent = "";
@@ -732,7 +799,7 @@ function renderSpeakGameScreen(current) {
         <div class="game-content">
           <div class="speak-stage" data-status="${state.speech.status}">
             <div class="speak-image-card" aria-label="${current.labels[state.language]}">
-              <img src="${current.image}" alt="" draggable="false" />
+              <img src="${assetUrl(current.image)}" alt="" draggable="false" />
             </div>
             <button class="mic-button" type="button" aria-label="Aufnehmen">
               ${lucideIcon("mic")}
@@ -890,7 +957,7 @@ function renderMemoryDifficultyScreen() {
 function memoryDifficultyCardMarkup(option) {
   return `
     <button class="memory-difficulty-card" type="button" data-difficulty="${option.id}">
-      <img class="memory-difficulty-image" src="${option.image}" alt="" draggable="false" />
+      <img class="memory-difficulty-image" src="${assetUrl(option.image)}" alt="" draggable="false" />
       <span class="memory-difficulty-copy">
         <strong>${option.title}</strong>
         <span>${option.gridSize} x ${option.gridSize}</span>
@@ -929,7 +996,7 @@ function renderHiddenObjectScreen() {
       </div>
       <div class="hidden-object-stage">
         <div class="hidden-object-scene-frame">
-          <img src="${state.hiddenObject.scene.image}" alt="" draggable="false" />
+          <img src="${assetUrl(state.hiddenObject.scene.image)}" alt="" draggable="false" />
           <svg class="hidden-object-hitmap" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Hidden object targets">
             ${state.hiddenObject.queue.map((target) => hiddenObjectHotspotMarkup(target)).join("")}
           </svg>
@@ -1137,7 +1204,7 @@ async function getColoursHiddenObjectConfig() {
     return state.hiddenObject.config;
   }
 
-  const response = await fetch(coloursHiddenObjectConfigPath, { cache: "force-cache" });
+  const response = await fetch(assetUrl(coloursHiddenObjectConfigPath), { cache: "force-cache" });
   if (!response.ok) {
     throw new Error(`Could not load hidden object config: ${coloursHiddenObjectConfigPath}`);
   }
@@ -1239,7 +1306,7 @@ function memoryCardMarkup(card) {
       data-card-id="${card.id}" aria-label="${isOpen ? label : "Verdeckte Memory-Karte"}" ${isMatched ? "disabled" : ""}>
       <span class="memory-card-face memory-card-back" aria-hidden="true">?</span>
       <span class="memory-card-face memory-card-front">
-        <img src="${card.item.image}" alt="" draggable="false" />
+        <img src="${assetUrl(card.item.image)}" alt="" draggable="false" />
         <span class="memory-card-word">${isMatched ? label : ""}</span>
       </span>
     </button>
@@ -1693,7 +1760,7 @@ function stopTutorIdleAnimation() {
 function preloadTutorFrames() {
   [...tutorBodyFrames, ...Object.values(tutorEyeFrames).flatMap((frame) => [frame.left, frame.right])].forEach((src) => {
     const image = new Image();
-    image.src = src;
+    image.src = assetUrl(src);
   });
 }
 
@@ -1712,12 +1779,12 @@ function setTutorBodyFrame(position) {
 
   if (baseIndex !== state.tutorBodyFrameIndex) {
     state.tutorBodyFrameIndex = baseIndex;
-    bodyFrame.setAttribute("src", tutorBodyFrames[baseIndex]);
+    bodyFrame.setAttribute("src", assetUrl(tutorBodyFrames[baseIndex]));
   }
 
   if (blendIndex !== state.tutorBodyBlendIndex) {
     state.tutorBodyBlendIndex = blendIndex;
-    bodyFrameBlend.setAttribute("src", tutorBodyFrames[blendIndex]);
+    bodyFrameBlend.setAttribute("src", assetUrl(tutorBodyFrames[blendIndex]));
   }
 
   bodyFrameBlend.style.opacity = blendIndex === baseIndex ? "0" : blendAmount.toFixed(3);
@@ -1802,8 +1869,8 @@ function setTutorEyeFrame(frameName) {
 
   const left = tutorButton.querySelector(".honey-eye-frame-left");
   const right = tutorButton.querySelector(".honey-eye-frame-right");
-  if (left) left.setAttribute("src", frame.left);
-  if (right) right.setAttribute("src", frame.right);
+  if (left) left.setAttribute("src", assetUrl(frame.left));
+  if (right) right.setAttribute("src", assetUrl(frame.right));
 }
 
 function updateTutorSpeakingHeadMotion(seconds, mouthOpen) {
@@ -1970,7 +2037,7 @@ async function loadLipsyncCues(audioPath) {
   if (state.lipsyncCache.has(jsonPath)) return state.lipsyncCache.get(jsonPath);
 
   try {
-    const response = await withTimeout(fetch(jsonPath, { cache: "force-cache" }), 3000);
+    const response = await withTimeout(fetch(assetUrl(jsonPath), { cache: "force-cache" }), 3000);
     if (!response.ok) throw new Error(`Missing lipsync JSON: ${jsonPath}`);
     const data = await response.json();
     const cues = normalizeMouthCues(data.mouthCues);
@@ -2164,8 +2231,14 @@ async function getAudioManifest() {
     return state.audioManifest;
   }
 
+  // The generated bundle is { files: [...] }; retain Set compatibility for older shells.
+  if (Array.isArray(window.LERNWORT_AUDIO_MANIFEST?.files)) {
+    state.audioManifest = new Set(window.LERNWORT_AUDIO_MANIFEST.files);
+    return state.audioManifest;
+  }
+
   try {
-    const response = await fetch("assets/audio/audio-manifest.json");
+    const response = await fetch(assetUrl("assets/audio/audio-manifest.json"));
     if (!response.ok) throw new Error("Audio manifest unavailable");
     const data = await response.json();
     if (!Array.isArray(data.files)) throw new Error("Invalid audio manifest");
@@ -2190,7 +2263,7 @@ async function getFeedbackCatalog() {
   }
 
   try {
-    const response = await fetch(feedbackBundlePath);
+    const response = await fetch(assetUrl(feedbackBundlePath));
     if (!response.ok) throw new Error("Feedback catalog unavailable");
     const data = await response.json();
     if (!Array.isArray(data.items)) throw new Error("Invalid feedback catalog");
@@ -2435,7 +2508,7 @@ function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlay
   let mouthCues = null;
   const mouthCuesPromise = shouldAutoSyncTutor ? loadLipsyncCues(path) : Promise.resolve(null);
   const autoMouthText = options.spokenText || fallbackTextForAudioPath(path);
-  showAudioStatus("Audio lädt …");
+  const hint = window.setTimeout(() => showAudioStatus("Einen Moment …"), 600);
 
   return new Promise((resolve) => {
     let finished = false;
@@ -2445,6 +2518,7 @@ function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlay
     const start = () => {
       if (started || finished) return;
       started = true;
+      window.clearTimeout(hint);
       state.audioUnlocked = true;
       window.clearTimeout(timeout);
       timeout = window.setTimeout(() => finish("timeout"), timeoutMs);
@@ -2457,6 +2531,7 @@ function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlay
     const finish = (result) => {
       if (finished) return;
       finished = true;
+      window.clearTimeout(hint);
       window.clearTimeout(timeout);
       audio.removeEventListener("playing", start);
       audio.removeEventListener("ended", ended);
@@ -2482,7 +2557,7 @@ function playAudioFile(path, volume = 1, timeoutMs = feedbackTiming.maxAudioPlay
         startCleanup = syncTutorMouthToAudio(audio, cues, autoMouthText);
       }
     });
-    audio.src = path;
+    audio.src = lessonAssets?.audioUrl(path) || assetUrl(path);
     audio.volume = volume;
     state.activeAudio = audio;
     state.activeAudioFinish = finish;
@@ -2564,10 +2639,20 @@ document.addEventListener("click", unlockAudioPlayback, { capture: true });
 
 renderLanguageScreen();
 
+// Warm content only while this page is open; no background-download permission UI.
+void assetPreloader?.background(sharedLearningAssets());
+window.addEventListener("online", () => {
+  const screen = app.querySelector(".game-screen.images-loading");
+  if (screen && !screen.querySelector(".asset-retry-button[disabled]")) void loadRoundImages(screen);
+});
+
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
-      console.info("Service worker registration skipped.", error);
+  // Don't wait for window.load: an unavailable optional CDN must not delay offline support.
+  navigator.serviceWorker.register("./service-worker.js").then((registration) => {
+    offlineRegistration = registration;
+    activateOfflineUpdateAtMenu();
+    registration.addEventListener("updatefound", () => {
+      registration.installing?.addEventListener("statechange", () => activateOfflineUpdateAtMenu());
     });
-  });
+  }).catch((error) => console.info("Offline support unavailable; using online assets.", error));
 }

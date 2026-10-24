@@ -38,7 +38,7 @@ test('one element unlocked by a tap plays later prompts; loading does not consum
   h.gesture(()=>h.run('unlockAudioPlayback()')); await Promise.resolve();
   const result=h.run('playAudioFile("cat.mp3")');
   assert.equal(h.instances.length,1);
-  assert.deepEqual([...h.timers.values()].map(t=>t.ms),[12000]);
+  assert.deepEqual([...h.timers.values()].map(t=>t.ms),[600,12000]);
   h.instances[0].begin(); await Promise.resolve();
   assert.deepEqual([...h.timers.values()].map(t=>t.ms),[8000]);
   h.instances[0].fire('ended');assert.equal(await result,'ended');
@@ -66,7 +66,7 @@ function imageRound(failures) {
   const image={src:'assets/cat.png',naturalWidth:768,getAttribute(){return this.src;},decode(){return ++calls<=failures?Promise.reject(new Error('network')):Promise.resolve();}};
   const card={disabled:false,querySelector:()=>image};
   const status={textContent:'',append(button){this.button=button;}};
-  const screen={isConnected:true,querySelector:()=>status,querySelectorAll:()=>[card],classList:{add(){},remove(){}}};
+  const screen={isConnected:true,querySelector:()=>status,querySelectorAll:()=>[card],classList:{add(){},remove(){},contains(){return true;}}};
   return {screen,card,status,image,calls:()=>calls};
 }
 
@@ -80,7 +80,7 @@ test('a failed image is retried before answers or autoplay become available',asy
 test('persistent image failure keeps the entire choice unplayable and exposes retry',async()=>{
   const h=harness(),r=imageRound(99);h.context.screen=r.screen;await h.run('loadRoundImages(screen)');
   assert.equal(r.card.disabled,true);assert.equal(r.status.button.textContent,'Erneut laden');
-  assert.equal(h.timers.size,0);
+  assert.deepEqual([...h.timers.values()].map(t=>t.ms),[8000]);
 });
 
 test('leaving during image loading never starts a stale round',async()=>{
@@ -107,4 +107,11 @@ test('a transient manifest failure does not disable audio for the rest of the se
   assert.equal(await h.run('audioExists("cat.mp3")'),false);
   assert.equal(await h.run('audioExists("cat.mp3")'),true);
   assert.equal(calls,2);
+});
+
+
+test('the actual generated manifest bundle supports offline feedback without a JSON fetch',async()=>{
+  const h=harness();let calls=0;h.context.fetch=()=>{calls++;throw new Error('offline');};
+  h.run('window.LERNWORT_AUDIO_MANIFEST={files:["cat.mp3"]}');
+  assert.equal(await h.run('audioExists("cat.mp3")'),true);assert.equal(calls,0);
 });

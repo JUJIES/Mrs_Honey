@@ -142,6 +142,7 @@ def main() -> int:
     validate(files)
     if not args.skip_voice_qa:
         run_voice_qa(args.voice_qa_report)
+    subprocess.run([sys.executable, str(PROJECT_ROOT / "tools/build_offline_assets.py")], check=True)
     print(f"Audio assets synced. MP3: {len(files)}. Lipsync JSON: {len(list(LIPSYNC_ROOT.rglob('*.json')))}.")
     return 0
 

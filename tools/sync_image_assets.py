@@ -7,6 +7,7 @@ import fcntl
 import json
 import math
 import os
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -164,6 +165,8 @@ def main() -> int:
     has_warnings = any(report["warnings"] for report in reports)
     if has_failures or (args.strict and has_warnings):
         return 2
+    if not args.dry_run and not args.validate_only:
+        subprocess.run([sys.executable, str(PROJECT_ROOT / "tools/build_offline_assets.py")], check=True)
     return 0
 
 
