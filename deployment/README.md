@@ -2,9 +2,10 @@
 
 Mrs Honey is deployed as a long-running `service`. GitHub and the exact product-freeze commit are the source of truth.
 
-Current runtime freeze (2026-10-24): `f7aec00ce766be825dee6bd5e398111302a6dc1b`.
+Current runtime freeze (2026-10-24): `56413667cb8c8031859e181eb2ead28785962bfe`.
 The competency-card release is recorded in section 6; the mobile reliability
-release and its public checks are recorded in section 7 of `MIGRATIONSPLAN_BEELINK.md`. Later documentation-only commits on
+release is recorded in section 7; automatic background loading and public checks
+are recorded in section 8 of `MIGRATIONSPLAN_BEELINK.md`. Later documentation-only commits on
 `main` do not require a runtime cutover. New release directories need the same
 LocalService read/execute ACL as the previous release; do not grant write access.
 

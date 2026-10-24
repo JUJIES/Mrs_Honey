@@ -94,3 +94,9 @@ python3 server/local_app_server.py
 Liveness: `GET /health`. Vollständige Speech-Bereitschaft: `GET /health/ready`.
 
 Der dauerhafte Beelink-Betrieb, das minimale Release und die getrennten Windows-Dienste für App und Tunnel sind unter `deployment/` dokumentiert. Der aktuelle Migrations- und Abnahmestand steht in `MIGRATIONSPLAN_BEELINK.md`.
+
+## Nutzung unterwegs
+
+Lerninhalte werden automatisch vorgeladen: zuerst die aktuelle/nächste Aufgabe, dann das gewählte Set und gemeinsame Rückmeldungen. Es gibt keinen zusätzlichen Downloadschritt. Vollständig vorbereitete Bilder und Audios werden lokal wiederverwendet und bleiben über Oberflächen-Updates erhalten. Noch fehlende Inhalte benötigen Verbindung; die Sprechprüfung bleibt online.
+
+Architektur, Grenzen und Aktualisierung des Datei-Inventars: [docs/OFFLINE_LOADING.md](docs/OFFLINE_LOADING.md).

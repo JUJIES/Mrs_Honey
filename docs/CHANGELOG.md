@@ -1,5 +1,20 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Gesprochene Memory-Treffer
+
+- Jedes gefundene Paar spricht direkt die vorhandene itembezogene Lese-Rückmeldung mit voller Medienlautstärke, ohne vorheriges allgemeines Lob oder Erfolgs-Cue; keine MP3 neu erzeugt oder verändert.
+- Beide Trefferkarten und das Wort werden vom tatsächlichen Audioanfang bis zum Ende gemeinsam hervorgehoben. Erhaltene Kartenknoten ermöglichen flüssige Flip-/Farbübergänge; 220 ms Vorlauf/Ausklang statt langer Zusatzpause.
+- Sichtbarer Wiederholungsknopf, passender Fehlerhinweis und Schutz gegen veraltete asynchrone Abläufe nach Zurück/Neustart. Regeln und Tests unter `docs/MEMORY_FEEDBACK.md`.
+- App-/CSS-URLs versioniert, Shell-Cache v36; vorbereitete Medien bleiben im getrennten Inhaltsspeicher.
+
+## 2026-10-24 – Automatisches Vorladen für unterwegs
+
+- Ausgewähltes Set und gemeinsame Dateien ohne Downloadbedienung vorbereiten; aktuelle/nächste Aufgabe priorisieren, abgebrochene Downloads automatisch wiederholen.
+- Vollständige, hashgeprüfte Medien/JSONs unabhängig vom Shell-Cache speichern; Audio aus lokal vorbereiteten Dateien und mit Offline-Teilbereichsanfragen wiedergeben. App-/Helper-URLs `background-cache-4`, Shell-Cache v35.
+- Vorhandenes Audio-Bundle `{files:[...]}` direkt unterstützen, damit Feedback keine unnötige Online-JSON-Abfrage voraussetzt.
+- Generiertes 733-Dateien-Inventar und automatische Bild-/Audio-Sync-Anbindung; POSIX-URLs und definierte Textzeilenenden für identische Mac-/Windows-Releases. Keine Audioaufnahmen oder Lerninhalte neu erzeugt.
+- 28 automatisierte Tests sowie vollständige Offline-Spielabläufe bei gestopptem Testserver; öffentlich Hören/Lesen und lokales Audio geprüft. Details: `docs/OFFLINE_LOADING.md`, Release-Nachweis in Abschnitt 8 des Migrationsplans.
+
 ## 2026-10-24 – Neue Audios über GPT-Audio-1.5
 
 - Nach drei echten Hörproben hat Julius `alloy` mit der warmen, langsamen britisch-englischen Regie als Standard für alle neuen Audios freigegeben. Das bestehende Standardprofil entspricht exakt den Proben; bisherige MP3s bleiben unverändert.

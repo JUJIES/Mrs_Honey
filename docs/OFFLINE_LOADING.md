@@ -31,7 +31,7 @@ python3 tools/build_offline_assets.py --check
 node --test tests/*.test.cjs
 ```
 
-Der Generator aktualisiert die Inventar-URL in Index/Worker. Erfolgreiche schreibende Bild-/Audio-Syncs rufen ihn automatisch auf; reine Prüf-/Dry-runs bleiben unverändert. App-/Helper-Änderungen brauchen gemeinsam neue Script-URLs und eine neue Shell-Cache-Version. JSON/SVG werden durch `.gitattributes` als LF ausgecheckt, damit Inhalts-Hashes auch auf dem Windows-Server stimmen. Neue Dateitypen benötigen einen expliziten, plattformunabhängigen MIME-Eintrag im Generator.
+Der Generator aktualisiert die Inventar-URL in Index/Worker. Erfolgreiche schreibende Bild-/Audio-Syncs rufen ihn automatisch auf; reine Prüf-/Dry-runs bleiben unverändert. App-/Helper-Änderungen brauchen gemeinsam neue Script-URLs und eine neue Shell-Cache-Version. JSON/SVG werden durch `.gitattributes` als LF ausgecheckt, damit Inhalts-Hashes auch auf dem Windows-Server stimmen. Neue Dateitypen benötigen einen expliziten, plattformunabhängigen MIME-Eintrag im Generator. URLs müssen mit `PurePosixPath` abgeleitet werden; native Windows-Pfade dürfen keine Inventarschlüssel werden. Script-Bundles bleiben im Shell-Cache und erhalten keine Medien-Hash-/MIME-Behandlung.
 
 Der minimale Runtime-Export enthält `asset-cache.js` sowie das unter `data/` erzeugte Inventar; Generator, Tests und Referenzbilder gehören nicht zum Runtime-Paket.
 
