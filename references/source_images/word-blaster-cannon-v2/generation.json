@@ -21,7 +21,7 @@
     ],
     "barrelRect": [
       -21,
-      -81,
+      -75,
       42,
       78.565
     ],
@@ -34,7 +34,7 @@
     "pivot": "arena origin; floor seating derived from baseRect, 1px inside frame; current pivot is 70.306px above canvas bottom",
     "muzzleLocal": [
       0,
-      -69.5
+      -63.5
     ],
     "layerOrder": [
       "rear base and recessed bearing",
@@ -44,7 +44,8 @@
     ],
     "render": "drawCannon shared between game and angle preview",
     "flash": "Existing muzzle-flash-v1.png retained unchanged",
-    "clearance": "Capsule lower boundary derives from rotating barrel corner radius + recoil overshoot + 10px clearance; gesture height derives from same envelope (currently 148px)"
+    "clearance": "Capsule lower boundary derives from rotating barrel corner radius + recoil overshoot + 10px clearance; gesture height derives from same envelope (currently 148px)",
+    "seatingAdjustment": "2026-10-24: barrel seated 6px deeper behind fixed foreground bearing; raster assets unchanged; muzzle follows same offset"
   },
   "qa": "2x2 processor: no edge touch; alpha exterior; rear bearing ball, front bearing rivet and barrel pivot registered together. Five angles -75/-45/0/45/75 inspected using actual runtime renderer; original pointed bottle tip removed. Foreground cap hides shortened shaft during rotation and recoil. Fourth generated cell is assembly reference only and is not runtime-exported.",
   "assets": [
@@ -79,9 +80,9 @@
       10
     ],
     "sampledShaftY": [
-      -10,
-      -6,
-      -2.5
+      -4,
+      0,
+      3.5
     ],
     "samples": 1395,
     "minimumForegroundAlpha": 255,

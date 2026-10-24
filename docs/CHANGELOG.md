@@ -1,5 +1,24 @@
 # Änderungsprotokoll
 
+## 2026-10-24 – Bandenbonus für Word Blaster
+
+- Challenge: direkt 10, nach einer Bande 15, nach zwei Banden 20 Punkte.
+  Derselbe geprüfte Trefferpfad zählt Bonuspunkte für Ergebnis und Highscore.
+- Goldener Doppelring und Bonusplakette mit eigener Tonfolge; bei reduzierter
+  Bewegung ohne aufsteigende Plakette, Stummschaltung bleibt maßgeblich.
+- Bestenlisten-Regelversion v2; frühere v1-Einträge bleiben gespeichert und getrennt.
+  Auswahl erklärt die Wertung; Validierung prüft die tatsächliche Treffer-/Punktespanne.
+- 73 Node-Tests, Eingabe-Smoke, echter Minutentest mit Speicherung und echter
+  Banden-Treffer im Browser bestanden; eigene Bonus-Prüfseite ohne Namensspeicherung.
+- App/CSS `word-blaster-bonus-1`, PWA-Shell v58. Keine neuen Runtime-Medien oder Dependencies.
+
+## 2026-10-24 – Kanone tiefer eingesetzt
+
+- Gestrichelte Fokusellipse um den Sockel entfernt; Ziehen und Tastatur bleiben bedienbar.
+- Rohr 6px tiefer in das feste Vorderlager eingesetzt. Mündung, Laser und Zielhilfe
+  folgen derselben Geometrie; Bilddateien bleiben unverändert.
+- App/CSS `word-blaster-seating-1`, PWA-Shell v57.
+
 ## 2026-10-24 – Word Blaster: drei Stufen und 60-Sekunden-Challenge
 
 - Auswahl vor dem Spiel: Leicht/Mittel/Knifflig und Set-Runde/Challenge.

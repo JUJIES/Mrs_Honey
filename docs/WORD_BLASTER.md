@@ -76,7 +76,7 @@ Touchziele: Eingabe bleibt die feste Fläche um die Kanone.
 ## 60-Sekunden-Challenge
 
 - Startet mit dem tatsächlichen „Los geht’s!“ nach erfolgreichem Laden, nicht
-  schon in der Auswahl. Jeder richtige Treffer gibt 10 Punkte, auch Wandtreffer;
+  schon in der Auswahl. Direkte Treffer geben 10 Punkte, nach einer Bande 15, nach zwei Banden 20;
   falsche Ziele bleiben geschützt. Einmal durch das Set beendet die Challenge nicht.
 - Die Item-Warteschlange rotiert getroffene Items ans Ende. Nach einem vollständigen
   Setdurchlauf wird sie neu gemischt; bei mehr als einem Item kein unmittelbares
@@ -96,15 +96,22 @@ Touchziele: Eingabe bleibt die feste Fläche um die Kanone.
   Deadline-Prüfung verhindert trotzdem spätere Treffer. Keine verpassten
   Physikschritte nachholen. Fortsetzen verlängert weder Deadline noch Cooldown.
 - Nach Ablauf Ergebnisansicht mit Treffern, Punkten, Namenseingabe und Top 10.
+  Bandenbonus wird im gemeinsamen Trefferpfad genau einmal vergeben; falsche,
+  veraltete und verspätete Treffer bleiben ohne Punkte. Goldener Doppelring,
+  kurze aufsteigende Bonusplakette und zusätzlicher hoher Ton kennzeichnen die
+  Bande; Doppelbande erhält einen weiteren Ton. Reduzierte Bewegung blendet die
+  Plakette ohne Aufstieg aus. In Set-Runden erscheint nur der Bandenhinweis.
   Beim Verlassen vor Ablauf gibt es keinen speicherbaren Zwischenstand.
   Neustart setzt Score/Deadline/Geste zurück, gespeicherte Einträge bleiben.
 
 ## Lokale Bestenlisten
 
 Nur Challenge-Ergebnisse, getrennt nach Set-ID und Stufe. Storage-Key:
-`lernwort.word-blaster.challenge.v1:<URL-encoded setId>:<difficultyId>`.
-`v1` ist die Regelversion; bei wesentlich geänderter Punkte-/Zeitregel künftig
-neuen Key verwenden. Keine Cloud-Rangliste, keine Synchronisation zwischen
+`lernwort.word-blaster.challenge.v2:<URL-encoded setId>:<difficultyId>`.
+`v2` ist die Regelversion mit Bandenbonus; alte v1-Listen bleiben unverändert gespeichert
+und werden nicht mit der neuen Rangliste vermischt. Bei wesentlich geänderter
+Punkte-/Zeitregel künftig einen neuen Key verwenden. Keine Cloud-Rangliste,
+keine Synchronisation zwischen
 Browsern oder Domains und kein Schutz gegen manuelles Bearbeiten lokaler Daten.
 
 Jede Liste enthält maximal zehn `{name,score,hits,at}`-Einträge; Punkte absteigend,
@@ -114,8 +121,8 @@ Namen ausschließlich als Textknoten darstellen. Nur vollständige Challenge-
 Ergebnisse lassen sich eintragen; `round.saved` verhindert Doppel-Submit.
 Ergebnisse außerhalb der Top 10 bekommen eine klare Rückmeldung.
 
-`readHighscores`/`saveHighscore` kapseln JSON-Validierung, Grenzen (0–2000 Punkte
-in 10er-Schritten, passende Trefferzahl) und Storage-Fehler. Ein blockierter/
+`readHighscores`/`saveHighscore` kapseln JSON-Validierung, Grenzen (0–4000 Punkte
+in 5er-Schritten, 0–200 ganzzahlige Treffer und 10–20 Punkte pro Treffer) und Storage-Fehler. Ein blockierter/
 voller Speicher darf das Spiel nicht abbrechen und keinen Speichervorgang
 vortäuschen. Bei Fehler bleibt Wiederholen möglich. Die optionale `storage`-
 Abhängigkeit von `mount` dient isolierten Tests; Runtime nutzt lokales Storage.
@@ -152,8 +159,9 @@ Zielhilfe, Laserstart und Blitz. `drawCannon` hält die verbindliche Tiefenfolge
 vordere Lagerschale → Blitz. Bildrechtecke sind zentral in `CANNON` verankert;
 Lagerkugel, vordere Achskappe und Rohrdrehpunkt liegen auf demselben Punkt.
 Der gekürzte Montageschaft verschwindet hinter der gefüllten Achskappe, statt
-als spitzes Flaschenende auf einer Plattform zu liegen. Die Lagerschale wird
-weder gedreht noch versetzt. Nur das Rohr federt 220ms axial in die Aufnahme
+als spitzes Flaschenende auf einer Plattform zu liegen. Das Rohr sitzt 6px tiefer in der Aufnahme; Mündung und Strahlstart sind gemeinsam
+angepasst. Die Gestenfläche bleibt fokussierbar, ohne gestrichelte Umrandung
+um den Sockel. Die Lagerschale wird weder gedreht noch versetzt. Nur das Rohr federt 220ms axial in die Aufnahme
 zurück und kehrt mit kleinem Nachfedern in die Ausgangslage zurück.
 Der Blitz spielt vier Frames über 160ms, ohne Canvas-Readback oder Frame-Uploads.
 Reduzierte Bewegung hält das Rohr still und zeigt nur den gedämpften ersten
@@ -239,3 +247,8 @@ weitere Aufgabenrichtungen später mit demselben Runden-/Physikmodell ergänzen.
   ohne Uhrmanipulation geprüft. Keine Testeinträge im echten Browserspeicher.
 - Memory/Catch-a-Pair-Navigation weiter bestanden. Physisches iPad/Safari und
   Feintuning der Schwierigkeit durch Kinder bleiben eine eigene Praxisabnahme.
+
+Bandenbonus-Prüfung: `tests/browser/word-blaster-bank-smoke.html` schießt
+über eine echte Wandreflexion und erwartet 15 Punkte. `?live=1` lässt den
+Bonus zur Sichtprüfung weiterlaufen; Standard pausiert nach dem Treffer.
+Keine Namen oder Ergebnisse werden in Browser-Storage geschrieben.

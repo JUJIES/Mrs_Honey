@@ -1320,7 +1320,7 @@ function renderWordBlasterSetup() {
     const challenge = state.wordBlaster.mode === "challenge";
     app.querySelector(".wb-setup-board").hidden = !challenge;
     app.querySelector(".wb-setup-rule").textContent = challenge
-      ? "60 Sekunden · 10 Punkte pro Treffer · Die Uhr läuft bei Pause und Tabwechsel weiter."
+      ? "60 Sekunden · Direkt: 10 · Eine Bande: 15 · Zwei Banden: 20 Punkte · Die Uhr läuft bei Pause und Tabwechsel weiter."
       : "Einmal durch dein Set · Kein Zeitlimit · Ziehen und loslassen oder Pfeiltasten und Leertaste.";
     if (challenge) {
       app.querySelector(".wb-setup-board-title").textContent =

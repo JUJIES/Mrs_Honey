@@ -169,7 +169,7 @@ test("painted muzzle rotates around the fixed mount and stays inside every arena
         const pose = game.cannonPose(g.origin, (degrees * Math.PI) / 180);
         close(
           Math.hypot(pose.muzzle.x - origin.x, pose.muzzle.y - origin.y),
-          69.5,
+          63.5,
         );
         assert(pose.muzzle.x > g.bounds.left && pose.muzzle.x < g.bounds.right);
         assert(pose.muzzle.y > g.bounds.top && pose.muzzle.y < g.bounds.bottom);
@@ -177,7 +177,7 @@ test("painted muzzle rotates around the fixed mount and stays inside every arena
         assert.equal(pose.flashFrame, -1);
       }
       assert(
-        g.targetBounds.bottom + g.r < origin.y - Math.hypot(21, 81) - 4,
+        g.targetBounds.bottom + g.r < origin.y - Math.hypot(21, 75) - 4,
         "Capsules must not drift into the larger painted barrel",
       );
     }
@@ -205,7 +205,7 @@ test("reduced motion keeps the painted barrel still and uses a subdued fading fl
     assert.equal(pose.kick, 0);
     assert.equal(pose.flashFrame, 0);
     assert(pose.flashAlpha >= 0 && pose.flashAlpha <= 0.55);
-    close(pose.muzzle.y, 130.5);
+    close(pose.muzzle.y, 136.5);
   }
 });
 
@@ -378,15 +378,79 @@ test("corrupt or unavailable storage does not break play or pretend to save", ()
   assert.deepEqual(game.readHighscores("a", "easy", bad), []);
   assert.equal(game.saveHighscore("a", "easy", record("A", 10), bad).ok, false);
   const storage = memoryStorage();
-  storage.setItem("lernwort.word-blaster.challenge.v1:a:easy", "{broken");
+  storage.setItem("lernwort.word-blaster.challenge.v2:a:easy", "{broken");
   assert.deepEqual(game.readHighscores("a", "easy", storage), []);
   assert(game.saveHighscore("a", "easy", record("Fixed", 10), storage).ok);
   for (const entry of [
     record("", 10),
     record("A", 10.5),
-    record("A", 2010),
+    record("A", 4010),
     { ...record("A", 10), hits: 99 },
     { ...record("A", 10), at: NaN },
   ])
     assert.equal(game.saveHighscore("a", "easy", entry, storage).ok, false);
+});
+
+
+test("bank-shot points accumulate once per valid timely hit and persist as v2", () => {
+  const r = challenge(1), storage = memoryStorage();
+  game.startChallenge(r, 0);
+  for (const bounces of [0, 1, 2]) {
+    const generation = r.generation;
+    assert(game.registerHit(r, r.prompt.id, generation, 100, bounces));
+    assert.equal(game.registerHit(r, r.prompt.id, generation, 101, bounces), false);
+  }
+  assert.equal(r.hits, 3);
+  assert.equal(r.score, 45);
+  assert.equal(game.registerHit(r, r.prompt.id, r.generation, 60000, 2), false);
+  assert.equal(r.score, 45);
+  const saved = game.saveHighscore("bank", "easy", {name:"Bank", score:r.score, hits:r.hits, at:1}, storage);
+  assert(saved.ok);
+  assert.equal(game.readHighscores("bank", "easy", storage)[0].score, 45);
+  assert(storage.map.has("lernwort.word-blaster.challenge.v2:bank:easy"));
+});
+test("bank scoring rejects impossible counts and keeps old leaderboards untouched", () => {
+  assert.deepEqual([0,1,2].map(game.pointsForHit), [10,15,20]);
+  const r = challenge(1); game.startChallenge(r, 0);
+  for (const bounces of [-1,3,1.5,NaN,Infinity]) {
+    assert.equal(game.pointsForHit(bounces), 0);
+    assert.equal(game.registerHit(r,r.prompt.id,r.generation,100,bounces), false);
+  }
+  assert.equal(r.hits,0);
+  const storage = memoryStorage(), oldKey = "lernwort.word-blaster.challenge.v1:bank:easy",
+    oldValue = JSON.stringify([record("Old",100)]);
+  storage.setItem(oldKey, oldValue);
+  assert.deepEqual(game.readHighscores("bank","easy",storage), []);
+  for (const entry of [
+    {name:"A",score:15,hits:1,at:1},
+    {name:"A",score:4000,hits:200,at:1},
+  ]) assert(game.saveHighscore("bank","easy",entry,storage).ok);
+  for (const entry of [
+    {name:"A",score:25,hits:1,at:1},
+    {name:"A",score:5,hits:1,at:1},
+    {name:"A",score:15,hits:1.5,at:1},
+    {name:"A",score:0,hits:-1,at:1},
+    {name:"A",score:4020,hits:201,at:1},
+  ]) assert.equal(game.saveHighscore("bank","easy",entry,storage).ok,false);
+  assert.equal(storage.getItem(oldKey),oldValue);
+});
+test("swept wall-hit event carries the bounce bonus into scoring", () => {
+  const r = challenge(1); game.startChallenge(r,0);
+  const s = shot(50,50,100,0), t = target(r.prompt.id,20,50);
+  const events = game.advanceShot(s,[t],bounds,1.5), event = events.find(e=>e.type==="target");
+  assert.equal(event.bounces,1);
+  assert(game.registerHit(r,event.target.id,r.generation,100,event.bounces));
+  assert.equal(r.score,15);
+});
+
+test("two swept wall contacts award 20 points, with no points for a wrong target", () => {
+  const r = challenge(1); game.startChallenge(r,0);
+  const s = shot(50,90,100,-150), t = target(r.prompt.id,56.667,50);
+  const events = game.advanceShot(s,[t],bounds,1.1), event = events.find(e=>e.type==="target");
+  assert.equal(events.filter(e=>e.type==="wall").length,2);
+  assert.equal(event.bounces,2);
+  assert.equal(game.registerHit(r,"wrong",r.generation,100,event.bounces),false);
+  assert.equal(r.score,0);
+  assert(game.registerHit(r,event.target.id,r.generation,100,event.bounces));
+  assert.equal(r.score,20);
 });

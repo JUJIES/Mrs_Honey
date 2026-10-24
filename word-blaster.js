@@ -13,9 +13,9 @@
     flash: "assets/images/word_blaster/muzzle-flash-v1.png",
   });
   const CANNON = Object.freeze({
-    muzzleDistance: 69.5,
+    muzzleDistance: 63.5,
     baseRect: Object.freeze([-52, -13, 104, 70.306]),
-    barrelRect: Object.freeze([-21, -81, 42, 78.565]),
+    barrelRect: Object.freeze([-21, -75, 42, 78.565]),
     mountRect: Object.freeze([-36.75, -19.2, 73.5, 46.131]),
     recoilDuration: 0.22,
     recoilTravel: 5,
@@ -238,7 +238,13 @@
     }),
   });
   const CHALLENGE_MS = 60000,
-    SCORE_PER_HIT = 10;
+    SCORE_PER_HIT = 10,
+    SCORE_PER_BOUNCE = 5;
+  function pointsForHit(bounces = 0) {
+    return Number.isInteger(bounces) && bounces >= 0 && bounces <= 2
+      ? SCORE_PER_HIT + bounces * SCORE_PER_BOUNCE
+      : 0;
+  }
   function difficultyFor(id) {
     return Object.hasOwn(DIFFICULTIES, id)
       ? DIFFICULTIES[id]
@@ -290,7 +296,7 @@
   }
   function scoreKey(setId, level) {
     return (
-      "lernwort.word-blaster.challenge.v1:" +
+      "lernwort.word-blaster.challenge.v2:" +
       encodeURIComponent(String(setId).slice(0, 80)) +
       ":" +
       difficultyFor(level).id
@@ -313,9 +319,13 @@
       cleanName(entry.name) &&
       Number.isInteger(entry.score) &&
       entry.score >= 0 &&
-      entry.score <= 2000 &&
-      entry.score % SCORE_PER_HIT === 0 &&
-      entry.hits === entry.score / SCORE_PER_HIT &&
+      entry.score <= 4000 &&
+      entry.score % SCORE_PER_BOUNCE === 0 &&
+      Number.isInteger(entry.hits) &&
+      entry.hits >= 0 &&
+      entry.hits <= 200 &&
+      entry.score >= entry.hits * SCORE_PER_HIT &&
+      entry.score <= entry.hits * pointsForHit(2) &&
       Number.isSafeInteger(entry.at) &&
       entry.at >= 0
     );
@@ -481,8 +491,9 @@
       saved: false,
     };
   }
-  function registerHit(round, id, generation, now = Date.now()) {
+  function registerHit(round, id, generation, now = Date.now(), bounces = 0) {
     if (
+      !pointsForHit(bounces) ||
       !round.prompt ||
       (round.mode === "challenge" && round.deadline === null) ||
       expireChallenge(round, now) ||
@@ -495,7 +506,7 @@
     const matched = round.prompt;
     round.found.add(id);
     round.hits++;
-    round.score = round.hits * SCORE_PER_HIT;
+    round.score += pointsForHit(bounces);
     round.remaining = round.remaining.filter((item) => item.id !== id);
     if (round.mode === "challenge") {
       round.remaining.push(matched);
@@ -574,6 +585,7 @@
     let particles = [],
       rings = [],
       flashes = [],
+      bonuses = [],
       gesture = null;
     const pointers = new Set(),
       keys = new Set(),
@@ -623,6 +635,7 @@
                   [660, 0.12, 880],
                   [880, 0.14, 1100],
                   ...(bounces ? [[1320, 0.18, 1760]] : []),
+                  ...(bounces === 2 ? [[1760, 0.2, 2200]] : []),
                 ];
       tones.forEach(([freq, duration, end], i) => {
         const oscillator = audio.createOscillator(),
@@ -845,6 +858,7 @@
       particles = [];
       rings = [];
       flashes = [];
+      bonuses = [];
       vacancy = null;
       makeTargets();
       if (hadGeometry && ready && started)
@@ -935,8 +949,23 @@
       if (!syncClock()) return;
       const target = targets.find((t) => t.id === event.target.id);
       if (!target || shot.generation !== round.generation) return;
-      if (registerHit(round, target.id, shot.generation)) {
-        const gold = event.bounces > 0;
+      if (registerHit(round, target.id, shot.generation, Date.now(), event.bounces)) {
+        const gold = event.bounces > 0,
+          bonusText = (event.bounces === 2 ? "Doppelbande!" : "Bandenbonus!") +
+            (round.mode === "challenge" ? ` +${pointsForHit(event.bounces)}` : "");
+        if (gold) {
+          bonuses.push({
+            x: target.x,
+            y: target.y,
+            life: 1,
+            text: bonusText,
+          });
+          if (bonuses.length > 4) bonuses.shift();
+          rings.push({
+            x: target.x, y: target.y, life: 0.65, total: 0.65,
+            color: "#fff3b3", radius: target.r * 0.65,
+          });
+        }
         sound("correct", event.bounces);
         burst(
           target.x,
@@ -960,8 +989,8 @@
         controlsOff();
         status(
           round.mode === "challenge"
-            ? `${round.score} Punkte.${gold ? " Toller Wandtreffer!" : ""}`
-            : `${round.found.size} von ${items.length} getroffen.${gold ? " Toller Wandtreffer!" : ""}`,
+            ? `${round.score} Punkte.${gold ? ` ${bonusText}` : ""}`
+            : `${round.found.size} von ${items.length} getroffen.${gold ? ` ${bonusText}` : ""}`,
         );
         updateTask();
       } else {
@@ -1052,6 +1081,8 @@
         }
       }
       targets.forEach((t) => (t.shield = Math.max(0, t.shield - dt)));
+      bonuses.forEach((b) => (b.life -= dt));
+      bonuses = bonuses.filter((b) => b.life > 0);
       particles.forEach((p) => {
         p.life -= dt;
         p.x += p.vx * dt;
@@ -1235,6 +1266,27 @@
         ctx.stroke();
       }
       drawCannon(ctx, artImages, g.origin, angle, recoil, reduced);
+      bonuses.forEach((b) => {
+        ctx.save();
+        ctx.globalAlpha = Math.min(1, b.life * 4);
+        ctx.font = "bold 18px system-ui";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        const width = ctx.measureText(b.text).width + 24,
+          x = Math.max(g.bounds.left + width / 2 + 4,
+            Math.min(g.bounds.right - width / 2 - 4, b.x)),
+          y = Math.max(g.bounds.top + 20, b.y - 24 - (reduced ? 0 : (1 - b.life) * 35));
+        ctx.fillStyle = "#fff4ce";
+        ctx.strokeStyle = "#d6a341";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(x - width / 2, y - 17, width, 34, 14);
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = "#805318";
+        ctx.fillText(b.text, x, y);
+        ctx.restore();
+      });
     }
     on(resume, "click", start);
     on(find(".wb-replay"), "click", start);
@@ -1486,6 +1538,7 @@
         resume.onclick = null;
         audio?.close().catch(() => {});
         particles = [];
+        bonuses = [];
         targets = [];
         round.shots = [];
         images.clear();
@@ -1499,6 +1552,7 @@
     mount,
     DIFFICULTIES,
     difficultyFor,
+    pointsForHit,
     startChallenge,
     timeLeft,
     expireChallenge,

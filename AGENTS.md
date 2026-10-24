@@ -250,3 +250,7 @@ refills must preserve surviving target positions and unique visible IDs. Local
 Top 10 keys are per set/level/rules version; render names as text, validate records
 and keep failed saves retryable. See `docs/WORD_BLASTER.md`; run model/storage tests
 and the real-minute browser challenge smoke test after changing these contracts.
+
+Word Blaster challenge scoring v2: direct / one / two wall bounces award 10 / 15 / 20
+points via `pointsForHit` and `registerHit`. Preserve old v1 lists; never mix them
+with v2 scores. Keep bonus feedback cosmetic and honor reduced motion/mute.

@@ -178,3 +178,21 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   Runtime-Cutover. Bestehender separater Control-Center-Versionsabgleich sowie
   physisches iPad/Safari bleiben außerhalb dieser Online-Abnahme. Kein Reboot,
   keine Tunnel-/Control-Center-Änderung und kein Cleanup früherer Releases.
+
+
+## 13. Folgeupdate 2026-10-24 – Kanonensitz und Bandenbonus
+
+- Autorisiert: Kanone tiefer im Lager, gestrichelte Fokusellipse entfernen und
+  Bandenbonus online veröffentlichen. Runtime `word-blaster-bonus-1`, Shell v58;
+  Bilder, MP3s und Setdaten bleiben unverändert.
+- Challenge-Wertung direkt/eine/zwei Banden: 10/15/20 Punkte, gemeinsame
+  Trefferprüfung für Anzeige und Highscore. Regelversion v2 trennt frühere
+  gespeicherte v1-Ranglisten. Goldene Bonusplakette, Doppelring und Tonfolge.
+- Vorab bestanden: 73 Node-Tests, 8 Server-Tests, Inventar 740 Dateien unverändert;
+  Browser-Eingabe-Smoke, echter Minutentest samt Speicherung und echter
+  Banden-Treffer mit 15 Punkten. Details in `docs/WORD_BLASTER.md`.
+- Rollback vor Cutover: aktiver sauberer Freeze
+  `bb8bacd728bc3036215a91de0256507266491284`; Dienst-XML separat sichern.
+  Erst sauberen GitHub-Freeze auf freiem Kandidatenport 5198 prüfen, danach nur
+  App-Dienst umstellen. Tunnel und Control Center bleiben unverändert.
+  Exakter Release und öffentliche Abnahme folgen nach erfolgreicher Aktivierung.
