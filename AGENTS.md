@@ -221,7 +221,7 @@ physical-device checks explicitly.
 ## Word Blaster bonus
 
 Read `docs/WORD_BLASTER.md` before changing this game. First prototype is read-word
-→ hit-picture only. Fixed cannon angle, drag/release in the free cannon area plus desktop arrows/Space, shared swept wall geometry
+→ hit-picture only. Fixed cannon angle, drag/release across the arena plus desktop arrows/Space, shared swept wall geometry
 for aim and shots; preserve generation guards, two-bounce/two-shot limits and
 pause-on-resize/visibility. Runtime JS/CSS belong in Index, PWA and release export.
 Run Node physics tests and the explicit browser smoke test; do not claim physical
@@ -232,8 +232,8 @@ Keep `cannonPose` authoritative for the painted muzzle, recoil, aim and laser;
 do not restore code-drawn cannon placeholders. All four sprites must load before
 start; keep their PWA precache entries and reduced-motion behavior.
 
-Word Blaster touch input is relative horizontal drag + release, with a 10px dead
-zone. Do not restore direction/fire buttons or a range slider. Keep pointercancel,
+Word Blaster touch input is relative horizontal drag + release across the arena, with a 10px dead
+zone. Cancellation keeps the current angle while discarding the shot. Do not restore direction/fire buttons or a range slider. Keep pointercancel,
 lost capture, multi-contact, resize/pause and stale-prompt releases non-firing;
 use `dragAim` and the existing `shoot()` path for all input methods.
 Touch travel caps at 180px plus dead zone; captured touch release allows a 24px

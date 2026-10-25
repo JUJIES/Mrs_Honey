@@ -420,9 +420,6 @@
         Math.max(Math.abs(bx), Math.abs(bx + bw)),
         Math.max(Math.abs(by), Math.abs(by + bh)),
       ) + CANNON.recoilOvershoot;
-    const aimHeight = Math.ceil(
-      Math.max(148, bounds.bottom - (origin.y - reach) + 4),
-    );
     const targetBounds = {
       left: 18 + r,
       top: 20 + r,
@@ -442,7 +439,6 @@
       targetBounds,
       capacity: Math.min(width < 500 ? 3 : profile.limit, cols * rows),
       origin,
-      aimHeight,
     };
   }
   function moveTargets(targets, g, dt) {
@@ -604,8 +600,8 @@
     root.innerHTML = `<div class="wb-game" tabindex="-1">
       <header class="wb-header"><div><h1>Word Blaster</h1><p class="wb-set"></p></div><div class="wb-tools"><button type="button" class="wb-sound" aria-label="Ton ausschalten" aria-pressed="true">Ton an</button><button type="button" class="wb-pause">Pause</button></div></header>
       <div class="wb-task"><span class="wb-instruction">Finde das Bild zu</span><strong class="wb-word" lang="en"></strong><span class="wb-count"></span><span class="wb-time" aria-label="Verbleibende Zeit" aria-live="off" hidden></span></div>
-      <div class="wb-stage"><canvas aria-label="Bewegte Bildkapseln und Kanone. Unten ziehen zum Zielen, loslassen zum Schießen. Desktop: Pfeiltasten und Leertaste."></canvas><div class="wb-gesture" role="group" tabindex="0" aria-label="Kanone steuern: unten nach links oder rechts ziehen, loslassen schießt. Zurück zum Startpunkt ziehen bricht ab. Mit Tastatur: Pfeiltasten zielen, Leertaste schießt." data-state="idle" aria-disabled="true"></div><div class="wb-overlay"><p class="wb-message">Bilder werden vorbereitet …</p><button class="wb-continue" type="button" hidden>Los geht’s!</button></div></div>
-      <p class="wb-help"><span>Unten ziehen · Loslassen schießt</span><span class="wb-key-help">← → zielen · Leertaste schießen</span></p>
+      <div class="wb-stage"><canvas aria-label="Bewegte Bildkapseln und Kanone. Ziehen zum Zielen, loslassen zum Schießen. Desktop: Pfeiltasten und Leertaste."></canvas><div class="wb-gesture" role="group" tabindex="0" aria-label="Kanone steuern: im Spielfeld nach links oder rechts ziehen, loslassen schießt. Zurück zum Startpunkt ziehen bricht ab. Mit Tastatur: Pfeiltasten zielen, Leertaste schießt." data-state="idle" aria-disabled="true"></div><div class="wb-overlay"><p class="wb-message">Bilder werden vorbereitet …</p><button class="wb-continue" type="button" hidden>Los geht’s!</button></div></div>
+      <p class="wb-help"><span>Ziehen · Loslassen schießt</span><span class="wb-key-help">← → zielen · Leertaste schießen</span></p>
       <section class="wb-results" hidden aria-label="Challenge-Ergebnis">
         <h2 class="wb-result-title" tabindex="-1"></h2><p class="wb-result-copy"></p>
         <form class="wb-score-form"><label>Dein Name oder Spitzname<input name="player" type="text" maxlength="20" required autocomplete="off" /></label><button type="submit">Highscore eintragen</button></form>
@@ -673,12 +669,11 @@
       if (!audio && Audio) audio = new Audio();
       if (audio?.state === "suspended") audio.resume().catch(() => {});
     }
-    function cancelAim(restore = true) {
+    function cancelAim() {
       const prior = gesture;
       gesture = null;
       aimZone.dataset.state = "idle";
       if (!prior) return;
-      if (restore) angle = prior.angle;
       if (aimZone.hasPointerCapture(prior.id))
         aimZone.releasePointerCapture(prior.id);
     }
@@ -858,7 +853,6 @@
       const hadGeometry = !!g;
       g = geometry(width, height, profile.id);
       stage.style.height = `${height}px`;
-      stage.style.setProperty("--wb-gesture-height", `${g.aimHeight}px`);
       const dpr = Math.min(global.devicePixelRatio || 1, 2);
       canvas.width = Math.round(width * dpr);
       canvas.height = Math.round(height * dpr);
@@ -1435,7 +1429,7 @@
         aimed.armed &&
         gesture.generation === round.generation;
       angle = aimed.angle;
-      cancelAim(!fireOnRelease);
+      cancelAim();
       if (fireOnRelease) shoot();
     });
     on(aimZone, "lostpointercapture", (e) => {
@@ -1526,7 +1520,7 @@
       message.textContent =
         round.mode === "challenge"
           ? "60 Sekunden: direkt 10, eine Bande 15, zwei Banden 20 Punkte. Die Uhr läuft auch bei Pause weiter."
-          : "Unten ziehen zum Zielen. Loslassen schießt!";
+          : "Ziehen zum Zielen. Loslassen schießt!";
       resume.textContent = "Los geht’s!";
       resume.hidden = false;
       updateTask();

@@ -7,8 +7,10 @@
 - Eingefangene Touch-Gesten tolerieren Loslassen knapp neben/unter dem Rahmen
   (24px seitlich/oben, 40px unten). Dort bleibt der Schuss sichtbar schussbereit,
   statt den Winkel beim Loslassen zurückzusetzen. Maus/Stift bleiben rahmengebunden.
+- Die gesamte Spielfeldfläche nimmt Ziehgesten an und blockiert dort Browser-Scrollen.
+  Abbrüche erhalten den zuletzt gezeichneten Winkel statt zurückzuspringen.
 - Mehrfinger-, Capture-, System-, Pause- und Generation-Abbrüche bleiben erhalten.
-  Bestehender Treffer-/Highscorepfad unverändert. App/CSS `word-blaster-touch-1`, Shell v60.
+  Bestehender Treffer-/Highscorepfad unverändert. App/CSS `word-blaster-touch-2`, Shell v61.
 
 ## 2026-10-24 – Bandenbonus für Word Blaster
 

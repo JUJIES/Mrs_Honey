@@ -4,7 +4,7 @@
     name="viewport"
     content="width=device-width,initial-scale=1"
   /><title>Word Blaster Smoke</title>
-  <link rel="stylesheet" href="../../word-blaster.css?v=word-blaster-touch-1" /><style>
+  <link rel="stylesheet" href="../../word-blaster.css?v=word-blaster-touch-2" /><style>
     body {
       margin: 16px;
       background: #fffaf1;
@@ -28,7 +28,7 @@
   <pre id="report">Noch nicht ausgeführt.</pre>
   <div id="host"></div>
   <script src="../../data/sets/animals_01.bundle.js"></script>
-  <script src="../../word-blaster.js?v=word-blaster-touch-1"></script>
+  <script src="../../word-blaster.js?v=word-blaster-touch-2"></script>
   <script>
     const report = document.querySelector("#report"),
       host = document.querySelector("#host");
@@ -81,9 +81,14 @@
       zone.releasePointerCapture = (id) => captured.delete(id);
       const ctx = canvas.getContext("2d"),
         draw = ctx.drawImage.bind(ctx),
-        flashes = [];
+        flashes = [],
+        barrelAngles = [];
       ctx.drawImage = (...a) => {
         if (a[0].src?.includes("muzzle-flash")) flashes.push(a.slice(1, 3));
+        if (a[0].src?.includes("cannon-barrel")) {
+          const m = ctx.getTransform();
+          barrelAngles.push(Math.atan2(m.b, m.a));
+        }
         return draw(...a);
       };
       const x = r.left + r.width / 2,
@@ -93,6 +98,7 @@
         x,
         y,
         flashes,
+        barrelAngles,
         event(type, dx = 0, dy = 0, id = 1) {
           zone.dispatchEvent(
             new PointerEvent(type, {
@@ -191,10 +197,14 @@
         check(!d.flashes.length, "Pointercancel feuert nicht");
         d.event("pointerdown");
         d.event("pointermove", 50);
+        await painted();
+        const aimedAngle = d.barrelAngles.at(-1);
         d.event("lostpointercapture", 50);
         d.event("pointerup", 50);
         await painted();
         check(!d.flashes.length, "Verlorene Pointer-Capture feuert nicht");
+        check(Math.abs(d.barrelAngles.at(-1) - aimedAngle) < 0.001,
+          "Systemabbruch erhält den zuletzt gezeichneten Winkel");
         d.event("pointerdown");
         d.event("pointermove", 50);
         d.event("pointerdown", 20, 0, 2);
@@ -267,6 +277,10 @@
           });
           await until(() => !host.querySelector(".wb-continue").hidden);
           host.querySelector(".wb-continue").click();
+          const zoneRect = host.querySelector(".wb-gesture").getBoundingClientRect(),
+            stageRect = host.querySelector(".wb-stage").getBoundingClientRect();
+          check(zoneRect.top <= stageRect.top + 13 && zoneRect.height >= stageRect.height - 25,
+            `Auch die Spielfeldmitte ist Ziehfläche (${width}px)`);
           const touch = gestureDriver(),
             bottom = host.querySelector(".wb-stage").getBoundingClientRect().bottom,
             drift = bottom + 16 - touch.y;

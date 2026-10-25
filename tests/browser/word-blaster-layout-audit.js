@@ -26,7 +26,7 @@
     issues.push("Spielfeld horizontal abgeschnitten");
   if (document.documentElement.scrollWidth > innerWidth + 1)
     issues.push("Horizontaler Überlauf");
-  if (z.width < c.width - 25 || z.height < 144)
+  if (z.width < c.width - 25 || z.height < c.height - 25)
     issues.push("Ziehbereich zu klein");
   if (z.left < c.left || z.right > c.right || z.bottom > c.bottom)
     issues.push("Ziehbereich außerhalb des Spielfelds");

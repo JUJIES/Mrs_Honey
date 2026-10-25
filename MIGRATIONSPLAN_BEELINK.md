@@ -233,7 +233,14 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   Promptgeneration. Highscore-, Physik- und Lernlogik unverändert.
 - Vorab: 75 Node-Tests, Eingabe-Smoke inklusive Randdrift bei 280/810px und
   native 100px-Ziehgeste mit sichtbar gedrehtem Rohr und echtem Schuss bestanden.
-  Inventar unverändert: 740 Dateien. App/CSS `word-blaster-touch-1`, Shell v60.
+  Inventar unverändert: 740 Dateien. App/CSS `word-blaster-touch-2`, Shell v61.
 - Vorheriger aktiver Freeze `23ec5ca841674ddb7f6c36b680398665e24a0f87` bleibt
   erhalten. Vor Cutover XML sichern, Kandidat 5198 prüfen, nur App-Dienst umstellen.
   Exakter Release und Online-Abnahme folgen; physische Tablet-Abnahme offen.
+
+- Ergänzung nach Nutzerpräzisierung „auch mitten im Feld“: frühere Steuerfläche
+  lag nur unten. Ganze Arena wird jetzt Ziehfläche mit `touch-action: none`;
+  Abbrüche behalten den letzten Winkel. Stale-/System-/Mehrfinger-Releases feuern
+  weiterhin nicht. Regression misst den tatsächlich gezeichneten Rohrwinkel vor
+  und nach Capture-Abbruch und prüft volle Steuerfläche. Finale Version
+  `word-blaster-touch-2`, Shell v61.

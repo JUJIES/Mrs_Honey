@@ -16,9 +16,9 @@ einzige Quelle für IDs, Bilder und englische Wörter.
   Leertaste feuert einen Schuss, Escape pausiert. Einzelne kurze Pfeiltaps
   funktionieren ebenso wie Halten. Nach dem Start besitzt der Ziehbereich den
   Tastaturfokus; Pause-/Tonbuttons behalten ihre native Leertastenbedienung.
-- Touch / Maus / Stift: **unten ziehen zum Zielen, loslassen zum Schießen**.
-  Die freie Fläche um die Kanone ist das Eingabeziel (148px hoch, innerhalb des
-  Rahmens), nicht die Bildkapseln. Keine Richtungsbuttons, Winkelleiste oder
+- Touch / Maus / Stift: **im Spielfeld ziehen zum Zielen, loslassen zum Schießen**.
+  Das gesamte Spielfeld innerhalb des Rahmens ist das Eingabeziel. Auch auf
+  Bildkapseln begonnene Ziehgesten steuern die Kanone; Antippen schießt nicht. Keine Richtungsbuttons, Winkelleiste oder
   Feuertaste. Relative horizontale Bewegung erhält den Winkel beim Aufsetzen;
   Linksziehen dreht nach links, Rechtsziehen nach rechts. Die Empfindlichkeit
   skaliert auf kleinen Bildschirmen mit der Breite; auf Tablets ist der Ziehweg
@@ -141,12 +141,13 @@ Fortsetzungen gehören zu dieser Session. Bilderfehler sperren den Start und
 bieten Wiederholung. Keine Runtime-Dependency und kein API-Aufruf.
 
 Canvas2D zeichnet die Arena, HTML besitzt Aufgabenanzeige, native Menübuttons
-und einen fokussierbaren Gestenbereich. Nur dieser freie untere Bereich nutzt
-`touch-action: none`; außerhalb bleibt Scrollen möglich. Pointer-Capture hält die
+und einen fokussierbaren Gestenbereich. Das ganze Spielfeld nutzt
+`touch-action: none`; außerhalb des Spielfelds bleibt Scrollen möglich. Pointer-Capture hält die
 Geste bei Bewegung, alle Kontakte werden für Mehrfinger-Abbruch verfolgt.
 `dragAim` leitet Winkel und Freigabe aus Startposition, Startwinkel und aktuellem
 X ab; `dragReleaseInside` prüft die begrenzte Touch-Randtoleranz.
-Kein zweites Winkelmodell. Abbruch stellt den Startwinkel wieder her.
+Kein zweites Winkelmodell. Abbruch verwirft nur den Schuss und erhält den zuletzt gezeichneten Winkel.
+Bewusstes Zurückziehen in die Start-Totzone dreht weiter physisch zum Startwinkel.
 Der Ziehbereich wird beim Laden, bei Pause und Erfolgsübergängen gesperrt.
 Escape pausiert und bricht ab. Ein Tastaturwechsel bricht eine laufende Geste ab,
 bevor der vorhandene Keyboardpfad verarbeitet wird.
@@ -170,8 +171,9 @@ zurück und kehrt mit kleinem Nachfedern in die Ausgangslage zurück.
 Der Blitz spielt vier Frames über 160ms, ohne Canvas-Readback oder Frame-Uploads.
 Reduzierte Bewegung hält das Rohr still und zeigt nur den gedämpften ersten
 Blitzframe mit Ausblendung. Pause und Resize verwerfen auch den Rückstoß.
-Sockelhöhe über dem Boden, Target-Freiraum und Gestenfläche werden aus den
-zentralen Bildrechtecken inklusive maximalem Nachfedern abgeleitet. Der
+Sockelhöhe über dem Boden und Target-Freiraum werden aus den zentralen
+Bildrechtecken inklusive maximalem Nachfedern abgeleitet. Die Gestenfläche
+folgt dem gesamten Spielfeld mit 12px Innenabstand. Der
 Target-Bereich hält Abstand zum gesamten größeren Rohr einschließlich
 seiner Eckpunkte bei extremen Winkeln, nicht nur zur Mündung. Keine Blur-/Shadow-Filter pro Frame.
 Reduzierte Bewegung senkt die Partikelzahl und entfernt Tastendruckbewegung;

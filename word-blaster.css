@@ -144,7 +144,7 @@
   left: 12px;
   right: 12px;
   bottom: 12px;
-  height: var(--wb-gesture-height, 148px);
+  top: 12px;
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
