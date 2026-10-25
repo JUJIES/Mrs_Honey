@@ -250,3 +250,24 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   asynchrone Hashprüfung noch lief. Test wartet jetzt auf die wirkliche zweite
   Anfrage (2s Fehlergrenze), dieselben Abbruch-/Request-Assertions bleiben erhalten.
   Kein Runtime-Cache geändert; nur der eindeutig eigene Testrunner wurde beendet.
+
+- Finale Aktivierung **bestanden**: Freeze
+  `7bfc0ac388f62c243ec7c251c9d79a6fc913348b` auf GitHub, sauberer detached
+  Release-Worktree und Listener-Eigentümer auf Port 5900 bestätigt. Windows:
+  75 Node-Tests und acht Server-Tests bestanden, Inventar unverändert, Kandidat
+  5198 mit acht Runtime-/sechs gesperrten Quellpfaden bereit und danach beendet.
+  App und Tunnel laufen, nur der App-Dienst wurde umgestellt.
+- Aktive XML-SHA256:
+  `565ad584039b0b436abe05f4f199610d941de0cf45059f28257f52a1f71172e0`.
+  Unmittelbarer Rollback über
+  `_runtime\Mrs_Honey\ops\tablet-touch-20261025-7bfc0ac\service-5900.before.xml`
+  auf a05ab00. Ursprünglicher Stand 23ec5ca über Backup im a05ab00-Ops-Ordner
+  weiterhin vorhanden. Kein Release-Cleanup, keine Tunnel-/Control-Center-Änderung.
+- Öffentlich: Index/Word-Blaster-JS/CSS/Service-Worker entsprechen dem finalen
+  Release nach CRLF/LF-Normalisierung; vollständige Readiness. Animals-Lesen
+  regulär bis Bonus, Spielfeld geladen, Audit ohne Fehler bei 610×673. Native
+  Ziehgeste mitten in der Arena dreht und feuert; falsches Ziel reagiert geschützt.
+  Nachweis `references/app_screenshots/public-word-blaster-touch-20261025.png`.
+  Touch-Randfälle wurden synthetisch mit explizitem Capture-Shim geprüft;
+  dies ersetzt weiterhin keine Bestätigung am betroffenen physischen Tablet.
+- Doku-/Nachweiscommit nach dem Freeze benötigt keinen weiteren Runtime-Cutover.
