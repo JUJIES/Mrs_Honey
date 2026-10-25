@@ -96,10 +96,21 @@ test('one background slot is reserved; urgent work overtakes pending background 
 });
 
 test('changing the selected set drops queued old downloads and keeps completed files',async()=>{
-  const h=harness();let finish;
-  h.setHandler(url=>new Promise(resolve=>{finish=()=>resolve(new Response(h.payloads[new URL(url).pathname.slice(1)]));}));
-  const p=h.api.createPreloader();const old=p.background(['a.mp3','b.mp3']);await new Promise(setImmediate);
-  const next=p.background(['c.mp3']);finish();await new Promise(setImmediate);await new Promise(setImmediate);finish();
+  const h=harness(),pending=[];let requestStarted=()=>{};
+  h.setHandler(url=>new Promise(resolve=>{pending.push({url,resolve});requestStarted();}));
+  function waitForRequest(index) {
+    if(pending[index])return Promise.resolve();
+    return new Promise((resolve,reject)=>{
+      const timer=setTimeout(()=>{requestStarted=()=>{};reject(new Error(`Request ${index} never started`));},2000);
+      requestStarted=()=>{if(pending[index]){clearTimeout(timer);requestStarted=()=>{};resolve();}};
+    });
+  }
+  const finish=job=>job.resolve(new Response(h.payloads[new URL(job.url).pathname.slice(1)]));
+  const p=h.api.createPreloader();const old=p.background(['a.mp3','b.mp3']);await waitForRequest(0);
+  const next=p.background(['c.mp3']);finish(pending[0]);
+  // Hashing/verification is asynchronous; two turns can still leave the old
+  // resolver installed on a busy Windows host. Wait for the actual next request.
+  await waitForRequest(1);finish(pending[1]);
   await Promise.all([old,next]);assert.equal(h.requests.length,2);assert.ok(!h.requests.some(u=>u.includes('/b.mp3?')));
 });
 

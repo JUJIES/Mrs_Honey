@@ -244,3 +244,9 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   weiterhin nicht. Regression misst den tatsächlich gezeichneten Rohrwinkel vor
   und nach Capture-Abbruch und prüft volle Steuerfläche. Finale Version
   `word-blaster-touch-2`, Shell v61.
+
+- Windows-Kandidat d1af0b6 blieb vor Cutover im Cache-Test hängen. Ursache im Test:
+  zweiter Resolver wurde nach zwei Eventloop-Schritten aufgerufen, obwohl die
+  asynchrone Hashprüfung noch lief. Test wartet jetzt auf die wirkliche zweite
+  Anfrage (2s Fehlergrenze), dieselben Abbruch-/Request-Assertions bleiben erhalten.
+  Kein Runtime-Cache geändert; nur der eindeutig eigene Testrunner wurde beendet.
