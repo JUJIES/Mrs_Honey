@@ -21,12 +21,15 @@ einzige Quelle für IDs, Bilder und englische Wörter.
   Rahmens), nicht die Bildkapseln. Keine Richtungsbuttons, Winkelleiste oder
   Feuertaste. Relative horizontale Bewegung erhält den Winkel beim Aufsetzen;
   Linksziehen dreht nach links, Rechtsziehen nach rechts. Die Empfindlichkeit
-  skaliert mit der Spielfeldbreite. Gestengeschwindigkeit verändert keine Schusskraft.
+  skaliert auf kleinen Bildschirmen mit der Breite; auf Tablets ist der Ziehweg
+  bis zur maximalen Auslenkung auf 180px plus 10px Totzone begrenzt. Gestengeschwindigkeit verändert keine Schusskraft.
 - Erst mehr als 10 CSS-Pixel horizontaler Weg geben den Schuss frei; kurze Taps
   und vertikales Wischen feuern nicht. Zurück in die Start-Totzone ziehen bricht
   ab. Ein dezenter Ring am Sockel unterscheidet Kontakt und schussbereites Zielen.
-  Loslassen außerhalb des Rahmens, `pointercancel`, Capture-Verlust und ein
-  zweiter Kontakt (auch außerhalb des Ziehbereichs) brechen ab. Erst ein frischer
+  Bei bereits eingefangenen Touch-Gesten toleriert das Loslassen 24px seitlich/oben
+  und 40px unterhalb des Rahmens. Weiter außerhalb sowie für Maus/Stift außerhalb
+  des Rahmens, bei `pointercancel`, Capture-Verlust und durch einen
+  zweiten Kontakt (auch außerhalb des Ziehbereichs) brechen ab. Erst ein frischer
   Pointerdown nach Ende aller Kontakte darf eine neue Geste beginnen.
 - Aktives Ziehen bzw. gehaltene Pfeiltasten verlangsamen die Kapseln je nach Stufe
   weich auf 55%, 75% oder 100% (Knifflig).
@@ -142,7 +145,8 @@ und einen fokussierbaren Gestenbereich. Nur dieser freie untere Bereich nutzt
 `touch-action: none`; außerhalb bleibt Scrollen möglich. Pointer-Capture hält die
 Geste bei Bewegung, alle Kontakte werden für Mehrfinger-Abbruch verfolgt.
 `dragAim` leitet Winkel und Freigabe aus Startposition, Startwinkel und aktuellem
-X ab; kein zweites Winkelmodell. Abbruch stellt den Startwinkel wieder her.
+X ab; `dragReleaseInside` prüft die begrenzte Touch-Randtoleranz.
+Kein zweites Winkelmodell. Abbruch stellt den Startwinkel wieder her.
 Der Ziehbereich wird beim Laden, bei Pause und Erfolgsübergängen gesperrt.
 Escape pausiert und bricht ab. Ein Tastaturwechsel bricht eine laufende Geste ab,
 bevor der vorhandene Keyboardpfad verarbeitet wird.

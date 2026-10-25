@@ -4,7 +4,7 @@
     name="viewport"
     content="width=device-width,initial-scale=1"
   /><title>Word Blaster Smoke</title>
-  <link rel="stylesheet" href="../../word-blaster.css?v=word-blaster-bonus-2" /><style>
+  <link rel="stylesheet" href="../../word-blaster.css?v=word-blaster-touch-1" /><style>
     body {
       margin: 16px;
       background: #fffaf1;
@@ -28,7 +28,7 @@
   <pre id="report">Noch nicht ausgeführt.</pre>
   <div id="host"></div>
   <script src="../../data/sets/animals_01.bundle.js"></script>
-  <script src="../../word-blaster.js?v=word-blaster-bonus-2"></script>
+  <script src="../../word-blaster.js?v=word-blaster-touch-1"></script>
   <script>
     const report = document.querySelector("#report"),
       host = document.querySelector("#host");
@@ -258,6 +258,27 @@
           host.children.length === 0,
           "Destroy beim Schuss entfernt DOM und spätere Arbeit",
         );
+        // Regression: a captured finger may drift just beyond the painted floor.
+        for (const width of [280, 810]) {
+          host.style.width = width + "px";
+          host.style.maxWidth = "none";
+          session = LernwortWordBlaster.mount(host, {
+            items: [item], urlFor: (p) => "../../" + p,
+          });
+          await until(() => !host.querySelector(".wb-continue").hidden);
+          host.querySelector(".wb-continue").click();
+          const touch = gestureDriver(),
+            bottom = host.querySelector(".wb-stage").getBoundingClientRect().bottom,
+            drift = bottom + 16 - touch.y;
+          touch.event("pointerdown");
+          touch.event("pointermove", 50, drift);
+          check(touch.zone.dataset.state === "armed", `Randdrift bleibt schussbereit (${width}px)`);
+          touch.event("pointerup", 50, drift);
+          await painted();
+          check(touch.flashes.length > 0, `Loslassen knapp unter dem Spielfeld schießt (${width}px)`);
+          session.destroy();
+        }
+        host.style.maxWidth = "";
         for (const missingArt of [false, true]) {
           session = LernwortWordBlaster.mount(host, {
             items: [

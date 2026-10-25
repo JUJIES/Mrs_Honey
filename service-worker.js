@@ -1,15 +1,15 @@
 importScripts("./data/offline-assets.bundle.js?v=9d401a9541925218", "./asset-cache.js?v=background-cache-4");
-const CACHE_NAME = "lernwort-pwa-v59";
+const CACHE_NAME = "lernwort-pwa-v60";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./styles.css?v=word-blaster-bonus-2",
-  "./app.js?v=word-blaster-bonus-2",
-  "./catch-pair.js?v=word-blaster-bonus-2",
-  "./catch-pair.css?v=word-blaster-bonus-2",
-  "./word-blaster.js?v=word-blaster-bonus-2",
-  "./word-blaster.css?v=word-blaster-bonus-2",
+  "./styles.css?v=word-blaster-touch-1",
+  "./app.js?v=word-blaster-touch-1",
+  "./catch-pair.js?v=word-blaster-touch-1",
+  "./catch-pair.css?v=word-blaster-touch-1",
+  "./word-blaster.js?v=word-blaster-touch-1",
+  "./word-blaster.css?v=word-blaster-touch-1",
   "./asset-cache.js?v=background-cache-4",
   "./data/offline-assets.bundle.js?v=9d401a9541925218",
   "./manifest.webmanifest",

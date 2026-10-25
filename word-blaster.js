@@ -99,11 +99,21 @@
       armed: Math.abs(dx) > deadZone,
       angle: clamp(
         start.angle +
-          (Math.sign(dx) * travel * MAX_ANGLE) / Math.max(1, width * 0.4),
+          (Math.sign(dx) * travel * MAX_ANGLE) / clamp(width * 0.28, 80, 180),
         -MAX_ANGLE,
         MAX_ANGLE,
       ),
     };
+  }
+  // Pointer capture lets a finger drift just beyond the painted edge. Keep a
+  // small touch-only release gutter; mouse/stylus and far-away releases stay strict.
+  function dragReleaseInside(point, bounds, pointerType) {
+    const side = pointerType === "touch" ? 24 : 0,
+      bottom = pointerType === "touch" ? 40 : 0;
+    return (
+      point.x >= bounds.left - side && point.x <= bounds.right + side &&
+      point.y >= bounds.top - side && point.y <= bounds.bottom + bottom
+    );
   }
   function wallHit(p, bounds) {
     const tx =
@@ -1391,6 +1401,7 @@
         x: p.x,
         angle,
         generation: round.generation,
+        pointerType: e.pointerType,
         armed: false,
       };
       aimZone.dataset.state = "aiming";
@@ -1408,7 +1419,7 @@
       const p = point(e),
         aimed = dragAim(gesture, p.x, g.width);
       angle = aimed.angle;
-      gesture.armed = aimed.armed && insideArena(p);
+      gesture.armed = aimed.armed && dragReleaseInside(p, g.bounds, gesture.pointerType);
       aimZone.dataset.state = gesture.armed ? "armed" : "aiming";
     });
     on(aimZone, "pointerup", (e) => {
@@ -1420,7 +1431,7 @@
         syncClock() &&
         canAim() &&
         pointers.size === 0 &&
-        insideArena(p) &&
+        dragReleaseInside(p, g.bounds, gesture.pointerType) &&
         aimed.armed &&
         gesture.generation === round.generation;
       angle = aimed.angle;
@@ -1563,6 +1574,7 @@
     cannonPose,
     drawCannon,
     dragAim,
+    dragReleaseInside,
     wallHit,
     circleHit,
     advanceShot,

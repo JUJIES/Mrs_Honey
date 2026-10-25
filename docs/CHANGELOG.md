@@ -1,5 +1,15 @@
 # Änderungsprotokoll
 
+## 2026-10-25 – Bedienbare Tablet-Zielgeste
+
+- Ziehweg auf großen Spielflächen begrenzt: maximal 180px plus 10px Totzone
+  statt fast einer halben Tabletbreite für die volle Kanonenauslenkung.
+- Eingefangene Touch-Gesten tolerieren Loslassen knapp neben/unter dem Rahmen
+  (24px seitlich/oben, 40px unten). Dort bleibt der Schuss sichtbar schussbereit,
+  statt den Winkel beim Loslassen zurückzusetzen. Maus/Stift bleiben rahmengebunden.
+- Mehrfinger-, Capture-, System-, Pause- und Generation-Abbrüche bleiben erhalten.
+  Bestehender Treffer-/Highscorepfad unverändert. App/CSS `word-blaster-touch-1`, Shell v60.
+
 ## 2026-10-24 – Bandenbonus für Word Blaster
 
 - Challenge: direkt 10, nach einer Bande 15, nach zwei Banden 20 Punkte.

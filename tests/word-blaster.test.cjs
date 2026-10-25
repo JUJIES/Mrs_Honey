@@ -219,7 +219,7 @@ test("relative aiming keeps contact stable and disarms taps and a return to the 
   assert(left.armed && left.angle < 0.4);
   assert.deepEqual(game.dragAim(start, 120, 320), { angle: 0.4, armed: false });
 });
-test("drag sensitivity scales with the arena and never exceeds cannon angle limits", () => {
+test("drag sensitivity scales on phones, caps tablet travel and preserves angle limits", () => {
   const start = { x: 0, angle: 0 };
   close(
     game.dragAim(start, 80, 320).angle,
@@ -453,4 +453,23 @@ test("two swept wall contacts award 20 points, with no points for a wrong target
   assert.equal(r.score,0);
   assert(game.registerHit(r,event.target.id,r.generation,100,event.bounces));
   assert.equal(r.score,20);
+});
+
+
+test("tablet aiming does not demand dragging across half the screen", () => {
+  const start = {x:0,angle:0};
+  for (const width of [714,810,1080,1140]) {
+    close(game.dragAim(start,190,width).angle,75*Math.PI/180);
+    close(game.dragAim(start,100,width).angle,37.5*Math.PI/180);
+    assert.equal(game.dragAim(start,10,width).armed,false);
+  }
+});
+test("only captured touch releases get a bounded gutter around the frame", () => {
+  for (const p of [{x:50,y:120},{x:-12,y:50},{x:112,y:50}]) {
+    assert(game.dragReleaseInside(p,bounds,"touch"));
+    assert.equal(game.dragReleaseInside(p,bounds,"mouse"),false);
+    assert.equal(game.dragReleaseInside(p,bounds,"pen"),false);
+  }
+  for (const p of [{x:50,y:141},{x:-25,y:50},{x:125,y:50},{x:50,y:-25}])
+    assert.equal(game.dragReleaseInside(p,bounds,"touch"),false);
 });

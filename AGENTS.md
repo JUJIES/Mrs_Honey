@@ -236,6 +236,9 @@ Word Blaster touch input is relative horizontal drag + release, with a 10px dead
 zone. Do not restore direction/fire buttons or a range slider. Keep pointercancel,
 lost capture, multi-contact, resize/pause and stale-prompt releases non-firing;
 use `dragAim` and the existing `shoot()` path for all input methods.
+Touch travel caps at 180px plus dead zone; captured touch release allows a 24px
+side/top and 40px bottom gutter via `dragReleaseInside`. Far-outside releases
+and mouse/pen outside the frame remain cancelled.
 
 The V2 cannon uses rear bearing → rotating/recoiling barrel → fixed front
 bearing cap → flash. Keep `drawCannon` shared with the angle preview and keep

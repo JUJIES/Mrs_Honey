@@ -219,3 +219,21 @@ Diese eine Datei ist Plan, Entscheidungsprotokoll und Abschlussnachweis. Statusw
   `references/app_screenshots/public-bank-bonus-{rules,game}-20261024.png`.
 - Doku-/Nachweiscommit nach dem Freeze benötigt keinen Runtime-Cutover.
   Physische iPad-Abnahme bleibt offen; Browserprüfung belegt keine Geräteleistung.
+
+
+## 14. Folgeupdate 2026-10-25 – Tablet-Zielgeste
+
+- Meldung: schwer drehbare Kanone, beim Loslassen kein Schuss und Rücksprung.
+  Im Eingabepfad nachgewiesen: Tablet-Ziehweg wuchs bis 456px; Finger knapp
+  außerhalb des Rahmens verwirft die Geste. Konkretes iPad-Fehlerbild bislang
+  nicht auf physischer Hardware reproduziert.
+- Kleinste Korrektur im vorhandenen Pfad: Ziehweg maximal 180px plus 10px
+  Totzone; eingefangene Touch-Gesten mit 24px seitlicher/oberer und 40px unterer
+  Randtoleranz. Keine Lockerung für Mehrfinger/Systemabbruch, Pause oder alte
+  Promptgeneration. Highscore-, Physik- und Lernlogik unverändert.
+- Vorab: 75 Node-Tests, Eingabe-Smoke inklusive Randdrift bei 280/810px und
+  native 100px-Ziehgeste mit sichtbar gedrehtem Rohr und echtem Schuss bestanden.
+  Inventar unverändert: 740 Dateien. App/CSS `word-blaster-touch-1`, Shell v60.
+- Vorheriger aktiver Freeze `23ec5ca841674ddb7f6c36b680398665e24a0f87` bleibt
+  erhalten. Vor Cutover XML sichern, Kandidat 5198 prüfen, nur App-Dienst umstellen.
+  Exakter Release und Online-Abnahme folgen; physische Tablet-Abnahme offen.
